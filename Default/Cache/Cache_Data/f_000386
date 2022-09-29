@@ -1,0 +1,379 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/template02.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>AthleteRanking.com ver 2.0</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_findObj(n, d) { //v3.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document); return x;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function submit_link(id){
+  document.form1.action = "gamelist.php";
+  document.form1.pref.value = id;
+  document.form1.submit();
+}
+function input_data(id){
+  var pref = new Array(48);
+  var games = new Array(48);
+  var opens = new Array(48);
+  var img = 'image/athlete_pref' + id + '.gif';
+
+pref[0] = "その他";
+games[0] = "166";
+opens[0] = "40";
+pref[1] = "北海道";
+games[1] = "357";
+opens[1] = "325";
+pref[2] = "青森";
+games[2] = "1";
+opens[2] = "0";
+pref[3] = "岩手";
+games[3] = "150";
+opens[3] = "121";
+pref[4] = "宮城";
+games[4] = "1";
+opens[4] = "1";
+pref[5] = "秋田";
+games[5] = "1";
+opens[5] = "0";
+pref[6] = "山形";
+games[6] = "1";
+opens[6] = "1";
+pref[7] = "福島";
+games[7] = "0";
+opens[7] = "0";
+pref[8] = "茨城";
+games[8] = "1";
+opens[8] = "0";
+pref[9] = "栃木";
+games[9] = "0";
+opens[9] = "0";
+pref[10] = "群馬";
+games[10] = "0";
+opens[10] = "0";
+pref[11] = "埼玉";
+games[11] = "19";
+opens[11] = "18";
+pref[12] = "千葉";
+games[12] = "1";
+opens[12] = "0";
+pref[13] = "東京";
+games[13] = "19";
+opens[13] = "15";
+pref[14] = "神奈川";
+games[14] = "2";
+opens[14] = "1";
+pref[15] = "山梨";
+games[15] = "19";
+opens[15] = "19";
+pref[16] = "新潟";
+games[16] = "1155";
+opens[16] = "1080";
+pref[17] = "長野";
+games[17] = "24";
+opens[17] = "23";
+pref[18] = "富山";
+games[18] = "180";
+opens[18] = "175";
+pref[19] = "石川";
+games[19] = "5";
+opens[19] = "4";
+pref[20] = "福井";
+games[20] = "3";
+opens[20] = "3";
+pref[21] = "静岡";
+games[21] = "3";
+opens[21] = "2";
+pref[22] = "愛知";
+games[22] = "35";
+opens[22] = "33";
+pref[23] = "三重";
+games[23] = "34";
+opens[23] = "34";
+pref[24] = "岐阜";
+games[24] = "2";
+opens[24] = "0";
+pref[25] = "滋賀";
+games[25] = "253";
+opens[25] = "224";
+pref[26] = "京都";
+games[26] = "222";
+opens[26] = "219";
+pref[27] = "大阪";
+games[27] = "10";
+opens[27] = "5";
+pref[28] = "兵庫";
+games[28] = "529";
+opens[28] = "498";
+pref[29] = "奈良";
+games[29] = "13";
+opens[29] = "8";
+pref[30] = "和歌山";
+games[30] = "1430";
+opens[30] = "1239";
+pref[31] = "鳥取";
+games[31] = "0";
+opens[31] = "0";
+pref[32] = "島根";
+games[32] = "4";
+opens[32] = "2";
+pref[33] = "岡山";
+games[33] = "30";
+opens[33] = "26";
+pref[34] = "広島";
+games[34] = "39";
+opens[34] = "29";
+pref[35] = "山口";
+games[35] = "0";
+opens[35] = "0";
+pref[36] = "香川";
+games[36] = "144";
+opens[36] = "137";
+pref[37] = "徳島";
+games[37] = "0";
+opens[37] = "0";
+pref[38] = "愛媛";
+games[38] = "0";
+opens[38] = "0";
+pref[39] = "高知";
+games[39] = "1";
+opens[39] = "0";
+pref[40] = "福岡";
+games[40] = "9";
+opens[40] = "7";
+pref[41] = "佐賀";
+games[41] = "0";
+opens[41] = "0";
+pref[42] = "長崎";
+games[42] = "1";
+opens[42] = "0";
+pref[43] = "熊本";
+games[43] = "0";
+opens[43] = "0";
+pref[44] = "大分";
+games[44] = "399";
+opens[44] = "388";
+pref[45] = "宮崎";
+games[45] = "0";
+opens[45] = "0";
+pref[46] = "鹿児島";
+games[46] = "0";
+opens[46] = "0";
+pref[47] = "沖縄";
+games[47] = "1";
+opens[47] = "0";
+
+  if(id == 0) img = 'image/athlete_pref.gif';
+
+  var text1 = pref[id];
+  var elem1 = document.getElementById("pref");
+  var text2 = games[id];
+  var elem2 = document.getElementById("allgame");
+  var text3 = opens[id];
+  var elem3 = document.getElementById("opengame");
+
+  elem1.innerHTML = text1;
+  elem2.innerHTML = text2;
+  elem3.innerHTML = text3;
+
+  MM_swapImage('japanmap','',img,1);
+}
+//-->
+</script>
+<!-- InstanceEndEditable -->
+<link href="css/main01.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./hed/ad.js"></script>
+</head>
+
+<body onload="adsize()" onresize="adsize()" onscroll="adsize()">
+<div class="body" id="mainbody">
+
+<h1 class="top"><img name="topmap" src="image/athlete_topmenu.gif" alt="top menu" usemap="#map_TOP" border="0"><!-- InstanceBeginEditable name="topimage" --><img name="titlemap" src="image/athlete_top2.gif" alt="AthleteRanking.com" usemap="#map_LOGIN" border="0"><!-- InstanceEndEditable --></h1>
+<h2 class="menu"><img name="menumap" src="image/athlete_menu.gif" alt="menu" usemap="#map_AREA" width="760" height="52" border="0"></h2>
+<map name="map_TOP">
+  <area shape=rect coords="419,3,495,32" href="sitemap.php" alt="サイトマップ">
+  <area shape=rect coords="502,3,600,32" href="about.php" alt="当サイトについて">
+  <area shape=rect coords="608,3,755,32" href="intro.php" alt="アスリートランキングの紹介">
+</map>
+<map name="map_LOGIN">
+  <area shape=rect coords="12,0,118,30" href="https://www.athleteranking.com/members/index.php" alt="HOME" target="_blank">
+</map>
+<map name="map_AREA">
+  <area shape=rect coords="5,5,80,49" href="http://www.athleteranking.com/" alt="HOME">
+  <area shape=rect coords="89,5,220,49" href="index.php" alt="SEARCH">
+  <area shape=rect coords="233,5,345,49" href="system.php" alt="SYSTEM">
+  <area shape=rect coords="358,5,500,49" href="faq.php" alt="RULE&amp;FAQ">
+  <area shape=rect coords="511,5,624,49" href="terms.php" alt="terms">
+  <area shape=rect coords="633,5,755,49" href="https://www.athleteranking.com/inquiry.php" alt="INQUIRY">
+</map>
+
+<div class="main">
+<!-- InstanceBeginEditable name="main" -->
+<div class="pankuzu"><a href="http://www.athleteranking.com/">HOME</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="index.php">競技会・ランキング検索</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="gamemain.php">競技会予定・結果</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;都道府県別検索</div>
+<h3 class="page_menu">
+<div class="page_menu_sub">Track & Field</div>
+都道府県別検索
+</h3>
+<p class="memo">ご覧になりたい都道府県をクリックしてください</p>
+<div class='ns' onLoad="MM_preloadImages('image/athle_pref.gif','image/athlete_pref1.gif','image/athlete_pref2.gif','image/athlete_pref3.gif','image/athlete_pref4.gif','image/athlete_pref5.gif','image/athlete_pref6.gif','image/athlete_pref7.gif','image/athlete_pref8.gif','image/athlete_pref9.gif','image/athlete_pref10.gif','image/athlete_pref11.gif','image/athlete_pref12.gif','image/athlete_pref13.gif','image/athlete_pref14.gif','image/athlete_pref15.gif','image/athlete_pref16.gif','image/athlete_pref17.gif','image/athlete_pref18.gif','image/athlete_pref19.gif','image/athlete_pref20.gif','image/athlete_pref21.gif','image/athlete_pref22.gif','image/athlete_pref23.gif','image/athlete_pref24.gif','image/athlete_pref25.gif','image/athlete_pref26.gif','image/athlete_pref27.gif','image/athlete_pref28.gif','image/athlete_pref29.gif','image/athlete_pref30.gif','image/athlete_pref31.gif','image/athlete_pref32.gif','image/athlete_pref33.gif','image/athlete_pref34.gif','image/athlete_pref35.gif','image/athlete_pref36.gif','image/athlete_pref37.gif','image/athlete_pref38.gif','image/athlete_pref39.gif','image/athlete_pref40.gif','image/athlete_pref41.gif','image/athlete_pref42.gif','image/athlete_pref43.gif','image/athlete_pref44.gif','image/athlete_pref45.gif','image/athlete_pref46.gif','image/athlete_pref47.gif','image/athlete_pref48.gif')"></div>
+
+<div class="i_pref"><img name="japanmap" src="image/athlete_pref.gif" alt="都道府県での競技会検索" usemap="#japan_map" width="440" height="388" border="0"></div>
+<map name="japan_map">
+<area shape="rect" coords="312,2,439,94" href="gamelist.php" onclick="submit_link(1);return false;" onMouseOver="input_data(1)" onMouseOut="MM_swapImgRestore()" alt="北海道">
+<area shape="rect" coords="312,101,409,131" href="gamelist.php" onclick="submit_link(2);return false;" onMouseOver="input_data(2)" onMouseOut="MM_swapImgRestore()" alt="青森">
+<area shape="rect" coords="361,130,410,164" href="gamelist.php" onclick="submit_link(3);return false;" onMouseOver="input_data(3)" onMouseOut="MM_swapImgRestore()" alt="岩手">
+<area shape="rect" coords="362,163,410,200" href="gamelist.php" onclick="submit_link(4);return false;" onMouseOver="input_data(4)" onMouseOut="MM_swapImgRestore()" alt="宮城">
+<area shape="rect" coords="312,130,361,165" href="gamelist.php" onclick="submit_link(5);return false;" onMouseOver="input_data(5)" onMouseOut="MM_swapImgRestore()" alt="秋田">
+<area shape="rect" coords="333,200,409,236" href="gamelist.php" onclick="submit_link(7);return false;" onMouseOver="input_data(7)" onMouseOut="MM_swapImgRestore()" alt="福島">
+<area shape="rect" coords="379,234,407,286" href="gamelist.php" onclick="submit_link(8);return false;" onMouseOver="input_data(8)" onMouseOut="MM_swapImgRestore()" alt="茨城">
+<area shape="rect" coords="347,235,380,273" href="gamelist.php" onclick="submit_link(9);return false;" onMouseOver="input_data(9)" onMouseOut="MM_swapImgRestore()" alt="栃木">
+<area shape="rect" coords="313,235,347,273" href="gamelist.php" onclick="submit_link(10);return false;" onMouseOver="input_data(10)" onMouseOut="MM_swapImgRestore()" alt="群馬">
+<area shape="rect" coords="312,272,380,303" href="gamelist.php" onclick="submit_link(11);return false;" onMouseOver="input_data(11)" onMouseOut="MM_swapImgRestore()" alt="埼玉">
+<area shape="rect" coords="379,285,409,369" href="gamelist.php" onclick="submit_link(12);return false;" onMouseOver="input_data(12)" onMouseOut="MM_swapImgRestore()" alt="千葉">
+<area shape="rect" coords="334,303,380,333" href="gamelist.php" onclick="submit_link(13);return false;" onMouseOver="input_data(13)" onMouseOut="MM_swapImgRestore()" alt="東京">
+<area shape="rect" coords="331,332,364,361" href="gamelist.php" onclick="submit_link(14);return false;" onMouseOver="input_data(14)" onMouseOut="MM_swapImgRestore()" alt="神奈川">
+<area shape="rect" coords="291,189,333,237" href="gamelist.php" onclick="submit_link(16);return false;" onMouseOver="input_data(16)" onMouseOut="MM_swapImgRestore()" alt="新潟">
+<area shape="rect" coords="313,164,362,201" href="gamelist.php" onclick="submit_link(6);return false;" onMouseOver="input_data(6)" onMouseOut="MM_swapImgRestore()" alt="山形">
+<area shape="rect" coords="258,201,292,236" href="gamelist.php" onclick="submit_link(18);return false;" onMouseOver="input_data(18)" onMouseOut="MM_swapImgRestore()" alt="富山">
+<area shape="rect" coords="238,181,261,236" href="gamelist.php" onclick="submit_link(19);return false;" onMouseOver="input_data(19)" onMouseOut="MM_swapImgRestore()" alt="石川">
+<area shape="rect" coords="217,235,260,273" href="gamelist.php" onclick="submit_link(20);return false;" onMouseOver="input_data(20)" onMouseOut="MM_swapImgRestore()" alt="福井">
+<area shape="rect" coords="302,303,335,335" href="gamelist.php" onclick="submit_link(15);return false;" onMouseOver="input_data(15)" onMouseOut="MM_swapImgRestore()" alt="山梨">
+<area shape="rect" coords="284,238,313,335" href="gamelist.php" onclick="submit_link(17);return false;" onMouseOver="input_data(17)" onMouseOut="MM_swapImgRestore()" alt="長野">
+<area shape="rect" coords="259,236,286,335" href="gamelist.php" onclick="submit_link(24);return false;" onMouseOver="input_data(24)" onMouseOut="MM_swapImgRestore()" alt="岐阜">
+<area shape="rect" coords="292,334,334,370" href="gamelist.php" onclick="submit_link(21);return false;" onMouseOver="input_data(21)" onMouseOut="MM_swapImgRestore()" alt="静岡">
+<area shape="rect" coords="261,333,293,369" href="gamelist.php" onclick="submit_link(22);return false;" onMouseOver="input_data(22)" onMouseOut="MM_swapImgRestore()" alt="愛知">
+<area shape="rect" coords="238,305,262,385" href="gamelist.php" onclick="submit_link(23);return false;" onMouseOver="input_data(23)" onMouseOut="MM_swapImgRestore()" alt="三重">
+<area shape="rect" coords="237,272,261,305" href="gamelist.php" onclick="submit_link(25);return false;" onMouseOver="input_data(25)" onMouseOut="MM_swapImgRestore()" alt="滋賀">
+<area shape="rect" coords="196,252,239,306" href="gamelist.php" onclick="submit_link(26);return false;" onMouseOver="input_data(26)" onMouseOut="MM_swapImgRestore()" alt="京都">
+<area shape="rect" coords="195,304,218,349" href="gamelist.php" onclick="submit_link(27);return false;" onMouseOver="input_data(27)" onMouseOut="MM_swapImgRestore()" alt="大阪">
+<area shape="rect" coords="171,252,198,324" href="gamelist.php" onclick="submit_link(28);return false;" onMouseOver="input_data(28)" onMouseOut="MM_swapImgRestore()" alt="兵庫">
+<area shape="rect" coords="217,305,239,369" href="gamelist.php" onclick="submit_link(29);return false;" onMouseOver="input_data(29)" onMouseOut="MM_swapImgRestore()" alt="奈良">
+<area shape="rect" coords="197,348,238,388" href="gamelist.php" onclick="submit_link(30);return false;" onMouseOver="input_data(30)" onMouseOut="MM_swapImgRestore()" alt="和歌山">
+<area shape="rect" coords="145,254,172,286" href="gamelist.php" onclick="submit_link(31);return false;" onMouseOver="input_data(31)" onMouseOut="MM_swapImgRestore()" alt="鳥取">
+<area shape="rect" coords="120,252,148,285" href="gamelist.php" onclick="submit_link(32);return false;" onMouseOver="input_data(32)" onMouseOut="MM_swapImgRestore()" alt="島根">
+<area shape="rect" coords="147,284,174,323" href="gamelist.php" onclick="submit_link(33);return false;" onMouseOver="input_data(33)" onMouseOut="MM_swapImgRestore()" alt="岡山">
+<area shape="rect" coords="120,284,148,322" href="gamelist.php" onclick="submit_link(34);return false;" onMouseOver="input_data(34)" onMouseOut="MM_swapImgRestore()" alt="広島">
+<area shape="rect" coords="98,251,124,324" href="gamelist.php" onclick="submit_link(35);return false;" onMouseOver="input_data(35)" onMouseOut="MM_swapImgRestore()" alt="山口">
+<area shape="rect" coords="143,349,187,371" href="gamelist.php" onclick="submit_link(37);return false;" onMouseOver="input_data(37)" onMouseOut="MM_swapImgRestore()" alt="徳島">
+<area shape="rect" coords="143,332,186,352" href="gamelist.php" onclick="submit_link(36);return false;" onMouseOver="input_data(36)" onMouseOut="MM_swapImgRestore()" alt="香川">
+<area shape="rect" coords="97,332,144,370" href="gamelist.php" onclick="submit_link(38);return false;" onMouseOver="input_data(38)" onMouseOut="MM_swapImgRestore()" alt="愛媛">
+<area shape="rect" coords="97,368,188,388" href="gamelist.php" onclick="submit_link(39);return false;" onMouseOver="input_data(39)" onMouseOut="MM_swapImgRestore()" alt="高知">
+<area shape="rect" coords="21,253,42,292" href="gamelist.php" onclick="submit_link(41);return false;" onMouseOver="input_data(41)" onMouseOut="MM_swapImgRestore()" alt="佐賀">
+<area shape="rect" coords="36,252,62,305" href="gamelist.php" onclick="submit_link(40);return false;" onMouseOver="input_data(40)" onMouseOut="MM_swapImgRestore()" alt="福岡">
+<area shape="rect" coords="0,251,23,293" href="gamelist.php" onclick="submit_link(42);return false;" onMouseOver="input_data(42)" onMouseOut="MM_swapImgRestore()" alt="長崎">
+<area shape="rect" coords="36,304,62,351" href="gamelist.php" onclick="submit_link(43);return false;" onMouseOver="input_data(43)" onMouseOut="MM_swapImgRestore()" alt="熊本">
+<area shape="rect" coords="62,252,89,306" href="gamelist.php" onclick="submit_link(44);return false;" onMouseOver="input_data(44)" onMouseOut="MM_swapImgRestore()" alt="大分">
+<area shape="rect" coords="62,305,89,351" href="gamelist.php" onclick="submit_link(45);return false;" onMouseOver="input_data(45)" onMouseOut="MM_swapImgRestore()" alt="宮崎">
+<area shape="rect" coords="35,351,87,386" href="gamelist.php" onclick="submit_link(46);return false;" onMouseOver="input_data(46)" onMouseOut="MM_swapImgRestore()" alt="鹿児島">
+<area shape="rect" coords="0,348,24,388" href="gamelist.php" onclick="submit_link(47);return false;" onMouseOver="input_data(47)" onMouseOut="MM_swapImgRestore()" alt="沖縄">
+</map>
+
+<div style="position:relative;display:block">
+<table class="t_pref">
+	<tr><th width="100px">都道府県</th><th width="120px">公開大会数</th><th width="120px">登録大会数</th></tr>
+	<tr><td id="pref">&nbsp;</td><td id="opengame">&nbsp;</td><td id="allgame">&nbsp;</td></tr>
+</table>
+</div>
+
+<table class="pref_area">
+<tr><th>北海道</th><td><span><a href='gamelist.php' onClick='submit_link(1);return false;' onMouseOver='input_data(1)'>北海道</a></span>
+</td></tr>
+<tr><th>東北</th><td><span><a href='gamelist.php' onClick='submit_link(2);return false;' onMouseOver='input_data(2)'>青森</a></span>
+<span><a href='gamelist.php' onClick='submit_link(3);return false;' onMouseOver='input_data(3)'>岩手</a></span>
+<span><a href='gamelist.php' onClick='submit_link(4);return false;' onMouseOver='input_data(4)'>宮城</a></span>
+<span><a href='gamelist.php' onClick='submit_link(5);return false;' onMouseOver='input_data(5)'>秋田</a></span>
+<span><a href='gamelist.php' onClick='submit_link(6);return false;' onMouseOver='input_data(6)'>山形</a></span>
+<span><a href='gamelist.php' onClick='submit_link(7);return false;' onMouseOver='input_data(7)'>福島</a></span>
+</td></tr>
+<tr><th>関東</th><td><span><a href='gamelist.php' onClick='submit_link(8);return false;' onMouseOver='input_data(8)'>茨城</a></span>
+<span><a href='gamelist.php' onClick='submit_link(9);return false;' onMouseOver='input_data(9)'>栃木</a></span>
+<span><a href='gamelist.php' onClick='submit_link(10);return false;' onMouseOver='input_data(10)'>群馬</a></span>
+<span><a href='gamelist.php' onClick='submit_link(11);return false;' onMouseOver='input_data(11)'>埼玉</a></span>
+<span><a href='gamelist.php' onClick='submit_link(12);return false;' onMouseOver='input_data(12)'>千葉</a></span>
+<span><a href='gamelist.php' onClick='submit_link(13);return false;' onMouseOver='input_data(13)'>東京</a></span>
+<span><a href='gamelist.php' onClick='submit_link(14);return false;' onMouseOver='input_data(14)'>神奈川</a></span>
+<span><a href='gamelist.php' onClick='submit_link(15);return false;' onMouseOver='input_data(15)'>山梨</a></span>
+</td></tr>
+<tr><th>北陸</th><td><span><a href='gamelist.php' onClick='submit_link(16);return false;' onMouseOver='input_data(16)'>新潟</a></span>
+<span><a href='gamelist.php' onClick='submit_link(18);return false;' onMouseOver='input_data(18)'>富山</a></span>
+<span><a href='gamelist.php' onClick='submit_link(19);return false;' onMouseOver='input_data(19)'>石川</a></span>
+<span><a href='gamelist.php' onClick='submit_link(20);return false;' onMouseOver='input_data(20)'>福井</a></span>
+</td></tr>
+<tr><th>東海</th><td><span><a href='gamelist.php' onClick='submit_link(17);return false;' onMouseOver='input_data(17)'>長野</a></span>
+<span><a href='gamelist.php' onClick='submit_link(21);return false;' onMouseOver='input_data(21)'>静岡</a></span>
+<span><a href='gamelist.php' onClick='submit_link(22);return false;' onMouseOver='input_data(22)'>愛知</a></span>
+<span><a href='gamelist.php' onClick='submit_link(23);return false;' onMouseOver='input_data(23)'>三重</a></span>
+<span><a href='gamelist.php' onClick='submit_link(24);return false;' onMouseOver='input_data(24)'>岐阜</a></span>
+</td></tr>
+<tr><th>近畿</th><td><span><a href='gamelist.php' onClick='submit_link(25);return false;' onMouseOver='input_data(25)'>滋賀</a></span>
+<span><a href='gamelist.php' onClick='submit_link(26);return false;' onMouseOver='input_data(26)'>京都</a></span>
+<span><a href='gamelist.php' onClick='submit_link(27);return false;' onMouseOver='input_data(27)'>大阪</a></span>
+<span><a href='gamelist.php' onClick='submit_link(28);return false;' onMouseOver='input_data(28)'>兵庫</a></span>
+<span><a href='gamelist.php' onClick='submit_link(29);return false;' onMouseOver='input_data(29)'>奈良</a></span>
+<span><a href='gamelist.php' onClick='submit_link(30);return false;' onMouseOver='input_data(30)'>和歌山</a></span>
+</td></tr>
+<tr><th>中国</th><td><span><a href='gamelist.php' onClick='submit_link(31);return false;' onMouseOver='input_data(31)'>鳥取</a></span>
+<span><a href='gamelist.php' onClick='submit_link(32);return false;' onMouseOver='input_data(32)'>島根</a></span>
+<span><a href='gamelist.php' onClick='submit_link(33);return false;' onMouseOver='input_data(33)'>岡山</a></span>
+<span><a href='gamelist.php' onClick='submit_link(34);return false;' onMouseOver='input_data(34)'>広島</a></span>
+<span><a href='gamelist.php' onClick='submit_link(35);return false;' onMouseOver='input_data(35)'>山口</a></span>
+</td></tr>
+<tr><th>四国</th><td><span><a href='gamelist.php' onClick='submit_link(36);return false;' onMouseOver='input_data(36)'>香川</a></span>
+<span><a href='gamelist.php' onClick='submit_link(37);return false;' onMouseOver='input_data(37)'>徳島</a></span>
+<span><a href='gamelist.php' onClick='submit_link(38);return false;' onMouseOver='input_data(38)'>愛媛</a></span>
+<span><a href='gamelist.php' onClick='submit_link(39);return false;' onMouseOver='input_data(39)'>高知</a></span>
+</td></tr>
+<tr><th>九州</th><td><span><a href='gamelist.php' onClick='submit_link(40);return false;' onMouseOver='input_data(40)'>福岡</a></span>
+<span><a href='gamelist.php' onClick='submit_link(41);return false;' onMouseOver='input_data(41)'>佐賀</a></span>
+<span><a href='gamelist.php' onClick='submit_link(42);return false;' onMouseOver='input_data(42)'>長崎</a></span>
+<span><a href='gamelist.php' onClick='submit_link(43);return false;' onMouseOver='input_data(43)'>熊本</a></span>
+<span><a href='gamelist.php' onClick='submit_link(44);return false;' onMouseOver='input_data(44)'>大分</a></span>
+<span><a href='gamelist.php' onClick='submit_link(45);return false;' onMouseOver='input_data(45)'>宮崎</a></span>
+<span><a href='gamelist.php' onClick='submit_link(46);return false;' onMouseOver='input_data(46)'>鹿児島</a></span>
+<span><a href='gamelist.php' onClick='submit_link(47);return false;' onMouseOver='input_data(47)'>沖縄</a></span>
+	</td></tr>
+	<tr><th>その他</th>
+	<td><span><a href='gamelist.php' onClick='submit_link(0);return false;' onMouseOver='input_data(0)'>その他</a></span></td></tr>
+</table>
+
+
+<form name="form1" method="post" action="" class="ns">
+  <input name="pref" type="hidden">
+</form>
+
+<!-- InstanceEndEditable -->
+</div>
+
+<div class="foot">
+｜ <a href="corporate.php">会社概要</a> ｜ <a href="rule.php">利用規約</a> ｜ <a href="privacy.php">個人情報保護</a> ｜<br>
+(C) 2008 AthleteRanking.com  -  All Rights Reserved.
+</div>
+</div>
+
+<div id="adbody" style="background-color:#bde9ba; width:120px; height:450px;">
+<A HREF="http://www.athletepit.com/" target="_blank"><img src="http://www.athletepit.com/ad.gif"></A>
+</div>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,622 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/template01.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>AthleteRanking.com ver 2.0</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="css/main01.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./games/hed/ad.js"></script>
+</head>
+
+<body onload="adsize()" onresize="adsize()" onscroll="adsize()">
+<div class="body" id="mainbody">
+<div style='font-size:8pt;text-align:left;'>AthleteRanking.com は陸上競技会運営システムです。WEBエントリー、計測機器オンライン受信はもちろん、システムを使って競技会運営するだけで自動で結果がWEB掲載、ランキング集計表示されます。当サイトには AthleteRanking.com を利用している競技会の情報が掲載されています。
+</div>
+<h1 class="top"><img name="topmap" src="image/athlete_topmenu.gif" alt="top menu" usemap="#map_TOP" border="0"><!-- InstanceBeginEditable name="topimage" --><img name="titlemap" src="image/athlete_top1.gif" alt="AthleteRanking.com" usemap="#map_LOGIN" border="0"><!-- InstanceEndEditable --></h1>
+<h2 class="menu"><img name="menumap" src="image/athlete_menu.gif" alt="menu" usemap="#map_AREA" width="760" height="52" border="0"></h2>
+<map name="map_TOP">
+  <area shape=rect coords="419,3,495,32" href="http://games.athleteranking.com/sitemap.php" alt="サイトマップ">
+  <area shape=rect coords="502,3,600,32" href="http://games.athleteranking.com/about.php" alt="当サイトについて">
+  <area shape=rect coords="608,3,755,32" href="http://games.athleteranking.com/intro.php" alt="アスリートランキングの紹介">
+</map>
+<map name="map_LOGIN">
+  <area shape=rect coords="12,0,118,30" href="https://www.athleteranking.com/members/index.php" alt="HOME" target="_blank">
+</map>
+<map name="map_AREA">
+  <area shape=rect coords="5,5,80,49" href="index.php" alt="HOME">
+  <area shape=rect coords="89,5,220,49" href="http://games.athleteranking.com/index.php" alt="SEARCH">
+  <area shape=rect coords="233,5,345,49" href="http://games.athleteranking.com/system.php" alt="SYSTEM">
+  <area shape=rect coords="358,5,500,49" href="http://games.athleteranking.com/faq.php" alt="RULE&amp;FAQ">
+  <area shape=rect coords="511,5,624,49" href="http://games.athleteranking.com/terms.php" alt="TERMS">
+  <area shape=rect coords="633,5,755,49" href="https://www.athleteranking.com/inquiry.php" alt="INQUIRY">
+</map>
+
+<div class="main">
+<!-- InstanceBeginEditable name="main" -->
+
+<table class="games">
+  <tr><th><a href="http://games.athleteranking.com/gamemain.php"><img src="image/athlete_left.gif" alt="GAMES / RESULTS" border="0"></a></th>
+  <th><a href="http://games.athleteranking.com/rankingmain.php"><img src="image/athlete_right.gif" alt="RANKING" border="0"></a></th></tr>
+</table>
+
+<div class='topic_title'><h3 style='font-size:1.1rem; margin:0px;'>AI AthleteRanking<span style='font-size:0.75rem; padding-left:1%; color: #333;'>アスリートランキングAIアスリート</span></h3></div><div class='ns'><img src='image/h1_border.gif' alt='' style='width:750px;height:1px;'></div><table class='hot_athlete'><tr><th><a href='http://games.athleteranking.com/gamedata.php?gid=ap112022010' style='text-decoration: underline;'>6月26日に 富山総合 にて行われた 国体種目記録会。女子300mH決勝 にて 内田愛里 （富山北部高） が 45.92  で1位。</a></th></tr></table><div class='topic_title'><h3 style='font-size:1.1rem; margin:0px;'>HOT GAMES<span style='font-size:0.75rem; padding-left:1%; color: #333;'>最新大会</span></h3></div><div class='ns'><img src='image/h1_border.gif' alt='' style='width:750px;height:1px;'></div><table class='hot_games'><tr><th>期日</th><th>大会名</th><th>期間</th><th>競技場名</th></tr>
+<tr><td nowrap>2022/6/25-7/2</td>
+<td nowrap><a href='http://games.athleteranking.com/gamedata.php?gid=br612022018' >県中学通信陸上</a></td>
+<td>1日目のレースは7/2に、２日目は予定通り実施します。 </td>
+<td nowrap>ジェイリース</td>
+</tr>
+</table>
+
+<div class="topic_title">
+	<h3 style='font-size:1.1rem; margin:0px;'>NEW TOPICS<span style='font-size:0.75rem; padding-left:1%;'>最新トピックス</span><span style='font-size:0.75rem; padding-left:1%;'><A HREF="./newslog.php" style='color: #333;'> more >></A></span></h3>
+</div>
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20220115.jpg" TARGET="_blank"><img src="image/athlete20220115.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2022/01/15</td>
+  </tr>
+  <tr><th align="left">第72回･第32回明石市駅伝競走大会</th>
+   <td>兵庫・明石公園</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=bb112022002" style="text-decoration: none;color: #333333;">
+弊社のトランスポンダーシステムを利用して表記大会が開催されました。計時データは自動でアスリートランキングドットコムにて集計。競技結果は競技会予定・結果よりご覧ください。
+</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20211002.jpg" TARGET="_blank"><img src="image/athlete20211002.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2021/10/02</td>
+  </tr>
+  <tr><th align="left">第９回北海道ハイテクＡＣ杯陸上競技選手権大会</th>
+   <td>北海道・札幌市厚別公園競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=aa512021021" style="text-decoration: none;color: #333333;">
+9回目を迎えた表記大会が開催されました。競技結果は競技会予定・結果よりご覧ください。
+</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20210918.jpg" TARGET="_blank"><img src="image/athlete20210918.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2021/09/17-19</td>
+  </tr>
+  <tr><th align="left">第54回近畿高等学校ユース陸上競技対校選手権大会</th>
+   <td>京都・たけびしスタジアム京都</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=az112021013" style="text-decoration: none;color: #333333;">
+54回目を迎えた表記大会が開催されました。台風の影響が心配されましたが無事３日間実施され多くの好記録が誕生しました。競技結果は競技会予定・結果よりご覧ください。
+</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20210711.jpg" TARGET="_blank"><img src="image/athlete20210711.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2021/07/10-11</td>
+  </tr>
+  <tr><th align="left">第72回丹有地区中学校総合体育大会</th>
+   <td>兵庫・三木総合防災運動公園補助競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=bb112021046" style="text-decoration: none;color: #333333;">
+東京オリンピックの関係で計測器の無いサブトラックにて開催された表記大会では、AthleteRanking.comの外部サービスとして、
+世界陸上等でも使用されている写真判定機を仮設し計時を行いました。競技結果は競技会予定・結果よりご覧ください。
+</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20201010.jpg" TARGET="_blank"><img src="image/athlete20201010.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2020/10/10-11</td>
+  </tr>
+  <tr><th align="left">ナイタートライアルｉｎ屋島</th>
+   <td>香川・屋島レクザムフィールド</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=bk022020011" style="text-decoration: none;color: #333333;">
+日本記録保持者も出場した表記大会。後半の長距離種目では全周回をICチップを使って計測。周回管理と結果情報に利用されました。競技結果は競技会予定・結果よりご覧ください。
+</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20200921.jpg" TARGET="_blank"><img src="image/athlete20200921.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2020/09/21</td>
+  </tr>
+  <tr><th align="left">第1回東広島市陸上競技記録会</th>
+   <td>広島・東広島運動公園陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=bh122020008" style="text-decoration: none;color: #333333;">
+競技会申込・参加料決済機能も利用した表記大会。当日は日本記録挑戦に会場が盛り上がりました。競技結果は競技会予定・結果よりご覧ください。
+</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20191130.jpg" TARGET="_blank"><img src="image/athlete20191130.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2019/11/30</td>
+  </tr>
+  <tr><th align="left">第42回三田市市民駅伝競走大会</th>
+   <td>兵庫・有馬富士公園特設コース</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=bb112019075" style="text-decoration: none;color: #333333;">兵庫県三田市にて表記大会が開催されました。
+記録処理にはSEIKO SVAJ701を使ってデータを取り込み、スマホで着順入力し円滑に処理されました。競技結果は競技会予定・結果よりご覧ください。</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20191019.jpg" TARGET="_blank"><img src="image/athlete20191019.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2019/10/19</td>
+  </tr>
+  <tr><th align="left">Denka Athletics Challenge Cup 2019</th>
+   <td>新潟・デンカビッグスワン</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=ao012019142" style="text-decoration: none;color: #333333;">日本グランプリシリーズ新潟大会として表記大会が開催されました。
+女子4x800mRでは日本新記録が誕生しました。競技結果は競技会予定・結果よりご覧ください。</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20190915.jpg" TARGET="_blank"><img src="image/athlete20190915.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2019/9/13-15</td>
+  </tr>
+  <tr><th align="left">近畿高等学校ユース陸上競技対校選手権大会</th>
+   <td>和歌山・紀三井寺公園陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=zha12019054" style="text-decoration: none;color: #333333;">第52回近畿高等学校ユース陸上競技対校選手権大会が開催されました。
+好記録続出のハイレベルの争いが繰り広げられました。
+競技結果は競技会予定・結果よりご覧ください。</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20190908.jpg" TARGET="_blank"><img src="image/athlete20190908.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2019/9/8</td>
+  </tr>
+  <tr><th align="left">第1回アスリートピット陸上競技会</th>
+   <td>和歌山・紀三井寺公園陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=zha12019041" style="text-decoration: none;color: #333333;">リアクションタイム、50mタイム、全ラップタイムも測る新しい競技会が開催されました。
+空きレーンの無い夕方からの競技会。西は福岡、東は埼玉からの選手が和歌山に集いました。
+自己新が出た選手も多数！競技結果は競技会予定・結果よりご覧ください。</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A href="image/athlete20190811.jpg" TARGET="_blank"><img src="image/athlete20190811.jpg" alt="" border="1" style="width:200px;height:80px"></A></th>
+   <td colspan="2" align="left">2019/8/10-11</td>
+  </tr>
+  <tr><th align="left">第68回近畿中学校総合体育大会陸上競技大会</th>
+   <td>滋賀・皇子山総合運動公園陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+<A HREF="http://games.athleteranking.com/gamedata.php?gid=ay022019013" style="text-decoration: none;color: #333333;">第68回近畿中学校総合体育大会が開催されました。<BR>
+写真の女子100mHでは藤原かれん選手が近畿中学新記録を樹立しました。<BR>
+競技結果は競技会予定・結果よりご覧ください。</A>
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><A HREF="image/athlete20180617.jpg" TARGET="blank"><img src="image/athlete20180617.jpg" width="200px" alt="" border="1"></A></th>
+   <td colspan="2" align="left">2018/6/11-17</td>
+  </tr>
+  <tr><th align="left">全国高校総体・地区予選会</th>
+   <td>北海道／札幌・厚別、近畿／滋賀・皇子山</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+第71回全国高等学校陸上競技対校選手権大会の予選を兼ねて
+北海道、近畿高等学校陸上競技対校選手権大会が開催され、好記録が続出！
+今年も出場権をかけた、高校生の熱い戦いが繰り広げられました。
+結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20170826.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2017/8/14-31</td>
+  </tr>
+  <tr><th align="left">東南アジア大会</th>
+   <td>マレーシア・ナショナルスタジアム</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+SeaGames・東南アジア大会のフィールド競技とトラックサイドクロックで、アスリートランキングドットコムのテクノロジーが利用されました。
+また水球、飛込、シンクロナイズドスイミングでも同様にシステムが利用されました。<BR>
+トラックサイドクロックでは大型LED画面に結果と共に選手名、国旗を表示、大会の盛り上がりに花を添えました。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20170813.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2017/8/5-13</td>
+  </tr>
+  <tr><th align="left">2017年世界陸上競技選手権大会</th>
+   <td>ロンドン</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+第16回世界陸上競技選手権大会、世界陸上ロンドン大会が開催されました。
+ＳＥＩＫＯがオフィシャルタイマーを務め、アスリートランキングドットコムの技術を用いた
+競歩のジャッジシステムが採用されました。
+その男子50キロ競歩では２本の日の丸が高らかに掲揚されました。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20170616.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2017/6/15-18</td>
+  </tr>
+  <tr><th align="left">全国高校総体・地区予選会</th>
+   <td>富山・県総合、京都・西京極</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+第70回全国高等学校陸上競技対校選手権大会の予選を兼ねて
+北信越、近畿高等学校陸上競技対校選手権大会が開催されました。
+今年も出場権をかけた、高校生の熱い戦いが繰り広げられました。
+結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20170610.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2017/6/10-11</td>
+  </tr>
+  <tr><th align="left">日本選手権（混成）</th>
+   <td>長野・長野市営</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+ロンドン世界選手権の代表選考会を兼ねて、
+第101回日本陸上競技選手権大会混成競技 兼 第33回U20日本陸上競技選手権大会混成競技が開催されました。<BR>
+男子十種競技は中村明彦選手が２連覇で代表に内定。
+女子七種競技はヘンプヒル恵選手が日本歴代２位の記録で３連覇しました。
+結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20151006.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/10/02-10/06</td>
+  </tr>
+  <tr><th align="left">紀の国わかやま国体</th>
+   <td>和歌山・紀三井寺</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+アスリートランキングドットコムをメインシステムに、2015紀の国わかやま国体が開催されました！<BR>
+ジュニア日本新、高校新、中学新も誕生！　晴天の秋空の下、熱戦が繰り広げられました。<BR>
+結果は「競技会・ランキング検索」よりご覧ください。	
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150920.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/9/20</td>
+  </tr>
+  <tr><th align="left">海草地方中学新人大会</th>
+   <td>和歌山・東海南中学</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+アスリートランキングドットコムは、インターハイや、全中、日本選手権といった大規模全国大会で採用されていますが
+学校の運動場で開催されるような小規模な大会にもご利用いただけます。
+国際大会から、手動計時のローカル大会まで、全く同じシステムを用いて運用できます。<BR>
+海草地方中学新人の結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150819.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/8/19-8/21</td>
+  </tr>
+  <tr><th align="left">全日本中学校陸上競技選手権大会</th>
+   <td>北海道・厚別</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+第42回全日本中学校陸上競技選手権大会が開催されました。<BR>
+インターハイに続き、全中でもアスリートランキングドットコムをメインシステムで運営され、
+すずしい北の大地にて、中学生の熱戦が繰り広げられました。<BR>
+結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150731.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/7/29-8/2</td>
+  </tr>
+  <tr><th align="left">全国高等学校総合体育大会</th>
+   <td>和歌山・紀三井寺</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+全国高等学校総合体育大会・第68回全国高等学校陸上競技対抗選手権大会がアスリートランキングドットコムをメインシステムに開催されました。<BR>
+灼熱の和歌山インターハイ。ジュニア日本新・高校新も２種目で誕生！　熱戦が繰り広げられました。<BR>
+結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150705.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/7/4-5</td>
+  </tr>
+  <tr><th align="left">日本選手権（混成）</th>
+   <td>長野・長野市営</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+北京世界選手権の代表選考会を兼ねて、第99回日本陸上競技選手権大会（混成競技）兼　第31回日本ジュニア陸上競技選手権大会（混成競技）が開催されました。<BR>
+男子十種競技の右代啓祐選手と中村明彦選手が代表に選出されました。<BR>
+結果は「競技会・ランキング検索」よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150620.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/6/16-21</td>
+  </tr>
+  <tr><th align="left">全国高等学校総合体育大会・地区予選会</th>
+   <td>各地</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+全国高等学校総合体育大会の地区予選会にてアスリートランキングドットコムが利用されました。
+全国切符を賭けた高校生の熱い戦い。今年は北海道・北信越・近畿の３地区にて当システムを利用。 写真は近畿地区予選にて。<BR>
+競技結果は競技会・ランキング検索よりご覧ください。		
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150611.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/6/6-12</td>
+  </tr>
+  <tr><th align="left">東南アジア大会</th>
+   <td>シンガポール・ナショナルスタジアム</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+SeaGames・東南アジア大会のフィールド競技と競歩競技にてアスリートランキングドットコムのテクノロジーが利用されました。<BR>
+競歩競技では大型LED画面と携帯端末を使った競歩歩型違反表示システムが、
+フィールド競技ではSEIKOフィールドイベントボードにリアルタイムに結果を表示。
+大会の盛り上がりに花を添えました。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150531.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/5/16-6/19</td>
+  </tr>
+  <tr><th align="left">全国高等学校総合体育大会　都道府県予選会</th>
+   <td>各地</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+全国高等学校総合体育大会の都道府県予選会が各地で開催されています。<BR>
+高校生の熱い夏。今年は北海道・新潟・富山・滋賀・京都・和歌山・大分の７道府県が当システムを利用。
+写真は和歌山予選4x400mR決勝<BR>
+競技結果は競技会・ランキング検索よりご覧ください。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150426.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/4/25-26</td>
+  </tr>
+  <tr><th align="left">日本選抜陸上和歌山大会</th>
+   <td>和歌山・紀三井寺陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+北京世界選手権の代表選考会を兼ねて
+２０１５年日本グランプリシリーズ第２戦　<BR>日本選抜陸上和歌山大会が開催されました。<BR>
+ヘンプヒル選手が女子七種競技で5678点の日本ジュニア新記録を樹立しました！<BR>
+競技結果は競技会・ランキング検索よりご覧ください。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20150404.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2015/4/4</td>
+  </tr>
+  <tr><th align="left">第77回　シンガポールオープン陸上</th>
+   <td>シンガポール</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+アスリートランキングドットコムの新機能として、標記大会の競歩歩型違反表示システムが運用されました。<BR>
+携帯端末を使って即時に警告表示。今後、国内の大会にもリリースされる予定です。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20140907.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2014/9/6-7</td>
+  </tr>
+  <tr><th align="left">紀の国わかやま国体陸上競技リハーサル大会</th>
+   <td>和歌山・紀三井寺陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+紀の国わかやま国体陸上競技リハーサル大会。第82回回近畿陸上競技選手権大会が開催されました。<BR>
+競技結果は競技会予定・結果よりご覧ください。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athlete20140807.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2014/8/6-7</td>
+  </tr>
+  <tr><th align="left">第63回近畿中学校総合体育大会陸上競技大会</th>
+   <td>兵庫・神戸総合運動公園陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+第63回近畿中学校総合体育大会陸上競技大会が開催されました。<BR>
+全日本中学を前に、近畿地区の中学生によるハイレベルなレースが続出。<BR>
+競技結果は競技会予定・結果よりご覧ください。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athle_140621.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2014/6/19-22</td>
+  </tr>
+  <tr><th align="left">全国高校総体近畿地区予選会</th>
+   <td>京都・西京極陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+第67回全国高等学校陸上競技対校選手権大会近畿地区予選会が開催されました。<BR>
+高校生の熱い夏。ハイレベルな戦いが繰り広げられました。<BR>
+競技結果は競技会予定・結果よりご覧ください。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athle20140427.jpg" alt="" border="1"></th>
+   <td colspan="2" align="left">2014/4/26-27</td>
+  </tr>
+  <tr><th align="left">日本選抜陸上和歌山大会</th>
+   <td>和歌山・紀三井寺陸上競技場</td>
+  </tr>
+  <tr><td colspan="2" align="left">
+アジア競技大会の代表選考会を兼ねて
+２０１４年日本グランプリシリーズの第２戦　<BR>日本選抜陸上和歌山大会が開催されました。<BR>
+右代選手が男子十種競技で8143点の日本新記録を樹立しました！<BR>
+競技結果は競技会・ランキング検索よりご覧ください。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+<!--ここから-->
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+
+ <table class="topics">
+  <tr><th rowspan="3" width="210"><img src="image/athle_0708.jpg" alt="大会運営のタイム計測SEIKO" border="1"></th>
+   <td colspan="2" align="left">2014/3/5</td>
+  </tr>
+  <tr><th align="left">ＳＥＩＫＯがＩＡＡＦの公式パートナー契約を延長!</th>
+   <td></td>
+  </tr>
+  <tr><td colspan="2" align="left">
+1985年より国際陸上競技連盟（IAAF）と28年間に渡ってパートナーシップを続けてきたＳＥＩＫＯ（セイコーホールディングス）は、
+IAAF主催大会のオフィシャルタイマーを6年間、契約延長いたしました。
+契約期間（2014年〜2019年）には、3回の世界陸上（2015:北京、2017:ロンドン、2019:開催地未定）を含む計25大会の開催が予定されています。
+（<A HREF="http://www.seiko.co.jp/news/pressrelease/detail.php?id=2014030422125101" TARGET="_blank">関連記事</A>）<BR><BR>
+
+「アスリートランキングドットコム」は
+ＳＥＩＫＯスポーツ時計事業会社のセイコータイムクリエーション社とフィールドハウス社の共同運営にて
+サービス提供されています。
+   </td>
+  </tr>
+ </table>
+<!--ここまで-->
+
+<div class="ns"><img src="image/h1_border.gif" alt="" style="width:750px;height:1px;"></div>
+
+
+<!-- InstanceEndEditable -->
+</div>
+
+<div class="foot">
+｜ <a href="http://games.athleteranking.com/corporate.php">会社概要</a> ｜ <a href="http://games.athleteranking.com/rule.php">利用規約</a> ｜ <a href="http://games.athleteranking.com/privacy.php">個人情報保護</a> ｜
+<br>
+(C) AthleteRanking.com  -  All Rights Reserved.
+</div>
+</div>
+
+<div id="adbody" style="background-color:#bde9ba; width:120px; height:450px;">
+<!--<A HREF="http://www.athletepit.com/welcome.php" target="_blank"><img src="https://lolipop-dp37133071.ssl-lolipop.jp/athletepit/ad.png"></A>-->
+<A HREF="http://www.athletepit.com/welcome.php" target="_blank"><img src="https://lolipop-dp37133071.ssl-lolipop.jp/athletepit/ad.gif"></A>
+
+</div>
+
+</body>
+<!-- InstanceEnd --></html>

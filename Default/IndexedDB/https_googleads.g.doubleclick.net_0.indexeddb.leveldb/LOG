@@ -1,0 +1,6 @@
+2022/07/17-23:10:19.512 37d8 Creating DB C:\Users\kakat\athleate\Default\IndexedDB\https_googleads.g.doubleclick.net_0.indexeddb.leveldb since it was missing.
+2022/07/17-23:10:19.530 37d8 Reusing MANIFEST C:\Users\kakat\athleate\Default\IndexedDB\https_googleads.g.doubleclick.net_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/17-23:11:08.210 1770 Level-0 table #5: started
+2022/07/17-23:11:08.220 1770 Level-0 table #5: 405 bytes OK
+2022/07/17-23:11:08.226 1770 Delete type=0 #3
+2022/07/17-23:11:08.227 1770 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

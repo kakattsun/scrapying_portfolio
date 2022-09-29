@@ -1,0 +1,1980 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+
+var game_ope_mode = 1;
+
+var advance_check_flag = 0;
+ 
+
+
+
+function button_click(var_x,var_y)
+{
+	if( var_x != 2 )
+		var change_flag = is_change();
+	else if( var_x == 1 && var_y == 1 )
+		var change_flag = false;
+
+	document.form_main.target = "";
+	document.form_main.P_submit_sub.value = "";
+	document.form_main.P_submit_value.value = "";
+	switch(var_x){
+		case 9999:
+			document.form_main.action = "../error.php";
+			break;
+		case 'back': //戻る
+		case 99: //戻る
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(99,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0015_racelist.php";
+			break;
+		case 1: //記録入力
+			if( change_flag == true )
+			{
+				if( confirm('更新して表示しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(1,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに表示しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0020_recinput.php";
+			break;
+		case 2: //記録入力：更新処理
+			if( postdata_check() == false )
+				return false;
+			if( var_y == 0 )
+				document.form_main.P_submit_onload.value = "";
+
+			document.form_main.P_rec_delete.value = 0;
+
+			var key_event = window.event;
+
+			if(key_event.ctrlKey)
+			{
+				if( confirm('このレースの情報を初期化してもよろしいでしょうか？') == true )
+				{
+					document.form_main.P_rec_delete.value = 1;
+				}
+				else
+				{
+					return false;
+				}
+			}
+
+			document.form_main.P_submit_value.value = "REGIST RESULT_TABLE REC";
+			document.form_main.action = "./0020_recinput.php";
+			break;
+		case 3: //
+				return false;
+			break;
+		case 4: //記録入力：状態変更
+			if( change_flag == true )
+			{
+				if( confirm('画面の内容を変更しています。更新しますか？\nキャンセルすると変更内容を更新せずに処理します。') == true )
+				{
+					button_click(2,1);
+					return false;
+				}
+			}
+			document.form_main.P_submit_value.value = "REGIST RESULT_TABLE STATUS";
+			document.form_main.P_submit_onload.value = "";
+
+			switch(var_y)
+			{
+				case 1:
+					document.form_main.P_set_status.value = 3.6;
+					break;
+				case 2:
+					document.form_main.P_set_status.value = 4.0;
+					break;
+				case 3:
+					document.form_main.P_set_status.value = 6.0;
+					break;
+				case 4:
+					document.form_main.P_set_status.value = 7.0;
+					break;
+			}
+
+
+			document.form_main.action = "./0020_recinput.php";
+			break;
+		case 5: //選手情報変更画面に移動
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(5," + var_y + ");";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_select_athlete_id.value = var_y;
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0024_athleteedit.php";
+			break;
+		case 6: //設定記録
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(6,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.target = "ARV2_WINDOW";
+			document.form_main.action = "../comp/baserecord.php";
+
+
+
+			break;
+		case 7: //試技入力画面に移動
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(7,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0021_attemptinput.php";
+			break;
+		case 8: //記録入力：進出
+
+			if( var_y == 1 )
+				return false;
+
+
+
+			if( change_flag == true )
+			{
+				if( confirm('画面の内容を変更しています。更新しますか？\nキャンセルすると変更内容を更新せずに処理します。') == true )
+				{
+					button_click(2,1);
+					return false;
+				}
+			}
+
+/*
+			if( var_y == 1 )
+			{
+				document.form_main.P_submit_sub.value = "FORCE MODE";
+			}
+			else
+			{
+				if( confirm('進出させますか？') == false )
+					return false;
+			}
+*/
+			if(var_y == 0)
+			{
+				if( confirm('進出させますか？') == false )
+					return false;
+			}
+
+
+			document.form_main.P_submit_value.value = "REGIST RESULT_TABLE ADVANCE";
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0020_recinput.php";
+			break;
+		case 9: //途中入力画面に移動
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(9,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.action = "./0021_attemptinput_mid.php";
+
+			break;
+		case 10: //試技毎入力画面に移動
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(10,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0021_attemptinput_each.php";
+			break;
+		case 11: //レースナンバー更新処理
+
+	
+			if( var_y == 0 )
+				document.form_main.P_submit_onload.value = "";
+			document.form_main.P_submit_value.value = "REGIST RESULT_TABLE RACENUMBER";
+			document.form_main.action = "./0020_recinput.php";
+			break;
+
+		case 12: //単独画面に移動
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(9,0);";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.action = "./0021_attemptinput_alone.php";
+			break;
+		case 13: //昇順画面に移動
+			document.form_main.target = "_blank";
+			document.form_main.action = "./0021_attemptinput_asc.php";
+			break;
+
+		case 14: //記録入力：簡単状態変更
+			if( change_flag == true )
+			{
+				if( confirm('画面の内容を変更しています。更新しますか？\nキャンセルすると変更内容を更新せずに処理します。') == true )
+				{
+					button_click(2,1);
+					return false;
+				}
+			}
+			document.form_main.P_submit_value.value = "REGIST RESULT_TABLE STATUS";
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.P_set_status.value = var_y;
+			document.form_main.action = "./0020_recinput.php";
+			break;
+
+		case 15: //駅伝入力に移動
+			document.form_main.action = "./0021_attemptinput_ekiden.php";
+			break;
+
+		case 16: //チーム情報変更画面に移動
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_submit_onload.value = "button_click(16," + var_y + ");";
+					button_click(2,1);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_select_result_id.value = var_y;
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "./0040_groupedit.php";
+			break;
+
+		case 17: //得点入力画面に移動
+			document.form_main.target = "_blank";
+			document.form_main.action = "./0020_pointinput.php";
+			break;
+
+		default:
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+function change_page_type(pageval)
+{
+	switch(Number(pageval))
+	{
+		case 0:
+			button_click(1,0);
+			break;
+		case 1:
+			button_click(7,0);
+			break;
+	}
+}
+function postdata_check()
+{
+	return true;
+}
+var form_element = new Array('P_rank[]','P_rec_str[]','P_wind[]','P_official[]','P_advance[]','P_new_string[]','P_point_rank[]','P_memo[]');
+function is_change()
+{
+	
+	// 指定フォーム要素対象版
+	var cnt = form_element.length;
+	for(var i=0;i<cnt;i++)
+	{
+		if( document.form_main.elements[form_element[i]] )
+		{
+			var frm = document.form_main.elements[form_element[i]];
+
+			var tmptag = document.getElementsByName( form_element[i] ) ;
+
+
+			if( frm.length > 1 )
+			{
+				for(var j=0;j<frm.length;j++)
+				{
+					if( frm[j].tagName == "INPUT" )
+					{
+						if( frm[j].getAttribute("type") == "text" && frm[j].value != frm[j].defaultValue )
+						{
+							return true; // 変更あり
+						}
+						else if( frm[j].getAttribute("type") == "checkbox" && frm[j].checked != frm[j].defaultChecked )
+							return true; // 変更あり
+						else if( frm[j].getAttribute("type") == "radio" && frm[j].checked != frm[j].defaultChecked )
+							return true; // 変更あり
+					}
+					else if( frm[j].tagName == "SELECT" && frm[j].options[frm[j].selectedIndex].defaultSelected == false )
+					{
+						return true; // 変更あり
+					}
+					else if( frm[j].tagName == "TEXTAREA" && frm[j].value != frm[j].defaultValue )
+						return true; // 変更あり
+				}
+			}
+			else
+			{
+
+				if( frm.tagName == "INPUT" )
+				{
+					if( frm.getAttribute("type") == "text" && frm.value != frm.defaultValue )
+					{
+						return true; // 変更あり
+					}
+					else if( frm.getAttribute("type") == "checkbox" && frm.checked != frm.defaultChecked )
+						return true; // 変更あり
+					else if( frm.getAttribute("type") == "radio" && frm.checked != frm.defaultChecked )
+						return true; // 変更あり
+				}
+				else if( frm.tagName == "SELECT" && frm.options[frm.selectedIndex].defaultSelected == false )
+				{
+					return true; // 変更あり
+				}
+				else if( frm.tagName == "TEXTAREA" && frm.value != frm.defaultValue )
+					return true; // 変更あり
+			}
+		}
+	}
+	return false;
+}
+
+function message_timer()
+{
+return;
+	setTimeout( hide_message, 3000 );
+}
+function hide_message()
+{
+	document.getElementById('id_message_box').style.display = 'none';
+	document.getElementById('id_message_button').style.display = '';
+}
+function open_slit_list()
+{
+	document.form_main.target = "SLIT_WINDOW";
+	document.form_main.action = "./0020_slitlist.php";
+	document.form_main.submit();
+	document.form_main.target = "";
+	return false;
+}
+function ajax_mod(mode)
+{
+	var stadium_id1 = document.getElementById('id_stadium').value;
+	var stadium_id2 = '17';
+	var stadium_id3 = 0;
+
+	if(parseInt(stadium_id1, 10) > 0)
+		stadium_id3 = parseInt(stadium_id1, 10);
+	else
+		stadium_id3 = stadium_id2;
+
+
+	var poststr = '';
+	var val1 = document.form_main.P_SESSION_KEY.value;
+	var val2 = document.form_main.P_SESSION_VALUE.value;
+
+	poststr = encodeURIComponent("P_SESSION_KEY") + "=" + encodeURIComponent(val1);
+	poststr += "&" + encodeURIComponent("P_SESSION_VALUE") + "=" + encodeURIComponent(val2);
+	switch(mode)
+	{
+		case 'race prev':
+		case 'race next':
+			poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent('MOVE GAME_RACE');
+			poststr += "&" + encodeURIComponent("game_num") + "=" + encodeURIComponent('ay022022013');
+			poststr += "&" + encodeURIComponent("sel_game_race_id") + "=" + encodeURIComponent('1469454');
+
+			if(document.getElementById('id_multi').checked == true)
+				poststr += "&" + encodeURIComponent("multi") + "=" + encodeURIComponent('1');
+			else
+				poststr += "&" + encodeURIComponent("multi") + "=" + encodeURIComponent('0');
+
+			if( mode == 'race prev' )
+				poststr += "&" + encodeURIComponent("prev_next") + "=0";
+			else
+				poststr += "&" + encodeURIComponent("prev_next") + "=1";
+			poststr += "&" + encodeURIComponent("race_group") + "=" + encodeURIComponent('1');
+			break;
+		case 1:
+			poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent('GET NEW ARRIVAL DATA_TIMER');
+			poststr += "&" + encodeURIComponent("userid") + "=" + encodeURIComponent('ay02');
+			poststr += "&" + encodeURIComponent("data_place") + "=" + encodeURIComponent(stadium_id3);
+			poststr += "&" + encodeURIComponent("data_type") + "=" + encodeURIComponent(0);
+			break;
+		case 2:
+			poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent('GET DATA_TIMER LIST');
+			poststr += "&" + encodeURIComponent("userid") + "=" + encodeURIComponent('ay02');
+			poststr += "&" + encodeURIComponent("data_place") + "=" + encodeURIComponent(stadium_id3);
+			poststr += "&" + encodeURIComponent("data_type") + "=" + encodeURIComponent(0);
+			var val3 = document.form_main.P_slit_order_number.value;
+			poststr += "&" + encodeURIComponent("order_number") + "=" + encodeURIComponent(val3);
+			var val4 = document.form_main.P_slit_time_date.value;
+			poststr += "&" + encodeURIComponent("time_date") + "=" + encodeURIComponent(val4);
+			var val5 = document.form_main.P_slit_check_flag.value;
+			poststr += "&" + encodeURIComponent("check_flag") + "=" + encodeURIComponent(val5);
+			break;
+		case 3:
+			poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent('GET RACE STAMPTIME');
+			poststr += "&" + encodeURIComponent("game_num") + "=" + encodeURIComponent('ay022022013');
+			poststr += "&" + encodeURIComponent("sel_game_race_id") + "=" + encodeURIComponent('1469454');
+			poststr += "&" + encodeURIComponent("stamptime") + "=" + encodeURIComponent('2022-06-23 12:16:08.305472');
+			break;
+	}
+	var xmlhttp1 = this.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+	xmlhttp1.onreadystatechange = function()
+	{
+		if( xmlhttp1.readyState == 4 )
+		{
+			if( xmlhttp1.status == 200 )
+			{
+				var result = xmlhttp1.responseText;
+
+				try {
+					var json_obj = JSON.parse(result);
+				} catch(e) {
+					var json_obj = false;
+				}
+
+				if( json_obj )
+				{
+					//if(console && console.log) { console.log(json_obj); };
+					switch(json_obj["status"])
+					{
+						case "OK":
+							try {
+								if( json_obj["result"] == 'Complete' )
+								{
+									ajax_receive(json_obj,mode);
+								}
+								else if( json_obj["result"] != 'NoAlertMessage' )
+								{
+									alert('該当データ無し');
+								}
+								else if( json_obj["result"] == 'NoAlertMessage' )
+								{
+									if(mode == 1)
+									{
+											document.getElementById('id_slit_time').innerHTML = "取得時間";
+											document.getElementById('id_slit_count').innerHTML = "件数";
+											document.getElementById('id_slit_record').innerHTML = "先頭ﾀｲﾑ";
+									}
+								}
+
+							} catch(e) {
+								alert('データ通信エラー');
+							}
+							break;
+						case "NoAlertMessage":
+							break;
+						default:
+							alert('データ通信エラー');
+							break;
+					}
+				}
+				else
+				{
+					alert('データ通信エラー');
+				}
+			}
+
+			switch(mode)
+			{
+				case 'race prev':
+				case 'race next':
+					on_timer_slit = 0;
+					on_timer_race = 0;
+					break;
+				case 1:
+					setTimeout('slit_timer()',3000);
+					break;
+				case 2:
+					on_timer_slit = 1;
+					break;
+				case 3:
+					setTimeout('race_timer()',5000);
+					break;
+			}
+		}
+	}
+	xmlhttp1.open("POST", "./0002_ajaxreceive.php", true);
+	xmlhttp1.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	xmlhttp1.send(poststr.replace(/%20/g,'+'));
+}
+
+function advance_check()
+{
+
+	advance_check_flag = 0;
+
+	var error_flag = 0;
+
+	var poststr = '';
+	var val1 = document.form_main.P_SESSION_KEY.value;
+	var val2 = document.form_main.P_SESSION_VALUE.value;
+
+	poststr = encodeURIComponent("P_SESSION_KEY") + "=" + encodeURIComponent(val1);
+	poststr += "&" + encodeURIComponent("P_SESSION_VALUE") + "=" + encodeURIComponent(val2);
+	poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent('REGIST RESULT_TABLE ADVANCE CHECK');
+	poststr += "&" + encodeURIComponent("P_select_game_race_id") + "=" + encodeURIComponent('1469454');
+	poststr += "&" + encodeURIComponent("P_select_game_table_id") + "=" + encodeURIComponent('5539');
+
+	var xmlhttp1 = this.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+	xmlhttp1.onreadystatechange = function()
+	{
+		if( xmlhttp1.readyState == 4 )
+		{
+			if( xmlhttp1.status == 200 )
+			{
+				var result = xmlhttp1.responseText;
+
+//				alert(result);
+
+				try {
+					var json_obj = JSON.parse(result);
+				} catch(e) {
+					var json_obj = false;
+				}
+
+				if( json_obj )
+				{
+					//if(console && console.log) { console.log(json_obj); };
+					switch(json_obj["status"])
+					{
+						case "OK":
+							try {
+								if( json_obj["result"] == 'Complete' )
+								{
+									if(json_obj["safe"] != '')
+									{
+										if( confirm(json_obj["safe"].replace(/<br>/g, '\n') + " \nそのまま進出させますか？") == true )
+										{
+											button_click(8,2);
+										}
+										else
+										{
+											button_click(8,1);
+										}
+									}
+									else if(json_obj["error"] != '')
+									{
+										alert(json_obj["error"].replace(/<br>/g, '\n'));
+										button_click(8,1);
+									}
+									else
+										button_click(8,0);
+
+
+								}
+								else if( json_obj["result"] != 'NoAlertMessage' )
+								{
+									alert('該当データ無し');
+								}
+							} catch(e) {
+								alert('データ通信エラー');
+							}
+							break;
+						case "NoAlertMessage":
+							break;
+						default:
+							alert('データ通信エラー');
+							break;
+					}
+				}
+				else
+				{
+					alert('データ通信エラー');
+				}
+			}
+
+		}
+	}
+	xmlhttp1.open("POST", "./0020_recinput.php", true);
+	xmlhttp1.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	xmlhttp1.send(poststr.replace(/%20/g,'+'));
+
+}
+
+
+var g_slit_ord_num = 0; //スリットオーダー番号
+var g_slit_ord_date = ""; //スリット取得日
+function ajax_receive(json_obj,mode)
+{
+	switch(mode)
+	{
+		case 'race prev':
+		case 'race next':
+			if( Number(json_obj["race_id"]) > 0 )
+			{
+				document.form_main.P_select_game_race_id.value = json_obj['race_id'];
+				button_click(1,0);
+			}
+			else
+				return false;
+			break;
+		case 1:
+			if( on_timer_slit == 1 )
+			{
+				document.getElementById('id_slit_time').innerHTML = json_obj['time_time'];
+				document.getElementById('id_slit_count').innerHTML = json_obj['time_count'];
+				document.getElementById('id_slit_record').innerHTML = json_obj['rec_string'];
+				g_slit_ord_num = json_obj['order_number'];
+				g_slit_ord_date = json_obj['time_date'];
+			}
+			break;
+		case 2:
+
+			var cnt = json_obj['timer']['id'].length;
+
+			var r_cnt = 20;
+			var lane = new Array('1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','');
+			var numbercard = new Array('265','61689','381','155','577','1020','1024','1007','379','1043','266','60395','231','61382','495','1018','61676','1151','143','153','');
+
+			var lane_cnt = 0;
+			var numb_cnt = 0;
+			for(i=0;i<cnt;i++)
+			{
+				for(j=0;j<r_cnt;j++)
+				{
+					if( json_obj['timer']['target'][i] == lane[j] )
+						lane_cnt++;
+					if( json_obj['timer']['target'][i] == numbercard[j] )
+						numb_cnt++;
+				}
+			}
+
+			if(lane_cnt > 0 || numb_cnt > 0)
+			{
+				for(j=0;j<r_cnt;j++)
+				{
+					document.getElementById('id_rank_' + j).value = "";
+					document.getElementById('id_rec_' + j).value = "";
+				}
+			}
+			else
+			{
+				return false;
+			}
+
+
+			for(i=0;i<cnt;i++)
+			{
+				for(j=0;j<r_cnt;j++)
+				{
+					if( ( lane_cnt >= numb_cnt && json_obj['timer']['target'][i] == lane[j] )
+					 || ( lane_cnt < numb_cnt && json_obj['timer']['target'][i] == numbercard[j] ) )
+					{
+						document.getElementById('id_rank_' + j).value = json_obj['timer']['rank'][i];
+						document.getElementById('id_rec_' + j).value = json_obj['timer']['rec_string'][i];
+	
+					}
+				}
+			}
+			document.form_main.P_slit_set_flag.value = 1;
+			break;
+		case 3:
+			if( json_obj["update_flag"] == 'CHANGED' )
+			{
+				on_timer_race = 0;
+				var change_flag = is_change();
+				if( change_flag == true )
+					alert('データの更新がありました。画面を最新にします。');
+				button_click(1,1);
+			}
+			break;
+	}
+}
+var on_timer_slit = 1;
+function slit_timer()
+{
+	if( on_timer_slit == 1 )
+	{
+		ajax_mod(1);
+	}
+}
+function set_slit_data()
+{
+	on_timer_slit = 0;
+	document.form_main.P_slit_order_number.value = g_slit_ord_num;
+	document.form_main.P_slit_time_date.value = g_slit_ord_date;
+	slit_order_number = document.form_main.P_slit_order_number.value;
+	document.form_main.P_slit_check_flag.value = 0;
+	if( Number(slit_order_number) > 0 )
+	{
+		ajax_mod(2);
+	}
+}
+var on_timer_race = 1;
+function race_timer()
+{
+	if( on_timer_race == 1 )
+	{
+		ajax_mod(3);
+	}
+}
+function move_race(prev_next)
+{
+	on_timer_slit = 0;
+	on_timer_race = 0;
+	if( prev_next == 0 )
+		ajax_mod('race prev');
+	else
+		ajax_mod('race next');
+}
+
+
+function print_button_click_excel(print_system,e_comb,e_code,status,idid,race,min_status,round_id)
+{
+
+	document.getElementById('id_dialogbox_print_job_excel').style.display = '';
+	document.getElementById('id_print_type_excel').style.display = '';
+	document.getElementById('id_print_button_excel').style.display = 'none';
+
+	document.form_main.idid.value = idid;
+	document.form_main.print_race.value = race;
+
+
+
+
+	var startlist = document.getElementById('id_startlist_excel');
+	var resultlist = document.getElementById('id_resultlist_excel');
+	var resulttotal = document.getElementById('id_resulttotal_excel');
+	var resultgroup = document.getElementById('id_resultgroup_excel');
+	var resultplus = document.getElementById('id_resultplus_excel');
+	var combtotal = document.getElementById('id_combtotal_excel');
+	var startfield = document.getElementById('id_startfield_excel');
+	var resultfield = document.getElementById('id_resultfield_excel');
+	var ekidentotal = document.getElementById('id_ekidentotal_excel');
+	var award = document.getElementById('id_award_excel');
+
+	resulttotal.className="printButton backGrayC width120 paddingL25";
+	resultgroup.className="printButton backGrayC width120 paddingL25";
+	resultplus.className="printButton backGrayC width120 paddingL25";
+	combtotal.className="printButton backGrayC width120 paddingL25";
+	startfield.className="printButton backGrayC width120 paddingL25";
+	resultfield.className="printButton backGrayC width120 paddingL25";
+	ekidentotal.className="printButton backGrayC width120 paddingL25";
+	award.className="printButton backGrayC width120 paddingL25";
+
+	resulttotal.onclick=function(){return false;}
+	resultgroup.onclick=function(){return false;}
+	resultplus.onclick=function(){return false;}
+
+	combtotal.onclick=function(){return false;}
+	startfield.onclick=function(){return false;}
+	resultfield.onclick=function(){return false;}
+	ekidentotal.onclick=function(){return false;}
+	award.onclick=function(){return false;}
+
+
+
+/*
+	var select_print_type = document.getElementById('id_select_print_type_excel');
+
+	select_print_type.style.display = '';
+
+	var option = document.createElement('option');
+	var deloptions = select_print_type.options
+
+	for (var i = deloptions.length - 1; 0 <= i; --i) {
+		select_print_type.removeChild(deloptions[i]);
+	}
+*/
+
+	if(status >= 6 || game_ope_mode == 1)
+	{
+		resultlist.className="printButton backDGreen width120 paddingL25";
+//		resultgroup.className="printButton backDGreen width120 paddingL25";
+
+		resultlist.onclick=function(){print_button_excel(print_system,2);}
+//		resultgroup.onclick=function(){print_button_excel(print_system,7);}
+		if( min_status >= 6  || game_ope_mode == 1)
+		{
+			resulttotal.className="printButton backDGreen width120 paddingL25";
+			resulttotal.onclick=function(){print_button_excel(print_system,6);}
+		}
+		else
+		{
+			resulttotal.className="printButton backGrayC width120 paddingL25";
+			resulttotal.onclick=function(){return false;}
+		}
+
+		if(e_code.substr(0,1) == 'A' )
+		{
+			resultgroup.className="printButton backDGreen width120 paddingL25";
+			resultgroup.onclick=function(){print_button_excel(print_system,7);}
+
+		}
+		else
+		{
+			resultgroup.className="printButton backGrayC width120 paddingL25";
+			resultgroup.onclick=function(){return false;}
+
+		}
+
+		if(e_code.substr(0,1) == 'T' )
+		{
+			ekidentotal.className="printButton backDGreen width120 paddingL25";
+			ekidentotal.onclick=function(){print_button_excel(print_system,9);}
+
+		}
+
+		if(round_id > 1)
+		{
+			resultplus.className="printButton backDGreen width120 paddingL25";
+			resultplus.onclick=function(){print_button_excel(print_system,8);}
+		}
+
+	}
+	else
+	{
+		resultlist.className="printButton backGrayC width120 paddingL25";
+		resulttotal.className="printButton backGrayC width120 paddingL25";
+		resultgroup.className="printButton backGrayC width120 paddingL25";
+
+		resultlist.onclick=function(){return false;}
+		resulttotal.onclick=function(){return false;}
+		resultgroup.onclick=function(){return false;}
+
+
+	}
+
+	if(e_code.substr(0,1) == 'F')
+	{
+		startfield.className="printButton backDGreen width120 paddingL25";
+		startfield.onclick=function(){print_button_excel(print_system,1);}
+
+		if(status >= 6  || game_ope_mode == 1)
+		{
+			resultfield.className="printButton backDGreen width120 paddingL25";
+			resultfield.onclick=function(){print_button_excel(print_system,5);}
+
+		}
+	}
+
+	if(e_comb > 0 && (status >= 6  || game_ope_mode == 1 ) )
+	{
+		combtotal.className="printButton backDGreen width120 paddingL25";
+		combtotal.onclick=function(){print_button_excel(print_system,4);}
+	}
+
+
+
+}
+
+function print_button_excel(print_system,id_value)
+{
+//	var obj = document.getElementById('id_select_print_type_excel');
+//	var i = obj.selectedIndex;
+//	var text_value = obj.options[i].text;
+//	var id_value = obj.options[i].value;
+
+
+	document.form_main.target = "ARV2_WINDOW";
+
+	if(print_system == 1)
+	{
+		document.form_main.submit_kbn.value = "EXCEL";
+	}
+	else
+	{
+		document.form_main.submit_kbn.value = "HTML";
+
+	}
+
+	switch(parseInt(id_value)){
+
+		case 0: //スタートリスト
+			document.form_main.sel_field.value = 0;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "start";
+
+			break;
+		case 1: //フィールド記録用紙
+			document.form_main.sel_field.value = 1;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "start";
+
+			break;
+		case 2: //ﾘｻﾞﾙﾄﾘｽﾄ
+			document.form_main.sel_field.value = 0;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "result";
+
+			break;
+		case 4: //混成
+			document.form_main.sel_field.value = 2;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "result";
+
+			break;
+		case 5: //フィールドリザルト
+			document.form_main.sel_field.value = 1;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "result";
+
+			break;
+		case 6: //総合
+			document.form_main.sel_field.value = 1;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "total";
+
+			break;
+		case 7: //団体
+			jun=prompt("対象人数-表示人数を入力してください。ex. 3人まで対象、5人分表示 -> 3-5","3-3");
+			if(jun == "")
+				rerurn;
+
+			//ハイフォン区切りで２個の数字でなければエラー
+			jun2 = jun.split("-");
+			if(jun2.length != 2)
+				return;
+
+			if((isNaN(jun2[0])==true)||(isNaN(jun2[1])==true))
+				return;
+
+			document.form_main.team_target1.value = jun2[0];
+			document.form_main.team_target2.value = jun2[1];
+
+			document.form_main.submit_option.value = 2;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "team";
+			document.form_main.print_race.value = "";
+
+			break;
+
+		case 8: //プラス
+			document.form_main.sel_field.value = 0;
+			document.form_main.action = "../comp/resultlist_taf.php";
+			document.form_main.start_result.value = "plus";
+
+			break;
+		case 9: //駅伝総合
+			document.form_main.sel_field.value = 0;
+			document.form_main.action = "../comp/recattempt_print.php";
+			document.form_main.start_result.value = "result";
+
+			break;
+
+
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+
+	document.getElementById('id_dialogbox_print_job_excel').style.display = 'none';
+	return false;
+}
+
+
+var print_post_ = '';
+function print_button_click(mode,idid,race,min_status)
+{
+
+
+	var key_event = window.event;
+
+	if(key_event.ctrlKey)
+	{
+
+
+		var e_comb = 0;
+		var e_code = "A1500";
+		var round_id = 1;
+
+		print_button_click_excel(0,e_comb,e_code,status,idid,race,min_status,round_id);
+
+		return false;
+	}
+
+	document.getElementById('id_print_button').style.display = '';
+	document.getElementById('id_print_race_box').style.display = '';
+
+	print_post_data = encodeURIComponent("userid") + "=" + encodeURIComponent('ay02');
+	print_post_data += "&" + encodeURIComponent("game_num") + "=" + encodeURIComponent('ay022022013');
+	print_post_data += "&" + encodeURIComponent("stadium_id") + "=" + encodeURIComponent('17');
+	print_post_data += "&" + encodeURIComponent("print_terminal_id") + "=" + encodeURIComponent(document.getElementById('id_select_print_terminal').value);
+	//print_post_data += "&" + encodeURIComponent("print_style") + "=" + encodeURIComponent(60);
+	print_post_data += "&" + encodeURIComponent("sex") + "=" + encodeURIComponent('1');
+	print_post_data += "&" + encodeURIComponent("e_class") + "=" + encodeURIComponent('0');
+	print_post_data += "&" + encodeURIComponent("e_comb") + "=" + encodeURIComponent('0');
+	print_post_data += "&" + encodeURIComponent("e_code") + "=" + encodeURIComponent('A1500');
+	print_post_data += "&" + encodeURIComponent("round_id") + "=" + encodeURIComponent('1');
+	print_post_data += "&" + encodeURIComponent("race_start") + "=" + encodeURIComponent('1');
+	print_post_data += "&" + encodeURIComponent("race_end") + "=" + encodeURIComponent('1');
+
+	print_job_click();
+
+	var e_comb = 0;
+	var e_code = "A1500";
+	var status = 2;
+	var min_status = 2;
+
+	var select_race = 1 + "-" + 1 ;
+
+	var round_id = 1;
+
+
+	print_type(e_comb,e_code,status,min_status,select_race,round_id);
+
+
+}
+function print_job_post()
+{
+	return print_post_data;
+}
+
+function print_type(e_comb,e_code,status,min_status,select_race,round_id)
+{
+
+
+	document.getElementById('id_print_type').style.display = '';
+	document.getElementById('id_print_button').style.display = 'none';
+	document.getElementById('id_print_select_race').value = select_race;
+
+
+
+	var startlist = document.getElementById('id_startlist');
+	var resultlist = document.getElementById('id_resultlist');
+	var resulttotal = document.getElementById('id_resulttotal');
+	var resultgroup = document.getElementById('id_resultgroup');
+	var resultplus = document.getElementById('id_resultplus');
+
+
+	var combtotal = document.getElementById('id_combtotal');
+	var combresult = document.getElementById('id_combresult');
+	var startfield = document.getElementById('id_startfield');
+	var resultfield = document.getElementById('id_resultfield');
+	var ekidentotal = document.getElementById('id_ekidentotal');
+	var award = document.getElementById('id_award');
+
+	resulttotal.className="printButton backGrayC width120 paddingL25";
+	resultgroup.className="printButton backGrayC width120 paddingL25";
+	resultplus.className="printButton backGrayC width120 paddingL25";
+
+	combtotal.className="printButton backGrayC width120 paddingL25";
+	combresult.className="printButton backGrayC width120 paddingL25";
+	startfield.className="printButton backGrayC width120 paddingL25";
+	resultfield.className="printButton backGrayC width120 paddingL25";
+	ekidentotal.className="printButton backGrayC width120 paddingL25";
+	award.className="printButton backGrayC width120 paddingL25";
+
+	resulttotal.onclick=function(){return false;}
+	resultgroup.onclick=function(){return false;}
+	resultplus.onclick=function(){return false;}
+
+	combtotal.onclick=function(){return false;}
+	combresult.onclick=function(){return false;}
+	startfield.onclick=function(){return false;}
+	resultfield.onclick=function(){return false;}
+	ekidentotal.onclick=function(){return false;}
+	award.onclick=function(){return false;}
+
+	if(status >= 6  || game_ope_mode == 1)
+	{
+
+		resultlist.className="printButton backDGreen width120 paddingL25";
+		resultgroup.className="printButton backGrayC width120 paddingL25";
+
+		resultlist.onclick=function(){print_job_create_click(60);}
+		resultgroup.onclick=function(){return false;}
+
+		award.className="printButton backDGreen width120 paddingL25";
+		award.onclick=function(){print_job_create_click(63);}
+
+
+		if( min_status >= 6  || game_ope_mode == 1)
+		{
+			resulttotal.className="printButton backDGreen width120 paddingL25";
+			resulttotal.onclick=function(){print_job_create_click(61);}
+		}
+		else
+		{
+			resulttotal.className="printButton backGrayC width120 paddingL25";
+			resulttotal.onclick=function(){return false;}
+		}
+
+		if(e_code.substr(0,1) == 'T' )
+		{
+			ekidentotal.className="printButton backDGreen width120 paddingL25";
+			ekidentotal.onclick=function(){print_job_create_click(192);}
+
+		}
+
+
+		if(round_id > 1)
+		{
+			resultplus.className="printButton backDGreen width120 paddingL25";
+			resultplus.onclick=function(){print_job_create_click(70);}
+		}
+	}
+	else
+	{
+
+		resultlist.className="printButton backGrayC width120 paddingL25";
+		resulttotal.className="printButton backGrayC width120 paddingL25";
+		resultgroup.className="printButton backGrayC width120 paddingL25";
+		award.className="printButton backGrayC width120 paddingL25";
+
+		resultlist.onclick=function(){return false;}
+		resulttotal.onclick=function(){return false;}
+		resultgroup.onclick=function(){return false;}
+		award.onclick=function(){return false;}
+
+
+	}
+
+
+	if(e_code.substr(0,3) == 'FJH')
+	{
+		startfield.className="printButton backDGreen width120 paddingL25";
+		startfield.onclick=function(){print_job_create_click(40);}
+
+		if(status >= 6  || game_ope_mode == 1)
+		{
+			resultfield.className="printButton backDGreen width120 paddingL25";
+			resultfield.onclick=function(){print_job_create_click(41);}
+		}
+	}
+	else if(e_code.substr(0,2) == 'FJ')
+	{
+		startfield.className="printButton backDGreen width120 paddingL25";
+		startfield.onclick=function(){print_job_create_click(42);}
+		if(status >= 6 || game_ope_mode == 1)
+		{
+			resultfield.className="printButton backDGreen width120 paddingL25";
+			resultfield.onclick=function(){print_job_create_click(43);}
+		}
+	}
+	else if(e_code.substr(0,2) == 'FT')
+	{
+		startfield.className="printButton backDGreen width120 paddingL25";
+		startfield.onclick=function(){print_job_create_click(44);}
+
+		if(status >= 6  || game_ope_mode == 1)
+		{
+			resultfield.className="printButton backDGreen width120 paddingL25";
+			resultfield.onclick=function(){print_job_create_click(45);}
+		}
+	}
+
+
+	if(((status >= 6 && min_status >= 6  ) ||  game_ope_mode == 1) && (e_code.substr(0,1) != 'F' && e_code.substr(0,1) != 'D' && e_code.substr(0,1) != 'T' && e_code.substr(0,1) != 'T'  ))
+	{
+
+		resultgroup.className="printButton backDGreen width120 paddingL25";
+		resultgroup.onclick=function(){print_job_create_click(62);}
+	}
+
+
+	if(e_comb > 0 || e_code.substr(0,1) == 'M' )
+	{
+			combtotal.className="printButton backDGreen width120 paddingL25";
+			combtotal.onclick=function(){print_job_create_click(80);}
+
+			if(e_code.substr(0,1) != 'M')
+			{
+				combresult.className="printButton backDGreen width120 paddingL25";
+				combresult.onclick=function(){print_job_create_click(81);}
+			}
+	}
+
+}
+
+
+
+function onload_event()
+{
+	slit_timer();race_timer();
+}
+
+
+function button_copy()
+{
+
+
+	//着順、レーン、記録をコピーします
+	var cnt = 20;
+
+	buf = "";
+
+	var rank = document.getElementsByName( "P_rank[]" ) ;
+	var lane = document.getElementsByName( "P_lane[]" ) ;
+	var rec = document.getElementsByName( "P_rec_str[]" ) ;
+
+
+	//レーンとナンバーと記録を取得する
+	for(i=0;i<cnt;i++)
+	{
+		buf = buf + rank[i].value + "\t";
+
+		buf = buf + lane[i].value + "\t";
+
+		buf = buf + rec[i].value + "\r\n";
+	}
+
+	var copyarea = document.getElementById("copyarea");
+
+    copyarea.value = buf;
+    copyarea.select();
+    document.execCommand("copy");
+
+	return;
+}
+
+
+function button_paste(mode)
+{
+
+	var p_rank = document.getElementsByName( "P_rank[]" ) ;
+	var p_lane = document.getElementsByName( "P_lane[]" ) ;
+	var p_rec = document.getElementsByName( "P_rec_str[]" ) ;
+	var p_numbercard = document.getElementsByName( "P_numbercard[]" ) ;
+
+	if(mode == 1)
+	{
+		// クリップボードからデータ取得
+		var copyarea = document.getElementById("copyarea");
+	    copyarea.select();
+	    document.execCommand("paste");
+	}
+	else
+	{
+		// クリップボードからデータ取得
+		var copyarea = document.getElementById("copyarea2");
+		document.getElementById('id_dialogbox_paste').style.display = 'none';
+	}
+
+    buf = copyarea.value;
+
+
+	if(buf == null)
+		return;
+
+	if(buf.length < 20)
+		return;
+
+	linedata=buf.split("\n");
+
+	cnt=linedata.length - 1;
+	var rec = new Array(cnt);
+	var num = new Array(cnt);
+	var pos = new Array(cnt);
+	var rec_only = -1;
+
+	for(i=0;i<cnt;i++)
+	{
+		sdata=linedata[i].split("\t");
+		if(sdata.length<3)
+		{
+			if( rec_only == 0 )
+			{
+				cnt=i;
+				break;
+			}
+			else
+			{
+				rec_only = 1;
+				rec[i] = sdata[0];
+			}
+		}
+		else
+		{
+			if( rec_only == 1 )
+			{
+				cnt=i;
+				break;
+			}
+			else
+			{
+				rec_only = 0;
+
+				pos[i] = sdata[0];
+				num[i] = sdata[1];
+				rec[i] = sdata[2];
+
+				//20140906 記録の左右のスペースをとってスペースで分割して２の場合、２つ目で番号を置き換える
+				rec[i] = rec[i].replace(/(^\s+)|(\s+$)/g, "");
+
+				rdata=rec[i].split(" ");
+				if(rdata.length>=2)
+				{
+					num[i] = rdata[rdata.length-1];
+					rec[i] = rdata[0];
+				}
+			}
+		}
+	}
+
+	var cnt2 = 20;
+
+	if( rec_only == 0 )
+	{
+		//レーンとナンバーのどちらに一致するか調べる
+		var lan = new Array(cnt2);
+		var bib = new Array(cnt2);
+
+		//レーンとナンバーと記録を取得する
+		for(i=0;i<cnt2;i++)
+		{
+			lan[i]=p_lane[i].value;
+
+			bib[i]=p_numbercard[i].value;
+		}
+
+		cnt_lan=0;
+		cnt_bib=0;
+		for(i=0;i<cnt;i++)
+		{
+			for(j=0;j<cnt2;j++)
+			{
+				if(parseInt(num[i],10) == parseInt(lan[j],10))
+				{
+					cnt_lan++;
+					break;
+				}
+			}
+			for(j=0;j<cnt2;j++)
+			{
+				if(parseInt(num[i],10) == parseInt(bib[j],10))
+				{
+					cnt_bib++;
+					break;
+				}
+			}
+		}
+		for(i=0;i<cnt2;i++)
+		{
+			for(j=0;j<cnt;j++)
+			{
+				if(cnt_lan>cnt_bib)
+				{
+					if(parseInt(lan[i],10)==parseInt(num[j],10))
+					{
+
+						p_rank[i].value = pos[j];
+
+						p_rec[i].value = rec[j];
+
+						break;
+					}
+				}
+				else
+				{
+					if(parseInt(bib[i],10)==parseInt(num[j],10))
+					{
+						p_rank[i].value = pos[j];
+
+						p_rec[i].value = rec[j];
+
+						break;
+					}
+				}
+			}
+		}
+	}
+	else if( rec_only == 1 )
+	{
+		//記録を画面記載順に貼り付け
+		if( cnt == cnt2*2 )
+		{
+			var ii = 0;
+			//フリガナあり
+			for(i=1;i<cnt;i+=2)
+			{
+				p_rec[ii].value = rec[i];
+				ii++;
+			}
+		}
+		else if( cnt == cnt2 )
+		{
+			//フリガナなし
+			for(i=0;i<cnt;i++)
+			{
+				p_rec[i].value = rec[i];
+			}
+		}
+	}
+	return;
+}
+
+function official_change(obj , row)
+{
+	var select_off = obj.value;
+	var rank = document.getElementsByName( "P_rank[]" ) ;
+	var rec = document.getElementsByName( "P_rec_str[]" ) ;
+	var wind = document.getElementsByName( "P_wind[]" ) ;
+
+	if(select_off == 9)
+	{
+		rank[row].value = "-";
+		rank[row].readOnly = "true";
+		rec[row].value = "";
+		rec[row].readOnly = "true";
+		if(wind[row])
+		{
+			wind[row].value = "";
+			wind[row].readOnly = "true";
+		}
+		document.getElementById('id_row_' + row).style.backgroundColor = "#999999";
+	}
+	else
+	{
+		rank[row].readOnly = "";
+		rec[row].readOnly = "";
+		if(wind[row])
+		{
+			wind[row].readOnly = "";
+		}
+		document.getElementById('id_row_' + row).style.backgroundColor = "#FFFFFF";
+	}
+	return;
+}
+
+
+function mouseclick_status(status,mode,obj){
+
+
+
+
+	if( mode == 1 )
+	{
+
+		if(status < 2)
+			obj.style.backgroundColor = "#FFDEAD";
+		else if(status < 6)
+			obj.style.backgroundColor = "#f2fffc";
+		else if(status < 9)
+			obj.style.backgroundColor = "#ccffcc";
+		else
+			obj.style.backgroundColor = "#d6cbc7";
+
+		obj.style.color = "#000000";
+
+	}
+	else
+	{
+		if(status < 2)
+			obj.style.backgroundColor = "#FF9900";
+		else if(status < 6)
+			obj.style.backgroundColor = "#4472c4";
+		else if(status < 9)
+			obj.style.backgroundColor = "#00CC00";
+		else
+			obj.style.backgroundColor = "#333333";
+
+		obj.style.color = "#FFFFFF";
+
+
+	}
+}
+
+var clicked = false;    // クリック状態を保持するフラグ
+
+
+function button_status(status,cnt,mode) {
+    // クリックフラグが立っている状態でのクリック
+    //     -> ダブルクリック
+
+
+
+    if (clicked) 
+	{
+
+	
+		switch(status)
+		{
+			case 3.2: // 到着済
+			case 3.4: // 紹介済
+			case 3.6: // 競技中
+			case 3.8: // 競技終了
+			case 4: // 入力
+			case 5.5: // 訂正
+			case 6: // 確認
+			case 7: // 印刷
+			case 8: // 通告済
+			case 8.5: // 表彰済
+
+				var jikan= new Date();
+
+				//時・分・秒を取得する
+				var hour = jikan.getHours();
+				var minute = jikan.getMinutes();
+				var second = jikan.getSeconds();
+
+				var time = hour +":"+ minute; 
+
+				var this_race_status = 2;
+
+
+				document.getElementById('id_dialogbox_status_time').style.display = '';
+				document.getElementById('id_select_status_str').innerHTML = document.getElementById('id_status_str_' + cnt).innerHTML;
+				if(document.getElementById('id_status_time_' + cnt).value == "" && this_race_status <= status)
+					document.form_main.P_race_status_time.value = time;
+				else
+					document.form_main.P_race_status_time.value = document.getElementById('id_status_time_' + cnt).value;
+
+				//document.form_main.P_race_select_status.value = document.getElementById('id_status_time_' + cnt).value;
+				document.getElementById('id_status_time_button').onclick=function(){button_status(status,cnt,1);}
+
+				break;
+			default:
+				break;
+		}
+
+        clicked = false;
+        return;
+    }
+
+    // シングルクリックを受理、300ms間だけダブルクリック判定を残す
+    clicked = true;
+    setTimeout(function () {
+        // ダブルクリックによりclickedフラグがリセットされていない
+        //     -> シングルクリックだった
+        if (clicked) 
+		{
+
+			var change_flag = is_change();
+			document.form_main.target = "";
+			document.form_main.P_submit_sub.value = "";
+			document.form_main.P_submit_value.value = "";
+
+			if( change_flag == true )
+			{
+				if( confirm('画面の内容を変更しています。更新しますか？\nキャンセルすると変更内容を更新せずに処理します。') == true )
+				{
+					button_click(2,1);
+					return false;
+				}
+			}
+			document.form_main.P_submit_value.value = "REGIST RESULT_TABLE STATUS";
+			document.form_main.P_submit_onload.value = "";
+			document.form_main.P_set_status.value = status;
+
+			if(mode == 0)
+			{
+				document.form_main.P_race_status_time.value = document.getElementById('id_status_time_' + cnt).value;
+				document.form_main.P_status_change_mode.value = 0;
+				 
+			}
+			else
+			{
+				document.form_main.P_status_change_mode.value = 1;
+
+			}
+
+			document.form_main.action = "./0020_recinput.php";
+
+
+			document.form_main.submit();
+//			return false;
+
+        }
+
+        clicked = false;
+    }, 300);
+}
+
+var status_flag=0;
+
+function mouseover_status(){
+  status_flag = 1;
+}
+function mouseout_status(){
+  status_flag = 0;
+}
+
+
+function close_status()
+{
+
+	if(status_flag == 1)
+	{
+		return;
+	}
+	else
+	{
+		document.getElementById("id_dialogbox_status").style.display="none";
+
+	}
+
+}
+
+function point_rank(obj)
+{
+	var cnt = 20;
+
+	if(obj.checked == false)
+	{
+		for(i=0;i<cnt;i++)
+		{
+			document.getElementById('id_point_rank_' + i).readOnly = '';
+		}
+	}
+	else
+	{
+		for(i=0;i<cnt;i++)
+		{
+			document.getElementById('id_point_rank_' + i).readOnly = 'true';
+		}
+	}
+
+}
+
+
+function checkForm($this)
+{
+	var str=$this.value;
+	while(str.match(/[^0-9\d\.()]/))
+	{
+		str=str.replace(/[^0-9\d\.()]/,"");
+	}
+	$this.value=str;
+}
+
+//-->
+</script>
+
+<style type="text/css">
+<!--
+
+.statusbox {
+	
+	margin:79px auto; /* このボックスの位置  */
+	max-width: 1276px;
+	height:90px;
+	background-color:#FFFFFF;
+	box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menuFull2 {
+	height:53px;
+	margin-top:-45px;
+	padding: 10px 0px 0px 0px;
+
+}
+
+.menuFull2 li{
+	height:30px;
+	vertical-align: bottom;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	text-align:center;
+
+
+}
+.selectstatus{
+	text-weight:bold;
+
+
+}
+
+-->
+</style>
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body onload='onload_event()' >
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li class='backButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click("back",1)' style='width: 75px; padding-left: 3px; padding-right: 3px;'><span style='font-weight:bold; font-size:18px;'><-Back</span></li><li><div class='pageName'>記録入力</div></li><li><div class='gameName'>2022滋賀県選手権[皇子山]</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_terminal'><input id='id_printer' type='button' value='未設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_click()' class='printButton'><span>端末選択</span></li><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option><option value='102'>記録（滋賀陸協１）</option><option value='104'>写真判定（高体連）</option><option value='105'>競技者係(MF244dw)</option><option value='117'>競技者係（テスト用）</option><option value='123'>普及(PX-1700F) </option><option value='150'>リザルト集</option><option value='151'>英語リザルト</option><option value='267'>番組編成(滋賀陸協1)</option><option value='340'>記録（コピー機）</option><option value='341'>賞状（PX-M6010F）</option><option value='356'>普及・記録</option><option value='357'>普及・賞状</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target='' autocomplete='off'>
+	<input type='hidden' name='P_SESSION_KEY' value='l10813'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-06-30 08:13:48 A1C1O5H4Y1'>
+	<input type='hidden' name='P_prev_page' value='0020_recinput.php'>
+	<input type='hidden' name='P_submit_value' value=''><input type='hidden' name='P_submit_sub' value=''>
+	<input type='hidden' name='P_submit_onload' value=''>
+		<input type='hidden' name='P_select_game_table_id' value='5539'>
+		<input type='hidden' name='P_select_game_race_id' value='1469454'>
+		<input type='hidden' name='P_select_athlete_id' value=''>
+		<input type='hidden' name='P_select_result_id' value=''>
+		<input type='hidden' name='P_result_table_rows' value='20'>
+		<input type='hidden' name='P_search_display' value='1'>
+		<input type='hidden' name='P_search_race_number' value='1072'>
+		<input type='hidden' name='P_set_status' value='2'>
+		<input type='hidden' name='P_old_status' value='2'>
+		<input type='hidden' name='P_status_change_mode' value=''>
+		<input type='hidden' name='P_race_result_id' value='553900060'>
+		<input type='hidden' name='P_rec_delete' value=''>
+		<input type='hidden' id='id_submit_option' name='submit_option' value=''>
+
+
+
+		<input type='hidden' name='idid' value='1:0:0:A1500:1:1'>
+
+	<!--  -->
+		<input type='hidden' name='submit_kbn' value=''>
+		<input type='hidden' name='start_result' value=''>
+		<input type='hidden' name='sel_field' value=''>
+		<input type='hidden' name='print_race' value=''>
+		<input type='hidden' name='team_target1' value='' >
+		<input type='hidden' name='team_target2' value='' >
+		<input type='hidden' name='submit_option' value='' >
+
+
+
+
+	<!--  -->
+	<div class='rectopBox' >
+		<div class='marginTop42' style='position: relative;'>
+					<div style='width: 60px; height:90px; position: absolute; top: 0px; left: 0px; z-index: 6; color:#FFFFFF; background-color:#ffffff;'>
+				<input type='button' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='move_race(0)' class='inputButton recprevButton'>
+			</div>
+
+			<div style='width: 60px; height:90px; position: absolute; top: 0px; right: 0px; z-index: 6; color:#FFFFFF; background-color:#ffffff;'>
+				<input type='button' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='move_race(1)' class='inputButton recnextButton'>
+			</div>
+		
+
+			<table class='topLine' style='margin-left: 60px; width:91%;'>
+			<tr class='lineH40 backGray_rec'>
+			<td class='' style='width:16%; padding: 5px 0px 4px 0px; margin: -5px 0px -5px 0px; display:none;'>
+				<select name='P_search_page_type' class='selectNormal select_display_type' onchange='change_page_type(this.value)' style='margin-left: 45px; '>
+				<option value='0' selected='selected'>記録入力</option>
+				</select>
+			</td>
+			<td class='' style='width:12%; padding: 0px 10px;'>
+				<select name='P_dummy' class='selectNormal select_display valignM' >
+				<option value='1' selected='selected'>組別表示</option>
+				</select>
+			</td>
+
+			<td class='race_ttl_td'><span ondblclick='document.getElementById("id_dialogbox_race_number_job").style.display="";'>[1072]</span><span> 男   5000m 決勝 1</span>			</td>
+			<td class='record_td' style='min-width: 100px;'>PR:13.28.73<br> PHR:14.03.14<br> GR:13.58.57<br></td>
+			<!--  -->
+
+			<td style='text-align:right; border-bottom:none; padding-right:30px; display:none;'>
+					<input type='button' value='設定記録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'				 onclick='button_click(6,0)' class='linkButtonimg' style='width: 100px;'>
+			</td>
+
+<td style='padding: 0px 10px; vertical-align: middle;' ><div class='status_Button' style='width: 150px; background-color:#4472c4;'   onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='document.getElementById("id_dialogbox_status").style.display="";' >班組済</div>
+<!--
+				
+								<input type='button' value='印刷済' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'				 onclick='button_click(4,4)' class='inputButtonIm width100 backDarkGray'>
+				
+-->
+			</td>
+			<td class='' style='width: 800px;'></td>
+			</tr>
+			</table>
+		</div>
+
+			<table class='rec_menuLine' style='width: 91%;'>
+			<tr class='lineH45 backGray_rec' >
+
+			<!--  -->
+			<td class='' style='padding: 0px 10px;' >
+
+						<input type='button' value='更新' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(2,0)' class='inputButton rec_update_Button'>
+						</td>
+
+			<td>
+				<label class='rec_label_multi' style='background-color:#fff;'><input type='checkbox' id='id_multi' name='P_search_multi'  value='ON'  onchange='button_click(1,0)' class='checkBox' style='vertical-align:middle; margin: 0px 3px 0px 3px; '>マルチ</label>
+			</td><!--
+
+-->
+			<td class='paddingL5'>
+				<select name='P_search_sort' class='selectNormal ' style='height:42px; padding:0px;' onchange='button_click(1,0)'>
+				<option value='0'>Ord.順</option><option value='1' selected='selected'>順位順</option>
+				</select>
+			</td><!--
+			--><td class='paddingL5'>
+				<table class='slit_Table' >
+				<tr>
+					<td colspan='2' id='id_slit_time' >取得時間</td>
+					<td >ID</td>
+
+					<td class='slit_Button' rowspan='2' style='padding:0px; '>
+												<input type='button' value='一覧' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='open_slit_list()' class='inputButton backDOrange slit_Button' style='height:40px;'>
+											</td>
+					<td class='set_Button' rowspan='2' style='padding:0px; '>
+												<input type='button' value='↓' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='set_slit_data()' class='inputButton backDOrange set_Button' style='height:40px;'>
+						<input type='hidden' name='P_slit_order_number' value=''><input type='hidden' name='P_slit_time_date' value=''>
+												<input type='hidden' name='P_slit_set_flag' value='0'><input type='hidden' name='P_slit_check_flag' value='0'>
+
+					</td>
+				</tr>
+				<tr>
+					<td id='id_slit_record'>先頭ﾀｲﾑ</td>
+					<td id='id_slit_count'>件数</td>
+					<td ><input type='text' name='P_data_place' id='id_stadium' value='17' style='width:20px;' ></td>
+				</tr>
+				</table>
+			</td><!--
+
+
+			--><td class='paddingL5'>
+
+				
+				<table class='width120' style='' >
+					<tr>
+						<td style='text-align:center; color: #ccc; line-height: 14px; font-size: 12px;'>Auto<br /><input type='checkbox' name='' value='ON' class='checkBox' style='margin: 0px 0px 0px 0px; vertical-align: middle;' disabled="">
+						</td>
+						<td style='padding:0px; width:80px;'>
+						<input type='button' value=' ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='print_button_click(1,"1:0:0:A1500:1:","1","2")' class='inputButton recprintButton backDGreen width80 paddingL15'>						</td>
+
+					</tr>
+				</table>
+			</td>
+
+			<td class='paddingL5' style='min-width:340px;'><input type='button' value='途中記録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(9,0)' class='linkButton_rec marginL5' ><input type='button' value='昇順入力' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(13,0)' class='linkButton_rec marginL5' ><input type='button' value='単独入力' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(12,0)' class='linkButton_rec marginL5' >			</td>
+			<td class='' style='width: 800px;'></td>
+			</tr>
+			<table>
+
+
+		<table class='rec_menuLine_small'>
+			<tr class='lineH22 backGray'>
+			<td class='width8per ' style='padding-left:15px; min-width: 60px;'>組名-Ord.</td><!--
+			--><td class='width7per ' >Bibs</td><!--
+			--><td class='width24per ' >名称</td><!--
+			--><td class='width6per ' >順位</td><!--
+			--><td class='width11per ' >記録<input type='button'  value='C' onclick='button_copy()' class='copyButton'><input type='button'  value='P' onclick="document.getElementById('id_dialogbox_paste').style.display = '';" class='copyButton'>			</td><!--
+
+			--><td class='width10per'  >
+<!-- 				<a href='' onclick='button_click(1,0);return false;' style=' color:#FFFFFF;'> -->
+				公認区分				</a>
+			</td><!--
+			--><td class='width6per ' >進出</td><!--
+			--><td class='width6per '  style='min-width: 60px;'><input type='checkbox' name='P_check_new_record' value='ON' checked='checked'>新記録</td><!--
+			--><td class='width6per ' ><input type='checkbox' name='P_check_point_set' value='ON' checked='checked' onclick='point_rank(this)' ><a href='' onclick='button_click(17,0);return false;' style=' color:#FFFFFF;'>決点</a></td><!--
+			--><td class='' style='min-width: 70px;'>
+				備考(略号)			</td>
+			</tr>
+		</table>
+	</div>
+
+	<!--  -->
+	<div class='bodyBox ' style='margin-top: 156px;'>
+		<table class='contentTable'>
+		<tbody id='id_result_table_tbody'>
+
+<tr class='contentData' id='id_row_0'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='477397' id='id_pid_0'><input type='hidden' name='P_result_id[]' value='553900060'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='1'><input type='hidden' name='P_numbercard[]' value='265'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='859210'><input type='hidden' name='P_personal_hand[]' value='1'>1-1</td><td class='width7per' >265</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,346811);return false;" class='athleteName'>下村　悟 (-) パナソニックホームズ・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_0' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_0' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,0);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_0'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_1'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='417742' id='id_pid_1'><input type='hidden' name='P_result_id[]' value='553900024'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='2'><input type='hidden' name='P_numbercard[]' value='61689'><input type='hidden' name='P_season_rec[]' value='971530'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='987820'><input type='hidden' name='P_personal_hand[]' value='1'>1-2</td><td class='width7per' >61689</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,347822);return false;" class='athleteName'>尾野　弘直 (4) 滋賀大・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_1' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_1' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,1);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_1'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_2'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='389958' id='id_pid_2'><input type='hidden' name='P_result_id[]' value='553900005'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='3'><input type='hidden' name='P_numbercard[]' value='381'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='935510'><input type='hidden' name='P_personal_hand[]' value='1'>1-3</td><td class='width7per' >381</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,346837);return false;" class='athleteName'>坂本　陽平 (-) てるみんRC・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_2' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_2' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,2);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_2'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_3'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='506365' id='id_pid_3'><input type='hidden' name='P_result_id[]' value='553900668'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='4'><input type='hidden' name='P_numbercard[]' value='155'><input type='hidden' name='P_season_rec[]' value='916130'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='916130'><input type='hidden' name='P_personal_hand[]' value='1'>1-4</td><td class='width7per' >155</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,344222);return false;" class='athleteName'>前田　涼太 (3) 滋賀学園高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_3' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_3' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,3);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_3'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_4'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='417227' id='id_pid_4'><input type='hidden' name='P_result_id[]' value='553900022'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='5'><input type='hidden' name='P_numbercard[]' value='577'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='956040'><input type='hidden' name='P_personal_hand[]' value='1'>1-5</td><td class='width7per' >577</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,338699);return false;" class='athleteName'>川村　好平 (-) 長浜AC・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_4' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_4' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,4);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_4'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_5'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='506367' id='id_pid_5'><input type='hidden' name='P_result_id[]' value='553900670'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='6'><input type='hidden' name='P_numbercard[]' value='1020'><input type='hidden' name='P_season_rec[]' value='968230'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='968230'><input type='hidden' name='P_personal_hand[]' value='1'>1-6</td><td class='width7per' >1020</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,400607);return false;" class='athleteName'>櫻井　大吾 (2) 滋賀学園高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_5' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_5' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,5);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_5'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_6'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='506370' id='id_pid_6'><input type='hidden' name='P_result_id[]' value='553900673'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='7'><input type='hidden' name='P_numbercard[]' value='1024'><input type='hidden' name='P_season_rec[]' value='959390'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='959390'><input type='hidden' name='P_personal_hand[]' value='1'>1-7</td><td class='width7per' >1024</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,400605);return false;" class='athleteName'>家原　一恭 (2) 滋賀学園高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_6' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_6' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,6);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_6'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_7'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='484020' id='id_pid_7'><input type='hidden' name='P_result_id[]' value='553900101'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='8'><input type='hidden' name='P_numbercard[]' value='1007'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='990780'><input type='hidden' name='P_personal_hand[]' value='1'>1-8</td><td class='width7per' >1007</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,400823);return false;" class='athleteName'>大西　峻平 (2) 比叡山高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_7' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_7' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,7);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_7'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_8'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='392935' id='id_pid_8'><input type='hidden' name='P_result_id[]' value='553900019'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='9'><input type='hidden' name='P_numbercard[]' value='379'><input type='hidden' name='P_season_rec[]' value='1013530'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='961010'><input type='hidden' name='P_personal_hand[]' value='1'>1-9</td><td class='width7per' >379</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,346854);return false;" class='athleteName'>上田　大輔 (-) てるみんRC・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_8' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_8' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,8);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_8'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_9'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='500653' id='id_pid_9'><input type='hidden' name='P_result_id[]' value='553900380'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='10'><input type='hidden' name='P_numbercard[]' value='1043'><input type='hidden' name='P_season_rec[]' value='979840'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='952310'><input type='hidden' name='P_personal_hand[]' value='1'>1-10</td><td class='width7per' >1043</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,400591);return false;" class='athleteName'>山本　朔豊 (2) 滋賀短大附高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_9' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_9' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,9);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_9'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_10'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='477400' id='id_pid_10'><input type='hidden' name='P_result_id[]' value='553900061'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='11'><input type='hidden' name='P_numbercard[]' value='266'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='968840'><input type='hidden' name='P_personal_hand[]' value='1'>1-11</td><td class='width7per' >266</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,346812);return false;" class='athleteName'>松宮　賢人 (-) パナソニックホームズ・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_10' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_10' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,10);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_10'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_11'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='518140' id='id_pid_11'><input type='hidden' name='P_result_id[]' value='553901181'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='12'><input type='hidden' name='P_numbercard[]' value='60395'><input type='hidden' name='P_season_rec[]' value='915350'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='915350'><input type='hidden' name='P_personal_hand[]' value='1'>1-12</td><td class='width7per' >60395</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,-112);return false;" class='athleteName'>太田　亮爾 (3) 同志社大・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_11' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_11' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,11);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_11'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_12'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='491654' id='id_pid_12'><input type='hidden' name='P_result_id[]' value='553900242'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='13'><input type='hidden' name='P_numbercard[]' value='231'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='973340'><input type='hidden' name='P_personal_hand[]' value='1'>1-13</td><td class='width7per' >231</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,347304);return false;" class='athleteName'>川西　治雄 (-) チームサンタ・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_12' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_12' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,12);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_12'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_13'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='517976' id='id_pid_13'><input type='hidden' name='P_result_id[]' value='553901017'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='14'><input type='hidden' name='P_numbercard[]' value='61382'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='0'><input type='hidden' name='P_personal_hand[]' value='1'>1-14</td><td class='width7per' >61382</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,-5);return false;" class='athleteName'>奥村　拳 (11) 大阪大・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_13' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_13' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,13);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_13'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_14'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='480262' id='id_pid_14'><input type='hidden' name='P_result_id[]' value='553900065'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='15'><input type='hidden' name='P_numbercard[]' value='495'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='1013700'><input type='hidden' name='P_personal_hand[]' value='1'>1-15</td><td class='width7per' >495</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,342994);return false;" class='athleteName'>山田　琢心 (3) 滋賀短大附高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_14' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_14' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,14);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_14'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_15'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='506366' id='id_pid_15'><input type='hidden' name='P_result_id[]' value='553900669'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='16'><input type='hidden' name='P_numbercard[]' value='1018'><input type='hidden' name='P_season_rec[]' value='943220'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='943220'><input type='hidden' name='P_personal_hand[]' value='1'>1-16</td><td class='width7per' >1018</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,400604);return false;" class='athleteName'>新木　淳太 (2) 滋賀学園高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_15' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_15' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,15);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_15'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_16'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='495213' id='id_pid_16'><input type='hidden' name='P_result_id[]' value='553900326'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='17'><input type='hidden' name='P_numbercard[]' value='61676'><input type='hidden' name='P_season_rec[]' value='0'><input type='hidden' name='P_season_hand[]' value='4'><input type='hidden' name='P_parsonal_rec[]' value='944720'><input type='hidden' name='P_personal_hand[]' value='1'>1-17</td><td class='width7per' >61676</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,419125);return false;" class='athleteName'>藤原　晋伍 (3) 滋賀県立大・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_16' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_16' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,16);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_16'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_17'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='501763' id='id_pid_17'><input type='hidden' name='P_result_id[]' value='553900425'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='18'><input type='hidden' name='P_numbercard[]' value='1151'><input type='hidden' name='P_season_rec[]' value='925350'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='925350'><input type='hidden' name='P_personal_hand[]' value='1'>1-18</td><td class='width7per' >1151</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,404119);return false;" class='athleteName'>�盒供〃�太 (2) 水口東高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_17' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_17' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,17);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_17'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_18'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='510353' id='id_pid_18'><input type='hidden' name='P_result_id[]' value='553900760'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='19'><input type='hidden' name='P_numbercard[]' value='143'><input type='hidden' name='P_season_rec[]' value='933870'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='933870'><input type='hidden' name='P_personal_hand[]' value='1'>1-19</td><td class='width7per' >143</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,425753);return false;" class='athleteName'>平井　智貴 (-) サウルスジャパン・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_18' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_18' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,18);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_18'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+<tr class='contentData' id='id_row_19'><td class='width8per paddingL15' ><input type='hidden' name='P_id[]' value='506364' id='id_pid_19'><input type='hidden' name='P_result_id[]' value='553900667'><input type='hidden' name='P_open_flag[]' value='0'><input type='hidden' name='P_lane[]' value='20'><input type='hidden' name='P_numbercard[]' value='153'><input type='hidden' name='P_season_rec[]' value='905160'><input type='hidden' name='P_season_hand[]' value='1'><input type='hidden' name='P_parsonal_rec[]' value='6782000'><input type='hidden' name='P_personal_hand[]' value='1'>1-20</td><td class='width7per' >153</td><td class='width24per' style='line-height:18px;'><a href='' onclick="button_click(5,344213);return false;" class='athleteName'>磯和　琳 (3) 滋賀学園高・滋賀</a></td><td class='width6per' ><input type='text' name='P_rank[]' value='' id='id_rank_19' onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width11per' ><input type='text' name='P_rec_str[]' value='' id='id_rec_19' onInput='checkForm(this)'  onkeydown='return move_focus(event,this);' class='rectextBox width70per imeOff'></td><td class='width10per' ><select name='P_official[]' class='selectNormal' onkeydown='return move_focus(event,this);' onChange='official_change(this,19);'  style='width:114px;'><option value='0' selected='selected'></option><option value='1'>追参(W)</option><option value='2'>参考(UO)</option><option value='3'>測無(NI)</option><option value='4'>記無(NM)</option><option value='7'>途棄(DNF)</option><option value='8'>失格(DQ)</option><option value='9'>欠場(DNS)</option></select></td><td class='width6per' ><select name='P_advance[]' class='selectNormal' onkeydown='return move_focus(event,this);'><option value='0' selected='selected'></option><option value='1'>Q</option><option value='3'>q</option><option value='5'>qB</option><option value='8'>qJ</option><option value='9'>qR</option><option value='10'>S</option></select></td><td class='width6per' ><input type='text' name='P_new_string[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td><td class='width6per' ><input type='text' id='id_point_rank_19'  name='P_point_rank[]' value='0'  onkeydown='return move_focus(event,this);' readonly = 'readonly'  class='rectextBox width70per imeOff'></td><td class='' ><input type='text' name='P_memo[]' value=''  onkeydown='return move_focus(event,this);' class='rectextBox width70per'></td></tr>
+
+		</tbody>
+		</table>
+	</div>
+	<!--  -->
+
+<div id='id_dialogbox_print_job_excel' class='dialogbox' style='display:none;'><div class='printbox' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job_excel").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'><table id='id_print_type_excel' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_excel' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,0)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_excel' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,2)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_excel' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,6)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus_excel' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,8)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup_excel' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,7)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal_excel' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,4)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield_excel' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,1)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield_excel' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,5)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal_excel' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,99)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_excel' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_button_excel(0,99)' class='printButton  backDGreen width120 paddingL25' style='display:none;'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button_excel' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div><div id='id_dialogbox_paste' class='dialogbox' style='display:none;'><div class='printbox' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_paste").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>値を貼り付け、貼り付けボタンを押してください。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>	<textarea name='copy' id='copyarea2' rows='10' cols='40' ></textarea></div><input type='button' id='id_print_button_excel' value='貼り付け' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_paste(2)' class='inputButton width200' style='display:;'></div></div><div id='id_dialogbox_race_number_job' class='dialogbox' style='display:none;'><div class='printbox' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_race_number_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>レースNo.を入力してください。</span><div class='width200' style='margin:20px auto 20px auto;'><input type='text' name='P_race_number_set' value='' class='textBox imeOff width75'><input type='hidden' name='P_race_number_set_id' value='1469453' class='textBox imeOff width75'><input type='hidden' name='P_race_number_old' value='1072' class='textBox imeOff width75'></div><input type='button' value='レースNo.Set' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(11,0)' class='inputButton width200'></div></div><div id='id_dialogbox_status' class='dialogbox' onclick='close_status()' style='display:none;'><div class='statusbox' id='id_statusbox' onmouseover='mouseover_status();' onmouseout='mouseout_status();' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_status").style.display="none";'>&nbsp;</div><ul class='menuFull2 ' style='padding:0px; width:95%; font-size:12px;'><li class='status_li'   style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#FFDEAD; ' onclick='button_status(0,0,0)'   onmouseup='mouseclick_status(0,0,this);' onmouseout='mouseclick_status(0,1,this);' onmouseover='mouseclick_status(0,0,this);'  ><span id='id_status_str_0'>未</span><br><input type='hidden' name='status_id' id='id_status_id_0' value='0'>　<input type='hidden' name='status_time' id='id_status_time_0' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#FFDEAD; ' onclick='button_status(1,1,0)'   onmouseup='mouseclick_status(1,0,this);' onmouseout='mouseclick_status(1,1,this);' onmouseover='mouseclick_status(1,0,this);'  ><span id='id_status_str_1'>申込済</span><br><input type='hidden' name='status_id' id='id_status_id_1' value='1'>　<input type='hidden' name='status_time' id='id_status_time_1' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#4472c4; font-weight:bold; height:50px; color:#FFFFFF;  ' onclick='button_status(2,2,0)'  onmouseup='mouseclick_status(2,0,this);' onmouseover='mouseclick_status(2,0,this);'  ><span id='id_status_str_2'>班組済</span><br><input type='hidden' name='status_id' id='id_status_id_2' value='2'>　<input type='hidden' name='status_time' id='id_status_time_2' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(2.8,3,0)'   onmouseup='mouseclick_status(2.8,0,this);' onmouseout='mouseclick_status(2.8,1,this);' onmouseover='mouseclick_status(2.8,0,this);'  ><span id='id_status_str_3'>受付開始</span><br><input type='hidden' name='status_id' id='id_status_id_3' value='2.8'>　<input type='hidden' name='status_time' id='id_status_time_3' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(3,4,0)'   onmouseup='mouseclick_status(3,0,this);' onmouseout='mouseclick_status(3,1,this);' onmouseover='mouseclick_status(3,0,this);'  ><span id='id_status_str_4'>受付済</span><br><input type='hidden' name='status_id' id='id_status_id_4' value='3'>　<input type='hidden' name='status_time' id='id_status_time_4' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(3.2,5,0)'   onmouseup='mouseclick_status(3.2,0,this);' onmouseout='mouseclick_status(3.2,1,this);' onmouseover='mouseclick_status(3.2,0,this);'  ><span id='id_status_str_5'>到着済</span><br><input type='hidden' name='status_id' id='id_status_id_5' value='3.2'>　<input type='hidden' name='status_time' id='id_status_time_5' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(3.4,6,0)'   onmouseup='mouseclick_status(3.4,0,this);' onmouseout='mouseclick_status(3.4,1,this);' onmouseover='mouseclick_status(3.4,0,this);'  ><span id='id_status_str_6'>紹介済</span><br><input type='hidden' name='status_id' id='id_status_id_6' value='3.4'>　<input type='hidden' name='status_time' id='id_status_time_6' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(3.6,7,0)'   onmouseup='mouseclick_status(3.6,0,this);' onmouseout='mouseclick_status(3.6,1,this);' onmouseover='mouseclick_status(3.6,0,this);'  ><span id='id_status_str_7'>競技中</span><br><input type='hidden' name='status_id' id='id_status_id_7' value='3.6'>　<input type='hidden' name='status_time' id='id_status_time_7' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(3.8,8,0)'   onmouseup='mouseclick_status(3.8,0,this);' onmouseout='mouseclick_status(3.8,1,this);' onmouseover='mouseclick_status(3.8,0,this);'  ><span id='id_status_str_8'>競技終了</span><br><input type='hidden' name='status_id' id='id_status_id_8' value='3.8'>　<input type='hidden' name='status_time' id='id_status_time_8' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(4,9,0)'   onmouseup='mouseclick_status(4,0,this);' onmouseout='mouseclick_status(4,1,this);' onmouseover='mouseclick_status(4,0,this);'  ><span id='id_status_str_9'>入力済</span><br><input type='hidden' name='status_id' id='id_status_id_9' value='4'>　<input type='hidden' name='status_time' id='id_status_time_9' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#f2fffc; ' onclick='button_status(5,10,0)'   onmouseup='mouseclick_status(5,0,this);' onmouseout='mouseclick_status(5,1,this);' onmouseover='mouseclick_status(5,0,this);'  ><span id='id_status_str_10'>審議中</span><br><input type='hidden' name='status_id' id='id_status_id_10' value='5'>　<input type='hidden' name='status_time' id='id_status_time_10' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#ccffcc; ' onclick='button_status(6,11,0)'   onmouseup='mouseclick_status(6,0,this);' onmouseout='mouseclick_status(6,1,this);' onmouseover='mouseclick_status(6,0,this);'  ><span id='id_status_str_11'>確認済</span><br><input type='hidden' name='status_id' id='id_status_id_11' value='6'>　<input type='hidden' name='status_time' id='id_status_time_11' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#ccffcc; ' onclick='button_status(7,12,0)'   onmouseup='mouseclick_status(7,0,this);' onmouseout='mouseclick_status(7,1,this);' onmouseover='mouseclick_status(7,0,this);'  ><span id='id_status_str_12'>印刷済</span><br><input type='hidden' name='status_id' id='id_status_id_12' value='7'>　<input type='hidden' name='status_time' id='id_status_time_12' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#ccffcc; ' onclick='button_status(8,13,0)'   onmouseup='mouseclick_status(8,0,this);' onmouseout='mouseclick_status(8,1,this);' onmouseover='mouseclick_status(8,0,this);'  ><span id='id_status_str_13'>通告済</span><br><input type='hidden' name='status_id' id='id_status_id_13' value='8'>　<input type='hidden' name='status_time' id='id_status_time_13' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#ccffcc; ' onclick='button_status(8.5,14,0)'   onmouseup='mouseclick_status(8.5,0,this);' onmouseout='mouseclick_status(8.5,1,this);' onmouseover='mouseclick_status(8.5,0,this);'  ><span id='id_status_str_14'>表彰済</span><br><input type='hidden' name='status_id' id='id_status_id_14' value='8.5'>　<input type='hidden' name='status_time' id='id_status_time_14' value=''></li><!----><li class='status_li'    style=' border: 1px solid #CCCCCC; line-height:20px; padding:15px 5px 15px 5px;  background-color:#d6cbc7; ' onclick='button_status(9,15,0)'   onmouseup='mouseclick_status(9,0,this);' onmouseout='mouseclick_status(9,1,this);' onmouseover='mouseclick_status(9,0,this);'  ><span id='id_status_str_15'>終了</span><br><input type='hidden' name='status_id' id='id_status_id_15' value='9'>　<input type='hidden' name='status_time' id='id_status_time_15' value=''></li></ul></div></div><div id='id_dialogbox_status_time' class='dialogbox' style='display:none;'><div class='printbox' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_status_time").style.display="none";' >&nbsp;</div><span style='display: inline-block;' id='id_select_status_str'></span><div class='width200' style='margin:20px auto 20px auto;'><input type='text' name='P_race_status_time' value='' class='textBox imeOff width100'></div><input type='button' value='登録' id='id_status_time_button' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(11,0)' class='inputButton width200'></div></div>
+	<textarea name="copy" id="copyarea" rows="1" cols="1" style="position: fixed; top: 0; z-index:0;"></textarea>
+	<div id='id_message_box' class='messageBox' style='position:fixed; top:20vh; z-index:10; width:800px; height:30vh; overflow-y: auto; margin:0px 203px;border: 2px solid #999999; background-color:#FFFFFF; display:none;'><div class='closebutton' onclick='document.getElementById("id_message_box").style.display="none";document.getElementById("id_message_button").style.display="";' >&nbsp;</div><div style='margin-top:-50px; width:200px; height:30px; padding: 20px 0px 15px 20px;'>Message</div><p class='message' id='id_message' style='padding-left:20px;'></p><p class='messageSafe' id='messagesafe' style='padding-left:20px;'></p><p class='messageError' id='messageerror' style='padding-left:20px;'></p></div><div id='id_message_button' style='position:fixed; bottom:0px; z-index:2; width:90px; height:50px;margin:0px 0px 0px 20px; padding-top:3px; background-color:#999999; cursor: pointer; display:none;' onclick='document.getElementById("id_message_box").style.display="";document.getElementById("id_message_button").style.display="none";'><span style='color:#FFFFFF;'>Message</span></div></form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+</div>
+</body>
+</html>

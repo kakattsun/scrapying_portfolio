@@ -1,0 +1,2841 @@
+body {
+  overflow-x: auto;
+  padding-top:0;
+  margin-top:0;
+}
+.cms-public .page {
+  margin:0 auto;
+}
+
+.cms-public .parts {
+  float: left;
+  width: 100%;
+}
+.cms-public .block {
+  float: left;
+  width: 100%;
+}
+
+.fontsize_change {
+  float: right;
+}
+.fontsize_change .easyweb {
+  float: left;
+}
+.fontsize_change .fontsize {
+  float: left;
+}
+.fontsize_change .fontsize p.fontsize_title {
+  margin: 0;
+  display: inline-block;
+}
+
+/***** sns *****/
+.cms-public .page .sns-area {
+  margin:20px auto;
+  padding:0;
+  list-style: none;
+}
+.cms-public .page .sns-area li {
+  float: left;
+  margin:0 10px 0 0;
+}
+.cms-public .page .sns-area li.facebook {
+  line-height: 1;
+}
+
+.cms-public .plugindownload {
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #e1e1e1;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 0.75em;
+  float: left;
+}
+.cms-public .plugindownload a {
+  display: inline-table;
+}
+.cms-public .plugindownload img {
+  vertical-align: middle;
+}
+.cms-public .plugindownload div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+/***** menu *****/
+.cms-public a span.text_item,
+.cms-public a img.image_item {
+  display: none;
+}
+.cms-public li.text_flag a span.text_item,
+.cms-public li.image_flag a img.image_item {
+  display: inline;
+}
+.cms-public .menu-vertical a,
+.cms-public .menu-horizontal a,
+.cms-public .menu-group a {
+  display: table-cell;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+.cms-public .menu-horizontal-fixed a{
+  display: flex;
+  background: linear-gradient(#091f51, #091f51);
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  border: 1px solid #ddd;
+}
+
+.cms-public .menu-sitemap{
+  display: table;
+} 
+
+.cms-public .menu-vertical,
+.cms-public .menu-horizontal,
+.cms-public .menu-horizontal-fixed,
+.cms-public .menu-group,
+.cms-public .menu-line,
+.cms-public .menu-sitemap{
+  width: 100%;
+}
+.cms-public .menu-vertical > ul,
+.cms-public .menu-horizontal > ul,
+.cms-public .menu-horizontal-fixed > ul,
+.cms-public .menu-group > ul,
+.cms-public .menu-line > ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Vertical */
+.cms-public .menu-vertical > ul > li {
+  /* level 1 block items */
+  display: table;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+  background: linear-gradient(#091f51, #091f51);
+}
+.cms-public .menu-vertical > ul > li > ul {
+  /* level 2 block */
+  position: absolute;
+  z-index: 9999;
+  top: 70%;
+  left: 0;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+.cms-public .menu-vertical > ul > li.active > ul,
+.cms-public .menu-vertical > ul > li:hover > ul {
+  /* level 2 block (hover) */
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.cms-public .menu-vertical > ul > li > ul > li {
+  /* level 2 block items */
+  position: relative;
+  display: table;
+  width: 100%;
+  border: 1px solid #ddd;
+  background: linear-gradient(#091f51, #091f51);
+}
+.cms-public .menu-vertical > ul > li > ul > li > ul {
+  /* level 3 block */
+  position: absolute;
+  z-index: 9999;
+  top: 0%;
+  left: 70%;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+.cms-public .menu-vertical > ul > li > ul > li.active > ul,
+.cms-public .menu-vertical > ul > li > ul > li:hover > ul {
+  /* level 3 block (hover) */
+  left: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.cms-public .menu-vertical > ul > li > ul > li > ul > li {
+  /* level 3 block items */
+  position: relative;
+  display: table;
+  width: 100%;
+  border: 1px solid #ddd;
+  background: linear-gradient(#091f51, #091f51);
+}
+.cms-public .menu-vertical > ul > li > ul > li > ul > li > ul{
+  /* level 4 */
+  display: none;
+}
+
+/* Horizontal */
+.cms-public .menu-horizontal > ul > li {
+  /* level 1 block items */
+  display: table;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+  background: linear-gradient(#091f51, #091f51);
+  z-index: 9999;
+}
+.cms-public .menu-horizontal > ul > li > ul {
+  /* level 2 block */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 70%;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+.cms-public .menu-horizontal > ul > li.active > ul,
+.cms-public .menu-horizontal > ul > li:hover > ul {
+  /* level 2 block (hover) */
+  left: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.cms-public .menu-horizontal > ul > li > ul > li {
+  /* level 2 block items */
+  position: relative;
+  display: table;
+  border: 1px solid #ddd;
+  background: linear-gradient(#091f51, #091f51);
+}
+.cms-public .menu-horizontal > ul > li > ul > li > ul {
+  /* level 3 block */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 80%;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+.cms-public .menu-horizontal > ul > li > ul > li.active > ul,
+.cms-public .menu-horizontal > ul > li > ul > li:hover > ul {
+  /* level 3 block (hover) */
+  left: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+.cms-public .menu-horizontal > ul > li > ul > li > ul > li {
+  /* level 3 block items */
+  position: relative;
+  display: table;
+  border: 1px solid #ddd;
+  background: linear-gradient(#091f51, #091f51);
+}
+.cms-public .menu-horizontal > ul > li > ul > li > ul > li > ul {
+  /* level 4 */
+  display: none;
+}
+
+/* Horizontal-fixed */
+.cms-public .menu-horizontal-fixed > ul > li {
+  /* level 1 block items */
+  display: table;
+  position: relative;
+}
+.cms-public .menu-horizontal-fixed > ul > li > ul {
+  /* level 2 block */
+  list-style-type: none;
+  padding-left: 0;
+  /*  visibility: collapse;
+    display: table;*/
+  display: none;
+}
+.cms-public .menu-horizontal-fixed > ul > li > ul > li {
+  /* level 2 block items */
+  display: table;
+  position: relative;
+}
+.cms-public .menu-horizontal-fixed > ul > li.menu_open > ul {
+  /* level 2 block (ドロップダウンクリック時) */
+  /*  visibility: visible;*/
+  display: table;
+}
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > a,
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > span.drop_down {
+  /* level 2 block items(2階層目の色) */
+  opacity: 0.8;
+}
+
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > ul {
+  /* level 3 block */
+  list-style-type: none;
+  padding-left: 0;
+  /*  visibility: collapse;
+    display: table;*/
+  display: none;
+}
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > ul > li {
+  /* level 3 block items */
+  display: table;
+  position: relative;
+}
+.cms-public .menu-horizontal-fixed > ul > li.menu_open > ul > li.menu_open > ul {
+  /* level 3 block (ドロップダウンクリック時) */
+  /*  visibility: visible;*/
+  display: table;
+}
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > ul > li > a,
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > ul > li > span.drop_down {
+  /* level 3 block (3階層目の色) */
+  opacity: 0.6;
+}
+.cms-public .menu-horizontal-fixed > ul > li > ul > li > ul > li > ul {
+  /* level 4 */
+  display: none;
+}
+.cms-public .menu-horizontal-fixed span.drop_down:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  border-top: solid 3px #fff;
+  border-right: solid 3px #fff;
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg); 
+  position: absolute;
+  bottom: 50%;
+  left: 40%;
+  margin-top: -4px;
+  text-decoration: none;
+}
+.cms-public .menu-horizontal-fixed span.drop_down {
+  display: inline-block;
+  right: 0px;
+  position: absolute;
+  border-left: 1px solid #ddd;
+  border: 1px solid #ddd;
+  top: 0;
+}
+.cms-public .menu-horizontal-fixed span.drop_down:hover {
+  cursor:pointer;
+  background: #176E90;
+}
+
+/* Horizontal.left-underneath */
+.cms-public .menu-horizontal.left-underneath > ul > li > ul {
+  /* level 2 block */
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -70%;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+.cms-public .menu-horizontal.left-underneath > ul > li.active > ul,
+.cms-public .menu-horizontal.left-underneath > ul > li:hover > ul {
+  /* level 2 block (hover) */
+  left: -100%;
+  visibility: visible;
+  opacity: 1;
+}
+.cms-public .menu-horizontal.left-underneath > ul > li > ul > li > ul {
+  /* level 3 block */
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: -80%;
+  padding: 0;
+  list-style-type: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: .25s;
+}
+.cms-public .menu-horizontal.left-underneath > ul > li > ul > li.active > ul,
+.cms-public .menu-horizontal.left-underneath > ul > li > ul > li:hover > ul {
+  /* level 3 block (hover) */
+  left: -100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Group */
+.cms-public .menu-group > ul > li {
+  /* level 2 block items */
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid #000;
+  background: #9df;
+  vertical-align: top;
+}
+.cms-public .menu-group > ul > li > ul {
+  /* level 2 block */
+  display: table;
+  width: 100%;
+  padding: 5px 0px 0px 15px;
+}
+.cms-public .menu-group > ul > li > ul > li {
+  /* level 2 block items */
+  display: inline-block;
+  width: 50%;
+}
+.cms-public .menu-group > ul > li > ul > li > ul {
+  /* level 3 */
+  display: none;
+}
+
+/* Line */
+.cms-public .menu-line img {
+  height: 50px;
+  width: 50px;
+}
+.cms-public .menu-line > ul > li {
+  /* level 2 block items */
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #000;
+  background: #9df;
+  vertical-align: top;
+  padding: 5px 0px 0px 5px;
+}
+.cms-public .menu-line > ul > li > * {
+  position: absolute;
+  top: 50%;
+  line-height: 1.5em;
+  margin-top: -1.5em;
+}
+.cms-public .menu-line > ul > li > ul {
+  /* level 2 block */
+  position: absolute;
+  left: 20%;
+  display: inline-block;
+}
+.cms-public .menu-line > ul > li > ul > li {
+  /* level 2 block items */
+  display: inline;
+  list-style: none;
+}
+.cms-public .menu-line > ul > li > ul > li + li:before {
+  margin: 0 8px;
+  content: "/";
+}
+.cms-public .menu-line > ul > li > ul > li > * {
+  vertical-align: baseline;
+}
+.cms-public .menu-line > ul > li > ul > li > ul {
+  /* level 3 */
+  display: none;
+}
+
+/* Sitemap */
+.cms-public .menu-sitemap a{
+  color: #081f51;
+} 
+.cms-public .menu-sitemap > ul{
+  padding:0;
+}
+.cms-public .menu-sitemap > ul > li {
+  /* level 1 block items */
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.5em;
+  height: auto;
+  background: transparent;
+  display: block;
+  float: none;
+  border: none;
+}
+.cms-public .menu-sitemap > ul > li > a {
+  /* level 1 block */
+  font-size: calc(1.5em + 0.15vw);
+  font-weight: bold;
+  text-decoration: underline;
+  border-bottom: 1px solid #0B214F;
+  display: block;
+}
+.cms-public .menu-sitemap > ul > li > ul {
+  /* level 2 block */
+  margin-top:20px;
+}
+.cms-public .menu-sitemap > ul > li > ul > li {
+  /* level 2 block items */
+  margin-top:10px;
+}
+.cms-public .menu-sitemap > ul > li > ul > li > ul {
+  /* level 3 block */
+  margin-top:10px;
+}
+.cms-public .menu-sitemap > ul > li > ul > li > ul > li {
+  /* level 3 block items */
+  margin-top:10px;
+}
+.cms-public .menu-sitemap > ul > li > ul > li > ul > li > ul {
+  /* level 4 block */
+  margin-top:10px;
+}
+.cms-public .menu-sitemap > ul > li > ul > li > ul > li > ul > li{
+  /* level 4 block items */
+  margin-top:10px;
+}
+.cms-public .menu-sitemap ul li a img {
+  width:50px;
+  height:50px;
+}
+
+/* Hamburger */
+.cms-public .menu-trigger {
+  vertical-align: middle;
+  background-color: #fff;
+  border: 4px solid #091f51;
+  border-radius: 6px;
+  padding: 15px 0px;
+  z-index: 99;
+  position: relative;
+  float: left;
+  cursor: pointer;
+}
+.cms-public .menu-trigger span {
+  display: block;
+  height: 8px;
+  width: 49px;
+  background-color: #091f51;
+  border-radius: 4px;
+  margin: 4px 16px;
+}
+.cms-public .menu-trigger-right {
+  float: right;
+}
+.menu-trigger.active_hamburger span:nth-of-type(1) {
+  transform: translateY(12px) rotate(-45deg);
+}
+.menu-trigger.active_hamburger span:nth-of-type(2) {
+  background-color: white;
+}
+.menu-trigger.active_hamburger span:nth-of-type(3) {
+  transform: translateY(-12px) rotate(45deg);
+}
+.cms-public .buns {
+  position: relative;
+}
+.cms-public .hamburger {
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  margin-top: 78px;
+  width:100%;
+}
+.cms-public .hamburger-right {
+  float: right;
+}
+.cms-public .hamburger .menu-hamburger {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.cms-public .hamburger .menu-hamburger > ul {
+  display: inline;
+  vertical-align: middle;
+}
+.cms-public .hamburger .menu-hamburger > ul .menu-hamburger > ul > li{
+  height: 40px;
+  margin: 16px auto 0 auto;
+}
+.cms-public .hamburger .menu-hamburger > ul .menu-hamburger > ul > li:first-child{
+  margin-top: 0;
+}
+.cms-public .hamburger .menu-hamburger > ul .menu-hamburger > ul > li > a{
+  display: block;
+  position: relative;
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: #333;
+  line-height: 40px;
+  text-align: center;
+}
+.cms-public .menu-hamburger {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.cms-public .menu-hamburger a{
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+  text-align: center;
+  background: linear-gradient(#091f51, #091f51);
+}
+.cms-public .menu-vertical a:hover,
+.cms-public .menu-vertical a:focus,
+.cms-public .menu-horizontal a:hover,
+.cms-public .menu-horizontal a:focus,
+.cms-public .menu-horizontal-fixed a:hover,
+.cms-public .menu-horizontal-fixed a:focus,
+.cms-public .menu-hamburger a:hover{
+  background: #176E90;
+  transition: 0s;
+}
+.cms-public .menu-hamburger > ul {
+  /* level 1 block */
+  padding-left: 0px;
+}
+.cms-public .menu-hamburger > ul > li {
+  /* level 1 block items */
+  display: table;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  list-style-type: none;
+  width: 100%;
+}
+.cms-public .menu-hamburger > ul > li > ul {
+  /* level 2 block */
+  padding-left: 0px;
+  /*  visibility: collapse;*/
+  list-style-type: none;
+  opacity: 0;
+  transition: .25s;
+  position:absolute;
+  z-index:9999;
+  top:100%;
+  /*  left:0;*/
+  padding:0;
+  visibility: hidden;
+  width:0%
+}
+.cms-public .menu-hamburger > ul > li:hover > ul {
+  /*   level 2 block (hover) */
+  visibility: visible;
+  opacity: 1;
+  width:50%;
+}
+.cms-public .menu-hamburger > ul > li > ul > li{
+  /* level 2 block items */
+  /*  display: table;*/
+  display: table;
+  position: relative;
+  /*position: absolute;*/
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ddd;
+  list-style-type: none;
+  width: 100%;
+}
+.cms-public .menu-hamburger > ul > li > ul > li > ul {
+  /*   level 3 block */
+  padding-left: 0px;
+  visibility: hidden;
+  list-style-type: none;
+  opacity: 0;
+  transition: .25s;
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:100%;
+  width:0%
+}
+.cms-public .menu-hamburger > ul > li > ul > li:hover > ul {
+  /*   level 3 block (hover) */
+  visibility: visible;
+  opacity: 1;
+  width:100%;
+}
+.cms-public .menu-hamburger > ul > li > ul > li > ul > li{
+  /* level 3 block items */
+  display: table;
+  position: relative;
+  /*position: absolute;*/
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  /*  border-bottom: 1px solid #ddd;*/
+  background: linear-gradient(#091f51, #091f51);
+  list-style-type: none;
+  width: 100%;
+}
+.cms-public .menu-hamburger > ul > li > ul > li > ul > li > ul{
+  /* level 4 block items */
+  display: none;
+}
+.cms-public .menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.cms-public .layout[data-type="4"] .area[data-type="2"],
+.cms-public .layout[data-type="6"] .area[data-type="2"] {
+  float: left;
+}
+.cms-public .layout[data-type="4"] .area[data-type="3"],
+.cms-public .layout[data-type="5"] .area[data-type="3"],
+.cms-public .layout[data-type="6"] .area[data-type="3"]{
+  float: left;
+}
+.cms-public .layout[data-type="5"] .area[data-type="4"],
+.cms-public .layout[data-type="6"] .area[data-type="4"] {
+  float: left;
+}
+.cms-public .layout[data-type="4"] .area[data-type="5"],
+.cms-public .layout[data-type="5"] .area[data-type="5"],
+.cms-public .layout[data-type="6"] .area[data-type="5"] {
+  clear: both;
+}
+
+/* Block Common*/
+
+/* Heading Block */
+body:not(.dev-mb) .cms-public .heading {
+  position: relative;
+}
+body:not(.dev-mb) .cms-public .heading h1 {
+  background-color: #eeeff3;
+  color: #081f51;
+  vertical-align: middle;
+  border-bottom: 4px solid #0B214F;
+  border-top: 0px;
+  padding: 26px 20px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 145%;
+  background-image: url(/img/h_sudachi.png);
+  background-repeat: no-repeat;
+  background-position: 99% 90%;
+  margin:  20px 0px 50px 0px;
+}
+body:not(.dev-mb) .cms-public .heading h1.disabled {
+  display: block !important;
+  width: 0 !important;
+  height: 0 !important;
+  clip: rect(0,0,0,0) !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+body:not(.dev-mb) .cms-public .heading time {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 5px;
+  right: 130px;
+}
+body:not(.dev-mb) .cms-public .heading h2 {
+  background-color: #fff;
+  color: #081f51;
+  vertical-align: middle;
+  border-left: 8px solid #0B214F;
+  line-height: 145%;
+  padding: 1px 12px;
+  margin: 30px 10px 30px 10px;
+}
+body:not(.dev-mb) .cms-public .heading h3 {
+  background-color: #e9fbff;
+  color: #081f51;
+  vertical-align: middle;
+  font-size: 1.25em;;
+  font-weight: bold;
+  line-height: 140%;
+  padding: 2px 11px;
+  margin: 30px 10px 30px 10px;
+}
+body:not(.dev-mb) .cms-public .heading h4 {
+  background-color: #fff;
+  color: #081f51;
+  vertical-align: middle;
+  font-size: 1.25em;;
+  font-weight: bold;
+  line-height: 140%;
+  position: relative;
+  margin: 30px 10px 30px 10px;
+  padding: 1px 18px;
+}
+body:not(.dev-mb) .cms-public .heading h4::after {
+  position: absolute;
+  top: .5em;
+  left: 0em;
+  z-index: 2;
+  content: '';
+  width: 0.3em;
+  height: 0.3em;
+  background-color: #7D90B7;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+body:not(.dev-mb) .cms-public .heading h5 {
+  background-color: #fff;
+  border-bottom: 1px solid #0B214F;
+  color: #081f51;
+  vertical-align: middle;
+  font-size: 1.25em;;
+  line-height: 140%;
+  padding: 1px 10px 2px;
+  margin: 30px 10px 30px 10px
+}
+body:not(.dev-mb) .cms-public .heading h6 {
+  background-color: #081f51;
+  color: #fff;
+  vertical-align: middle;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 200%;
+  padding-left: 10px;
+  margin: 30px 10px 30px 10px
+}
+
+/* Sentence Block */
+body:not(.dev-mb) .cms-public .sentence {
+  padding: 0px;
+  margin: 0px 10px 0px 10px
+}
+body:not(.dev-mb) .cms-public .sentence p {
+  color: #000000;
+  line-height: 180%;
+  font-size: 1.0em;
+}
+
+/* Attach Block */
+body:not(.dev-mb) .cms-public .attach {
+  padding: 0px 23px;
+}
+body:not(.dev-mb) .cms-public .attach .item_side {
+  display: inline-block;
+}
+body:not(.dev-mb) .cms-public .attach img.file-extension {
+  width: 50px;
+  height: 50px;
+}
+
+/* Horizontal Line Block */
+body:not(.dev-mb) .cms-public .horizontalline hr.solid,
+body:not(.dev-mb) .cms-public .horizontalline hr.dashed,
+body:not(.dev-mb) .cms-public .horizontalline hr.border {
+  border-color:#081f51;
+}
+body:not(.dev-mb) .cms-public .horizontalline hr.dashed {
+  border-style:dashed;
+}
+body:not(.dev-mb) .cms-public .horizontalline hr.solid,
+body:not(.dev-mb) .cms-public .horizontalline hr.dashed {
+  border-width: 1px 0 0 0
+}
+body:not(.dev-mb) .cms-public .horizontalline hr.border {
+  border-width: 2px 0 0 0
+}
+
+/* Image Block */
+body:not(.dev-mb) .cms-public .image .block {
+  width: 100%;
+}
+body:not(.dev-mb) .cms-public .image .block.left {
+  text-align: left;
+}
+body:not(.dev-mb) .cms-public .image .block.center {
+  text-align: center;
+}
+body:not(.dev-mb) .cms-public .image .block.right {
+  text-align: right;
+}
+body:not(.dev-mb) .cms-public .image .image_listitem {
+  display: inline-table;
+}
+body:not(.dev-mb) .cms-public .image figure,
+body:not(.dev-mb) .cms-public .sentence_with_image figure {
+  display: inline-table;
+}
+body:not(.dev-mb) .cms-public .image figcaption.top {
+  display: table-caption;
+  caption-side: top;
+}
+body:not(.dev-mb) .cms-public .image figcaption.bottom {
+  display: table-caption;
+  caption-side: bottom;
+}
+body:not(.dev-mb) .cms-public .image figcaption.left {
+  text-align: left;
+}
+body:not(.dev-mb) .cms-public .image figcaption.center {
+  text-align: center;
+}
+body:not(.dev-mb) .cms-public .image figcaption.right {
+  text-align: right;
+}
+body:not(.dev-mb) .cms-public .image div.border {
+  border: 1px solid #000;
+}
+body:not(.dev-mb) .cms-public .image img {
+  width: 100%;
+  height: 100%;
+}
+body:not(.dev-mb) .cms-public .image img.border {
+  border: 1px solid #000;
+}
+body:not(.dev-mb) .cms-public .page .image figcaption > img,
+body:not(.dev-mb) .cms-public .page .sentence_with_image figcaption > img {
+  margin-left: 0.3em;
+  position: relative;
+  top: 0.2em;
+  width: auto !important;
+}
+
+/* List Block */
+.cms-public .list > figure > ul, 
+.cms-public .list > figure > ol,  
+.cms-public .list > figure > dl { 
+  padding-left: 0;
+}
+.cms-public .list ul li {}
+.cms-public .list ol {}
+.cms-public .list ol li {}
+.cms-public .list dl {
+  padding-left: 20px;
+  margin: 0;
+}
+.list li{
+  text-indent: 0;
+}
+.list dt{
+  text-indent: 0;
+}
+.cms-public .list dl dt {}
+.cms-public .list dl dd {}
+.cms-public .list figcaption {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.list-style-white-space{
+  white-space: pre-wrap;
+}
+
+/* Map Block */
+.cms-public .map {
+  clear: both;
+}
+.cms-public .map .gmap {
+  display: inline-block;
+}
+/* 中央寄せ */
+.cms-public .map figure.center {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 左寄せ */
+.cms-public .map figure.left {
+  display: table;
+  margin-left : 10px ;
+  margin-right: auto;
+}
+/* 右寄せ */
+.cms-public .map figure.right {
+  display: table;
+  margin-left: auto;
+  margin-right : 10px ;
+}
+.cms-public .map figure figcaption {
+  display: block;
+}
+.cms-public .map figure figcaption.left {
+  text-align: left;
+}
+.cms-public .map figure figcaption.center {
+  text-align: center;
+}
+.cms-public .map figure figcaption.right {
+  text-align: right;
+}
+
+/* Movie Block */
+.cms-public .movie {
+  clear: both;
+}
+.cms-public .movie figure.left {
+  text-align: left;
+}
+.cms-public .movie figure.center {
+  text-align: center;
+}
+.cms-public .movie figure.right {
+  text-align: right;
+}
+.cms-public .movie figure figcaption.left {
+  text-align: left;
+}
+.cms-public .movie figure figcaption.center {
+  text-align: center;
+}
+.cms-public .movie figure figcaption.right {
+  text-align: right;
+}
+
+/* Table Block */
+.cms-public .table {
+  margin: 0 10px;
+}
+.cms-public .table caption {
+  text-align: left;
+}
+.cms-public .table caption pre {
+  white-space: normal;
+  word-break: break-all;
+}
+.cms-public .table span {
+  font-size: 1.0em;
+  font-weight: bold;
+  word-break: break-all;
+}
+.cms-public .table pre {
+  font-size: 1.0em;
+}
+.cms-public .table table  {
+  border-collapse: collapse;
+  border-spacing: 0;
+  word-break: break-all;
+}
+.cms-public .table table tr {
+}
+.cms-public .table table tr th {
+  border: 1px solid;
+  background-color: #F1F2F3;
+}
+.cms-public .table table tr td {
+  border: 1px solid;
+}
+.cms-public .table table tr th.left,
+.cms-public .table table tr td.left {
+  text-align: left;
+}
+.cms-public .table table tr th.center,
+.cms-public .table table tr td.center {
+  text-align: center;
+}
+.cms-public .table table tr th.right,
+.cms-public .table table tr td.right {
+  text-align: right;
+  float: unset;
+}
+.table-style-white-space{
+  white-space: pre-wrap;
+}
+
+/* Slide Block */
+.cms-public div.slide {
+  width: 100%;
+  font-size: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.cms-public div.animation {
+  width: 100%;
+  font-size: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.cms-public div.slide div.prev {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+}
+.cms-public div.slide div.prev span.arrow {
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-prev.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  display: block;
+}
+.cms-public div.slide div.prev a:hover span.arrow,
+.cms-public div.slide div.prev a:focus span.arrow,
+.cms-public div.slide div.prev a:active span.arrow,
+.cms-public div.slide div.prev span.arrow:hover,
+.cms-public div.slide div.prev span.arrow:focus,
+.cms-public div.slide div.prev span.arrow:active {
+  opacity: 0.6;
+}
+.cms-public div.slide div.next {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 100;
+}
+.cms-public div.slide div.next span.arrow {
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-next.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  display: block;
+}
+.cms-public div.slide div.next a:hover span.arrow,
+.cms-public div.slide div.next a:focus span.arrow,
+.cms-public div.slide div.next a:active span.arrow,
+.cms-public div.slide div.next span.arrow:hover,
+.cms-public div.slide div.next span.arrow:focus,
+.cms-public div.slide div.next span.arrow:active{
+  opacity: 0.6;
+}
+.cms-public div.slide ul.index {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  z-index: 100;
+}
+.cms-public div.slide ul.index li {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #666;
+  background-color: #fff;
+  margin-right: 3px;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing:border-box;
+}
+.cms-public div.slide ul.index li:focus,
+.cms-public div.slide ul.index li > span:focus {
+  opacity: 0.8;
+}
+.cms-public div.slide ul.index li.active {
+  border-bottom: 5px solid #333;
+}
+.cms-public div.slide ul.index li img {
+  width: 100%;
+  height: 100%;
+}
+.cms-public div.slide div.pause {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+}
+.cms-public div.slide div.animation,
+.cms-public div.slide div.scroll {
+  width: 100%;
+  font-size: 0em;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  text-align:center;
+  bottom: 0;
+}
+.cms-public div.slide div.pause span.pause {
+  width: 40px;
+  height: 21px;
+  display: inline-block;
+  background-image: url('/img/pause-pause.png');
+  background-repeat: no-repeat;
+}
+.cms-public div.slide div.pause span.play {
+  width: 40px;
+  height: 21px;
+  display: inline-block;
+  background-image: url('/img/pause-play.png');
+  background-repeat: no-repeat;
+}
+.cms-public div.slide ul.slide {
+  width: 100%;
+  font-size: 0em;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  position: relative;
+}
+.cms-public div.slide ul.slide:after,
+.cms-public div.slide ul.slide:before {
+  content: "";
+  clear: both;
+  display: block;
+}
+.cms-public div.slide ul.slide li {
+  float: left;
+  position: absolute;
+  display: none;
+}
+.cms-public div.slide ul.slide li.active {
+  display: inline-block;
+}
+.cms-public div.slide[arrow=left] ul.scroll,
+.cms-public div.slide[arrow=right] ul.scroll {
+  width: 100%;
+  font-size: 0em;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  position: relative;
+}
+.cms-public div.slide[arrow=top] ul.scroll,
+.cms-public div.slide[arrow=bottom] ul.scroll {
+  width: 100%;
+  font-size: 0em;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+.cms-public div.slide[arrow=left] ul.scroll li,
+.cms-public div.slide[arrow=right] ul.scroll li {
+  display: inline-block;
+}
+.cms-public div.slide[arrow=top] ul.scroll li,
+.cms-public div.slide[arrow=bottom] ul.scroll li {
+  display: block;
+}
+.cms-public div.slide li a:hover,
+.cms-public div.slide li a:focus {
+  opacity: 0.8;
+  filter: alpha(opacity(80));
+}
+
+/* Contact Block */
+.cms-public .contact {
+  margin: 5em 10px;
+  border: 1px solid #081f51;
+  padding: 10px 20px;
+}
+.dev-pc .cms-public .contact {
+  width: 95%;
+}
+.cms-public .contact .contact_title {
+  margin: 1.3em 0;
+}
+.cms-public .contact .contact_title label {
+  border-left: 4px solid #081f51;
+  font-size: 1.25em;
+  margin-left: 0;
+  padding-left: 0.5em;
+  color: #081f51;
+  font-weight: 700;
+}
+.cms-public .contact .contact_child_department {
+  margin: 0.5em 0;
+  display: inline-block;
+}
+.cms-public .contact .contact_charge {
+  display: inline-block;
+}
+.cms-public .contact .contact_child_department label,
+.cms-public .contact .contact_charge label {
+  font-weight: 700;
+  margin-left: 0;
+}
+.cms-public .contact .contact_department {
+  margin-left: 0;
+}
+.cms-public .contact_mail {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Sentence With Image Block */
+.cms-public .sentence_with_image .sentence ul:after {
+  clear: none;
+}
+
+/***** Parts *****/
+
+/* Title list */
+.cms-public .title-list {
+  border: 1px solid #FFF;
+  width: 100%;
+}
+.cms-public .title-list .index {
+  list-style-type: none;
+  border-bottom: 1px solid #081f51;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: -.40em;
+}
+.cms-public .title-list .index li {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: normal;
+}
+.cms-public .title-list .index li h2 {
+  margin: 0px;
+}
+.cms-public .title-list .index li a {
+  color: #000000;
+  display: block;
+  text-decoration: none;
+  background-color: white;
+}
+.cms-public .title-list .management {
+  width: 100%;
+  border-top: 1px solid #081f51;
+  border-right: 1px solid #081f51;
+  border-left: 1px solid #081f51;
+  display: inline-block;
+  font-size: 1em;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.cms-public .title-list.slide .index li {
+  display: none;
+}
+.cms-public .title-list .index li.active {
+  border-bottom: 4px solid #081f51;
+}
+.cms-public .title-list.slide .index li.active {
+  display: block;
+}
+.cms-public .title-list .tab {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #081f51;
+  position: relative;
+}
+.cms-public .title-list .no-index {
+  border-top: 1px solid #081f51;
+}
+.cms-public .title-list .slide-prev {
+  display: none;
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-prev.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.cms-public .title-list.slide .slide-prev {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+.cms-public .title-list .slide-next {
+  display: none;
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-next.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.cms-public .title-list.slide .slide-next {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 5px;
+}
+.cms-public .title-list .tab ul {
+  display: none;
+  list-style-type: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  word-break: break-all;
+}
+.cms-public .title-list .tab >* {
+  clear: both;
+}
+.cms-public .title-list .tab .rss_left {
+  display: block;
+  text-align: left;
+}
+.cms-public .title-list .tab .rss_right {
+  display: block;
+  text-align: right;
+}
+.cms-public .title-list .tab ul.active {
+  display: block;
+}
+.cms-public .title-list.slide .tab {
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+.cms-public .title-list .tab ul li {
+  display: block;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-left: 8.5em;
+}
+.cms-public .title-list .tab ul li.display_date_time{
+  padding-left: 13.5em;
+}
+.cms-public .title-list .tab ul li.display_no_date_time{
+  padding-left: 0.5em;
+}
+.cms-public .title-list .tab ul li.totaling {
+  padding-left: 5em;
+}
+.cms-public .title-list .tab ul li.no-data {
+  padding-left: unset;
+}
+.cms-public .title-list .tab ul.tile li {
+  width: 49%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  margin: 0.5%;
+  float: left;
+  padding-left: unset;
+}
+.cms-public .title-list .tab ul li .picture {
+  display: none;
+}
+.cms-public .title-list .tab ul.tile li .picture {
+  display: block;
+  width: 120px;
+  height: 70px;
+  border: 1px solid #000;
+}
+.cms-public .page .layout .title-list .tile .picture img {
+  width:100%;
+  height:100%
+}
+.cms-public .title-list .tab ul li .recommen {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-image: url("/img/recommend.png");
+}
+.cms-public .title-list .tab ul.tile li .recommen {
+  display: none;
+}
+.cms-public .title-list .tab ul.totaling li .title,
+.cms-public .title-list .tab ul.totaling li .summary {
+  overflow: hidden;
+}
+.cms-public .title-list .tab ul.totaling li .summary_mb {
+  margin-left: 16px;
+  overflow: hidden;
+}
+.cms-public .title-list .tab ul.totaling li time {
+  margin-left: 0px;
+  /* float: left; */
+  position: absolute;
+  left: 0px;
+}
+.cms-public .title-list .tab ul.totaling.tile li time,
+.cms-public .title-list .tab ul.totaling.tile li .title,
+.cms-public .title-list .tab ul.totaling.tile li .title_mb,
+.cms-public .title-list .tab ul.totaling.tile li .belong{
+  margin-left: 0px;
+  /* float: left; */
+  position: unset;
+  left: 0px;
+}
+.cms-public .title-list .tab ul.totaling li time.same {
+  display: none;
+}
+.cms-public .title-list .tab ul.totaling li time.totaling {
+  position: relative;
+  left: -5em;
+}
+.cms-public .title-list .tab ul li .summary,
+.cms-public .title-list .tab ul li .summary_mb {
+  display: block;
+}
+.cms-public .title-list .paging {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+.cms-public .title-list .paging div {
+  display: inline;
+}
+.cms-public .title-list .paging a {
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin: 3px;
+  padding: 2px;
+}
+.cms-public .title-list .paging span.first,
+.cms-public .title-list .paging span.prev,
+.cms-public .title-list .paging span.page,
+.cms-public .title-list .paging span.next,
+.cms-public .title-list .paging span.last {
+  color: #03f;
+}
+.cms-public .title-list .paging .number .active {
+  font-weight: bold;
+  color: #000;
+}
+.cms-public .title-list .other span {
+  display: none;
+  text-align: right;
+  /*margin-top: 20px;*/
+}
+.cms-public .title-list .other span.active {
+  display: block;
+}
+body:not(.dev-mb) .cms-public .list li > img,
+body:not(.dev-mb) .cms-public .list dt > img,
+body:not(.dev-mb) .cms-public .list li > span > img,
+.cms-public .title-list .title a > img {
+  margin-left: 0.3em;
+  position: relative;
+  top: 0.2em;
+}
+
+/* Search */
+.gsc-search-button-v2 {
+  font-size: 0;
+  padding: 6px 27px;
+  width: auto;
+  vertical-align: middle;
+  border: 1px solid #666;
+  border-radius: 2px;
+  background-color: #081f51;
+}
+
+/* Access Ranking */
+.cms-public .access {
+  border: 1px solid #FFF;
+  width: 100%;
+}
+.cms-public .access .index {
+  list-style-type: none;
+  border-bottom: 1px solid #081f51;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: -.40em;
+}
+.cms-public .access .index li {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: normal;
+}
+.cms-public .access .index li h2 {
+  margin: 0px;
+}
+.cms-public .access .index li a {
+  color: #000000;
+  display: block;
+  text-decoration: none;
+}
+.cms-public .access .management {
+  width: 100%;
+  border-top: 1px solid #081f51;
+  border-right: 1px solid #081f51;
+  border-left: 1px solid #081f51;
+  display: inline-block;
+  font-size: 1em;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.cms-public .access.slide .index li {
+  display: none;
+}
+.cms-public .access .index li.active {
+  border-bottom: 4px solid #081f51;
+}
+.cms-public .access.slide .index li.active {
+  display: block;
+}
+.cms-public .access .tab {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #081f51;
+  position: relative;
+}
+.cms-public .access .no-index {
+  border-top: 1px solid #081f51;
+}
+.cms-public .access .slide-prev {
+  display: none;
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-prev.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.cms-public .access.slide .slide-prev {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+.cms-public .access .slide-next {
+  display: none;
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-next.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.cms-public .access.slide .slide-next {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 5px;
+}
+.cms-public .access .tab ol {
+  display: none;
+  list-style-type: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  word-break: break-all;
+}
+.cms-public .access .tab >* {
+  clear: both;
+}
+.cms-public .access .tab .rss_left {
+  display: block;
+  text-align: left;
+}
+.cms-public .access .tab .rss_right {
+  display: block;
+  text-align: right;
+}
+.cms-public .access .tab ol.active {
+  display: block;
+}
+.cms-public .access.slide .tab {
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+.cms-public .access .tab ol li {
+  display: block;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-left: 8.5em;
+}
+.cms-public .access .tab ol li.no-data {
+  padding-left: unset;
+}
+.cms-public .access .tab ol.tile li {
+  width: 49%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  margin: 0.5%;
+  float: left;
+  padding-left: unset;
+}
+.cms-public .access .tab ol li .picture {
+  display: none;
+}
+.cms-public .access .tab ol.tile li .picture {
+  display: block;
+  width: 120px;
+  height: 70px;
+  border: 1px solid #000;
+}
+.cms-public .access .tab ol li .recommen {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-image: url("/img/recommend.png");
+}
+.cms-public .access .tab ol.tile li .recommen {
+  display: none;
+}
+.cms-public .access .tab ol li .belong {
+  display: block;
+}
+.cms-public .access .tab ol li .title {
+  overflow: hidden;
+}
+.cms-public .access .tab ol li .belong,
+.cms-public .access .tab ol li .summary {
+  overflow: hidden;
+}
+.cms-public .access .tab ol.totaling li time {
+  margin-left: 0px;
+  /* float: left; */
+  position: absolute;
+  left: 0px;
+}
+.cms-public .access .tab ol.totaling li time.same {
+  display: none;
+}
+.cms-public .access .tab ol li .summary {
+  display: block;
+}
+.cms-public .access .paging {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+.cms-public .access .paging div {
+  display: inline;
+}
+.cms-public .access .paging a {
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin: 3px;
+  padding: 2px;
+}
+.cms-public .access .paging span.first,
+.cms-public .access .paging span.prev,
+.cms-public .access .paging span.page,
+.cms-public .access .paging span.next,
+.cms-public .access .paging span.last {
+  color: #03f;
+}
+.cms-public .access .paging .number .active {
+  font-weight: bold;
+  color: #000;
+}
+.cms-public .access .other span {
+  display: none;
+  text-align: right;
+  /*margin-top: 20px;*/
+}
+.cms-public .access .other span.active {
+  display: block;
+}
+
+/* Calendar */
+.cms-public .calendar {
+  border: 1px solid #FFF;
+  width: 100%;
+}
+.cms-public .calendar .index {
+  list-style-type: none;
+  border-bottom: 1px solid #081f51;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: -.40em;
+}
+.cms-public .calendar .index li {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: normal;
+}
+.cms-public .calendar .index li h2 {
+  margin: 0px;
+}
+.cms-public .calendar .index li a {
+  color: #000000;
+  display: block;
+  text-decoration: none;
+}
+.cms-public .calendar .management {
+  width: 100%;
+  border-top: 1px solid #081f51;
+  border-right: 1px solid #081f51;
+  border-left: 1px solid #081f51;
+  display: inline-block;
+  font-size: medium;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.cms-public .calendar.slide .index li {
+  display: none;
+}
+.cms-public .calendar .index li.active {
+  border-bottom: 4px solid #081f51;
+}
+.cms-public .calendar.slide .index li.active {
+  display: block;
+}
+.cms-public .calendar .calendar-y,
+.cms-public .calendar .calendar-m {
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.cms-public .calendar select {
+  font-size: 24px;
+}
+.cms-public .calendar .calendar-d-ym {
+  display: inline-block;
+  padding-left: 17px;
+}
+.cms-public .calendar .this-month-switch {
+  display: inline-block;
+  padding-left: 26px;
+}
+.cms-public .calendar .calendar-name {
+  display: inline-block;
+  padding-left: 15px;
+}
+.cms-public .calendar .calendar-d-name {
+  display: inline-block;
+  padding-left: 45px;
+}
+.cms-public .calendar .calendar-d-paging,
+.cms-public .calendar .calendar-m-paging {
+  display: inline-block;
+}
+.cms-public .calendar .calendar-d-paging {
+  float: left;
+}
+.cms-public .calendar .calendar-d {
+  font-size: 5em;
+  width: 2em;
+  height: 1.2em;
+  margin-top: -0.25em;
+  margin-left: 0.45em;
+  position: relative;
+  display: inline-block;
+}
+.cms-public .calendar .calendar-y h2,
+.cms-public .calendar .calendar-m h2,
+.cms-public .calendar .calendar-name h2,
+.cms-public .calendar .calendar-d-ym h2,
+.cms-public .calendar .calendar-d-name h2 {
+  margin: 0px;
+}
+.cms-public .calendar .calendar-table table {
+  border-collapse: collapse;
+  border-color: darkgray;
+}
+.cms-public .calendar .calendar-table .week {
+  text-align: center;
+  margin: auto;
+}
+.cms-public .calendar .calendar-table td.weekday div,
+.cms-public .calendar .calendar-table td.weekday a:link,
+.cms-public .calendar .calendar-table td.weekday a:visited {
+  color: #000000;
+}
+.cms-public .calendar div.sat,
+.cms-public .calendar .calendar-table th.sat,
+.cms-public .calendar .calendar-table td.sat div,
+.cms-public .calendar .calendar-table td.sat a:link,
+.cms-public .calendar .calendar-table td.sat a:visited {
+  color: #0000FF;
+}
+.cms-public .calendar .calendar-table th.sat,
+.cms-public .calendar .calendar-table td.sat {
+  background-color: #B0D0FF;
+}
+.cms-public .calendar div.sun,
+.cms-public .calendar div.holiday,
+.cms-public .calendar .calendar-table th.sun,
+.cms-public .calendar .calendar-table td.sun div,
+.cms-public .calendar .calendar-table td.sun a:link,
+.cms-public .calendar .calendar-table td.sun a:visited,
+.cms-public .calendar .calendar-table td.holiday div,
+.cms-public .calendar .calendar-table td.holiday a:link,
+.cms-public .calendar .calendar-table td.holiday a:visited {
+  color: #FF0000;
+}
+.cms-public .calendar .calendar-table th.sun,
+.cms-public .calendar .calendar-table td.sun,
+.cms-public .calendar .calendar-table td.holiday {
+  background-color: #FFC0C0;
+}
+.cms-public .calendar .calendar-table td.active {
+  background-color: #EEE8AA;
+}
+.cms-public .calendar .calendar-table td div {
+  display: table;
+  margin: auto;
+}
+.cms-public .calendar .tab {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #081f51;
+  position: relative;
+}
+.cms-public .calendar .no-index {
+  border-top: 1px solid #FFF;
+}
+.cms-public .calendar .slide-prev {
+  display: none;
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-prev.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.cms-public .calendar.slide .slide-prev {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+.cms-public .calendar .slide-next {
+  display: none;
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-next.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+.cms-public .calendar.slide .slide-next {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 5px;
+}
+.dev-pc .cms-public .calendar .calendar-ul,
+.dev-tb .cms-public .calendar .calendar-ul {
+  display: inline-block;
+}
+.dev-sp .cms-public .calendar .calendar-ul.calendar-day-list {
+  width: auto;
+}
+.dev-pc .cms-public .calendar .calendar-ul.calendar-day-list,
+.dev-tb .cms-public .calendar .calendar-ul.calendar-day-list {
+  width: -webkit-calc(100% - 12.3em);
+  width: calc(100% - 12.3em);
+}
+.cms-public .calendar .tab ul {
+  display: none;
+  list-style-type: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  word-break: break-all;
+}
+.cms-public .calendar .tab >* {
+  clear: both;
+}
+.cms-public .calendar .tab .rss_left {
+  display: block;
+  text-align: left;
+}
+.cms-public .calendar .tab .rss_right {
+  display: block;
+  text-align: right;
+}
+.cms-public .calendar .tab .calendar-list-changedate {
+  display: none;
+}
+.cms-public .calendar .tab .calendar-list-changedate.active {
+  display: block;
+}
+.cms-public .calendar .tab ul.active {
+  display: block;
+}
+.cms-public .calendar.slide .tab {
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+.cms-public .calendar .tab ul li {
+  display: block;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  padding-left: 19em;
+  padding-bottom: 0.3em;
+}
+.cms-public .calendar .tab ul li.totaling {
+  padding-left: 4em;
+}
+.dev-pc .cms-public .calendar .tab ul.list li.totaling,
+.dev-tb .cms-public .calendar .tab ul.list li.totaling {
+  padding-left: 25.5em;
+  padding-top: 5px;
+}
+.dev-sp .cms-public .calendar .tab ul li.totaling {
+  padding-left: 0;
+}
+.cms-public .calendar .tab ul li div.during {
+  position: absolute;
+  padding-top: 0.3em;
+}
+.dev-pc .cms-public .calendar .tab ul li div.during,
+.dev-tb .cms-public .calendar .tab ul li div.during {
+  left: 3em;
+}
+.dev-pc .cms-public .calendar .tab ul.list li div.during,
+.dev-tb .cms-public .calendar .tab ul.list li div.during {
+  left: 0;
+  padding-top: 0;
+}
+.cms-public .calendar .tab ul li.totaling div.during {
+  position: relative;
+}
+.dev-pc .cms-public .calendar .tab ul.list li.totaling div.during,
+.dev-tb .cms-public .calendar .tab ul.list li.totaling div.during {
+  position: absolute;
+  z-index: -1;
+}
+.cms-public .calendar .tab ul li.no-data {
+  padding-left: 0;
+}
+.cms-public .calendar .tab ul li .picture {
+  display: none;
+}
+.cms-public .calendar .tab ul li .recommen {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-image: url("/img/recommend.png");
+}
+.cms-public .calendar .tab ul.totaling li .title,
+.cms-public .calendar .tab ul.totaling li .summary {
+  overflow: hidden;
+}
+.cms-public .calendar .tab ul.totaling li .summary_mb {
+  margin-left: 16px;
+  overflow: hidden;
+}
+.cms-public .calendar .tab ul.totaling li time {
+  margin-left: 0px;
+}
+.cms-public .calendar .tab ul.totaling li time.same {
+  display: none;
+}
+.cms-public .calendar .tab ul.totaling li time.totaling {
+  position: relative;
+}
+.cms-public .calendar .tab ul li .summary,
+.cms-public .calendar .tab ul li .summary_mb {
+  display: block;
+}
+.cms-public .calendar .paging,
+.cms-public .calendar .month-paging,
+.cms-public .calendar .list-month-paging {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+.cms-public .calendar .list-month-paging {
+  position: relative;
+  z-index: 1;
+}
+.cms-public .calendar .day-paging {
+  width: 11em;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.cms-public .calendar .paging div,
+.cms-public .calendar .day-paging div,
+.cms-public .calendar .month-paging div,
+.cms-public .calendar .list-month-paging div {
+  display: inline;
+}
+.cms-public .calendar .paging a,
+.cms-public .calendar .day-paging a,
+.cms-public .calendar .month-paging a,
+.cms-public .calendar .list-month-paging a {
+  display: inline-block;
+  border: 1px solid #ccc;
+  margin: 3px;
+  padding: 2px;
+}
+.cms-public .calendar .paging span.first,
+.cms-public .calendar .paging span.prev,
+.cms-public .calendar .paging span.page,
+.cms-public .calendar .paging span.next,
+.cms-public .calendar .paging span.last,
+.cms-public .calendar .day-paging span.prev-day,
+.cms-public .calendar .day-paging span.next-day,
+.cms-public .calendar .month-paging span.prev-month,
+.cms-public .calendar .month-paging span.next-month,
+.cms-public .calendar .list-month-paging span.prev-month,
+.cms-public .calendar .list-month-paging span.next-month {
+  color: #03f;
+}
+.cms-public .calendar .paging .number .active {
+  font-weight: bold;
+  color: #000;
+}
+.cms-public .calendar .other span {
+  display: none;
+  text-align: right;
+  /*margin-top: 20px;*/
+}
+.cms-public .calendar .other span.active {
+  display: block;
+}
+
+/* Calendar(FullCalendar) */
+.cms-public .parts #calendar .display-none {
+  display: none;
+}
+.cms-public .parts #calendar > div:nth-child(2) table {
+  border-bottom-style: hidden;
+}
+.cms-public .parts #calendar > div:nth-child(3) table {
+  border-top-style: hidden;
+}
+.cms-public .parts #calendar > div:nth-child(3) table thead {
+  display: none;
+}
+/* header */
+.cms-public .parts #calendar .fc-center {
+  display: flex;
+  align-items: center;
+}
+.cms-public .parts #calendar .fc-center h2 {
+  text-align: center;
+}
+.dev-sp .cms-public .parts #calendar .fc-center h2 {
+  font-size: 1.4em;
+}
+.cms-public .parts #calendar td.fc-day-header {
+  font-weight: bold;
+}
+.cms-public .parts #calendar td.fc-day-header.fc-sat {
+  color: #0000FF;
+  background-color: #E0F0FE;
+}
+.cms-public .parts #calendar td.fc-day-header.fc-sun,
+.cms-public .parts #calendar td.fc-day-header.fc-holiday {
+  color: #C00018;
+  background-color: #FFF0F9;
+}
+.cms-public #calendar div.fc-header-datetime {
+  font-family: Georgia,serif;
+  font-size: 20px;
+}
+.cms-public #calendar div.fc-header-week {
+  font-family: Helvetica,Arial;
+  font-size: 14px;
+  display: inline-block;
+}
+/* events */
+.cms-public .parts #calendar table td > a {
+  border: none;
+}
+.cms-public .parts #calendar table td > a.fc-event-end,
+.cms-public .parts #calendar table td > a.fc-thumbnail-event-end {
+  border-radius: 0 2em 2em 0;
+  padding-right: 1em;
+}
+.cms-public .parts #calendar .fc-content {
+  text-overflow: ellipsis;
+}
+.cms-public .parts #calendar > div:nth-child(3) .fc-content {
+  height: 4.8em;
+  padding-top: 0.4em;
+  line-height: 1.6;
+}
+.cms-public .parts #calendar .fc-display-none {
+  display: none;
+}
+.cms-public .parts #calendar .fc-content img {
+  float: left;
+  height: 5.4em;
+  margin-top: -0.4em;
+  vertical-align: middle;
+}
+.cms-public .parts #calendar .fc-content .fc-title {
+  vertical-align: top;
+}
+
+/* Login */
+.cms-public .login_parts {
+  text-align: center;
+}
+.cms-public .login_parts .login_area {
+  display: inline-block;
+}
+.cms-public .login_parts .login_error_message label {
+  float: left;
+  text-align: left;
+  color: #FF0000;
+}
+.cms-public .login_parts div.login_id,
+.cms-public .login_parts div.login_password {
+  clear: both;
+}
+.cms-public .login_parts div.login_id input.number,
+.cms-public .login_parts div.login_password input.password {
+  width: 16.5em;
+  height: 2.7em;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  padding-left: 10px;
+  float: left;
+}
+.cms-public .login_parts .login_area div.right {
+  float: none;
+  text-align: right;
+  clear: both;
+}
+.cms-public .login_parts .login_area div.left {
+  float: none;
+  text-align: left;
+  clear: both;
+}
+.cms-public .login_parts .login_area div.center {
+  float: none;
+  text-align: center;
+  clear: both;
+}
+.cms-public .login_parts .login_button,
+.cms-public .login_parts .logout_button {
+  height: 35px;
+  cursor: pointer;
+  font: 400 1em Arial;
+  background-color: #081f51;
+  border: 1px solid #081f51;
+  color: #fff;
+}
+.cms-public .login_parts .login_password .login_button {
+  margin-left: 10px;
+}
+
+/* User Password Change */
+.cms-public .user_password_change_parts {
+  text-align: center;
+}
+.cms-public .user_password_change_parts .user_password_change_area {
+  display: inline-block;
+}
+.cms-public .user_password_change_parts .user_password_change_error_message label {
+  float: left;
+  text-align: left;
+  color: #FF0000;
+}
+.cms-public .user_password_change_parts .user_password_change_area table.password_change {
+  margin: auto;
+}
+.cms-public .user_password_change_parts .user_password_change_area table.password_change caption {
+  text-align: left;
+  font-weight: bold;
+}
+.cms-public .user_password_change_parts table.password_change tr.number,
+.cms-public .user_password_change_parts table.password_change tr.old_password,
+.cms-public .user_password_change_parts table.password_change tr.new_password,
+.cms-public .user_password_change_parts table.password_change tr.check_new_password {
+  clear: both;
+}
+.cms-public .user_password_change_parts table.password_change tr.number label.number,
+.cms-public .user_password_change_parts table.password_change tr.old_password label.password,
+.cms-public .user_password_change_parts table.password_change tr.new_password label.new_password,
+.cms-public .user_password_change_parts table.password_change tr.check_new_password label.check_new_password {
+  float: right;
+  text-align: left;
+}
+.cms-public .user_password_change_parts table.password_change tr.number input.number,
+.cms-public .user_password_change_parts table.password_change tr.old_password input.password,
+.cms-public .user_password_change_parts table.password_change tr.new_password input.new_password,
+.cms-public .user_password_change_parts table.password_change tr.check_new_password input.check_new_password {
+  width: 16.5em;
+  height: 2.7em;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  padding-left: 10px;
+  float: left;
+}
+.cms-public .user_password_change_parts .user_password_change_area tr.note label.note {
+  text-align: left;
+  float: left;
+}
+.cms-public .user_password_change_parts .user_password_change_area div.password_change_buttons {
+  float: none;
+  text-align: right;
+}
+.cms-public .user_password_change_parts .password_change_button,
+.cms-public .user_password_change_parts .password_change_cancel_button {
+  height: 35px;
+  cursor: pointer;
+  margin-left: 10px;
+  font: 400 1em Arial;
+  background-color: #081f51;
+  border: 1px solid #081f51;
+  color: #fff;
+}
+
+/* Banner Parts */
+.cms-public div.banner {
+  overflow: hidden;
+  position: relative;
+}
+.cms-public div.banner div.banner-part {
+  position: relative;
+}
+.cms-public div.banner div.banner-part.left {
+  float: left;
+}
+.cms-public div.banner div.banner-part.center {
+  float: left;
+  left: 50%;
+}
+.cms-public div.banner div.banner-part.right {
+  float: right;
+}
+.cms-public div.banner div.advertisement {
+  width: 100%;
+  font-size: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.cms-public div.banner div.banner-part.banner-side div.advertisement {
+  float: left;
+}
+.cms-public div.banner div.banner-part.center div.advertisement {
+  left: -50%;
+}
+.cms-public div.banner div.animation {
+  width: 100%;
+  font-size: 0em;
+  overflow: hidden;
+  position: relative;
+}
+.cms-public div.banner div.advertisement div.prev {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 100;
+}
+.cms-public div.banner div.advertisement div.prev span.arrow {
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-prev.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  display: block;
+}
+.cms-public div.banner div.advertisement div.prev a:hover span.arrow,
+.cms-public div.banner div.advertisement div.prev a:focus span.arrow,
+.cms-public div.banner div.advertisement div.prev a:active span.arrow,
+.cms-public div.banner div.advertisement div.prev span.arrow:hover,
+.cms-public div.banner div.advertisement div.prev span.arrow:focus,
+.cms-public div.banner div.advertisement div.prev span.arrow:active
+{
+  opacity: 0.6;
+}
+.cms-public div.banner div.advertisement div.next {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 100;
+}
+.cms-public div.banner div.advertisement div.next span.arrow {
+  width: 15px;
+  height: 35px;
+  background-image: url('/img/arrow-next.png');
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  display: block;
+}
+.cms-public div.banner div.advertisement div.next a:hover span.arrow,
+.cms-public div.banner div.advertisement div.next a:focus span.arrow,
+.cms-public div.banner div.advertisement div.next a:active span.arrow,
+.cms-public div.banner div.advertisement div.next span.arrow:hover,
+.cms-public div.banner div.advertisement div.next span.arrow:focus,
+.cms-public div.banner div.advertisement div.next span.arrow:active {
+  opacity: 0.6;
+}
+.cms-public div.banner div.advertisement ul.index {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  z-index: 100;
+}
+.cms-public div.banner div.advertisement ul.index li {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #666;
+  background-color: #fff;
+  margin-right: 3px;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing:border-box;
+}
+.cms-public div.banner div.advertisement ul.index li:focus,
+.cms-public div.banner div.advertisement ul.index li > span:focus {
+  opacity: 0.8;
+}
+.cms-public div.banner div.advertisement ul.index li.active {
+  border-bottom: 5px solid #333;
+}
+.cms-public div.banner div.advertisement ul.index li img {
+  width: 100%;
+  height: 100%;
+}
+.cms-public div.banner div.advertisement div.pause {
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 100;
+}
+.cms-public div.banner div.advertisement div.animation {
+  width: 100%;
+  font-size: 0em;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  text-align:center;
+  bottom: 0;
+}
+.cms-public div.banner div.advertisement div.pause span.pause {
+  width: 40px;
+  height: 21px;
+  display: inline-block;
+  background-image: url('/img/pause-pause.png');
+  background-repeat: no-repeat;
+}
+.cms-public div.banner div.advertisement div.pause span.play {
+  width: 40px;
+  height: 21px;
+  display: inline-block;
+  background-image: url('/img/pause-play.png');
+  background-repeat: no-repeat;
+}
+.cms-public div.banner div.advertisement ul.slide {
+  width: 100%;
+  font-size: 0em;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  position: relative;
+}
+.cms-public div.banner div.advertisement ul.slide:after,
+.cms-public div.banner div.advertisement ul.slide:before {
+  content: "";
+  clear: both;
+  display: block;
+}
+.cms-public div.banner div.advertisement ul.slide li {
+  float: left;
+  position: absolute;
+  display: none;
+}
+.cms-public div.banner div.advertisement ul.slide li.active {
+  display: inline-block;
+}
+.cms-public div.banner div.advertisement[arrow=left] ul.scroll,
+.cms-public div.banner div.advertisement[arrow=right] ul.scroll {
+  width: 100%;
+  font-size: 0em;
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  position: relative;
+}
+.cms-public div.banner div.advertisement[arrow=top] ul.scroll,
+.cms-public div.banner div.advertisement[arrow=bottom] ul.scroll {
+  width: 100%;
+  font-size: 0em;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+.cms-public div.banner div.advertisement[arrow=left] ul.scroll li,
+.cms-public div.banner div.advertisement[arrow=right] ul.scroll li {
+  display: inline-block;
+}
+.cms-public div.banner div.advertisement[arrow=top] ul.scroll li,
+.cms-public div.banner div.advertisement[arrow=bottom] ul.scroll li {
+  display: block;
+}
+
+/***** PC Footer ***********************************************************************************************/
+.dev-pc .cms-public footer .main {
+  margin:0 auto;
+  position: relative;
+  background:url(/img/bg_footer.gif)
+}
+.dev-pc .cms-public footer .main:before, .dev-pc .cms-public footer .main:after {
+  content: "";
+  position: absolute;
+  background:url(/img/bg_footer.gif) ;
+  top: 0;
+  bottom: 0;
+  width: 9999px;   /* some huge width */
+}
+.dev-pc .cms-public footer .main:before {
+  right: 100%;
+}
+.dev-pc .cms-public footer .main:after {
+  left: 100%;
+}
+.dev-pc .cms-public footer {
+  margin:160px auto 0 auto;
+}
+.dev-pc .cms-public footer .main {
+  background:url(/img/bg_footer.gif) ;
+}
+.dev-pc .cms-public footer strong {
+  font-size:1.25em;
+}
+.dev-pc .cms-public footer .ai {
+  display:table-cell;
+  width:145px;
+  text-indent:-9999px;
+  background:url(/img/ai_tokushima.png) 0 center no-repeat;
+  background-color:#001280;
+  min-width:133px;
+}
+.dev-pc .cms-public footer address {
+  vertical-align:top;
+  display:table-cell;
+  padding:30px 0 0 30px;
+  font-style:normal;
+  width:1000px;
+  font-size:0.94em;
+}
+.dev-pc .cms-public footer .menu {
+  position:relative;
+  width:1200px;
+  margin:0 auto;
+  margin-bottom:0;
+  padding-top:20px;
+  font-size:0.94em;
+}
+.dev-pc .cms-public footer .menu ul {
+  padding:0 0 20px 0;
+  margin:0 0 0 170px;
+}
+.dev-pc .cms-public footer .inner {
+  color:#fff;
+  width:1300px;
+  margin:0 auto;
+}
+.dev-pc .cms-public footer .inner:after, dl:after, ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.dev-pc .cms-public footer dt {
+  float:left;
+  display:block;
+  color:#fff;
+}
+.dev-pc .cms-public footer dd {
+  display:block;
+  color:#fff;
+}
+.dev-pc .cms-public footer .inquire_block, .banner_block {
+  vertical-align:top;
+  display:table-cell;
+  color:#333;
+  width:250px;
+  padding:20px 0px 10px 20px;
+}
+.dev-pc .cms-public footer .inquire_block a, .banner_block a {
+  text-decoration:none;
+}
+.dev-pc .cms-public footer .inquire_block .inquire {
+  background-color:#fff;
+  padding:20px;
+  margin-top:20px;
+  width:250px;
+}
+.dev-pc .cms-public footer .inner .title {
+  font-size:1.2em;
+  font-weight:bold;
+}
+.dev-pc .cms-public footer .inquire .title {
+  border-bottom:1px solid #333;
+  font-size:1.5em;
+  background:url(/img/sudachikun.png)  0 50% no-repeat;
+  height:70px;
+  padding-left:50px;
+  line-height:3.2em;
+}
+.dev-pc .cms-public footer .inquire .desc {
+  /*	width:300px;*/
+  font-size:0.94em;
+  margin:20px 0 10px 0;
+}
+.dev-pc .cms-public footer .access {
+  margin-top:20px;
+  background:url(/img/icon_access.png)  30px 50% no-repeat;
+}
+.dev-pc .cms-public footer .floor {
+  background:url(/img/icon_floor.png) 30px 50% no-repeat;
+}
+.dev-pc .cms-public footer .access, .dev-pc .cms-public footer .floor {
+  background-color:#fff;
+  color:#333;
+  width:250px;
+  padding:20px 20px 20px 100px;
+  margin-bottom:20px;
+  display:block;
+}
+.dev-pc .cms-public footer .copyright {
+  clear:both;
+  text-align:center;
+  margin-top:10px;
+  font-size:0.8em;
+}
+.dev-pc .cms-public footer .menu li {
+  float:left;
+  list-style-type:none;
+  margin-right:10px;
+  font-size:0.94em;
+}
+.dev-pc .cms-public footer .arrow2 {
+  position: relative;
+  display: inline-block;
+  padding-left: 17px;
+}
+.dev-pc .cms-public footer .arrow2 a {
+  color:#333;
+}
+.dev-pc .cms-public footer .arrow2:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: #081f51;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+}
+.dev-pc .cms-public footer .arrow2:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: solid 4px transparent;
+  border-left: solid 4px #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  margin-top: -4px;
+}
+.dev-pc .cms-public footer .pagetop {
+  position:absolute;
+  right:0;
+  bottom:0;
+  background:url(/img/arrow01.png) 50px center no-repeat;
+  width:280px;
+  font-size:1.2em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  background-color:#081f51;
+  color:#fff;
+  padding:14px 10px;
+  font-weight:bold;
+  text-indent:85px;
+  border-bottom:3px solid #526285;
+}
+.cms-public .detail {
+  float: right;
+}
+
+.cms-public .breadcrumb .bread-list .breadcrumb_open,
+.cms-public .breadcrumb .bread-list .breadcrumb_close {
+  float: right;
+  display: inline-block;
+}
+
+.to_pc_page, .to_original_page {
+  background-color: white;
+  font-size: 175%;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+.to_pc_page a, .to_original_page a {
+  color: rgb(8,31,81);
+  text-decoration: none;
+}
+
+/*[小][標準][大]*/
+button#smaller,
+button#medium,
+button#larger,
+button#smaller-btn,
+button#medium-btn,
+button#larger-btn{
+  font: 400 1em Arial;
+}
+
+/* カタカナ付き・括弧数字付きリスト*/
+ol.list-style-kana {
+  list-style-type: katakana !important;
+  clear: both !important;
+}
+ol.list-style-lower-latin {
+  list-style-type: lower-latin !important;
+  clear: both !important;
+}
+ol.list-style-upper-latin {
+  list-style-type: upper-latin !important;
+  clear: both !important;
+}
+ol.list-style-lower-roman {
+  list-style-type: lower-roman !important;
+  clear: both !important;
+}
+ol.list-style-upper-roman {
+  list-style-type: upper-roman !important;
+  clear: both !important;
+}
+/* 段組みリスト */
+ul.list-style-table {
+  list-style: none;
+}
+ul.list-style-table li span.first {
+  float: left;
+  /*  padding: 10px;*/
+  word-wrap: break-word;
+}
+ul.list-style-table li span.second {
+  display: block;
+  word-wrap: break-word;
+}
+ul.list-style-table li.next {
+  clear: both;
+}
+
+/* 括弧数字付きリスト */
+ol.list-style-parenthesized{
+  counter-reset: item;
+  list-style: none;
+}
+ol.list-style-parenthesized li.parenthesized:before{
+  content:"(" counter(item) ")";
+  counter-increment:item;
+  margin-right:0.5em;
+}
+
+/*IE表示対応*/
+_:-ms-lang(x)::-ms-backdrop, ol.list-style-parenthesized li.parenthesized:before {
+  margin-right:0.8em;
+}
+ol.list-style-parenthesized li.parenthesized{
+  padding-left: 2px;
+  text-indent: -2em;
+}
+
+/* 定義リスト */
+ul.list-style-ul-def {
+  list-style-type: none !important;
+  clear: both !important;
+  padding-left: 20px;
+}
+
+img.cc_license {
+  width: auto;
+  max-height: 35px;
+  padding-left: 10px;
+}
+
+.area {
+  min-height: 1px;
+}
+
+.cms-public .dynamic_breadcrumb {
+  height : 48px;
+}
+.cms-public .default_breadcrumb {
+  height : 48px;
+}
+
+button.easyweb_alternative_click {
+  font: 400 1em Arial;
+}
+.easyweb_alternative {
+  float:left;
+}
+.easyweb_alternative_word {
+  padding-left: 5px;
+}
+
+.easyweb_alternative_normal {
+  /*border: none;*/
+}
+.easyweb_alternative_blue {
+  background: blue;
+  color: yellow;
+}
+.easyweb_alternative_yellow {
+  background: yellow;
+  color: black;
+}
+.easyweb_alternative_black {
+  background: black;
+  color: yellow;
+}
+
+/*レスポンシブデザイン用*/
+.cms-public .menu-vertical + .menu-trigger-rf, .cms-public .menu-horizontal + .menu-trigger-rf,
+.cms-public .menu-group + .menu-trigger-rf, .cms-public .menu-line + .menu-trigger-rf,
+.cms-public .menu-sitemap + .menu-trigger-rf, .cms-public .menu-horizontal-fixed + .menu-trigger-rf {
+  display: none;
+}
+.cms-public .menu-vertical + .menu-trigger-rf + .buns-rf, .cms-public .menu-horizontal + .menu-trigger-rf + .buns-rf,
+.cms-public .menu-group + .menu-trigger-rf + .buns-rf, .cms-public .menu-line + .menu-trigger-rf + .buns-rf,
+.cms-public .menu-sitemap + .menu-trigger-rf + .buns-rf, .cms-public .menu-horizontal-fixed + .menu-trigger-rf + .buns-rf{
+  display: none;
+}
+
+.cms-public .page .layout .buns-rf ul li a img {
+  width:50px;
+  height:50px;
+}
+
+/*アクセシビリティ用*/
+.prohibited_words_check {
+  background-color: yellow!important;
+  color: red!important;
+}
+.accessibility_patterns_check {
+  background-color: yellow!important;
+  color: red!important;
+}
+
+/*問い合わせパーツ質問一覧（QuestionItems）*/
+.cms-public label.qmain {
+  word-wrap: break-word;
+  width:100%;
+}
+.cms-public .qinput > div {
+  word-wrap: break-word;
+}
+
+/*IEのみ*/
+@media all and (-ms-high-contrast: none) {
+  .sentence_with_image .sentence ul {
+    list-style-position:inside;
+  }
+}
+
+/*Edgeのみ*/
+_:-ms-lang(x)::backdrop, .sentence_with_image .sentence ul {
+  list-style-position:inside;
+}
+
+/*非表示用CSS*/
+.cms-public .page .not_display_content {
+  display: none;
+}

@@ -1,0 +1,427 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<title>AthleteRanking.com ver 2.0</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+var today_i = 0;
+
+function submit_link(id,mode) {
+  document.form_sub.target = "";
+  if( mode == 1 ){
+	document.form_sub.action = "resultdata.php";
+  }else{
+	document.form_sub.action = "timetable.php";
+  }
+  document.form_sub.id.value = id;
+  document.form_sub.submit();
+  if( mode == 1 && window.parent )
+  {
+	obj = window.parent.document.getElementById("gametitle");
+	y = obj.offsetTop;
+	window.parent.scrollTo(0,y);
+  }
+  return false;
+}
+
+function start_sheet()
+{
+	disp_timetable(today_i);
+	set_scroll();
+}
+
+function set_scroll()
+{
+	//親iframeの高さをこのコンテンツの高さに合わせる
+	if( window.parent.document.getElementsByName("AR_data") )
+	{
+		window.parent.document.getElementsByName("AR_data")[0].style.display = "block";
+		window.parent.document.getElementsByName("AR_data")[0].style.height = document.body.offsetHeight + 20 + "px";
+	}
+
+
+	return;
+}
+function disp_timetable(sheet)
+{
+	var cnt = 2;
+	for(i=0;i<cnt;i++)
+	{
+		if( i == sheet )
+		{
+			document.getElementById("date" + i + "").className = "datelink2";
+			document.getElementById("timetable" + i + "").style.display = "block";
+		}
+		else
+		{
+			document.getElementById("date" + i + "").className = "datelink";
+			document.getElementById("timetable" + i + "").style.display = "none";
+		}
+	}
+	set_scroll();
+
+	return false;
+}
+
+function onload_event()
+{
+	start_sheet();
+}
+
+//-->
+</script>
+<link href="css/main01.css" rel="stylesheet" type="text/css">
+<link href="css/main02.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload='onload_event()'>
+<form name="form_sub" method="post" action="" class="ns">
+	<input name="id" type="hidden">
+</form>
+
+<table class='race_table' cellspacing='0'><tr><th class='timetable_date' colspan='3'>2022年 <a href='racedata.php' onclick='return disp_timetable(0);' id='date0' class='datelink2'>7月16日(土)</a> <a href='racedata.php' onclick='return disp_timetable(1);' id='date1' class='datelink'>7月17日(日)</a></th></tr></table><div id='timetable0'><table class='race_table' cellspacing='0'><tr><th class='race_table_race'>トラック競技</th></tr><tr><th class='race_th1'>競技時刻</th><th class='race_th2'>性別　種別　種目　ラウンド</th><th class='race_th1'>組数　進出</th></tr><tr>
+<td class='race_td1'>09:40</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@A0100@1" , 1 );'>男子   十種競技100m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>09:50</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@AH101@1" , 1 );'>女子   七種競技100mH 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>09:55</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@AH101@5" , 1 );'>女子   100mH 予選</a></td>
+<td class='race_td1'>2組 3着+2</td></tr>
+<tr>
+<td class='race_td2'>10:05</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@AH112@5" , 1 );'>男子 少年B 110mH 予選</a></td>
+<td class='race_td2'>2組 3着+2</td></tr>
+<tr>
+<td class='race_td1'>10:15</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@AH111@5" , 1 );'>男子   110mH 予選</a></td>
+<td class='race_td1'>2組 3着+2</td></tr>
+<tr>
+<td class='race_td2'>10:30</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0400@5" , 1 );'>女子   400m 予選</a></td>
+<td class='race_td2'>2組 3着+2</td></tr>
+<tr>
+<td class='race_td1'>10:40</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0400@5" , 1 );'>男子   400m 予選</a></td>
+<td class='race_td1'>9組 2着+6</td></tr>
+<tr>
+<td class='race_td2'>11:20</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0800@5" , 1 );'>女子   800m 予選</a></td>
+<td class='race_td2'>4組 1着+4</td></tr>
+<tr>
+<td class='race_td1'>11:40</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0800@5" , 1 );'>男子   800m 予選</a></td>
+<td class='race_td1'>5組 1着+3</td></tr>
+<tr>
+<td class='race_td2'>12:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0100@5" , 1 );'>男子   100m 予選</a></td>
+<td class='race_td2'>13組 1着+12</td></tr>
+<tr>
+<td class='race_td1'>12:40</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0100@5" , 1 );'>女子   100m 予選</a></td>
+<td class='race_td1'>7組 3着+3</td></tr>
+<tr>
+<td class='race_td2'>13:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@1@0@A1300@1" , 1 );'>女子 少年A 3000m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>13:20</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@A1300@1" , 1 );'>男子 少年B 3000m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>13:40</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0400@2" , 1 );'>男子   400m 準決勝</a></td>
+<td class='race_td2'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td1'>13:50</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@2@0@A0100@5" , 1 );'>女子 少年B 100m 予選</a></td>
+<td class='race_td1'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td2'>14:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@A0100@5" , 1 );'>男子 少年B 100m 予選</a></td>
+<td class='race_td2'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td1'>14:10</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0100@2" , 1 );'>女子   100m 準決勝</a></td>
+<td class='race_td1'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td2'>14:20</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0100@2" , 1 );'>男子   100m 準決勝</a></td>
+<td class='race_td2'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td1'>14:35</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@AH101@1" , 1 );'>女子   100mH 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>14:40</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@2@0@AH105@1" , 1 );'>女子 少年B 100mH 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>14:45</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@AH112@1" , 1 );'>男子 少年B 110mH 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>14:50</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@AH111@1" , 1 );'>男子   110mH 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>15:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0800@1" , 1 );'>女子   800m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>15:05</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0800@1" , 1 );'>男子   800m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>15:10</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A1500@1" , 1 );'>男子   5000m 決勝</a></td>
+<td class='race_td1'>2組</td></tr>
+<tr>
+<td class='race_td2'>15:10</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A1500@1" , 1 );'>女子   5000m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>16:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@2@0@A0100@1" , 1 );'>女子 少年B 100m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>16:05</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@A0100@1" , 1 );'>男子 少年B 100m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>16:10</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0100@1" , 1 );'>女子   100m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>16:15</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0100@1" , 1 );'>男子   100m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>16:20</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0400@1" , 1 );'>女子   400m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>16:25</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0400@1" , 1 );'>男子   400m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>16:30</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@A0200@1" , 1 );'>女子   七種競技200m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>16:35</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@A0400@1" , 1 );'>男子   十種競技400m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr><td class='race_table_foot' colspan='3'>&nbsp;</td></tr><tr><th class='race_table_race'>跳躍競技</th></tr><tr><th class='race_th1'>競技時刻</th><th class='race_th2'>性別　種別　種目　ラウンド</th><th class='race_th1'>組数　進出</th></tr><tr>
+<td class='race_td1'>10:50</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@FJLJ0@1" , 1 );'>男子   十種競技走幅跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>11:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FJHP0@1" , 1 );'>男子   棒高跳 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>11:15</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@FJHJ0@1" , 1 );'>女子   七種競技走高跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>12:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FJLJ0@1" , 1 );'>女子   走幅跳 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>14:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@FJHJ0@1" , 1 );'>男子   十種競技走高跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>14:20</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FJLJ0@1" , 1 );'>男子   走幅跳 決勝</a></td>
+<td class='race_td2'>2組</td></tr>
+<tr>
+<td class='race_td1'>14:20</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@FJLJ0@1" , 1 );'>男子 少年B 走幅跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr><td class='race_table_foot' colspan='3'>&nbsp;</td></tr><tr><th class='race_table_race'>投擲競技</th></tr><tr><th class='race_th1'>競技時刻</th><th class='race_th2'>性別　種別　種目　ラウンド</th><th class='race_th1'>組数　進出</th></tr><tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FTHT1@1" , 1 );'>男子   ハンマー投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>10:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@1@0@FTHT3@1" , 1 );'>男子 少年A ハンマー投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FTHT5@1" , 1 );'>女子   ハンマー投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>12:45</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@FTAT1@1" , 1 );'>男子   十種競技砲丸投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>13:30</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FTJT3@1" , 1 );'>女子   やり投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>13:30</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@FTAT6@1" , 1 );'>女子   七種競技砲丸投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>15:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FTJT1@1" , 1 );'>男子   やり投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>15:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FTAT6@1" , 1 );'>女子   砲丸投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr><td class='race_table_foot' colspan='3'>&nbsp;</td></tr></table></div><div id='timetable1' style='display:none;'><table class='race_table' cellspacing='0'><tr><th class='race_table_race'>トラック競技</th></tr><tr><th class='race_th1'>競技時刻</th><th class='race_th2'>性別　種別　種目　ラウンド</th><th class='race_th1'>組数　進出</th></tr><tr>
+<td class='race_td1'>09:30</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@AH111@1" , 1 );'>男子   十種競技110mH 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>09:40</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A1150@5" , 1 );'>女子   1500m 予選</a></td>
+<td class='race_td2'>2組 6着+4</td></tr>
+<tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A1150@5" , 1 );'>男子   1500m 予選</a></td>
+<td class='race_td1'>4組 3着+4</td></tr>
+<tr>
+<td class='race_td2'>10:35</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0200@5" , 1 );'>女子   200m 予選</a></td>
+<td class='race_td2'>6組 3着+6</td></tr>
+<tr>
+<td class='race_td1'>10:55</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0200@5" , 1 );'>男子   200m 予選</a></td>
+<td class='race_td1'>14組 1着+10</td></tr>
+<tr>
+<td class='race_td2'>11:05</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@AW500@1" , 1 );'>男子   5000mW 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>12:15</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@AH403@5" , 1 );'>女子   400mH 予選</a></td>
+<td class='race_td1'>2組 3着+2</td></tr>
+<tr>
+<td class='race_td2'>12:25</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@AH401@5" , 1 );'>男子   400mH 予選</a></td>
+<td class='race_td2'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td1'>13:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@AW500@1" , 1 );'>女子   5000mW 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>13:50</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0200@2" , 1 );'>女子   200m 準決勝</a></td>
+<td class='race_td2'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td1'>14:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0200@2" , 1 );'>男子   200m 準決勝</a></td>
+<td class='race_td1'>3組 2着+2</td></tr>
+<tr>
+<td class='race_td2'>14:20</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@AS301@1" , 1 );'>男子   3000mSC 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>14:40</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A1150@1" , 1 );'>女子   1500m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>14:40</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@AS302@1" , 1 );'>女子   3000mSC 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>14:50</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A1150@1" , 1 );'>男子   1500m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>15:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@AH403@1" , 1 );'>女子   400mH 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>15:05</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@AH401@1" , 1 );'>男子   400mH 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>15:15</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@A0200@1" , 1 );'>男子   200m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>15:20</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@A0200@1" , 1 );'>女子   200m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>15:25</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@A0800@1" , 1 );'>女子   七種競技800m 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>15:30</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@A1150@1" , 1 );'>男子   十種競技1500m 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr><td class='race_table_foot' colspan='3'>&nbsp;</td></tr><tr><th class='race_table_race'>跳躍競技</th></tr><tr><th class='race_th1'>競技時刻</th><th class='race_th2'>性別　種別　種目　ラウンド</th><th class='race_th1'>組数　進出</th></tr><tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FJHJ0@1" , 1 );'>男子   走高跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>10:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FJHP0@1" , 1 );'>女子   棒高跳 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@FJLJ0@1" , 1 );'>女子   七種競技走幅跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>11:30</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FJTJ0@1" , 1 );'>女子   三段跳 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>12:15</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@FJHP0@1" , 1 );'>男子   十種競技棒高跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>13:30</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FJHJ0@1" , 1 );'>女子   走高跳 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>14:30</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FJTJ0@1" , 1 );'>男子   三段跳 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr><td class='race_table_foot' colspan='3'>&nbsp;</td></tr><tr><th class='race_table_race'>投擲競技</th></tr><tr><th class='race_th1'>競技時刻</th><th class='race_th2'>性別　種別　種目　ラウンド</th><th class='race_th1'>組数　進出</th></tr><tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FTAT1@1" , 1 );'>男子   砲丸投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>10:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@0@FTDT3@1" , 1 );'>女子   円盤投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>10:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@2@0@FTDT3@1" , 1 );'>女子 少年B 円盤投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>11:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@FTDT1@1" , 1 );'>男子   十種競技円盤投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>12:00</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@0@FTDT1@1" , 1 );'>男子   円盤投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>12:00</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@2@0@FTDT2@1" , 1 );'>男子 少年B 円盤投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr>
+<td class='race_td1'>13:45</td>
+<td class='race_td2_1'><a href='racedata.php' onclick='return submit_link( "ay022022013@2@0@107@FTJT3@1" , 1 );'>女子   七種競技やり投 決勝</a></td>
+<td class='race_td1'>1組</td></tr>
+<tr>
+<td class='race_td2'>14:15</td>
+<td class='race_td2_2'><a href='racedata.php' onclick='return submit_link( "ay022022013@1@0@110@FTJT1@1" , 1 );'>男子   十種競技やり投 決勝</a></td>
+<td class='race_td2'>1組</td></tr>
+<tr><td class='race_table_foot' colspan='3'>&nbsp;</td></tr></table></div>
+</body>
+</html>

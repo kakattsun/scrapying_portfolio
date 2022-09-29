@@ -1,0 +1,6 @@
+2022/07/19-22:00:34.836 4054 Reusing MANIFEST C:\Users\kakat\athleate\Default\Local Storage\leveldb/MANIFEST-000001
+2022/07/19-22:00:34.837 4054 Recovering log #8
+2022/07/19-22:00:34.838 4054 Reusing old log C:\Users\kakat\athleate\Default\Local Storage\leveldb/000008.log 
+2022/07/19-22:01:35.603 28e0 Level-0 table #11: started
+2022/07/19-22:01:35.614 28e0 Level-0 table #11: 16866 bytes OK
+2022/07/19-22:01:35.617 28e0 Delete type=0 #8

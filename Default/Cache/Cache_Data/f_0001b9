@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+          <meta charset="utf-8"/>        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta property="og:title" content="滋賀県｜滋賀県ホームページ">
+              <meta property="og:type" content="フレーム">
+            <meta property="og:site_name" content="滋賀県ホームページ">
+            
+    <title>滋賀県｜滋賀県ホームページ</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon">
+    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
+                    <script src="/js/jquery/jquery-3.1.0.min.js"></script>
+            <link rel="stylesheet" href="/css/public.css">
+      <link rel="stylesheet" href="/css/public_pref_shiga.css">
+      <script src="/js/public.js"></script>
+                <link rel="stylesheet" href="/file/css/4042232.css">
+                  <link rel="stylesheet" href="/file/css/5101201.css">
+                  <script src="/file/js/5109719.js"></script>
+                    <script src="/file/js/4032770.js"></script>
+                    <link rel="stylesheet" href="/file/css/5101189.css">
+                  <script src="/file/js/5117406.js"></script>
+                    <link rel="stylesheet" href="/file/css/4040475.css">
+                  <link rel="stylesheet" href="/file/css/5101223.css">
+                  <link rel="stylesheet" href="/file/css/5101224.css">
+                  <link rel="stylesheet" href="/file/css/4035991.css">
+                  <link rel="stylesheet" href="/file/css/4040842.css">
+                  <link rel="stylesheet" href="/file/css/4040970.css">
+                  <script src="/file/js/2070110.js"></script>
+                    <link rel="stylesheet" href="/file/css/2072959.css">
+                  <link rel="stylesheet" href="/file/css/4035090.css">
+                  <link rel="stylesheet" href="/file/css/4035091.css">
+                  <link rel="stylesheet" href="/file/css/4035703.css">
+                  <link rel="stylesheet" href="/file/css/4035991.css">
+                  <link rel="stylesheet" href="/file/css/4040842.css">
+                  <link rel="stylesheet" href="/file/css/4040970.css">
+                  <link rel="stylesheet" href="/file/css/5118335.css">
+                  <link rel="stylesheet" href="/file/css/2070483.css">
+                  <link rel="stylesheet" href="/file/css/5165194.css">
+                  <link rel="stylesheet" href="/file/css/5100890.css">
+                  <link rel="stylesheet" href="/file/css/5110009.css">
+                  <link rel="stylesheet" href="/file/css/4035872.css">
+                  <link rel="stylesheet" href="/file/css/4035873.css">
+                  <link rel="stylesheet" href="/file/css/5101562.css">
+                  <link rel="stylesheet" href="/file/css/5110014.css">
+                  <link rel="stylesheet" href="/file/css/4029031.css">
+                  <link rel="stylesheet" href="/file/css/5110010.css">
+                  <link rel="stylesheet" href="/file/css/5109753.css">
+                  <link rel="stylesheet" href="/file/css/5110011.css">
+                  <link rel="stylesheet" href="/file/css/4035594.css">
+                  <link rel="stylesheet" href="/file/css/4029051.css">
+                  <link rel="stylesheet" href="/file/css/4034934.css">
+                  <link rel="stylesheet" href="/file/css/4029051.css">
+                  <link rel="stylesheet" href="/file/css/4034934.css">
+                  <link rel="stylesheet" href="/file/css/5118349.css">
+                  <link rel="stylesheet" href="/file/css/5114255.css">
+                  <link rel="stylesheet" href="/file/css/5261771.css">
+                  <script src="/js/public/slide_block.js"></script>
+                    <script src="/js/public/title_list_parts_static.js"></script>
+                      <script src="/js/public/breadcrumb_parts.js"></script>
+                  <script src="/js/public/banner_parts.js"></script>
+                  <script src="/js/public/search.js"></script>
+                  <script src="/js/public/menu_parts.js"></script>
+              <link rel="stylesheet" href="/css/leaflet/leaflet.css"/>
+      <link rel="stylesheet" href="/css/leaflet/leaflet.fullscreen.css"/>
+      <script src="/js/leaflet/leaflet.js"></script>
+      <script src="/js/leaflet/Leaflet.fullscreen.min.js"></script>
+        </head>
+  <body class="dev-pc">
+          <noscript>
+      <p>ご使用のブラウザでJavaScriptが無効なため、一部の機能をご利用できません。JavaScriptの設定方法は、お使いのブラウザのヘルプページをご覧ください。</p>
+      </noscript>
+        <div class="cms-public">
+  <div class="page" style="">
+    <div class="layout" data-type="3">
+            <div class="area area1 " data-type="1" style="" lang="" >
+        <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="html">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-715656-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-715656-2');
+</script></div>  </div>
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="html">
+  <script>
+  $(function () {
+      $('.siga_info .image figure').matchHeight();
+      $('.banner-part .advertisementv').matchHeight();
+  });
+</script></div>  </div>
+  </div>
+  </div>
+            <div class="parts logo" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="font-family:0;" lang="" data-load="1" >
+    <div class="image" role="list">
+  <div class="block center">
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/" target=""><img src="/file/img/1100433.jpg" alt="滋賀県 ホーム" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts top_header" style="" lang="" data-load="1" >
+        <div class="div_tag">
+        <div class="parts MojiSize" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="sentence">
+  <p>文字サイズ</p>
+</div>  </div>
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="html">
+  <div class="fontsize">
+ <button type="button" id="smaller" onclick="smaller()">小</button>
+ <button type="button" id="medium" onclick="medium()">標準</button>
+ <button type="button" id="larger" onclick="larger()">大</button>
+</div></div>  </div>
+  </div>
+  </div>
+          <div class="parts EasyWeb" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="html">
+  <script id="pt_loader" src="//ewb-c.infocreate.co.jp/ewbc/ptspk_loader.js?siteId=076_pref_shiga" async defer></script>
+<div class="block " style="font-family:0;" data-load="1">
+  <div class="sentence">
+    <p style="text-align:center"><a href="javascript:ptspkLoader('toggle')" id="pt_enable"><img src="/file/html/5233565.png" alt="" flag="0" class="" style=""><span>文字・音声サポート</span></a></p>
+  </div>
+</div></div>  </div>
+  </div>
+  </div>
+          <div class="parts language_top" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="html">
+  <div class="block " style="font-family:0;" lang="en" data-load="1">
+  <div class="sentence">
+    <p style="text-align:center"><a href="/foreignlanguage/index.html" target="_self"><img src="/file/html/5233566.png" alt="" flag="0" class="" style=""><span>Language</span></a></p>
+  </div>
+</div></div>  </div>
+  </div>
+  </div>
+    </div>
+  </div>
+            <div class="parts globalmenu  global_menu" style="font-family:0;" lang="" data-load="1" >
+        
+  <div class="menu menu-vertical">
+    <ul><li style="" class="text_flag " ><a href="/ippan/" style=""><span class="text_item" val="23108">県民の方</span></a><ul><li style="" class="text_flag " ><a href="/ippan/kurashi/" style=""><span class="text_item" val="23162">くらし</span></a></li><li style="" class="text_flag " ><a href="/ippan/bunakasports/" style=""><span class="text_item" val="108219">文化・スポーツ</span></a></li><li style="" class="text_flag " ><a href="/ippan/kenkouiryouhukushi/" style=""><span class="text_item" val="108220">健康・医療・福祉</span></a></li><li style="" class="text_flag " ><a href="/ippan/kosodatekyouiku/" style=""><span class="text_item" val="108221">子育て・教育</span></a></li><li style="" class="text_flag " ><a href="/ippan/shigotosangyou/" style=""><span class="text_item" val="108222">しごと・産業・観光</span></a></li><li style="" class="text_flag " ><a href="/ippan/kankyoshizen/" style=""><span class="text_item" val="108224">環境・自然</span></a></li><li style="" class="text_flag " ><a href="/ippan/kendoseibi/" style=""><span class="text_item" val="108225">県土整備</span></a></li><li style="" class="text_flag " ><a href="/ippan/bousai/" style=""><span class="text_item" val="108226">防災・危機管理</span></a></li></ul></li><li style="" class="text_flag " ><a href="/zigyousya/" style=""><span class="text_item" val="108216">事業者の方</span></a><ul><li style="" class="text_flag " ><a href="/zigyousya/oshirase/" style=""><span class="text_item" val="108883">お知らせ・注意</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/event/" style=""><span class="text_item" val="108884">イベント・講座・募集</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/nyusatsubaikyaku/" style=""><span class="text_item" val="108395">入札・売却・指定管理</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/syokijun/" style=""><span class="text_item" val="302591">諸基準</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/shien/" style=""><span class="text_item" val="301755">支援・助成・補助</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/koukokukifu/" style=""><span class="text_item" val="302491">広告・寄附</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/ricchi/" style=""><span class="text_item" val="302498">企業立地推進室からのご案内</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/cocoshiga/" style=""><span class="text_item" val="302492">情報発信拠点「ここ滋賀」</span></a></li></ul></li><li style="" class="text_flag " ><a href="/kengai/" style=""><span class="text_item" val="108215">県外の方</span></a></li><li style="" class="text_flag " ><a href="/motherlake/" style=""><span class="text_item" val="108217"> Mother Lake 琵琶湖</span></a></li><li style="" class="text_flag " ><a href="/kensei/" style=""><span class="text_item" val="108218">県政情報</span></a><ul><li style="" class="text_flag " ><a href="/kensei/gaiyou/" style=""><span class="text_item" val="108713">県の概要</span></a></li><li style="" class="text_flag " ><a href="/kensei/chizi/" style=""><span class="text_item" val="23200">ようこそ知事室へ</span></a></li><li style="" class="text_flag " ><a href="/kensei/kenseiunei/" style=""><span class="text_item" val="108719">県政運営・行政改革</span></a></li><li style="" class="text_flag " ><a href="/kensei/zaiseikaikei/" style=""><span class="text_item" val="108723">財政・予算・会計</span></a></li><li style="" class="text_flag " ><a href="/kensei/jinji/" style=""><span class="text_item" val="108726">人事・採用</span></a></li><li style="" class="text_flag " ><a href="/kensei/koho/" style=""><span class="text_item" val="108728">広報</span></a></li><li style="" class="text_flag " ><a href="/kensei/kenseisanka/" style=""><span class="text_item" val="302493">県政への参加・意見</span></a></li><li style="" class="text_flag " ><a href="/kensei/zyourei/" style=""><span class="text_item" val="108731">条例・規則・公報</span></a></li><li style="" class="text_flag " ><a href="/kensei/zyouhou/" style=""><span class="text_item" val="108736">公文書管理・情報公開・個人情報保護</span></a></li><li style="" class="text_flag " ><a href="/kensei/iinkai/" style=""><span class="text_item" val="302565">教育・選挙等（行政委員会）</span></a></li><li style="" class="text_flag " ><a href="/kensei/shikaku/" style=""><span class="text_item" val="302496">資格・試験情報</span></a></li><li style="" class="text_flag " ><a href="/kensei/download/" style=""><span class="text_item" val="302706">申請書等ダウンロード</span></a></li><li style="" class="text_flag " ><a href="/kensei/tokei/" style=""><span class="text_item" val="302708">滋賀の統計情報</span></a></li></ul></li></ul>  </div>
+          <a class="menu-trigger menu-trigger-rf" href="javascript:void(0);" >
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+              <div class="buns buns-rf"  >
+                    <div class="hamburger hamburger-rf" >
+              <div class="menu-rf menu menu-hamburger">
+                <ul><li style="" class="text_flag " ><a href="/ippan/" style=""><span class="text_item" val="23108">県民の方</span></a><ul><li style="" class="text_flag " ><a href="/ippan/kurashi/" style=""><span class="text_item" val="23162">くらし</span></a></li><li style="" class="text_flag " ><a href="/ippan/bunakasports/" style=""><span class="text_item" val="108219">文化・スポーツ</span></a></li><li style="" class="text_flag " ><a href="/ippan/kenkouiryouhukushi/" style=""><span class="text_item" val="108220">健康・医療・福祉</span></a></li><li style="" class="text_flag " ><a href="/ippan/kosodatekyouiku/" style=""><span class="text_item" val="108221">子育て・教育</span></a></li><li style="" class="text_flag " ><a href="/ippan/shigotosangyou/" style=""><span class="text_item" val="108222">しごと・産業・観光</span></a></li><li style="" class="text_flag " ><a href="/ippan/kankyoshizen/" style=""><span class="text_item" val="108224">環境・自然</span></a></li><li style="" class="text_flag " ><a href="/ippan/kendoseibi/" style=""><span class="text_item" val="108225">県土整備</span></a></li><li style="" class="text_flag " ><a href="/ippan/bousai/" style=""><span class="text_item" val="108226">防災・危機管理</span></a></li></ul></li><li style="" class="text_flag " ><a href="/zigyousya/" style=""><span class="text_item" val="108216">事業者の方</span></a><ul><li style="" class="text_flag " ><a href="/zigyousya/oshirase/" style=""><span class="text_item" val="108883">お知らせ・注意</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/event/" style=""><span class="text_item" val="108884">イベント・講座・募集</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/nyusatsubaikyaku/" style=""><span class="text_item" val="108395">入札・売却・指定管理</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/syokijun/" style=""><span class="text_item" val="302591">諸基準</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/shien/" style=""><span class="text_item" val="301755">支援・助成・補助</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/koukokukifu/" style=""><span class="text_item" val="302491">広告・寄附</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/ricchi/" style=""><span class="text_item" val="302498">企業立地推進室からのご案内</span></a></li><li style="" class="text_flag " ><a href="/zigyousya/cocoshiga/" style=""><span class="text_item" val="302492">情報発信拠点「ここ滋賀」</span></a></li></ul></li><li style="" class="text_flag " ><a href="/kengai/" style=""><span class="text_item" val="108215">県外の方</span></a></li><li style="" class="text_flag " ><a href="/motherlake/" style=""><span class="text_item" val="108217"> Mother Lake 琵琶湖</span></a></li><li style="" class="text_flag " ><a href="/kensei/" style=""><span class="text_item" val="108218">県政情報</span></a><ul><li style="" class="text_flag " ><a href="/kensei/gaiyou/" style=""><span class="text_item" val="108713">県の概要</span></a></li><li style="" class="text_flag " ><a href="/kensei/chizi/" style=""><span class="text_item" val="23200">ようこそ知事室へ</span></a></li><li style="" class="text_flag " ><a href="/kensei/kenseiunei/" style=""><span class="text_item" val="108719">県政運営・行政改革</span></a></li><li style="" class="text_flag " ><a href="/kensei/zaiseikaikei/" style=""><span class="text_item" val="108723">財政・予算・会計</span></a></li><li style="" class="text_flag " ><a href="/kensei/jinji/" style=""><span class="text_item" val="108726">人事・採用</span></a></li><li style="" class="text_flag " ><a href="/kensei/koho/" style=""><span class="text_item" val="108728">広報</span></a></li><li style="" class="text_flag " ><a href="/kensei/kenseisanka/" style=""><span class="text_item" val="302493">県政への参加・意見</span></a></li><li style="" class="text_flag " ><a href="/kensei/zyourei/" style=""><span class="text_item" val="108731">条例・規則・公報</span></a></li><li style="" class="text_flag " ><a href="/kensei/zyouhou/" style=""><span class="text_item" val="108736">公文書管理・情報公開・個人情報保護</span></a></li><li style="" class="text_flag " ><a href="/kensei/iinkai/" style=""><span class="text_item" val="302565">教育・選挙等（行政委員会）</span></a></li><li style="" class="text_flag " ><a href="/kensei/shikaku/" style=""><span class="text_item" val="302496">資格・試験情報</span></a></li><li style="" class="text_flag " ><a href="/kensei/download/" style=""><span class="text_item" val="302706">申請書等ダウンロード</span></a></li><li style="" class="text_flag " ><a href="/kensei/tokei/" style=""><span class="text_item" val="302708">滋賀の統計情報</span></a></li></ul></li></ul>              </div>
+            </div>
+              </div>
+      </div>
+            <div class="parts bousai_top" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="image">
+  <div class="block center">
+          <div class="image_listitem">
+        <figure>
+                      <div>
+              <img src="/file/img/5117405.png" alt="" flag="1" class="" style=""/>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+        <div class="block " style="font-family:0;" lang="" data-load="1" >
+    <div class="sentence">
+  <p style="text-align:center"><a href="http://dis-shiga.jp/pc/topdis-shiga.html" target="_self">防災・災害情報</a></p>
+</div>  </div>
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+  </div>
+  </div>
+        </div>
+            <div class="area-group-2-3-4">
+                  <div class="area area3 top_contents" data-type="3" style="font-family:0;" lang="ja" >
+        <div class="parts " style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="heading">
+        <h1 class="disabled"><span>滋賀県</span></h1>
+      </div>
+  </div>
+  </div>
+  </div>
+            <div class="parts main_visual" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="image" role="list">
+  <div class="block center">
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <img src="/file/img/5297875.png" alt="新型コロナウイルス感染症に関するご相談は…、大津市内、症状のある方 077-526-5411 無症状の方 077-522-7228、大津市以外、症状のある方 077-528-3621 無症状の方 077-528-3637、事業者の方向けの支援制度に関するワンストップ相談窓口…077-525-5670" flag="0" class="" style=""/>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts slide_wrap" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+          <div class="slide" timer="5" arrow="left" style="width: 325px; height: 230px;  margin-left: auto;   margin-right: auto; ">
+              <div class="prev">
+          <a href="javascript:void(0);"><span style="display:hidden" class="arrow">Previous</span></a>
+        </div>
+            <ul class="slide">
+                  <li item-name="item0" class="active">
+                            <a href="/ippan/kenkouiryouhukushi/yakuzi/320755.html" target=""><img src="/file/slide/5325167.png" alt="広域ワクチン接種センター予約サイト" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item1">
+                            <a href="/kensei/kenseiunei/kousou/324827.html" target=""><img src="/file/slide/5315790.png" alt="県政150周年" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item2">
+                            <a href="/kensei/koho/kohoshi/325100.html" target=""><img src="/file/slide/5322819.jpg" alt="広報誌プラスワン5－6月号" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item3">
+                            <a href="/ippan/kenkouiryouhukushi/yakuzi/324549.html" target=""><img src="/file/slide/5297203.jpg" alt="新型コロナウイルス感染症患者の濃厚接触者に対する連絡にご協力ください" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item4">
+                            <a href="/ippan/bousai/sougo/313693.html" target=""><img src="/file/slide/5330185.png" alt="現在の感染拡大防止対策 滋賀県新型コロナ対策相談コールセンター077-528-1344 平日9時～17時" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item5">
+                            <a href="/ippan/bousai/sougo/322797.html" target=""><img src="/file/slide/5295238.png" alt="PCR検査、抗原定性検査が無料で受検できます。" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item6">
+                            <a href="/ippan/kenkouiryouhukushi/yakuzi/314501.html" target=""><img src="/file/slide/5201874.jpg" alt="知事からの最新動画メッセージ" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item7">
+                            <a href="/kensei/chizi/kaiken/" target=""><img src="/file/slide/5243045.jpg" alt="知事定例会見" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+                  <li item-name="item8">
+                            <a href="/kensei/kenseisanka/323165.html" target=""><img src="/file/slide/5322816.png" alt="県民の声ひろば" flag="0" style="width:325px; height:230px; "/></a>                        </li>
+              </ul>
+              <div class="next">
+          <a href="javascript:void(0);"><span style="display:hidden" class="arrow">Next</span></a>
+        </div>
+                  <div class="pause" >
+            <a href="javascript:void(0);"><span class="pause">stop</span></a>
+            <a href="javascript:void(0);" aria-hidden="true"><span class="play" style="display: none;">start</span></a>
+          </div>
+                <ul class="index">
+                      <li item-name="item0" class="active"><span role="button" tabindex="0">
+                <img src="/file/slide/5325167.png" alt="広域ワクチン接種センター予約サイト"/></span>
+            </li>
+                      <li item-name="item1"><span role="button" tabindex="0">
+                <img src="/file/slide/5315790.png" alt="県政150周年"/></span>
+            </li>
+                      <li item-name="item2"><span role="button" tabindex="0">
+                <img src="/file/slide/5322819.jpg" alt="広報誌プラスワン5－6月号"/></span>
+            </li>
+                      <li item-name="item3"><span role="button" tabindex="0">
+                <img src="/file/slide/5297203.jpg" alt="新型コロナウイルス感染症患者の濃厚接触者に対する連絡にご協力ください"/></span>
+            </li>
+                      <li item-name="item4"><span role="button" tabindex="0">
+                <img src="/file/slide/5330185.png" alt="現在の感染拡大防止対策 滋賀県新型コロナ対策相談コールセンター077-528-1344 平日9時～17時"/></span>
+            </li>
+                      <li item-name="item5"><span role="button" tabindex="0">
+                <img src="/file/slide/5295238.png" alt="PCR検査、抗原定性検査が無料で受検できます。"/></span>
+            </li>
+                      <li item-name="item6"><span role="button" tabindex="0">
+                <img src="/file/slide/5201874.jpg" alt="知事からの最新動画メッセージ"/></span>
+            </li>
+                      <li item-name="item7"><span role="button" tabindex="0">
+                <img src="/file/slide/5243045.jpg" alt="知事定例会見"/></span>
+            </li>
+                      <li item-name="item8"><span role="button" tabindex="0">
+                <img src="/file/slide/5322816.png" alt="県民の声ひろば"/></span>
+            </li>
+                  </ul>
+          </div>  </div>
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+  </div>
+  </div>
+            <div class="parts important_1 main_titleList" style="font-family:0;" lang="" data-load="1" >
+          <div class="title-list"  tab="1" step="1">
+    <div class="title-top"></div>
+            <ul class="index">
+                        <li tab-number="1" style="width: 100%;" class="active"><h2>重要なお知らせ</h2></li>
+                    </ul>
+            <div class="tab ">
+              <ul class="active totaling " tab-number="1" part-val="2494687" title-list-entry-part-val="53671" language="1" device="1" total-count="71" display-number="5" step-number="1" paging="false" system="1" external_link_display_type="1">
+                              <li class="display_date">
+                                            <time  datetime="2022-6-1">2022年6月1日</time>
+                                              <span class="title"><a href="/ippan/shigotosangyou/syougyou/322159.html">【ここクーポン】ご利用者様情報の流出に関するお知らせとお詫び</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-23">2022年6月23日</time>
+                                              <span class="title"><a href="/ippan/kenkouiryouhukushi/yakuzi/325638.html">滋賀県広域ワクチン接種センター（大規模接種会場・4回目接種）について</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-23">2022年6月23日</time>
+                                              <span class="title"><a href="/ippan/kenkouiryouhukushi/yakuzi/320755.html">滋賀県広域ワクチン接種センター（大規模接種会場）について</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-15">2022年6月15日</time>
+                                              <span class="title"><a href="/ippan/kenkouiryouhukushi/yakuzi/325876.html">警戒レベルの引き下げ（令和4年6月15日）</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-3">2022年6月3日</time>
+                                              <span class="title"><a href="/ippan/kenkouiryouhukushi/yakuzi/325696.html">滋賀県広域ワクチン接種センター（大規模接種会場・予約なし接種）について</a></span>
+                                      </li>
+                        </ul>
+                <span class="slide-prev"></span>
+        <span class="slide-next"></span>
+                  <div class="paging">
+            <a href="javascript:void(0);"><span class="first">最初へ</span></a>
+            <a href="javascript:void(0);"><span class="prev">前へ</span></a>
+            <div class="number">
+            </div>
+            <a href="javascript:void(0);"><span class="next">次へ</span></a>
+            <a href="javascript:void(0);"><span class="last">最後へ</span></a>
+          </div>
+                <div class="other">
+                  </div>
+          </div>
+          <script>
+        $('.title-list').each(function () {
+          var tab = parseInt($(this).attr('tab'));
+          var step = parseInt($(this).attr('step'));
+          if (tab == 0) {
+            tab = 1;
+          }
+          title_list_paging_goto(this, tab, step, 0, false);
+        });
+      </script>
+      </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+        <div class="block corona-info" style="font-family:0;" lang="" data-load="1" >
+    <div class="html">
+  <div style="width:100%;display:flex;padding:20px auto;font-size:1em !important;">
+	<div style="width:1080px;margin:15px auto;padding:0 15px;display:flex;">
+
+		<div style="width:15%;float:left;background:#FFC000;color:#000000;padding:auto;margin:0;text-align:center;position:relative;border-radius:5px 0 0 5px;">
+			<h2 style="font-size:100%;padding:0.5em auto;margin:0.3em;position:absolute;top:50%;-webkit-transform: translateY(-50%);transform: translateY(-50%);">新型コロナウイルス関連情報</h2>
+		</div>
+		<div style="border:1px solid #FFC000;width:100%;padding:0.5em 1em;border-radius:0 5px 5px 0;">
+			<h3 style="color:#FFC000;font-weight:bold;font-size:120%;"><img src="/file/html/5164251.gif" alt="" style="vertical-align:middle;" /> <a>よく見られているページ</a></h3>
+			<ul style="list-style-image:url('/file/html/5164160.gif');padding-left:20px;padding-bottom:20px;">
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/309252.html">滋賀県の状況トップページ</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/310735.html">新型コロナウイルス感染症患者の発生状況</a></li>
+                                <li><a href="/ippan/bousai/sougo/322797.html">【無症状の方限定】PCR検査・抗原定性検査を無料で受検できます！</a></li>
+                                <li><a href="/ippan/bousai/sougo/322744.html">ワクチン・検査パッケージ制度に参加する飲食店等の登録を開始します！</a></li>
+                                <li><a href="/ippan/bousai/sougo/313183.html">イベント開催における新型コロナウイルス感染予防対策について</a></li>    
+                                <li><a href="/ippan/bousai/sougo/313693.html">現在の感染拡大防止対策について（マスク不要の場面などマスク着用の考え方を掲載しました！）</a></li>
+			</ul>
+			<h3 style="color:#FFC000;font-weight:bold;font-size:120%;"><img src="/file/html/5164251.gif" alt="" style="vertical-align:middle;" /> <a>新型コロナウイルス感染症の相談・受診・診断後の対応について</a></h3>
+			<ul style="list-style-image:url('/file/html/5164160.gif');padding-left:20px;padding-bottom:20px;">
+                                <li><a href="/ippan/kenkouiryouhukushi/iryo/314835.html">発熱などの症状がある場合の相談・受診について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/325365.html">休日・夜間に発熱など症状がある場合について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/322420.html">新型コロナ感染症と診断された方へ</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/324549.html">濃厚接触者の方への連絡・検査について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/iryo/323122.html">濃厚接触者の待機期間等について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/324452.html">積極的疫学調査の対象をハイリスク施設等に集中化します</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/iryo/317319.html">軽症者等に係る宿泊療養について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/iryo/320613.html">自宅療養について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/iryo/325137.html">新型コロナウイルス感染症の後遺症（罹患後症状）について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/325387.html">症状がない方の検査の案内について</a></li>
+			</ul>
+			<h3 style="color:#FFC000;font-weight:bold;font-size:120%;"><img src="/file/html/5164251.gif" alt="" style="vertical-align:middle;" /> <a>支援制度について</a></h3>
+			<ul style="list-style-image:url('/file/html/5164160.gif');padding-left:20px;padding-bottom:20px;">
+                                <li><a href="/ippan/bousai/sougo/311727.html">お困りのみなさまを支援する様々な制度の案内</a></li>
+                                <li><a href="/ippan/shigotosangyou/syougyou/321019.html">新型コロナウイルス感染拡大の影響を受ける県内事業者のみなさまへ</a></li>
+                                <li><a href="/zigyousya/shien/syoukouroudou/323459.html">滋賀県事業継続支援金（第4期）【申請期限:8月1日（月）に延長しました】</a></li>
+                                <li><a href="/ippan/shigotosangyou/shigoto/310828.html">新型コロナウイルス感染拡大により仕事を休む必要が生じた方への支援等について</a></li>
+                                <li><a href="/ippan/shigotosangyou/kigyou/313673.html">事業者の方向け各種支援策に関する相談</a></li>
+			</ul>
+			<h3 style="color:#FFC000;font-weight:bold;font-size:120%;"><img src="/file/html/5164251.gif" alt="" style="vertical-align:middle;" /> <a>ワクチン接種について</a></h3>
+			<ul style="list-style-image:url('/file/html/5164160.gif');padding-left:20px;padding-bottom:20px;">
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/316596.html#guide">ワクチン接種に関する情報</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/320755.html">滋賀県広域ワクチン接種センター(大規模接種会場・3回目接種、4回目接種)について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/322417.html">3回目接種について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/325227.html">4回目接種について</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/yakuzi/325274.html">武田社ワクチン(ノババックス)の接種について</a></li>
+			</ul>
+			<h3 style="color:#FFC000;font-weight:bold;font-size:120%;"><img src="/file/html/5164251.gif" alt="" style="vertical-align:middle;" /> <a>新しい生活様式の実践</a></h3>
+			<ul style="list-style-image:url('/file/html/5164160.gif');padding-left:20px;padding-bottom:20px;">
+                                <li><a href="/ippan/bousai/sougo/318963.html">飲食店認証店舗のお知らせ！（県民の皆様へ）</a></li>
+                                <li><a href="/ippan/shigotosangyou/kanko/317848.html">県内観光を支援！「今こそ滋賀を旅しよう！」について</a></li>
+                                <li><a href="/ippan/kurashi/ict/312529.html">「もしサポ滋賀」のご案内はこちら</a></li>
+                                <li><a href="/ouen/index.html">滋賀県がんばる医療・福祉応援寄附</a></li>
+			</ul>
+			<h3 style="color:#FFC000;font-weight:bold;font-size:120%;"><img src="/file/html/5164251.gif" alt="" style="vertical-align:middle;" /> <a>相談窓口</a></h3>
+			<ul style="list-style-image:url('/file/html/5164160.gif');padding-left:20px;padding-bottom:20px;">
+                                <li><a href="/kensei/koho/koho/323412.html">各種電話相談窓口のご案内</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/iryo/314835.html#FL" lang="en">Foreign Language Contact Center</a></li>
+                                <li><a href="/ippan/kenkouiryouhukushi/syougaifukushi/311768.html">障害のある方へのご案内</a></li>
+                                <li><a href="/ippan/kurashi/zinken/314134.html">人権侵害の相談</a></li>
+                                <li><a href="https://notalone-cas.go.jp/">内閣官房「あなたはひとりじゃない孤独・孤立対策」</a></li>
+			</ul>
+　　　　	</div>
+	</div>
+</div></div>  </div>
+  </div>
+  </div>
+            <div class="parts top_search" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="heading">
+      <h2><span>検索</span></h2>
+    </div>
+  </div>
+  </div>
+  </div>
+            <div class="parts top_search_content" style="" lang="" data-load="1" >
+        <div class="div_tag">
+        <div class="parts searchbox" style="font-family:0;" lang="" data-load="1" >
+        <link rel="stylesheet" href="/css/jquery/jquery.datetimepicker.css"/>
+<link rel="stylesheet" href="/css/search.css"/>
+<script src="/js/jquery/jquery.datetimepicker.full.min.js"></script>
+<script src="/js/public/search.js"></script>
+<div class="search_input">
+          <div class="google_search_input_core">
+                <div class="search">
+                      <div class="html">
+              <div class="gs_form">
+                <form action="/result/index.html">
+                  <input type="hidden" value="001429382534592644305:mjbwd3q1slw" name="cx">
+                  <input type="hidden" value="ja" name="hl">
+                  <input type="hidden" value="FORID:10" name="cof">
+                  <input type="hidden" value="UTF-8" name="ie">
+                  <input type="text" title="google検索" placeholder="google検索" class="text" id="search-box" name="q">
+                  <input type="image" src="/img/googlesearch.png" class="gsc-search-button gsc-search-button-v2" title="検索" alt="検索" id="search-button" name="sa">
+                </form>
+              </div>
+              <script>
+                (function () {
+                  var cx = '001429382534592644305:mjbwd3q1slw';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:searchresults-only></gcse:searchresults-only>
+            </div>
+                  </div>
+              </div>
+    </div>
+  </div>
+          <div class="parts search_keyword" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="list">
+  <figure>
+        <figcaption><h2><span class="list_block_title" style="font-size: 100%">キーワード</span></h2></figcaption>
+        <ul><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E5%85%A5%E6%9C%AD%E5%8F%82%E5%8A%A0%E8%B3%87%E6%A0%BC&amp;sa.x=32&amp;sa.y=7" target="">入札参加資格</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E3%83%91%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88&amp;sa.x=13&amp;sa.y=12" target="">パスポート</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E4%BE%8B%E8%A6%8F%E9%9B%86&amp;sa.x=11&amp;sa.y=21" target="">例規集</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E6%95%99%E5%93%A1%E6%8E%A1%E7%94%A8&amp;sa.x=15&amp;sa.y=17" target="">教員採用</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E8%81%B7%E5%93%A1%E6%8E%A1%E7%94%A8&amp;sa.x=23&amp;sa.y=23" target="">職員採用</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E9%81%B8%E6%8C%99&amp;sa.x=31&amp;sa.y=15" target="">選挙</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E3%81%93%E3%81%93%E6%BB%8B%E8%B3%80&amp;sa.x=21&amp;sa.y=20" target="">ここ滋賀</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E5%BA%81%E8%88%8E%E6%A1%88%E5%86%85&amp;sa.x=23&amp;sa.y=16" target="">庁舎案内</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E9%81%8B%E8%BB%A2%E5%85%8D%E8%A8%B1%E8%A8%BC&amp;sa.x=21&amp;sa.y=11" target="">運転免許証</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E4%BA%BA%E5%8F%A3&amp;sa.x=17&amp;sa.y=11" target="">人口</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E&amp;sa.x=0&amp;sa.y=0" target="">ふるさと納税</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=SDGs&amp;sa.x=0&amp;sa.y=0" target="">SDGs</a></li><li class="list-style-white-space"><a href="/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E5%8F%8E%E5%85%A5%E8%A8%BC%E7%B4%99&amp;sa.x=0&amp;sa.y=0" target="">収入証紙</a></li><li class="list-style-white-space"><a href="https://www.pref.shiga.lg.jp/result/index.html?cx=001429382534592644305%3Amjbwd3q1slw&amp;hl=ja&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=%E6%B0%B4%E5%AE%B3%E3%83%AA%E3%82%B9%E3%82%AF%E3%83%9E%E3%83%83%E3%83%97&amp;sa.x=0&amp;sa.y=0" target="">水害リスクマップ(外部サイト)</a></li></ul>  </figure>
+</div>
+  </div>
+  </div>
+  </div>
+          <div class="parts search_soshiki" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="sentence">
+  <p><a href="/kensei/gaiyou/soshiki/">組織から探す</a></p>
+</div>  </div>
+  </div>
+  </div>
+          <div class="parts search_popular" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="heading">
+      <h2><span>よく検索されるページ</span></h2>
+    </div>
+  </div>
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="image" role="list">
+  <div class="block center">
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/kensei/download/" target=""><img src="/file/img/5117479.jpg" alt="申請書" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/zigyousya/nyusatsubaikyaku/" target=""><img src="/file/img/5117481.jpg" alt="入札情報" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/kensei/gaiyou/madoguchi/" target=""><img src="/file/img/5117477.jpg" alt="相談窓口" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/kensei/jinji/saiyou/" target=""><img src="/file/img/5117478.jpg" alt="職員採用" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/kensei/gaiyou/soshiki/300696.html" target=""><img src="/file/img/5117482.jpg" alt="パスポート" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/senkyo/" target=""><img src="/file/img/5117480.jpg" alt="選挙" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/kensei/tokei/" target=""><img src="/file/img/5117483.jpg" alt="滋賀の統計情報" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/ippan/kurashi/zeikin/" target=""><img src="/file/img/5117484.jpg" alt="税金" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+    </div>
+  </div>
+            <div class="parts top_news" style="" lang="" data-load="1" >
+        <div class="div_tag">
+        <div class="parts s1" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block midasi_esinbun" style="font-family:0;" lang="" data-load="1" >
+    <div class="heading">
+      <h2><span>県政eしんぶん</span></h2>
+    </div>
+  </div>
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="html">
+  <h3><span style="position:absolute;left-9999px;font-size:0;height:0;overflow:hidden;">3つのカテゴリ別ページリンク一覧</span></h3></div>  </div>
+  </div>
+  </div>
+          <div class="parts eshinbun  s1 main_titleList" style="font-family:0;" lang="" data-load="1" >
+          <div class="title-list"  tab="1" step="1">
+    <div class="title-top"></div>
+            <ul class="index">
+                        <li tab-number="1" style="width: 33.333333333333%;" class="active"><h2><a href="#tab_1">お知らせ</a></h2></li>
+                          <li tab-number="2" style="width: 33.333333333333%;"><h2><a href="#tab_2">募集</a></h2></li>
+                          <li tab-number="3" style="width: 33.333333333333%;"><h2><a href="#tab_3">催し</a></h2></li>
+                    </ul>
+            <div class="tab ">
+              <ul class="active totaling " tab-number="1" part-val="826908" title-list-entry-part-val="30294" language="1" device="1" total-count="3507" display-number="5" step-number="1" paging="false" system="1" external_link_display_type="1">
+                              <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/oshirase/326037.html">新型コロナウイルスに感染した患者の発生について（県内94,366～94,544例目)</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/oshirase/325961.html">消費者物価指数（大津市） 2022年（令和4年）5月分（2020年基準）</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/oshirase/325978.html">「若者消費者トラブル110番～令和4年4月から成年年齢が18歳に～」実施結果</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/ippan/bousai/sougo/322797.html">【無症状の方限定】PCR検査・抗原定性検査の受検について</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-23">2022年6月23日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/oshirase/326012.html">新型コロナウイルスに感染した患者の発生について（県内94,209～94,365例目)</a></span>
+                                      </li>
+                        </ul>
+                      <div class="rss_button rss_right" tab-number="1"><a href="/file/rss/kensei_koho_e-shinbun_oshirase_index.rss">RSSリンク</a></div>
+                    <ul class=" totaling " tab-number="2" part-val="826908" title-list-entry-part-val="30295" language="1" device="1" total-count="431" display-number="5" step-number="1" paging="false" system="1" external_link_display_type="1">
+                              <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/ippan/bousai/sougo/322706.html">滋賀県PCR等検査無料化事業の検査実施事業者募集について</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/bosyuu/326013.html">「しがの農×福ネットワーク」勉強会の開催</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-22">2022年6月22日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/bosyuu/325962.html">令和4年度滋賀県充電インフラ整備事業補助金の受付を開始します</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-22">2022年6月22日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/bosyuu/325868.html">プラスチックごみ・食品ロス削減等ごみの減量につながる先進的な活動や取組を補助金で支援します！</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-20">2022年6月20日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/bosyuu/325841.html">中小企業等を対象とした省エネ・再エネ等設備への補助金を増額します</a></span>
+                                      </li>
+                        </ul>
+                      <div class="rss_button rss_right" tab-number="2"><a href="/file/rss/kensei_koho_e-shinbun_bosyuu_index.rss">RSSリンク</a></div>
+                    <ul class=" totaling " tab-number="3" part-val="826908" title-list-entry-part-val="30296" language="1" device="1" total-count="437" display-number="5" step-number="1" paging="false" system="1" external_link_display_type="1">
+                              <li class="display_date">
+                                            <time  datetime="2022-6-24">2022年6月24日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/event/326026.html">早崎内湖再生保全協議会によるびわ北小学校4年生 「総合学習:ビオトープ観察授業」の実施について</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-16">2022年6月16日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/event/325892.html">令和4年度農業技術振興センター試験研究発表会 「水田農業部門」の開催について</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-14">2022年6月14日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/event/325819.html">6月23日（木）～29日（水）は男女共同参画週間です</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-9">2022年6月9日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/event/325103.html">滋賀県環境影響評価審査会の開催のお知らせ</a></span>
+                                      </li>
+                                    <li class="display_date">
+                                            <time  datetime="2022-6-6">2022年6月6日</time>
+                                              <span class="title"><a href="/kensei/koho/e-shinbun/event/325716.html">就職面接会「しがジョブフェア2022夏」開催について</a></span>
+                                      </li>
+                        </ul>
+                      <div class="rss_button rss_right" tab-number="3"><a href="/file/rss/kensei_koho_e-shinbun_event_index.rss">RSSリンク</a></div>
+                    <span class="slide-prev"></span>
+        <span class="slide-next"></span>
+                  <div class="paging">
+            <a href="javascript:void(0);"><span class="first">最初へ</span></a>
+            <a href="javascript:void(0);"><span class="prev">前へ</span></a>
+            <div class="number">
+            </div>
+            <a href="javascript:void(0);"><span class="next">次へ</span></a>
+            <a href="javascript:void(0);"><span class="last">最後へ</span></a>
+          </div>
+                <div class="other">
+                          <span tab-number="1"><a href="/kensei/koho/e-shinbun/oshirase/index.html">県政eしんぶん一覧を見る</a></span>
+                              <span tab-number="2"><a href="/kensei/koho/e-shinbun/bosyuu/index.html">県政eしんぶん一覧を見る</a></span>
+                              <span tab-number="3"><a href="/kensei/koho/e-shinbun/event/index.html">県政eしんぶん一覧を見る</a></span>
+                      </div>
+          </div>
+          <script>
+        $('.title-list').each(function () {
+          var tab = parseInt($(this).attr('tab'));
+          var step = parseInt($(this).attr('step'));
+          if (tab == 0) {
+            tab = 1;
+          }
+          title_list_paging_goto(this, tab, step, 0, false);
+        });
+      </script>
+      </div>
+  </div>
+    </div>
+  </div>
+            <div class="parts sigakensei  kensei_div" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block kensei_image1" style="font-family:0;" lang="" data-load="1" >
+    <div class="html">
+  <div class="image" role="list">
+  <div class="block left">
+    <div class="image_listitem" role="listitem">
+      <figure>
+        <div>
+          <h2><a href="/kensei/chizi/index.html" target=""><img src="/file/img/5111574.png" alt="ようこそ知事室へ" flag="0" class="" style=""></a></h2>
+        </div>
+      </figure>
+    </div>
+  </div>
+</div></div>  </div>
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="list">
+  <figure>
+        <ul><li class="list-style-white-space"><a href="/kensei/chizi/kaiken/index.html" target="">知事会見</a></li><li class="list-style-white-space"><a href="https://www.shigaken-gikai.jp/" target="">滋賀県議会</a></li><li class="list-style-white-space"><a href="/edu/" target="">教育委員会</a></li><li class="list-style-white-space"><a href="/police/" target="">滋賀県警察</a></li><li class="list-style-white-space"><a href="/othersites/index.html" target="">関連サイト</a></li></ul>  </figure>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts guide " style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="list">
+  <figure>
+        <figcaption><h2><span class="list_block_title" style="font-size: 100%">各種ご案内</span></h2></figcaption>
+        <ul><li class="list-style-white-space"><a href="/kensei/zyourei/kouhou/" target="">公報</a></li><li class="list-style-white-space"><a href="/kensei/gaiyou/shicyou/20959.html" target="">県内市町</a></li><li class="list-style-white-space"><a href="/ippan/kurashi/ict/324588.html" target="">電子申請・手続ガイド</a></li><li class="list-style-white-space"><a href="/ippan/kurashi/ict/300004.html" target="">オープンデータ</a></li><li class="list-style-white-space"><a href="/kensei/kenseisanka/" target="">ご意見・ご提案</a></li></ul>  </figure>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts siga_info s1" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block midasi_osusume" style="font-family:0;" lang="" data-load="1" >
+    <div class="heading">
+      <h2><span>おすすめ情報・サイト</span></h2>
+    </div>
+  </div>
+        <div class="block detail_osusume" style="font-family:0;" lang="" data-load="1" >
+    <div class="image" role="list">
+  <div class="block center">
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/kensei/koho/kohoshi/325100.html" target=""><img src="/file/img/5321796.jpg" alt="広報誌滋賀プラスワン" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/2024/index.html" target=""><img src="/file/img/5314487.png" alt="2025国スポ障スポ大会" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://mlgs.shiga.jp/" target=""><img src="/file/img/5286315.jpg" alt="MLGs WEBへのリンク(外部サイト)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://cocoshiga.jp/" target="_blank"><img src="/file/img/5117486.jpg" alt="ここ滋賀(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://www.biwako-visitors.jp/" target="_blank"><img src="/file/img/5117723.jpg" alt="滋賀・びわ湖観光情報(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="/ouen/index.html" target=""><img src="/file/img/5120252.jpg" alt="滋賀応援寄附" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://shigaquo.jp/" target="_blank"><img src="/file/img/5319690.png" alt="滋賀のおいしいコレクション(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://www.hikonejo-worldheritage.jp/" target="_blank"><img src="/file/img/5319691.png" alt="彦根城世界遺産登録推進(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts banner_top" style="padding-bottom:50px;font-family:0;" lang="" data-load="1" >
+        <div class="banner">
+  <div class="banner-part center banner-side" role="list">
+                      <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://aipo.xsrv.jp/kandajkinzoku/" target="_blank"><img src="/file/banner/5214700.jpg" alt="銅・真鍮・電線・アルミ・ステン・鉄屑 滋賀県神田重量金属株式会社 滋賀県に許可を認められた金属買取業者です(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://aipo.xsrv.jp/re_tool/" target="_blank"><img src="/file/banner/5214701.jpg" alt="工具市場滋賀 愛知川店 甲賀店 中古工具・電動工具・手動工具・バイク・タイヤ(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://taniguchi-koumuten.jp/" target="_blank"><img src="/file/banner/5260244.jpg" alt="設計士とつくる、自然素材の注文住宅木の家専門店谷口工務店(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://shigatoyopet.jp/" target="_blank"><img src="/file/banner/5277589.jpg" alt="滋賀トヨペット・トヨタモビリティ滋賀(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://www.npo-welment.com" target="_blank"><img src="/file/banner/5292695.jpg" alt="障がい者支援 リサイクル ウェルメント(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://aipo.xsrv.jp/sanometaru/" target="_blank"><img src="/file/banner/5312553.jpg" alt="佐野重量金属 彦根ヤード(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="https://aipo.xsrv.jp/metal/" target="_blank"><img src="/file/banner/5312551.jpg" alt="鉄くず出張買取ドットコムのバナー 滋賀県全域で1kg・少量に対応可能(外部サイト,別ウィンドウで開く)" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                                  <div class="advertisement" arrow="right" style="width: 180px; height: 46px;  margin-left: auto;   margin-right: auto; " role="listitem">
+                                    <ul class="slide">
+                                          <li item-name="item0" class="active">
+                                                      <a href="/zigyousya/koukokukifu/11315.html" target=""><img src="/file/banner/4035413.png" alt="バナー広告募集中" flag="0" style="width:180px; height:46px; "/></a>                                                  </li>
+                                      </ul>
+                                  </div>
+                          </div>
+        </div>  </div>
+        </div>
+                </div>
+              <div class="area area5 " data-type="5" style="" lang="" >
+        <div class="parts footer_site" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="font-family:0;" lang="" data-load="1" >
+    <div class="list">
+  <figure>
+        <ul><li class="list-style-white-space"><a href="/kensei/koho/hpsns/copyright.html" target="">著作権・リンクについて</a></li><li class="list-style-white-space"><a href="/site_map/index.html" target="">サイトマップ</a></li><li class="list-style-white-space"><a href="/kensei/koho/hpsns/policy.html" target="">サイトポリシー</a></li><li class="list-style-white-space"><a href="/kensei/koho/hpsns/accessibility.html" target="">ウェブアクセシビリティの方針</a></li></ul>  </figure>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts footer_pref" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="image" role="list">
+  <div class="block center">
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <img src="/file/img/5117413.jpg" alt="滋賀県章" flag="0" class="" style=""/>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+        <div class="block location_title" style="margin-left:10%;font-family:0;" lang="" data-load="1" >
+    <div class="heading">
+      <h2><span>滋賀県庁</span></h2>
+    </div>
+  </div>
+        <div class="block " style="" lang="" data-load="1" >
+    <div class="list">
+  <figure>
+        <ul><li class="list-style-white-space"><a href="/kensei/gaiyou/annai/300434.html" target="">県庁アクセスマップ・フロアマップ</a></li></ul>  </figure>
+</div>
+  </div>
+        <div class="block location_info" style="font-family:0;" lang="" data-load="1" >
+    <div class="sentence">
+  <p>〒520-8577<br />
+滋賀県大津市京町四丁目1番1号<br />
+TEL:077-528-3993（総合案内）<a href="/kensei/gaiyou/soshiki/">県庁各課室への問い合わせはこちら</a>(受付:8:30～17:15)<br />
+開庁時間：月曜日～金曜日8:30～17:15</p>
+</div>  </div>
+        <div class="block location_info_detail" style="font-family:0;" lang="" data-load="1" >
+    <div class="sentence">
+  <p>土曜・休日・年末年始(12月29日～1月3日)は開庁しておりません。</p>
+</div>  </div>
+        <div class="block sns" style="font-family:0;" lang="" data-load="1" >
+    <div class="image" role="list">
+  <div class="block center">
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://www.facebook.com/pref.shiga" target="_blank"><img src="/file/img/5117419.jpg" alt="facebook(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://twitter.com/watan_shiga" target="_blank"><img src="/file/img/5117421.jpg" alt="twitter(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://www.instagram.com/shigaphotoclub/" target="_blank"><img src="/file/img/5117420.jpg" alt="instagram(外部サイト,別ウィンドウで開く)" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+          <div class="image_listitem" role="listitem">
+        <figure>
+                      <div>
+              <a href="https://lin.ee/kB1USjP" target=""><img src="/file/img/5149143.png" alt="LINE" flag="0" class="" style=""/></a>            </div>
+                  </figure>
+      </div>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+            <div class="parts footer_copyright" style="font-family:0;" lang="" data-load="1" >
+        <div class="note">
+        <div class="block copyright" style="font-family:0;" lang="en" data-load="1" >
+    <div class="sentence">
+  <p style="text-align:center">&copy;Shiga Prefectural Government. All Rights Reserved.</p>
+</div>  </div>
+  </div>
+  </div>
+            <div class="parts " style="" lang="" data-load="1" >
+        <div class="note">
+  </div>
+  </div>
+        </div>
+        </div>
+</div>
+</div>
+<div class="data-field">
+  <input type="hidden" id="attribute_page_id_hidden" name="attribute_page_id_hidden" value="319922">
+  <input type="hidden" id="type_hidden" name="type_hidden" value="1">
+  <input type="hidden" id="language_page_id_hidden" name="language_page_id_hidden" value="382008">
+  <input type="hidden" id="page_id_hidden" name="page_id_hidden" value="383020">
+  <input type="hidden" id="language_id_hidden" name="language_id_hidden" value="1">
+  <input type="hidden" id="device_id_hidden" name="device_id_hidden" value="1">
+  <input type="hidden" id="sites_responsive_flag_hidden" name="sites_responsive_flag_hidden" value="1">
+  <input type="hidden" id="page_responsive_flag_hidden" name="page_responsive_flag_hidden" value="1">
+</div>
+  <div class="to_original_page"><a href="javascript:void(0);"></a></div>
+  <script src="/js/jquery/jquery.cookie.js"></script>
+  <script>
+    $(function () {
+      var original_device = $.cookie('original_device'); //2:tb, 3:sp
+      if (original_device == 'tb') {
+        $('.to_original_page a').text('滋賀県ホームページ（タブレット版）表示');
+      } else if (original_device == 'sp') {
+        $('.to_original_page a').text('滋賀県ホームページ（スマートフォン版）表示');
+      } else {
+        $('.to_original_page a').text('滋賀県ホームページ表示');
+        $('.to_original_page').css('display', 'none');
+      }
+      $(document).on('click', '.to_original_page a', function () {
+        var original_device = $.cookie('original_device');
+        var device_type;
+        if (original_device == 'tb') {
+          device_type = 2;
+        } else if (original_device == 'sp') {
+          device_type = 3;
+        }
+        $.cookie('selected_device', device_type, {expires: 1, path: '/', domain: 'www.pref.shiga.lg.jp'});
+        window.location.href = $(location).attr('pathname');
+      });
+    });
+  </script>
+<script>
+  var x = 100;
+  var cnt = 0;
+
+  function larger() {
+    if (cnt >= 2) {
+      return;
+    }
+    x *= 1.2;
+    cnt++;
+    document.body.style.fontSize = x + '%';
+  }
+  function medium() {
+    x = 100;
+    cnt = 0;
+    document.body.style.fontSize = 100 + '%';
+  }
+
+  function smaller() {
+    x /= 1.2;
+    cnt--;
+    document.body.style.fontSize = x + '%';
+  }
+</script>
+  </body>
+</html>

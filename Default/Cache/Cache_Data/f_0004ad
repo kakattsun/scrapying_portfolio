@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+
+
+var change_checkbox_flag = 0;
+
+
+function button_click(var_x,var_y)
+{
+	document.form_main.P_submit_value.value = "";
+	document.form_main.target = "";
+
+	if( var_x != 1 && var_x != 4 && var_x != 5 && var_x != 6 && var_x != 7 )
+	{
+		var change_flag = is_change();
+
+		if( change_flag == true )
+		{
+			if( confirm('更新して移動しますか？') == true )
+			{
+				switch(var_x){
+
+					case 'back': //戻る
+						document.form_main.P_back_flag.value = 1;
+						break;
+					case 2: //レース設定＿ラウンドへ移動
+						document.form_main.P_submit_onload.value = "button_click(2,0);";
+						break;
+					case 3: //レース設定＿タイムテーブル：検索処理
+						document.form_main.P_submit_onload.value = "button_click(3,0);";
+						break;
+					case 8: //v2種別クラス画面へ移動
+						document.form_main.P_submit_onload.value = "button_click(8,0);";
+						break;
+					default:
+						document.form_main.action = "../index.php";
+						break;
+				}
+
+				button_click(1,0);
+				return false;
+			}
+			else
+			{
+				if( confirm('更新せずに移動しますか？') == false )
+					return false;
+			}
+		}
+	}
+
+	switch(var_x){
+		case 9999:
+			document.form_main.action = "../error.php";
+			break;
+		case 'back': //戻る
+			document.form_main.action = "./0011_gamemenu.php";
+			break;
+		case 1: //レース設定＿タイムテーブル：登録処理
+			if( postdata_check() == false )
+				return false;
+
+			if(document.form_main.P_race_open.value == 2)
+			{
+				if( confirm('組集約での更新時は1組目の時刻を他の組へ上書きしますのでご注意ください。\n更新してもよろしいでしょうか？') == false )
+				{
+					return false;
+				}
+
+			}	
+
+			document.form_main.P_submit_value.value = "REGIST GAME_RACE SCHEDULE";
+			document.form_main.action = "./0014_race_schedule.php";
+			break;
+		case 2: //レース設定＿ラウンドへ移動
+			document.form_main.action = "./0014_race_round.php";
+			break;
+		case 3: //レース設定＿タイムテーブル：検索処理
+			document.form_main.P_submit_value.value = "SEARCH GAME_RACE SCHEDULE";
+
+			document.form_main.action = "./0014_race_schedule.php";
+			break;
+		case 4: //レース設定＿タイムテーブル：スタートリスト印刷
+alert('制作中です');
+return false;
+			break;
+		case 5: //タイムテーブル出力(v2)
+			document.form_main.action = "../comp/timelist.php";
+			document.form_main.target = "_blank";
+			break;
+		case 6: ////v2大会記録
+			document.form_main.target = "_blank";
+			document.form_main.action = "0009_baserecinput.php";
+			document.form_main.P_submit_sub.value = "REC GAME";
+			break;
+		case 7: ////レースNo.Setボタン
+			document.form_main.P_submit_value.value = "REGIST GAME_RACE SCHEDULE RACE NUMBER";
+			document.form_main.action = "./0014_race_schedule.php";
+			break;
+		case 8: //v2種別クラス画面へ移動
+			document.form_main.action = "./0022_rec.php";
+			break;
+
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+function print_button_excel(var_x,var_y)
+{
+	document.form_main.P_submit_value.value = "";
+	document.form_main.target = "ARV2_WINDOW";
+	document.form_main.action = "../comp/timelist.php";
+
+	switch(var_x){
+
+		case 1: //v2タイムテーブル EXCEL
+			document.form_main.submit_kbn.value = "EXCEL";
+			break;
+		case 2: //v2タイムテーブル HTML
+			document.form_main.submit_kbn.value = "HTML";
+			break;
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+function postdata_check()
+{
+
+
+
+	return true;
+}
+var racerow = 0;
+var race = new Array('');
+function disp_rows(obj)
+{
+	obj.style.display = 'none';
+	document.getElementById('id_race_button_2').style.display = '';
+	document.getElementById('id_auto_number').style.display = '';
+//	document.getElementById('id_auto_number_check').checked = true;
+	document.getElementById('id_max_race').style.display = 'none';
+	document.getElementById('id_race').style.display = '';
+	document.getElementById('id_race_name').style.display = '';
+	document.getElementById('id_final_b').style.display = '';
+	document.getElementById('id_page_name').style.display = 'none';
+	for(i=0;i<racerow;i++)
+	{
+		document.getElementById('id_max_race_' + i).style.display = 'none';
+		document.getElementById('id_race_' + i).style.display = '';
+		document.getElementById('id_race_name_' + i).style.display = '';
+		document.getElementById('id_final_b_' + i).style.display = '';
+		document.getElementById('id_page_name_' + i).style.display = 'none';
+//		document.getElementById('id_race_number_' + i).disabled = '';
+		document.getElementById('id_final_b_' + i).style.display = '';
+		document.getElementById('id_race_number_same_' + i).disabled = '';
+
+		if( race[i] > 1 )
+			document.getElementById('id_row_' + i).style.display = '';
+	}
+
+	document.form_main.P_race_open.value = 1;
+
+}
+
+function hidden_rows(obj)
+{
+	obj.style.display = 'none';
+	document.getElementById('id_auto_number').style.display = 'none';
+//	document.getElementById('id_auto_number_check').checked = true;
+	document.getElementById('id_race_button_1').style.display = '';
+	document.getElementById('id_max_race').style.display = '';
+	document.getElementById('id_race').style.display = 'none';
+	document.getElementById('id_race_name').style.display = 'none';
+	document.getElementById('id_final_b').style.display = 'none';
+	document.getElementById('id_page_name').style.display = '';
+	for(i=0;i<racerow;i++)
+	{
+		document.getElementById('id_max_race_' + i).style.display = '';
+		document.getElementById('id_race_' + i).style.display = 'none';
+		document.getElementById('id_race_name_' + i).style.display = 'none';
+		document.getElementById('id_final_b_' + i).style.display = 'none';
+		document.getElementById('id_page_name_' + i).style.display = '';
+		document.getElementById('id_race_number_' + i).disabled = 'disabled';
+		document.getElementById('id_race_number_same_' + i).disabled = 'disabled';
+
+		if( race[i] > 1 )
+			document.getElementById('id_row_' + i).style.display = 'none';
+	}
+
+	document.form_main.P_race_open.value = 2;
+
+}
+
+function auto_number(obj)
+{
+	if(obj.checked == false)
+	{
+		for(i=0;i<racerow;i++)
+		{
+			document.getElementById('id_race_number_' + i).disabled = '';
+//			document.getElementById('id_race_number_same_' + i).disabled = '';
+
+		}
+	}
+	else
+	{
+		for(i=0;i<racerow;i++)
+		{
+			document.getElementById('id_race_number_' + i).disabled = 'disabled';
+//			document.getElementById('id_race_number_same_' + i).disabled = 'disabled';
+		}
+	}
+
+}
+
+
+function onload_event()
+{
+	return;disp_rows(document.getElementById('id_race_button_1'));
+}
+
+function number_sort(obj,row)
+{
+	if(document.form_main.P_race_open.value == 1)
+	{
+
+		var number = obj.value;
+		var cnt = 0;
+		var new_number = 0;
+
+		if(number.match(/[^0-9]+/) || number === "")
+		{
+			alert("値が空か、数値以外が入力されています。数値を入力してください。");
+			return false;
+			
+		}
+
+
+		if( confirm('基準となるレースNo.から+1ずつ付与します。よろしいですか？') == true )
+		{
+			for(i=0;i<racerow;i++)
+			{
+				if(i > row )
+				{
+					cnt++;
+					new_number = Number(number) + Number(cnt);
+					document.getElementById('id_race_number_' + i).value = new_number;
+				}
+			}
+		}
+	}
+}
+
+
+function move_focus2(e,obj)
+{
+	if(e){
+		code = e.keyCode;
+		shif = e.shiftKey;
+	}else{
+		code = event.keyCode;
+		shif = event.shiftKey;
+	}
+	if(code == 13){
+		var target = document.form_main.elements[obj.name];
+		var mov = 0;
+		for(i=0;i<target.length;i++){
+			if( obj == target[i] ){
+				if(shif == false)
+				{
+					for(j=i+1;j<target.length;j++)
+					{
+						mov = j;
+
+						if( mov > target.length )
+						{
+							mov = 0;
+							break;
+
+						}
+						else if(document.getElementById('id_row_' + mov).style.display == '')
+						{
+
+							break;
+						}
+					 }
+				}
+				else
+				{
+					for(j=i;j>-1;j--)
+					{
+						mov = j - 1;
+
+						if( mov == -1 )
+						{
+							mov = target.length - 1;
+							break;
+
+						}
+						else if(document.getElementById('id_row_' + mov).style.display == '')
+						{
+
+							break;
+						}
+					}
+
+				}
+
+				break;
+			}
+		}
+
+		target[mov].focus();
+		if( target[mov].type == "text" || target[mov].type == "textarea" || target[mov].type == "password" )
+			target[mov].select();
+
+		return false;
+	}else{
+		return true;
+	}
+	return false;
+}
+
+var print_post_data = '';
+function print_button_click(print_style)
+{
+	var key_event = window.event;
+
+	if(key_event.ctrlKey)
+	{
+		print_button_excel(2);
+		return false;
+	}
+
+	document.getElementById('id_print_button').style.display = '';
+
+	var sex = 0;
+	var e_class = 0;
+	var e_comb = 0;
+	var e_code = "";
+	var round_id = 0;
+	var race_start = 0;
+	var race_end = 0;
+	var job_parameters = "";
+
+	print_post_data = encodeURIComponent("userid") + "=" + encodeURIComponent('ay02');
+	print_post_data += "&" + encodeURIComponent("game_num") + "=" + encodeURIComponent('ay022021016');
+	print_post_data += "&" + encodeURIComponent("stadium_id") + "=" + encodeURIComponent('17');
+	print_post_data += "&" + encodeURIComponent("print_terminal_id") + "=" + encodeURIComponent(document.getElementById('id_select_print_terminal').value);
+	print_post_data += "&" + encodeURIComponent("print_style") + "=" + encodeURIComponent(print_style);
+	print_post_data += "&" + encodeURIComponent("sex") + "=" + encodeURIComponent(sex);
+	print_post_data += "&" + encodeURIComponent("e_class") + "=" + encodeURIComponent(e_class);
+	print_post_data += "&" + encodeURIComponent("e_comb") + "=" + encodeURIComponent(e_comb);
+	print_post_data += "&" + encodeURIComponent("e_code") + "=" + encodeURIComponent(e_code);
+	print_post_data += "&" + encodeURIComponent("round_id") + "=" + encodeURIComponent(round_id);
+	print_post_data += "&" + encodeURIComponent("race_start") + "=" + encodeURIComponent(race_start);
+	print_post_data += "&" + encodeURIComponent("race_end") + "=" + encodeURIComponent(race_end);
+	print_post_data += "&" + encodeURIComponent("job_parameters") + "=" + encodeURIComponent(job_parameters);
+
+
+	print_job_click();
+}
+function print_job_post()
+{
+	return print_post_data;
+}
+
+
+function multi(num,obj)
+{
+
+	if(document.getElementById('id_multi_' + num).value == 1)
+	{
+		document.getElementById('id_race_number_' + num).style.display = '';
+	}
+
+	if(obj.checked != obj.defaultChecked )
+		change_checkbox_flag = 1;
+
+}
+
+function change_check(obj)
+{
+
+	if(obj.checked != obj.defaultChecked )
+		change_checkbox_flag = 1;
+
+}
+
+
+var form_element = new Array('P_multi[]','P_final_b[]','P_event_date[]','P_estimat_time[]','P_recept_time[]','P_recept_end_time[]','P_page_name[]','P_race_number[]','P_race_name[]');
+function is_change()
+{
+
+	// 指定フォーム要素対象版
+	var cnt = form_element.length;
+	for(var i=0;i<cnt;i++)
+	{
+		if( document.form_main.elements[form_element[i]] )
+		{
+			var frm = document.form_main.elements[form_element[i]];
+
+			var tmptag = document.getElementsByName( form_element[i] ) ;
+
+
+			if( frm.length > 1 )
+			{
+				for(var j=0;j<frm.length;j++)
+				{
+					if( frm[j].tagName == "INPUT" )
+					{
+						if( frm[j].getAttribute("type") == "text" && frm[j].value != frm[j].defaultValue )
+						{
+							return true; // 変更あり
+						}
+						else if( frm[j].getAttribute("type") == "checkbox" && frm[j].checked != frm[j].defaultChecked )
+							return true; // 変更あり
+						else if( frm[j].getAttribute("type") == "radio" && frm[j].checked != frm[j].defaultChecked )
+							return true; // 変更あり
+					}
+					else if( frm[j].tagName == "SELECT" && frm[j].options[frm[j].selectedIndex].defaultSelected == false )
+					{
+						return true; // 変更あり
+					}
+					else if( frm[j].tagName == "TEXTAREA" && frm[j].value != frm[j].defaultValue )
+						return true; // 変更あり
+				}
+			}
+			else
+			{
+
+				if( frm.tagName == "INPUT" )
+				{
+					if( frm.getAttribute("type") == "text" && frm.value != frm.defaultValue )
+					{
+						return true; // 変更あり
+					}
+					else if( frm.getAttribute("type") == "checkbox" && frm.checked != frm.defaultChecked )
+						return true; // 変更あり
+					else if( frm.getAttribute("type") == "radio" && frm.checked != frm.defaultChecked )
+						return true; // 変更あり
+				}
+				else if( frm.tagName == "SELECT" && frm.options[frm.selectedIndex].defaultSelected == false )
+				{
+					return true; // 変更あり
+				}
+				else if( frm.tagName == "TEXTAREA" && frm.value != frm.defaultValue )
+					return true; // 変更あり
+			}
+		}
+	}
+
+	if(change_checkbox_flag == 1)
+		return true; // 変更あり
+
+
+	return false;
+}
+
+
+//-->
+</script>
+
+<style type="text/css">
+
+.RaceNumSet{
+	background-color: #003399;
+    display: block;
+    padding-top: 3px;
+    height: 37px;
+    width: 70px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.RaceNumSet:hover{
+	opacity:0.7;
+}
+
+
+</style>
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body onload='onload_event()' >
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li class='backButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click("back",1)' style='width: 75px; padding-left: 3px; padding-right: 3px;'><span style='font-weight:bold; font-size:18px;'><-Back</span></li><li><div class='pageName'>レース設定</div></li><li><div class='gameName'>2021滋賀ユース選手権[皇子山]</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_terminal'><input id='id_printer' type='button' value='未設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_click()' class='printButton'><span>端末選択</span></li><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option><option value='102'>記録（滋賀陸協１）</option><option value='104'>写真判定（高体連）</option><option value='105'>競技者係(MF244dw)</option><option value='117'>競技者係（テスト用）</option><option value='123'>普及(PX-1700F) </option><option value='150'>リザルト集</option><option value='151'>英語リザルト</option><option value='267'>番組編成(滋賀陸協1)</option><option value='340'>記録（コピー機）</option><option value='341'>賞状（PX-M6010F）</option><option value='356'>普及・記録</option><option value='357'>普及・賞状</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target=''>
+	<input type='hidden' name='P_SESSION_KEY' value='l11947'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-07-19 19:47:33 A3R4F3E1S5'>
+	<input type='hidden' name='P_prev_page' value='0014_race_schedule.php'>
+	<input type='hidden' name='P_submit_value' value=''><input type='hidden' name='P_submit_sub' value=''>
+		<input type='hidden' name='P_select_game_table_id' value='4965'>
+		<input type='hidden' name='P_game_race_rows' value='0'>
+		<input type='hidden' name='P_race_open' value='1'>
+		<input type='hidden' name='P_back_flag' value='0'>
+
+	<!--  -->
+		<input type='hidden' name='submit_kbn' value=''>
+
+	<input type='hidden' name='P_submit_onload' value=''>
+
+	<!--  -->
+	<div class='topBox'>
+		<table class='topLine' style='margin-top: 42px;'>
+			<tr class='lineH50 race'>
+			<td class='paddingR5'></td>
+			<td class='width15per valignB'><div class='backDBlue topLine_tab_noselect' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,0)' >ラウンド</div>
+			</td>
+			<td class='paddingR5'></td>
+			<td class='width15per backDOrange textCenter' >タイムテーブル</td>
+			<td class='width12per paddingL8'>
+			<input type='button' value='更新' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(1,0)' class='inputButton' style='width:100%;'>
+			</td>
+
+	<!--  -->
+<!--
+
+			<td>
+			<input type='button' value='ﾀｲﾑﾃｰﾌﾞﾙ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(4,0)' class='printButton width250'>
+			</td>
+-->
+
+	<!--  -->
+
+			<td class='paddingL8'>
+			<input type='button' value='ﾀｲﾑﾃｰﾌﾞﾙ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='print_button_click(10)'  class='printButton width120 paddingL23'> 			</td>
+
+
+	<!--  -->
+
+			<td>
+			<input type='button' value='大会記録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(6,0)' class='linkButtonimg width150 paddingL15' style='width: 120px;'>
+			</td>
+
+			<td>
+			<input type='button' value='使用記録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(8,0)' class='linkButtonimg' style='width: 95px; margin-left: 10px;'>
+			</td><!--
+			--><td class='width30per'></td>
+
+			</tr>
+		</table>
+
+
+		<table class='menuLine'>
+			<tr class='lineH36 backDOrange'>
+			<td class='fontBig width12per' style='padding-left: 1%' >
+				<select name='P_search_event' class='selectNormal' onchange='button_click(3,0)' >
+				<option value='0' selected='selected'>トラック</option><option value='1'>フィールド</option>				</select>
+			</td><!--
+			--><td class='fontBig width13per'>
+				<select name='P_search_schedule_order' class='selectNormal' onchange='button_click(3,0)' style='width:90%;'>
+				<option value='0' selected='selected'>時間順</option><option value='1'>種目順</option><option value='2'>レースNo.順</option>
+				</select>
+			</td><!--
+			--><td class=' fontBig width8per' >ラウンド</td><!--
+			--><td class=' fontBig width5per' id='id_max_race' >組数</td><!--
+			--><td class=' fontBig width5per' id='id_race' style='display:none; '>組No.</td><!--
+			--><td class=' fontBig width5per' id='id_race_name' style='display:none; '>組名</td><!--
+			--><td class=' fontBig width4per' id='id_final_b' style='display:none; '>B決</td><!--
+			--><td class=' fontBig width8per' >
+				<select name='P_search_event_date' class='selectNormal' onchange='button_click(3,0)'>
+				<option value='2021-08-19'>08/19</option><option value='2021-08-20' selected='selected'>08/20</option><option value='2021-08-21'>08/21</option>
+				</select>
+			</td><!--
+			--><td class=' fontBig width7per' >時刻</td><!--
+			--><td class=' fontBig width7per' >招集始</td><!--
+			--><td class=' fontBig width7per' >招集終</td><!--
+			--><td class=' fontBig width7per' id='id_page_name' >ページ</td><!--
+			--><td class=' fontBig width9per ' style='line-height:18px;' >
+			<span class=' RaceNumSet ' onclick='document.getElementById("id_dialogbox_race_number_job").style.display="";' >
+				レース<br>No.Set			</span>
+			</td><!--
+			--><td class='fontBig' style='min-width: 180px;'><span class='backWhite' style='display:inline-block; line-height:36px;'>
+			<input type='button' value='組展開↓'
+			 onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='disp_rows(this)' id='id_race_button_1' class='inputButton backDBlue hbox50 ' style='width:50px;'>
+			<input type='button' value='組集約↑' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='hidden_rows(this)' id='id_race_button_2' style='display:none;' class='inputButton backDBlue' style='width:100%;'></span><span id='id_auto_number' style='display:none;'><input type='checkbox' id='id_auto_number_check' name='P_auto_number' value='ON' onclick='auto_number(this)' style='vertical-align:middle;' class='checkBox' checked  >自動付与</span></td><!--
+			--><td></td>
+			</tr>
+		</table>
+	</div>
+
+	<!--  -->
+	<div class='bodyBox marginTop219' style='margin-top: 143px;'>
+		<table class='contentTable'>
+		<tbody id='id_game_race_tbody'>
+
+
+		</tbody>
+		</table>
+	</div>
+	<!--  -->
+
+<div id='id_dialogbox_race_number_job' class='dialogbox' style='display:none;'><div class='printbox' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_race_number_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>先頭のレースNo.を入力してください。</span><div class='width200' style='margin:20px auto 20px auto;'><input type='text' name='P_race_number_set' value='' class='textBox imeOff width75'>
+Notice: Undefined variable: game_race in /var/www/html/devuser/athleteranking.com/members/compv3/0014_race_schedule.php on line 1918
+<input type='hidden' name='P_race_number_set_id' value='' class='textBox imeOff width75'></div><input type='button' value='レースNo.Set' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(7,0)' class='inputButton width200'></div></div>	<!--  -->
+	<div id='id_message_box' class='messageBox' style='position:fixed; top:20vh; z-index:10; width:800px; height:30vh; overflow-y: auto; margin:0px 203px;border: 2px solid #999999; background-color:#FFFFFF; display:none;'><div class='closebutton' onclick='document.getElementById("id_message_box").style.display="none";document.getElementById("id_message_button").style.display="";' >&nbsp;</div><div style='margin-top:-50px; width:200px; height:30px; padding: 20px 0px 15px 20px;'>Message</div><p class='message' id='id_message' style='padding-left:20px;'></p><p class='messageSafe' id='messagesafe' style='padding-left:20px;'></p><p class='messageError' id='messageerror' style='padding-left:20px;'></p></div><div id='id_message_button' style='position:fixed; bottom:0px; z-index:2; width:90px; height:50px;margin:0px 0px 0px 20px; padding-top:3px; background-color:#CCCCCC; cursor: pointer; display:none;' onclick='document.getElementById("id_message_box").style.display="";document.getElementById("id_message_button").style.display="none";'>Message</div></form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+</div>
+
+
+</body>
+</html>

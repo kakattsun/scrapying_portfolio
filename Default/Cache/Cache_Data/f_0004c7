@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+
+var usertype = 1
+function button_click(var_x,var_y,var_z)
+{
+	var key_event = window.event;
+
+	document.form_main.P_submit_value.value = "";
+	document.form_main.target = "";
+	switch(var_x){
+		case 9999:
+			document.form_main.action = "../error.php";
+			break;
+		case 1: //競技会選択：検索処理
+			document.form_main.P_submit_value.value = "SEARCH";
+			document.form_main.action = "./0003_gamelist.php";
+			break;
+		case 2: //競技会メニューへ移動
+			if(var_z == 1 && usertype != 5)
+			{
+				if( confirm('過去の競技会を選択しました。データを変更してしまう恐れがありますので注意してください。') == false )
+				{
+					return false;
+				}
+				else
+				{
+					if( confirm('本当に過去の競技会を操作しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.P_select_game_table_id.value = var_y;
+			document.form_main.action = "./0011_gamemenu.php";
+			break;
+		case 3: //v2基本記録画面へ移動
+
+				document.form_main.action = "./0008_basereclist.php";
+
+
+			break;
+		case 4: //エントリー画面へ移動
+			break;
+		case 5: //新規競技会登録画面へ移動
+			document.form_main.action = "./0010_newgame_base.php";
+			break;
+		case 6: //基本競技会選択画面へ移動
+			document.form_main.action = "./0004_gamebaselist.php";
+			break;
+		case 7: //競技場選択画面へ移動
+			document.form_main.action = "./0006_gameplacelist.php";
+			break;
+		case 8: //ランキングへ移動
+			document.form_main.action = "./0035_rankingsearch_a.php";
+			break;
+		case 9: //選手検索画面へ移動
+			document.form_main.action = "./0039_athletesearch.php";
+			break;
+		case 10: //v2所属検索画面へ移動
+			document.form_main.action = "./0037_teamsearch.php";
+			break;
+		case 11: //他大会取込処理
+
+
+			if( confirm('大会の結果等が一旦削除されます\n本当によろしいですか？') == false )
+				return false;
+
+			window.opener.document.form_main.P_copy_game_table_id.value = var_y;
+			window.opener.document.form_main.P_submit_value.value = "COPY GAME";
+			window.opener.document.form_main.target = "";
+			window.opener.document.form_main.action = "./0012_gameinput.php";
+			window.opener.document.form_main.submit();
+			window.open('','_self').close();
+
+			return false;
+			break;
+
+		case 12: //bbs移動
+			document.form_main.target = "_blank";
+			document.form_main.P_select_bbs_id.value = var_y;
+			document.form_main.action = "./0032_bbsinput.php";
+			break;
+
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+window.onload = function() {
+	var objs = document.getElementsByName("touche_rows");
+	for(var i=0;i<objs.length;i++)
+	{
+		obj=objs[i];
+		if( window.navigator.msPointerEnabled )
+		{
+			obj.addEventListener("MSPointerDown",startListner,false);
+			obj.addEventListener("MSPointerOver",startListner,false);
+			obj.addEventListener("MSPointerUp",endListner,false);
+			obj.addEventListener("MSPointerOut",endListner,false);
+			obj.addEventListener("MSPointerCancel",endListner,false);
+		}
+		else
+		{
+			obj.addEventListener("touchstart",startListner,false);
+			obj.addEventListener("touchmove",startListner,false);
+			obj.addEventListener("touchend",endListner,false);
+			obj.addEventListener("touchcancel",endListner,false);
+		}
+	}
+}
+function startListner(event)
+{
+	if(event)
+	{
+		event.currentTarget.style.opacity = 0.5;
+	}
+}
+function endListner(event)
+{
+	if(event)
+	{
+		event.currentTarget.style.opacity = "";
+	}
+}
+//-->
+</script>
+
+
+<style type="text/css">
+
+.linkButton {
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #000066;
+    font-family: "メイリオ", sans-serif;
+/*    font-size:2vmin;*/
+    cursor: pointer;
+}
+
+</style>
+
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body>
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li><div class='pageName'>競技会選択</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target=''>
+	<input type='hidden' name='P_SESSION_KEY' value='l11947'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-07-19 19:47:33 A3R4F3E1S5'>
+	<input type='hidden' name='P_prev_page' value='0003_gamelist.php'>
+	<input type='hidden' name='P_submit_value' value=''>
+	<input type='hidden' name='P_select_game_table_id' value=''>
+	<input type='hidden' name='P_copy_game_table_id' value=''>
+	<input type='hidden' name='P_game_copy' value=''>
+	<input type='hidden' name='P_select_bbs_id' value=''>
+
+
+
+	<!--  -->
+	<input type='hidden' name='disp_prev' value=''>
+
+	<!--  -->
+	<div class='topBox'>
+		<div class='newsBox' style='padding: 5px 0px 0px 20px; line-height: 42px; background-color: #0062ac; max-width: 1256px; margin-top: 42px; height: 60px; color: #fff; font-size: 14px;'>
+<div class='' style='overflow: auto;  height:39px; margin-top:5px; padding: 3px 0px 3px 20px; line-height: 20px; background-color: #FFFFFF; max-width: 850px;  color: #000000; font-size: 14px;'><a href='' class='athleteName' onclick='button_click(12,522);return false;' >22/06/27 :データ受信システム(ARTIMER)操作マニュアル</a><br><a href='' class='athleteName' onclick='button_click(12,521);return false;' >22/06/27 :システム更新：ARPRINTERの更新、レース番号なしの取込対応、事前受付画面の修正など</a><br><a href='' class='athleteName' onclick='button_click(12,519);return false;' >22/06/27 :印刷システム(ARPRINTER)のダウンロード Ver 1.1.11</a><br><a href='' class='athleteName' onclick='button_click(12,509);return false;' >22/05/26 :システム更新：班組後、所属別エントリーからの選手削除、種目登録など</a><br><a href='' class='athleteName' onclick='button_click(12,507);return false;' >22/05/25 :データ受信システム(ARTIMER)のダウンロード　Ver.1.3.9</a><br><a href='' class='athleteName' onclick='button_click(12,502);return false;' >22/05/05 :システム更新：選手統合、選手カテゴリ登録</a><br><a href='' class='athleteName' onclick='button_click(12,494);return false;' >22/04/19 :システム更新：ルール変更対応：レーン侵害の略号 L2の追加</a><br><a href='' class='athleteName' onclick='button_click(12,490);return false;' >22/04/15 :システム更新：ルール変更対応：レーン侵害の略号</a><br><a href='' class='athleteName' onclick='button_click(12,480);return false;' >22/03/18 :非ログインエントリーマニュアル</a><br><a href='' class='athleteName' onclick='button_click(12,477);return false;' >22/01/05 :システム更新：CSVエントリー時の団体No.付与の修正</a><br><a href='' class='athleteName' onclick='button_click(12,475);return false;' >21/11/30 :システム更新：1/1000着差の表示、印刷システム更新、エントリー後の選手マスタ削除不可など</a><br><a href='' class='athleteName' onclick='button_click(12,474);return false;' >21/11/30 :印刷システム(ARPRINTER)のダウンロード Ver 1.1.10</a><br><a href='' class='athleteName' onclick='button_click(12,472);return false;' >21/11/15 :システム更新：駅伝入力の更新</a><br><a href='' class='athleteName' onclick='button_click(12,471);return false;' >21/11/05 :システム更新：略号の更新</a><br><a href='' class='athleteName' onclick='button_click(12,470);return false;' >21/10/26 :システム更新：駅伝区間記録の登録、SB・PB出力変数の印刷テンプレート追加</a><br><a href='' class='athleteName' onclick='button_click(12,469);return false;' >21/10/26 : 駅伝入力操作マニュアル</a><br><a href='' class='athleteName' onclick='button_click(12,468);return false;' >21/10/26 :印刷システム(ARPRINTER)（テンプレートのみ）更新 駅伝区間、SB/PB　Ver 1.1.9</a><br><a href='' class='athleteName' onclick='button_click(12,459);return false;' >21/09/21 :システム更新：所属情報のCSV出力、賞状印刷テンプレートの更新</a><br><a href='' class='athleteName' onclick='button_click(12,457);return false;' >21/09/21 :印刷システム(ARPRINTER)（テンプレートのみ）更新　Ver 1.1.9</a><br><a href='' class='athleteName' onclick='button_click(12,454);return false;' >21/08/31 :システム更新：CSVエントリーに生年月日・国籍追加、選手追加画面のBibs検索など</a><br><a href='' class='athleteName' onclick='button_click(12,442);return false;' >21/07/26 :システム更新：規格の表記追加、ARPRINTER更新</a><br><a href='' class='athleteName' onclick='button_click(12,440);return false;' >21/07/26 :印刷システム(ARPRINTER)のダウンロード　Ver 1.1.9</a><br><a href='' class='athleteName' onclick='button_click(12,434);return false;' >21/07/15 :システム更新：ARPRINTER更新、所属別状況、チーム一覧の修正</a><br><a href='' class='athleteName' onclick='button_click(12,432);return false;' >21/07/15 :印刷システム(ARPRINTER)のダウンロード　Ver 1.1.8</a><br><a href='' class='athleteName' onclick='button_click(12,428);return false;' >21/06/28 :データ受信システム(ARTIMER)のダウンロード　Ver.1.3.8</a><br><a href='' class='athleteName' onclick='button_click(12,427);return false;' >21/06/28 :コンバインド種目の得点集計について</a><br><a href='' class='athleteName' onclick='button_click(12,426);return false;' >21/06/22 :システム更新：ファイル公開指定登録・競技場情報ページの公開</a><br><a href='' class='athleteName' onclick='button_click(12,405);return false;' >21/05/24 :データ受信システム(ARTIMER)のダウンロード　Ver.1.3.7</a><br><a href='' class='athleteName' onclick='button_click(12,399);return false;' >21/05/06 :システム更新：混成競技の各種目ごとの得点編集</a><br><a href='' class='athleteName' onclick='button_click(12,390);return false;' >21/04/23 :システム更新：SB・PBの判定、チャット機能、ARTIMER、ARPRINTERの更新など</a><br><a href='' class='athleteName' onclick='button_click(12,388);return false;' >21/04/21 :データ受信システム(ARTIMER)のダウンロード　Ver.1.3.6</a><br><a href='' class='athleteName' onclick='button_click(12,382);return false;' >21/04/07 :システム更新：スタートリスト公開選択・記録入力初期化など</a><br><a href='' class='athleteName' onclick='button_click(12,376);return false;' >21/03/18 :システム更新：ARPRINTERの更新、機能改善</a><br><a href='' class='athleteName' onclick='button_click(12,363);return false;' >21/01/22 :システム更新：ARPRINTERの更新、非ログインエントリー「国籍」「生年」必須など</a><br><a href='' class='athleteName' onclick='button_click(12,355);return false;' >21/01/20 :システム更新：複数会場のスリットデータ取得、ARTIMER、ARTIMER_LITEの更新など</a><br><a href='' class='athleteName' onclick='button_click(12,352);return false;' >21/01/19 :データ受信システム簡易版(ARTIMER LITE)のダウンロード　Ver.1.0.2</a><br><a href='' class='athleteName' onclick='button_click(12,346);return false;' >20/12/10 :システム更新：ARTIMER、ARPRINTER更新、WAカテゴリ登録追加</a><br><a href='' class='athleteName' onclick='button_click(12,341);return false;' >20/12/08 :システム更新：選手あてメール連絡機能、陸連CSV出力の駅伝追加</a><br><a href='' class='athleteName' onclick='button_click(12,338);return false;' >20/11/17 :システム更新：メール連絡機能 更新</a><br><a href='' class='athleteName' onclick='button_click(12,327);return false;' >20/09/18 :システム更新：班組、使用記録画面の更新、競技場統合機能の追加</a><br><a href='' class='athleteName' onclick='button_click(12,324);return false;' >20/09/09 :システム更新：審判登録機能、エントリーランキング出力、ARPRINTERの更新など</a><br><a href='' class='athleteName' onclick='button_click(12,313);return false;' >20/08/26 :システム更新：総合入力画面追加、記録英名、ARPRINTERの更新など</a><br><a href='' class='athleteName' onclick='button_click(12,287);return false;' >20/07/17 :システム更新：非ログイン申込移行の英字姓名・ARTIMERの更新など</a><br><a href='' class='athleteName' onclick='button_click(12,274);return false;' >20/05/11 :システム更新：所属別陸連CSV取込、データ受信システムの更新など</a><br><a href='' class='athleteName' onclick='button_click(12,260);return false;' >20/05/08 :データ受信システム簡易版(ARTIMER LITE)のダウンロード　Ver.1.0.1</a><br><a href='' class='athleteName' onclick='button_click(12,259);return false;' >20/05/01 :システム更新：マルチレース機能の追加</a><br><a href='' class='athleteName' onclick='button_click(12,258);return false;' >20/04/08 :システム更新：プロ版下一括出力、他ユーザーエントリー機能の追加</a><br><a href='' class='athleteName' onclick='button_click(12,254);return false;' >20/04/01 :システム更新：ARPRINTERの更新、チーム分散班組機能の追加</a><br><a href='' class='athleteName' onclick='button_click(12,242);return false;' >20/02/10 :システム更新：選手名非公開機能</a><br><a href='' class='athleteName' onclick='button_click(12,235);return false;' >20/01/20 :システム更新：進出者取込機能など</a><br><a href='' class='athleteName' onclick='button_click(12,221);return false;' >19/10/18 :システム更新：駅伝オープン参加設定の機能拡張など</a><br><a href='' class='athleteName' onclick='button_click(12,206);return false;' >19/08/24 :サーバー障害復旧のお知らせとお詫び</a><br><a href='' class='athleteName' onclick='button_click(12,198);return false;' >19/08/06 :システム更新：選手一覧から選手変更、DNS選手を除いた班組機能</a><br><a href='' class='athleteName' onclick='button_click(12,191);return false;' >19/07/23 :システム更新：JPN国籍の一括付与、未受付機能の追加など</a><br><a href='' class='athleteName' onclick='button_click(12,179);return false;' >19/07/02 :システム更新：ARPRINTER更新</a><br><a href='' class='athleteName' onclick='button_click(12,164);return false;' >19/06/21 :システム更新：CIS画面の英語表示、ARPRINTER更新など</a><br><a href='' class='athleteName' onclick='button_click(12,152);return false;' >19/06/07 :システム更新：陸連CSV取込の修正、英語帳票出力が簡単に。など</a><br><a href='' class='athleteName' onclick='button_click(12,142);return false;' >19/05/29 :システム更新：陸連CSV(英語対応)の取込、非ログインエントリーの英語対応など</a><br><a href='' class='athleteName' onclick='button_click(12,138);return false;' >19/05/08 :システム更新：競技会略号出力、英名自動変換機能の修正など</a><br></div>		</div>
+		<table class='topLine' style='margin-top: 0px;' >
+			<tr class='lineH50' style='padding-top: 0px;     '>
+
+			
+			<td class='paddingL15' style='width: 55%;'>
+				<input type='button' value='新規競技会作成' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(5,0)' class='plusButton' style='height: 40px;'>
+			</td>
+			<td>
+				<input type='button' value='基本競技会' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(6,0)' class='linkButton' style='height: 40px; '>
+			</td><!--
+			--><td class='borderLeft'>
+				<input type='button' value='競技場' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(7,0)' class='linkButton' style='height: 40px; '>
+			</td><!--
+			--><td class='borderLeft'>
+				<input type='button' value='基本記録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(3,0)' class='linkButton' style='height: 40px;'>
+			</td><!--
+			--><td class='borderLeft'>
+				<input type='button' value='ランキング' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(8,0)' class='linkButton' style='height: 40px;'>
+			</td><!--
+			--><td class='borderLeft'>
+				<input type='button' value='選手検索' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(9,0)' class='linkButton' style='height: 40px;'>
+			</td><!--
+			--><td class='borderLeft'>
+				<input type='button' value='所属検索' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(10,0)' class='linkButton' style='height: 40px;'>
+			</td>
+
+						</tr>
+		</table>
+
+		<table class='menuLine'>
+			<tr class='backGray'>
+			<td class='fontBig paddingL15' colspan='2' style='width: 24%;'>
+			<select name='P_search_year' class='selectNormal' onchange='button_click(1,0)'>
+				<option value='2022' selected='selected'>2022</option><option value='2021'>2021</option><option value='2020'>2020</option><option value='2019'>2019</option><option value='2018'>2018</option><option value='2017'>2017</option><option value='2016'>2016</option><option value='2015'>2015</option><option value='2014'>2014</option><option value='2013'>2013</option><option value='2012'>2012</option><option value='2011'>2011</option><option value='2010'>2010</option><option value='2009'>2009</option><option value='2008'>2008</option><option value='2007'>2007</option><option value='2006'>2006</option><option value='2005'>2005</option><option value='2004'>2004</option><option value='1013'>1013</option>
+			</select>
+			<select name='P_search_month' class='selectNormal' onchange='button_click(1,0)'>
+				<option value='1'>1-2</option><option value='2'>2-3</option><option value='3'>3-4</option><option value='4'>4-5</option><option value='5'>5-6</option><option value='6' selected='selected'>6-7</option><option value='7'>7-8</option><option value='8'>8-9</option><option value='9'>9-10</option><option value='10'>10-11</option><option value='11'>11-12</option><option value='12'>12-1</option>
+			</select>
+			</td><!--
+			--><td class='fontBig width15per' >受付期間</td><!--
+			--><td class='fontBig width30per' >競技会略称(ｱｶｳﾝﾄ消費量)</td><!--
+			--><td class='fontBig width15per' >競技場</td><!--
+			--><td class='fontBig ' >公開</td>
+
+			</tr>
+		</table>
+
+	</div>
+
+
+
+
+	<!--  -->
+	<div class='bodyBox marginTop239' style='margin-top: 209px; '>
+		<table class='contentTable'>
+
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5558,0)'><td class='width170 paddingL15'>7/28 - 7/29</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backDBlue '>受付中</span></td><td class='width15per'>7/1 - 7/23</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀中学夏季総体(0)</span><br>
+				<span  class='game_num'>ay022022025</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5541,0)'><td class='width170 paddingL15'>7/23</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backDBlue '>受付中</span></td><td class='width15per'>4/20 - 7/23</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>第3回滋賀高校記録会(0)</span><br>
+				<span  class='game_num'>ay022022015</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5540,0)'><td class='width170 paddingL15'>7/22</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus  '></span></td><td class='width15per'>4/20 - 6/20</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀県高校県体(961)</span><br>
+				<span  class='game_num'>ay022022014</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5557,0)'><td class='width170 paddingL15'>7/21 - 7/22</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus  '></span></td><td class='width15per'>6/1 - 6/21</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀中学U16陸上(42)</span><br>
+				<span  class='game_num'>ay022022024</span></td><td class='width15per'>布引</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5556,0)'><td class='width170 paddingL15'>7/21 - 7/22</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus  '></span></td><td class='width15per'>6/1 - 6/21</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀中学通信陸上(955)</span><br>
+				<span  class='game_num'>ay022022023</span></td><td class='width15per'>布引</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5539,0)'><td class='width170 paddingL15'>7/16 - 7/17</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>6/1 - 6/19</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀県選手権(1407)</span><br>
+				<span  class='game_num'>ay022022013</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5729,0)'><td class='width170 paddingL15'>7/9</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>6/1 - 7/1</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>第4ブロック７月チャレンジ記録会(429)</span><br>
+				<span  class='game_num'>ay022022034</span></td><td class='width15per'>甲賀</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5555,0)'><td class='width170 paddingL15'>7/2</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>6/1 - 6/21</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>第3回滋賀中学記録会(1244)</span><br>
+				<span  class='game_num'>ay022022022</span></td><td class='width15per'>布引</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5726,0)'><td class='width170 paddingL15'>6/26</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>5/1 - 6/6</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>全国小学生陸上滋賀県予選(1045)</span><br>
+				<span  class='game_num'>ay022022033</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5554,0)'><td class='width170 paddingL15'>6/18</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>5/10 - 6/7</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>第2回滋賀中学記録会(1359)</span><br>
+				<span  class='game_num'>ay022022021</span></td><td class='width15per'>布引</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5607,0)'><td class='width170 paddingL15'>6/12</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>5/15 - 5/27</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>第32回大津市陸上競技大会(1313)</span><br>
+				<span  class='game_num'>ay022022026</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5666,0)'><td class='width170 paddingL15'>6/7</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>5/10 - 5/30</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀中学第3ブロック陸上(1195)</span><br>
+				<span  class='game_num'>ay022022029</span></td><td class='width15per'>希望が丘</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5676,0)'><td class='width170 paddingL15'>6/4</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>5/4 - 5/27</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>滋賀県第4ブロック6月記録会(557)</span><br>
+				<span  class='game_num'>ay022022030</span></td><td class='width15per'>甲賀</td><td >公開</td></tr>
+<tr class='contentLink' name='touche_rows' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(2,5538,0)'><td class='width170 paddingL15'>6/2 - 6/4</td><td class='width10per'><span class='paddingTB3 width70 textCenter entryStatus backGray '>終了</span></td><td class='width15per'>4/20 - 5/10</td><td class='width30per' style='line-height:0px;'><span style='line-height:25px;'>2022滋賀高校春季総体(3078)</span><br>
+				<span  class='game_num'>ay022022012</span></td><td class='width15per'>皇子山</td><td >公開</td></tr>
+
+		</table>
+	</div>
+	<!--  -->
+
+</form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+</div>
+</body>
+</html>

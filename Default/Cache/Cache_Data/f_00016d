@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+
+function button_click(mode,kbn)
+{
+
+	document.form_main.target="";
+
+
+	switch(mode)
+	{
+		case 'back': //戻る
+			document.form_main.action = "./0011_gamemenu.php";
+			document.form_main.submit();
+
+			break;
+
+		case 1://エントリー選択部分
+
+				switch(kbn)
+				{
+					case 1://エントリー
+						document.form_main.submit_kbn.value="INS";
+						document.form_main.submit();
+
+			//			parent.upmain1.document.frm_main.submit_kbn.value="SCH";
+			//			parent.upmain1.document.frm_main.submit();
+
+						break;
+					case 2://選手登録
+						document.form_main.target="_parent";
+						document.form_main.action="./0039_athletesearch.php";
+						document.form_main.submit();
+
+						break;
+					case 4://CSV入力
+						document.form_main.target="_parent";
+						document.form_main.action="csvinput.php";
+						document.form_main.submit();
+						break;
+					case 44://CSV入力(新)
+						document.form_main.target="_parent";
+						document.form_main.action="0311_entrycsv.php";
+						document.form_main.submit();
+						break;
+					case 52://参加一覧（陸上）
+						document.form_main.target="_blank";
+						document.form_main.submit_kbn.value="HTML";
+						document.form_main.action="entryprint_taf.php";
+						document.form_main.submit();
+						break;
+					case 53://参加一覧EXCEL（陸上）
+						document.form_main.target="_self";
+						document.form_main.submit_kbn.value="EXCEL";
+						document.form_main.action="entryprint_taf.php";
+						document.form_main.submit();
+						break;
+					case 54://エントリー状況（陸上）
+						document.form_main.target="_parent";
+						document.form_main.action="0313_entryinfo.php";
+						document.form_main.submit();
+						break;
+					case 55://所属別エントリー状況（陸上）
+						document.form_main.target="_parent";
+						document.form_main.action="0315_entryteaminfo.php";
+						document.form_main.submit_kbn.value="HTML";
+						document.form_main.submit();
+						break;
+					case 56://所属別エントリー状況（陸上） EXCEL
+						document.form_main.target = "ARV2_WINDOW";
+						document.form_main.action="../comp/entryteaminfo.php";
+						document.form_main.submit_kbn.value="EXCEL";
+						document.form_main.submit();
+						break;
+					case 57://チーム一覧（陸上）
+						document.form_main.target="_parent";
+						document.form_main.action="0316_entryteamlist.php";
+						document.form_main.submit();
+						break;
+					case 58://非ログイン申込移行
+						document.form_main.action="0018_movenotlogin.php";
+						document.form_main.submit_kbn.value="";
+						document.form_main.submit();
+						break;
+					case 6://チェック
+						if(document.form_main.search_limit.checked != true)
+							alert("表示件数が多いと時間がかかることがありますので、\nなるべくチェックを付けた状態で検索してください。");
+
+						break;
+					case 10://チェック
+
+						//先頭の状態と逆チェックします。
+						cnt = document.form_main.r_cnt.value;
+						if(cnt<1)
+							return;
+
+						if(document.form_main.elements['r_chk[0]'].checked==true)
+						{
+							for(i=0;i<cnt;i++)
+							{
+								sss = "r_chk[" + i + "]";
+								document.form_main.elements[sss].checked=false;
+							}
+						}
+						else
+						{
+							for(i=0;i<cnt;i++)
+							{
+								sss = "r_chk[" + i + "]";
+								document.form_main.elements[sss].checked=true;
+							}
+						}
+						break;
+					case 98://エントリーへ戻る
+						document.form_main.target="_parent";
+						document.form_main.action="./entrymenu.php";
+						document.form_main.submit();
+						break;
+					case 99://チーム一覧へ戻る
+						document.form_main.target="_parent";
+						document.form_main.action="./teamlist.php";
+						document.form_main.submit();
+						break;
+
+					case 21://男子エントリー
+						document.form_main.P_relay_flag.value="";
+
+						document.form_main.target="_parent";
+						document.form_main.kbn.value="1";
+						document.form_main.submit_kbn.value="";
+						document.form_main.end_submit_kbn.value="";
+						document.form_main.action="0310_entryadmin.php";
+						document.form_main.submit();
+						break;
+					case 22://女子エントリー
+						document.form_main.P_relay_flag.value="";
+
+						document.form_main.target="_parent";
+						document.form_main.kbn.value="2";
+						document.form_main.submit_kbn.value="";
+						document.form_main.end_submit_kbn.value="";
+						document.form_main.action="0310_entryadmin.php";
+						document.form_main.submit();
+						break;
+					case 23://リレー登録
+						document.form_main.target="_parent";
+						document.form_main.kbn.value="1";
+						document.form_main.P_relay_flag.value="1";
+						document.form_main.submit_kbn.value="";
+						document.form_main.end_submit_kbn.value="";
+						document.form_main.action="0310_entryadmin.php";
+						document.form_main.submit();
+						break;
+					case 24://リレー登録
+						document.form_main.target="_parent";
+						document.form_main.kbn.value="2";
+						document.form_main.submit_kbn.value="";
+						document.form_main.end_submit_kbn.value="";
+						document.form_main.action="0310_entryadmin.php";
+						document.form_main.P_relay_flag.value="1";
+
+						document.form_main.submit();
+						break;
+
+					default://検索
+
+						document.form_main.target="_self";
+						document.form_main.action="0310_entryadmin.php";
+						document.form_main.submit_kbn.value="SCH";
+						document.form_main.submit();
+				}
+		break;
+		case 2://エントリー後
+
+				switch(kbn)
+				{
+					case 6://エントリー作成
+						document.form_main.target="_self";
+						document.form_main.end_submit_kbn.value="MAK";
+						document.form_main.submit();
+						break;
+					case 7://更新
+						document.form_main.target="_self";
+						document.form_main.end_submit_kbn.value="UPD";
+						document.form_main.submit();
+						break;
+					case 10://全チェック
+
+						//先頭の状態と逆チェックします。
+						cnt = document.form_main.entry_r_cnt.value;
+						if(cnt<1)
+							return;
+
+						if(document.form_main.elements['r_chk[0]'].checked==true)
+						{
+							for(i=0;i<cnt;i++)
+							{
+								sss = "r_chk[" + i + "]";
+								document.form_main.elements[sss].checked=false;
+							}
+						}
+						else
+						{
+							for(i=0;i<cnt;i++)
+							{
+								sss = "r_chk[" + i + "]";
+								document.form_main.elements[sss].checked=true;
+							}
+						}
+						break;
+					case 11://名称変更
+						alert('名称変更未作成');
+						break;
+					case 12://チェック
+						if(document.form_main.end_search_limit.checked != true)
+							alert("表示件数が多いと時間がかかることがありますので、\nなるべくチェックを付けた状態で検索してください。");
+
+						break;
+					case 98://エントリーへ戻る
+						document.form_main.target="_parent";
+						document.form_main.action="./entrymenu.php";
+						document.form_main.submit();
+						break;
+					case 99://チーム一覧へ戻る
+						document.form_main.target="_parent";
+						document.form_main.action="./teamlist.php";
+						document.form_main.submit();
+						break;
+					default://検索
+
+						document.form_main.target="_self";
+						document.form_main.action="0310_entryadmin.php";
+						document.form_main.end_submit_kbn.value="SCH";
+						document.form_main.submit();
+				}
+
+		break;
+
+		default://検索
+
+			document.form_main.target="_self";
+			document.form_main.action="0310_entryadmin.php";
+			document.form_main.submit_kbn.value="SCH";
+			document.form_main.submit();
+	}
+
+}
+
+function row_check(obj,row)
+{
+
+	if( document.activeElement.getAttribute("type") == "text")
+	{
+		return false;
+	}
+	else if( document.activeElement.getAttribute("type") == "checkbox")
+	{
+		if( document.getElementById('id_check_box_' + row).checked == false )
+		{
+			obj.style.backgroundColor = '';
+			obj.style.color = '#000000';
+			document.getElementById('id_athlete_name_' + row).style.color = '#003399';
+
+		}
+		else if(document.getElementById('id_check_box_' + row).checked == true )
+		{
+			obj.style.backgroundColor = '#0062AC';
+			obj.style.color = '#ffffff';
+			document.getElementById('id_athlete_name_' + row).style.color = '#ffffff';
+
+		}
+
+	}
+	else
+	{
+		if( document.getElementById('id_check_box_' + row).checked == true )
+		{
+			document.getElementById('id_check_box_' + row).checked = false ;
+			obj.style.backgroundColor = '';
+			obj.style.color = '#000000';
+			document.getElementById('id_athlete_name_' + row).style.color = '#003399';
+
+		}
+		else if(document.getElementById('id_check_box_' + row).checked == false )
+		{
+			document.getElementById('id_check_box_' + row).checked = true ;
+			obj.style.backgroundColor = '#0062AC';
+			obj.style.color = '#ffffff';
+			document.getElementById('id_athlete_name_' + row).style.color = '#ffffff';
+
+		}
+	}
+
+}
+
+function row_check_end(obj,row)
+{
+
+	if( document.activeElement.getAttribute("type") == "text")
+	{
+		return false;
+	}
+	else if( document.activeElement.getAttribute("type") == "checkbox")
+	{
+		if( document.getElementById('id_check_box_end_' + row).checked == false )
+		{
+			obj.style.backgroundColor = '';
+			obj.style.color = '#000000';
+			document.getElementById('id_entry_athlete_name_' + row).style.color = '#003399';
+
+
+		}
+		else if(document.getElementById('id_check_box_end_' + row).checked == true )
+		{
+			obj.style.backgroundColor = '#0062AC';
+			obj.style.color = '#ffffff';
+			document.getElementById('id_entry_athlete_name_' + row).style.color = '#ffffff';
+
+		}
+
+	}
+	else
+	{
+		if( document.getElementById('id_check_box_end_' + row).checked == true )
+		{
+			document.getElementById('id_check_box_end_' + row).checked = false ;
+			obj.style.backgroundColor = '';
+			obj.style.color = '#000000';
+			document.getElementById('id_entry_athlete_name_' + row).style.color = '#003399';
+
+
+		}
+		else if(document.getElementById('id_check_box_end_' + row).checked == false )
+		{
+			document.getElementById('id_check_box_end_' + row).checked = true ;
+			obj.style.backgroundColor = '#0062AC';
+			obj.style.color = '#ffffff';
+			document.getElementById('id_entry_athlete_name_' + row).style.color = '#ffffff';
+
+		}
+	}
+
+}
+
+function all_entry(mode)
+{
+
+	var data_cnt = 0;
+
+	if( document.getElementById('id_chk_all_entry').checked == false )
+	{
+			for(i=0;i<data_cnt;i++)
+			{
+				document.getElementById('id_check_box_' + i).checked = false;
+				document.getElementById('id_tr_' + i).style.backgroundColor = '';
+				document.getElementById('id_tr_' + i).style.color = '#000000';
+				if(mode == 0)
+					document.getElementById('id_athlete_name_' + i).style.color = '#003399';
+
+			}
+	}
+	else if( document.getElementById('id_chk_all_entry').checked == true )
+	{
+		for(i=0;i<data_cnt;i++)
+		{
+			document.getElementById('id_check_box_' + i).checked = true;
+			document.getElementById('id_tr_' + i).style.backgroundColor = '#0062AC';
+			document.getElementById('id_tr_' + i).style.color = '#ffffff';
+			if(mode == 0)
+				document.getElementById('id_athlete_name_' + i).style.color = '#003399';
+
+
+		}
+
+	}
+}
+
+
+
+
+function button_set(kbn)
+{
+	cnt = document.form_main.entry_r_cnt.value;
+
+	if(cnt<1)
+		return;
+
+	if(kbn==0)//ナンバー
+	{
+		ret = confirm("先頭の「Bibs」から順に+1した番号をセットして登録します。\nよろしいですか？");
+
+		if (ret != true)
+			return false;
+
+		//先頭のナンバーを取得し、昇順に付与します
+		moto = parseInt(document.form_main.elements['end_r_select_field[0]'].value);
+		if(isNaN(moto)==true)
+			moto=1;
+
+		for(i=0;i<cnt;i++)
+		{
+			sss = "end_r_select_field[" + i + "]";
+			document.form_main.elements[sss].value=moto;
+			moto++;
+		}
+	}
+	else
+	{
+		switch(kbn)
+		{
+		case 2://ブロック
+			ret = confirm("先頭のグループを表示されている全選手にセットして登録します。\nよろしいですか？");
+			moto = parseInt(document.form_main.elements['end_r_select_field[0]'].value);
+			if(isNaN(moto)==true)
+				moto=0;
+			break;
+		case 10://チーム名
+			ret = confirm("先頭のチーム名を表示されている全選手にセットして登録します。\nよろしいですか？");
+			moto = document.form_main.elements['end_r_select_field[0]'].value;
+			break;
+		case 11://チーム仮名
+			ret = confirm("先頭のチーム仮名を表示されている全選手にセットして登録します。\nよろしいですか？");
+			moto = document.form_main.elements['end_r_select_field[0]'].value;
+			break;
+		default://チーム番号
+			ret = confirm("先頭の団体No.を表示されている全選手にセットして登録します。\nよろしいですか？");
+			moto = parseInt(document.form_main.elements['end_r_select_field[0]'].value);
+			if(isNaN(moto)==true)
+				moto=0;
+		}
+		if (ret != true)
+			return false;
+
+		for(i=0;i<cnt;i++)
+		{
+			sss = "end_r_select_field[" + i + "]";
+			document.form_main.elements[sss].value=moto;
+		}
+	}
+
+	document.form_main.target="_self";
+	document.form_main.end_submit_kbn.value="UPD";
+	document.form_main.submit();
+
+	return true;
+
+}
+
+function button_athle(pos,sex)
+{
+
+	//選択された位置のIDを格納する
+	document.form_main.sel_pos.value=pos;
+	document.form_main.P_event_sex.value=sex;
+	document.form_main.target="_parent";
+	document.form_main.submit_kbn.value="SCHSUB";
+	document.form_main.action="0312_entryrelaysub.php";
+	document.form_main.submit();
+	return;
+
+}
+
+function button_pref()
+{
+	switch(parseInt(document.form_main.set_pref.value,10)){
+	case 1:
+		ret = confirm("チーム名の前に都道府県名を付与します。よろしいですか？");
+		break;
+	case 2:
+		ret = confirm("チーム名の後に地区名を付与します。よろしいですか？");
+		break;
+	case 3:
+		ret = confirm("チーム名の前に地区名を付与します。よろしいですか？");
+		break;
+	case 4:
+		ret = confirm("チーム名の記号文字から後を削除します。よろしいですか？");
+		break;
+	case 5:
+		ret = confirm("チーム名の記号文字から前を削除します。よろしいですか？");
+		break;
+	default:
+		ret = confirm("チーム名の後ろに都道府県名を付与します。よろしいですか？");
+	}
+	if (ret != true)
+		return false;
+
+	document.form_main.target="_self";
+	document.form_main.action="0310_entryadmin.php";
+	document.form_main.end_submit_kbn.value="PREF";
+	document.form_main.submit();
+
+	return;
+}
+
+function athle_chg(mode,idid)
+{
+
+	document.form_main.target="_parent";
+	document.form_main.P_select_athlete_id.value=idid;
+	document.form_main.P_submit_kbn.value = "";
+
+	if(mode == 1)
+	{
+
+		document.form_main.action="./0024_athleteedit.php";
+
+	}
+	else
+	{
+//		document.form_main.P_submit_kbn.value = "athletesearch";
+		document.form_main.action="./0024_athleteedit.php";
+	}
+
+	document.form_main.submit();
+	return false;
+
+}
+
+function checkForm($this)
+{
+    var str=$this.value;
+    while(str.match(/[^A-Za-z\d\-]/))
+    {
+        str=str.replace(/[^A-Za-z\d\-]/,"");
+    }
+    $this.value=str;
+}
+
+function onload_event()
+{
+	return;
+}
+
+//-->
+</script>
+
+<style type="text/css">
+
+.checkbox{
+	position:relative;
+	top:5px;
+
+	width:20px;
+	height:20px;
+
+}
+
+.topBox {
+	position: relative; top: 0px;
+	width: 100%; max-width: 1276px; min-width: 780px;
+	border: none;
+	text-align: left;
+	background-color: #FFFFFF;
+	z-index: 5;
+}
+
+.DataBox2 {
+	margin-top:0px;
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 50%;
+	max-height: 800px; min-height: 400px;
+
+
+	border: none;
+	text-align: left;
+	z-index: 5;
+
+}
+
+.DataBox_data2 {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 100%;
+	max-height: 320px; min-height: 150px;
+	border: none;
+	text-align: left;
+	z-index: 5;
+	overflow: auto;
+
+}
+
+
+
+</style>
+
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body  onload='onload_event()' >
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li class='backButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click("back",1)' style='width: 75px; padding-left: 3px; padding-right: 3px;'><span style='font-weight:bold; font-size:18px;'><-Back</span></li><li><div class='pageName'>管理者エントリー</div></li><li><div class='gameName'>2022滋賀県選手権[皇子山]</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_terminal'><input id='id_printer' type='button' value='未設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_click()' class='printButton'><span>端末選択</span></li><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option><option value='102'>記録（滋賀陸協１）</option><option value='104'>写真判定（高体連）</option><option value='105'>競技者係(MF244dw)</option><option value='117'>競技者係（テスト用）</option><option value='123'>普及(PX-1700F) </option><option value='150'>リザルト集</option><option value='151'>英語リザルト</option><option value='267'>番組編成(滋賀陸協1)</option><option value='340'>記録（コピー機）</option><option value='341'>賞状（PX-M6010F）</option><option value='356'>普及・記録</option><option value='357'>普及・賞状</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target=''>
+	<input type='hidden' name='P_SESSION_KEY' value='l10934'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-06-23 09:34:26 C8F3W3L7C0'>
+	<input type='hidden' name='P_prev_page' value='0310_entryadmin.php'>
+	<input type='hidden' name='P_submit_value' value=''><input type='hidden' name='P_submit_sub' value=''>
+		<input type='hidden' name='P_select_game_table_id' value='5539'>
+
+		<input type='hidden' name='P_select_athlete_id' value=''>
+		<input type='hidden' name='P_select_rec_base_id' value='' >
+		<input type='hidden' name='P_submit_onload' value=''>
+		<input type='hidden' name='P_submit_kbn' value=''>
+
+		<input type='hidden' name='P_copy_text' value=''>
+		<input type='hidden' name='P_event_sex' value=''>
+
+		<INPUT TYPE="hidden" NAME="submit_kbn" value="" >
+
+
+<INPUT TYPE='hidden' NAME='d_id' value=''><INPUT TYPE='hidden' NAME='sel_pos' value=''>
+		<INPUT TYPE="hidden" NAME="end_submit_kbn" value="" >
+
+		<INPUT TYPE="hidden" NAME="kbn" value="1" >
+		<input type='hidden' name='P_relay_flag' value='' >
+		<INPUT TYPE='hidden' NAME='r_cnt' VALUE='0'>
+		<INPUT TYPE='hidden' NAME='entry_r_cnt' VALUE=''>
+
+			<INPUT TYPE='hidden' NAME='page_load' VALUE='1'>
+
+
+
+	<!--  -->
+	<div class='entryadmin_DataBox1'>
+
+		<div class='topBox'>
+			<table class='topLine'>
+				<!-- <tr class='entryadmin_TabButton_ul' > -->
+				<tr class='lineH50' >
+					<td class='paddingR5'></td>
+<td class='entryadmin_menu_tabButton_selected backBlue' >エントリー(男)</td><!----><td class='paddingR5'></td><!----><td class='width10per valignB min_width100'><div class='entryadmin_menu_tabButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(1,22)'>エントリー(女)</div></td><!----><td class='paddingR5'></td><!----><td class='width10per valignB min_width100'><div class='entryadmin_menu_tabButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(1,23)'>リレー・駅伝(男)</div></td><!----><td class='paddingR5'></td><!----><td class='width10per valignB min_width100'><div class='entryadmin_menu_tabButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click(1,24)'>リレー・駅伝(女)</div></td>					<td >
+					</td>
+					<td >
+						<input type='button' value='種目別状況' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,54,0)' class='linkButton3' style='font-size:12px; width: 75px; margin-left: 5px; height: 37px;'>
+					</td>
+					<td >
+						<input type='button' value='所属別状況' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,55,0)' class='linkButton3' style='font-size:12px; width: 75px; margin-left: 5px; height: 37px;'>
+					</td>
+					<td >
+						<input type='button' value='チーム一覧' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,57,0)' class='linkButton3' style='font-size:12px; width: 75px; margin-left: 5px; height: 37px;'>
+					</td>
+					<td >
+						<input type='button' value='CSVエントリー' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,44,0)' class='linkButton3' style='font-size:12px; width: 100px; margin-left: 5px; height: 37px;'>
+					</td>
+					<td >
+						<input type='button' value='選手登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,2,0)' class='linkButton3' style='font-size:12x; width: 65px; margin-left: 5px; height: 37px;'>
+					</td>
+					<td >
+						<input type='button' value='非ﾛｸﾞｲﾝ申込移行' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,58,0)' class='linkButton3' style='font-size:12px; width: 110px; margin-left: 5px; height: 37px;'>
+					</td>
+
+<!-- 					<td class='paddingL15'>
+						<input type='button' value='所属別EXCEL' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'						 onclick='button_click(1,56,0)' class='inputButton ' style='font-size:12px; width:95px;  height: 30px; background-color:#00CC00;'>
+					</td> -->
+					<td class='width25per'></td>
+				</tr>
+			</table>
+
+
+		<!--  -->
+			<table class='menuLine' style='color:#ffffff; background-color:#4472c4;font-size:14px;'>
+<tr class='lineH50'><td class='paddingL15 width2per'>全</td><td class='paddingL3 width2per'><input TYPE='checkbox'  class='checkbox'  id='id_chk_all_entry' onclick='all_entry(0)' name='chk_all_entry'></td><td class='paddingL15 width12per'><INPUT TYPE='hidden' NAME='s_team_id' VALUE=''><INPUT TYPE='TEXT' NAME='s_team_nm' VALUE='' placeholder='所属略称'  class='textBox width90per'></td><td class='paddingL15 width17per'><SELECT NAME='s_on50' class='selectNormal width40per' ><OPTION VALUE=0 SELECTED>全音行<OPTION VALUE=1>ア−オ<OPTION VALUE=2>カ−コ<OPTION VALUE=3>サ−ソ<OPTION VALUE=4>タ−ト<OPTION VALUE=5>ナ−ノ<OPTION VALUE=6>ハ−ホ<OPTION VALUE=7>マ−モ<OPTION VALUE=8>ヤ−ヨ<OPTION VALUE=9>ラ−ロ<OPTION VALUE=10>ワヲン</SELECT><INPUT TYPE='TEXT' NAME='s_name' VALUE='' placeholder='選手名'  style='ime-mode:active' class='textBox width45per'></td><td class='paddingL15 width12per'><INPUT TYPE='TEXT' NAME='s_jaaf_id' VALUE='' placeholder='JAAF ID'  style='ime-mode:disabled' class='textBox width90per'></td><td class='paddingL15 width11per'><INPUT TYPE='TEXT' NAME='s_bib' VALUE='' placeholder='Bibs(ﾅﾝﾊﾞｰｶｰﾄﾞ)'  style='ime-mode:disabled' class='textBox width90per'></td><td class='paddingL15 lineH16 width4per' style='min-width: 30px;'>最大<br>50件</td><td class='width9per' style='min-width:85px;'><INPUT TYPE='checkbox' class='checkbox' onclick='return button_click(1,6)' name='search_limit' value='on'  CHECKED> <button type='button' onclick='return button_click(1,0);' class='inputButton width70per' style='height:40px; line-height:40px; vertical-align:middle;' >検索</button></td><td class='paddingL15 width5per lineH16' style='min-width:50px;'>ｴﾝﾄﾘｰ<br>種目</td><td class='width13per'><SELECT NAME='s_ecode' class='selectNormal width95per'><OPTION VALUE='0:0:A0100: :1:Class:0'>  100m</OPTION><OPTION VALUE='0:0:A0200: :1:Class:0'>  200m</OPTION><OPTION VALUE='0:0:A0400: :1:Class:0'>  400m</OPTION><OPTION VALUE='0:0:A0800: :1:Class:0'>  800m</OPTION><OPTION VALUE='0:0:A1150: :1:Class:0'>  1500m</OPTION><OPTION VALUE='0:0:A1500: :1:Class:0'>  5000m</OPTION><OPTION VALUE='0:0:AH111: :1:Class:0'>  110mH:106.7cm</OPTION><OPTION VALUE='0:0:AH401: :1:Class:0'>  400mH:91.4cm</OPTION><OPTION VALUE='0:0:AS301: :1:Class:0'>  3000mSC:91.4cm</OPTION><OPTION VALUE='0:0:AW500: :1:Class:0'>  5000mW</OPTION><OPTION VALUE='0:0:FJHJ0: :1:Class:0'>  走高跳</OPTION><OPTION VALUE='0:0:FJHP0: :1:Class:0'>  棒高跳</OPTION><OPTION VALUE='0:0:FJLJ0: :1:Class:0'>  走幅跳</OPTION><OPTION VALUE='0:0:FJTJ0: :1:Class:0'>  三段跳</OPTION><OPTION VALUE='0:0:FTAT1: :1:Class:0'>  砲丸投:7.26kg</OPTION><OPTION VALUE='0:0:FTDT1: :1:Class:0'>  円盤投:2.0kg</OPTION><OPTION VALUE='0:0:FTHT1: :1:Class:0'>  ﾊﾝﾏｰ投:7.26kg</OPTION><OPTION VALUE='0:0:FTJT1: :1:Class:0'>  やり投:800g</OPTION><OPTION VALUE='0:0:M1001: :1:Class:0'>  十種競技</OPTION><OPTION VALUE='1:0:FTHT3:少年A:1:Class:1'>少年A ﾊﾝﾏｰ投:6kg</OPTION><OPTION VALUE='2:0:A0100:少年B:1:Class:2'>少年B 100m</OPTION><OPTION VALUE='2:0:A1300:少年B:1:Class:2'>少年B 3000m</OPTION><OPTION VALUE='2:0:AH112:少年B:1:Class:2'>少年B 110mH:99.1cm</OPTION><OPTION VALUE='2:0:FJLJ0:少年B:1:Class:2'>少年B 走幅跳</OPTION><OPTION VALUE='2:0:FTDT2:少年B:1:Class:2'>少年B 円盤投:1.5kg</OPTION></SELECT></td><td rowspan='2' class='paddingL15 ' style='padding-right:15px;'><button type='button' VALUE='エントリー作成'  onclick='return button_click(1,1)' class='inputButton width90 ' style='width:120px; vertical-align: middle; background-color:#000000; height:40px; line-height:16px;'>エントリー<br>作成↓</button></td></tr>			</table>
+		</div>
+
+		<!--  -->
+		<div class='entryadmin_DataBox_data1'>
+
+			<table class='contentTable' style='line-height: 32px;'>
+
+			</table>
+		</div>
+
+	</div>
+
+	<!--  -->
+	<div class='entryadmin_DataBox2' >
+		<div class='topBox'>
+
+			<div class='pageMenu'>
+				<table class='contentTable' style='table-layout: fixed; color:#ffffff; background-color:#4472c4; font-size:14px;'>
+<tr class='lineH50'><td class='paddingL15 width3per' >削除</td><td class='width10per'><INPUT TYPE='TEXT' NAME='end_s_team_nm' VALUE='' placeholder='チーム名'  class='textBox width75per'></TD></td><td class='width16per'><SELECT NAME='end_s_on50' class='selectNormal width40per'><OPTION VALUE=0 SELECTED>全音行<OPTION VALUE=1>ア−オ<OPTION VALUE=2>カ−コ<OPTION VALUE=3>サ−ソ<OPTION VALUE=4>タ−ト<OPTION VALUE=5>ナ−ノ<OPTION VALUE=6>ハ−ホ<OPTION VALUE=7>マ−モ<OPTION VALUE=8>ヤ−ヨ<OPTION VALUE=9>ラ−ロ<OPTION VALUE=10>ワヲン</SELECT><INPUT TYPE='TEXT' NAME='end_s_name' VALUE='' placeholder='選手名'  style='ime-mode:active' class='textBox width45per'></td><td class='paddingL5 width9per'><SELECT NAME='end_s_ecode' class='selectNormal width95per'><OPTION VALUE=''>指定無</OPtion><OPTION VALUE='1:0:0:A0100'>  100m</OPTION><OPTION VALUE='1:0:0:A0200'>  200m</OPTION><OPTION VALUE='1:0:0:A0400'>  400m</OPTION><OPTION VALUE='1:0:0:A0800'>  800m</OPTION><OPTION VALUE='1:0:0:A1150'>  1500m</OPTION><OPTION VALUE='1:0:0:A1500'>  5000m</OPTION><OPTION VALUE='1:0:0:AH111'>  110mH:106.7cm</OPTION><OPTION VALUE='1:0:0:AH401'>  400mH:91.4cm</OPTION><OPTION VALUE='1:0:0:AS301'>  3000mSC:91.4cm</OPTION><OPTION VALUE='1:0:0:AW500'>  5000mW</OPTION><OPTION VALUE='1:0:0:FJHJ0'>  走高跳</OPTION><OPTION VALUE='1:0:0:FJHP0'>  棒高跳</OPTION><OPTION VALUE='1:0:0:FJLJ0'>  走幅跳</OPTION><OPTION VALUE='1:0:0:FJTJ0'>  三段跳</OPTION><OPTION VALUE='1:0:0:FTAT1'>  砲丸投:7.26kg</OPTION><OPTION VALUE='1:0:0:FTDT1'>  円盤投:2.0kg</OPTION><OPTION VALUE='1:0:0:FTHT1'>  ﾊﾝﾏｰ投:7.26kg</OPTION><OPTION VALUE='1:0:0:FTJT1'>  やり投:800g</OPTION><OPTION VALUE='1:0:0:M1001'>  十種競技</OPTION><OPTION VALUE='1:1:0:FTHT3'>少年A ﾊﾝﾏｰ投:6kg</OPTION><OPTION VALUE='1:2:0:A0100'>少年B 100m</OPTION><OPTION VALUE='1:2:0:A1300'>少年B 3000m</OPTION><OPTION VALUE='1:2:0:AH112'>少年B 110mH:99.1cm</OPTION><OPTION VALUE='1:2:0:FJLJ0'>少年B 走幅跳</OPTION><OPTION VALUE='1:2:0:FTDT2'>少年B 円盤投:1.5kg</OPTION></SELECT></td><td class='width11per'><SELECT NAME='s_sort' class='selectNormal width95per'><OPTION VALUE=0 SELECTED>AR選手コード順</OPTION><OPTION VALUE=1>Bibs(ﾅﾝﾊﾞｰｶｰﾄﾞ)順</OPTION><OPTION VALUE=2>所属・種目順</OPTION><OPTION VALUE=3>所属・フリガナ順</OPTION><OPTION VALUE=4>所属・Bibs順</OPTION><OPTION VALUE=5>種目・フリガナ順</OPTION><OPTION VALUE=6>種目・Bibs順</OPTION></SELECT></td><td class='paddingL5 lineH16 width3per' style='min-width: 38px;'>最大<br>50件</td><td class='width9per' style='min-width:110px;'><INPUT TYPE='checkbox'  class='checkbox'  onclick='button_click(2,12)' name='end_search_limit' value='on' CHECKED> <button type='button' onclick='return button_click(2,0);' class='inputButton width65per' style='height:40px; line-height:40px; vertical-align:middle;' >検索</button></td><td class='paddingL5 width13per' style='min-width:172px;'> <SELECT NAME='s_select' class='selectNormal width75per' onchange='return button_click(2,0);'><OPTION VALUE=0>Bibs</OPTION><OPTION VALUE=2>グループ</OPTION><OPTION VALUE=3>シード順</OPTION><OPTION VALUE=4 SELECTED>資格記録</OPTION><OPTION VALUE=5>ベスト記録</OPTION><OPTION VALUE=6>シーズン記録</OPTION><OPTION VALUE=7>学年</OPTION><OPTION VALUE=8>生年(下二桁)</OPTION><OPTION VALUE=9>生年月日</OPTION><OPTION VALUE=10>チーム名</OPTION><OPTION VALUE=11>チームカナ</OPTION><OPTION VALUE=12>団体No.</OPTION><OPTION VALUE=13>所属名</OPTION><OPTION VALUE=14>英字姓名</OPTION></SELECT> <INPUT TYPE='hidden' NAME='set_button'><INPUT TYPE='hidden' name='s_select_p' value='4'></td><td class='' style='padding-left: 5px; '>&nbsp;</td><td class=''>&nbsp;</td><td class='width3per'><INPUT TYPE='BUTTON' VALUE='更新'  onclick='return button_click(2,7)'  class=' inputButton width80 ' style='background-color:#000000; height:40px;' ></td><td class='width5per'></td></tr>							</table>
+			</div>
+		</div>
+
+	<!--  -->
+		<div class='DataBox_data2'>
+			<table class='contentTable' style='line-height: 32px;'>
+
+			</table>
+
+
+
+		</div>
+	</div>
+
+	<div id='id_message_box' class='messageBox' style='position:fixed; top:20vh; z-index:10; width:800px; height:30vh; overflow-y: auto; margin:0px 203px;border: 2px solid #999999; background-color:#FFFFFF; display:none;'><div class='closebutton' onclick='document.getElementById("id_message_box").style.display="none";document.getElementById("id_message_button").style.display="";' >&nbsp;</div><div style='margin-top:-50px; width:200px; height:30px; padding: 20px 0px 15px 20px;'>Message</div><p class='message' id='id_message' style='padding-left:20px;'></p><p class='messageSafe' id='messagesafe' style='padding-left:20px;'></p><p class='messageError' id='messageerror' style='padding-left:20px;'></p></div><div id='id_message_button' style='position:fixed; bottom:0px; z-index:2; width:90px; height:50px;margin:0px 0px 0px 20px; padding-top:3px; background-color:#CCCCCC; cursor: pointer; display:none;' onclick='document.getElementById("id_message_box").style.display="";document.getElementById("id_message_button").style.display="none";'>Message</div>
+
+</form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+</div>
+</body>
+</html>

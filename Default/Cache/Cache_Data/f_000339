@@ -1,0 +1,203 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<title>AthleteRanking.com ver 2.0</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function submit_link(id,mode) {
+  document.form1.target = "";
+  if( mode == 0 ){
+	document.form1.action = "gamedata.php?gid=" + id;
+  }else if( mode == 1 ){
+	document.form1.target = "AR_data";
+	document.form1.action = "resultdata.php";
+  }else if( mode == 3 ){
+	document.form1.action = "gamelist.php";
+  }else if( mode >= 4.0 && mode < 5.0 ){
+	document.form1.rec_use.value = String(mode).substring(2,String(mode).length-1);
+	document.form1.target = "AR_data";
+	document.form1.action = "recorddata.php";
+  }else if( mode == 6 ){
+	document.form1.target = "_blank";
+	document.form1.action = "timetableprint.php";
+  }else{
+	document.form1.target = "AR_data";
+	document.form1.action = "timetable.php";
+  }
+  document.form1.id.value = id;
+  document.form1.submit();
+  if( mode == 1 )
+  {
+	obj = document.getElementById("gametitle");
+	y = obj.offsetTop;
+	window.scrollTo(0,y);
+  }
+}
+function submit_link2(id,mode) {
+  document.form1.target = "";
+  if( mode == 0 ){
+	document.form1.action = "gamedata.php?gid=" + id;
+  }else if( mode == 1 ){
+	document.form1.target = "AR_data";
+	document.form1.action = "resultdata2.php";
+  }else if( mode == 3 ){
+	document.form1.action = "gamelist.php";
+  }else if( mode >= 4.0 && mode < 5.0 ){
+	document.form1.rec_use.value = String(mode).substring(2,String(mode).length-1);
+	document.form1.target = "AR_data";
+	document.form1.action = "recorddata.php";
+  }else{
+	document.form1.target = "AR_data";
+	document.form1.action = "timetable.php";
+  }
+  document.form1.id.value = id;
+  document.form1.submit();
+  if( mode == 1 )
+  {
+	obj = document.getElementById("gametitle");
+	y = obj.offsetTop;
+	window.scrollTo(0,y);
+  }
+}
+//-->
+</script>
+<link href="css/main01.css" rel="stylesheet" type="text/css">
+<link href="css/main02.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="submit_link('ay022022013',2)">
+<div class="body">
+<h1 class="top"><img name="topmap" src="image/athlete_topmenu.gif" alt="top menu" usemap="#map_TOP" border="0"><img name="titlemap" src="image/athlete_top2.gif" alt="AthleteRanking.com" usemap="#map_LOGIN" border="0"></h1>
+<h2 class="menu"><img name="menumap" src="image/athlete_menu.gif" alt="menu" usemap="#map_AREA" width="760" height="52" border="0"></h2>
+<map name="map_TOP">
+  <area shape=rect coords="419,3,495,32" href="sitemap.php" alt="サイトマップ">
+  <area shape=rect coords="502,3,600,32" href="about.php" alt="当サイトについて">
+  <area shape=rect coords="608,3,755,32" href="intro.php" alt="アスリートランキングの紹介">
+</map>
+<map name="map_LOGIN">
+  <area shape=rect coords="12,0,118,30" href="https://www.athleteranking.com/members/index.php" alt="HOME" target="_blank">
+</map>
+<map name="map_AREA">
+  <area shape=rect coords="5,5,80,49" href="http://www.athleteranking.com/" alt="HOME">
+  <area shape=rect coords="89,5,220,49" href="index.php" alt="SEARCH">
+  <area shape=rect coords="233,5,345,49" href="system.php" alt="SYSTEM">
+  <area shape=rect coords="358,5,500,49" href="faq.php" alt="RULE&amp;FAQ">
+  <area shape=rect coords="511,5,624,49" href="terms.php" alt="terms">
+  <area shape=rect coords="633,5,755,49" href="https://www.athleteranking.com/inquiry.php" alt="INQUIRY">
+</map>
+
+<div class="main">
+<div class="pankuzu"><a href="http://www.athleteranking.com/">HOME</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="index.php">競技会・ランキング検索</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="gamemain.php">競技会予定・結果</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href="gamepref.php">都道府県別検索</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href='gamelist.php' onclick='submit_link("",3);return false;'>大会一覧</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;<a href='gamedata.php?gid=ay022022013' onclick='submit_link("ay022022013",0);return false;'>大会詳細</a>
+&nbsp;&nbsp;&gt;&nbsp;&nbsp;競技情報・結果</div>
+<h3 class="page_menu">
+<div class="page_menu_sub">Track & Field</div>
+競技情報・結果
+</h3>
+
+<div class="game_title" id="gametitle">
+第８１回滋賀県陸上競技選手権大会<br><div class='game_sub'>兼近畿陸上競技選手権大会滋賀県予選会</div></div>
+
+<form name="form1" method="post" action="" class="ns">
+	<input name="id" type="hidden">
+	<input name="pref" type="hidden" value="25">
+	<input name="year_s" type="hidden" value="2022">
+	<input name="year_e" type="hidden" value="2022">
+	<input name="month_s" type="hidden" value="5">
+	<input name="month_e" type="hidden" value="8">
+	<input name="rec_use" type="hidden">
+</form>
+
+<div class="event_left">
+<table class="race_l" cellspacing="0">
+<tr><th class='race_l_th_m' colspan='3'>男子</th></tr>
+<tr><td class='race_l_td_c1'> </td></tr><tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@A0100@ALL" , 1 );return false;'>100m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@A0200@ALL" , 1 );return false;'>200m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@A0400@ALL" , 1 );return false;'>400m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@A0800@ALL" , 1 );return false;'>800m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@A1150@ALL" , 1 );return false;'>1500m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@A1500@ALL" , 1 );return false;'>5000m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@AH111@ALL" , 1 );return false;'>110mH</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@AH401@ALL" , 1 );return false;'>400mH</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@AS301@ALL" , 1 );return false;'>3000mSC</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@AW500@ALL" , 1 );return false;'>5000mW</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FJHJ0@ALL" , 1 );return false;'>走高跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FJHP0@ALL" , 1 );return false;'>棒高跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FJLJ0@ALL" , 1 );return false;'>走幅跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FJTJ0@ALL" , 1 );return false;'>三段跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FTAT1@ALL" , 1 );return false;'>砲丸投</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FTDT1@ALL" , 1 );return false;'>円盤投</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FTHT1@ALL" , 1 );return false;'>ハンマー投</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@FTJT1@ALL" , 1 );return false;'>やり投</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@0@M1001@ALL" , 1 );return false;'>十種競技</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@A0100@ALL" , 1 );return false;'>十種競技 100m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@A0400@ALL" , 1 );return false;'>十種競技 400m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@A1150@ALL" , 1 );return false;'>十種競技 1500m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@AH111@ALL" , 1 );return false;'>十種競技 110mH</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@FJHJ0@ALL" , 1 );return false;'>十種競技 走高跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@FJHP0@ALL" , 1 );return false;'>十種競技 棒高跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@FJLJ0@ALL" , 1 );return false;'>十種競技 走幅跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@FTAT1@ALL" , 1 );return false;'>十種競技 砲丸投</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@FTDT1@ALL" , 1 );return false;'>十種競技 円盤投</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@0@110@FTJT1@ALL" , 1 );return false;'>十種競技 やり投</a></td></tr>
+<tr><td class='race_l_line_td1'><hr class='race_l_line'></td></tr>
+<tr><td class='race_l_td_c1'>少年A</td></tr><tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@1@0@FTHT3@ALL" , 1 );return false;'>ハンマー投</a></td></tr>
+<tr><td class='race_l_line_td1'><hr class='race_l_line'></td></tr>
+<tr><td class='race_l_td_c1'>少年B</td></tr><tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@2@0@A0100@ALL" , 1 );return false;'>100m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@2@0@A1300@ALL" , 1 );return false;'>3000m</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@2@0@AH112@ALL" , 1 );return false;'>110mH</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@2@0@FJLJ0@ALL" , 1 );return false;'>走幅跳</a></td></tr>
+<tr><td class='race_l_td1'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@1@2@0@FTDT2@ALL" , 1 );return false;'>円盤投</a></td></tr>
+</table><table class='race_l' cellspacing='0'><tr><th class='race_l_th_w' colspan='3'>女子</th></tr>
+<tr><td class='race_l_td_c2'> </td></tr><tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@A0100@ALL" , 1 );return false;'>100m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@A0200@ALL" , 1 );return false;'>200m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@A0400@ALL" , 1 );return false;'>400m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@A0800@ALL" , 1 );return false;'>800m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@A1150@ALL" , 1 );return false;'>1500m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@A1500@ALL" , 1 );return false;'>5000m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@AH101@ALL" , 1 );return false;'>100mH</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@AH403@ALL" , 1 );return false;'>400mH</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@AS302@ALL" , 1 );return false;'>3000mSC</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@AW500@ALL" , 1 );return false;'>5000mW</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FJHJ0@ALL" , 1 );return false;'>走高跳</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FJHP0@ALL" , 1 );return false;'>棒高跳</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FJLJ0@ALL" , 1 );return false;'>走幅跳</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FJTJ0@ALL" , 1 );return false;'>三段跳</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FTAT6@ALL" , 1 );return false;'>砲丸投</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FTDT3@ALL" , 1 );return false;'>円盤投</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FTHT5@ALL" , 1 );return false;'>ハンマー投</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@FTJT3@ALL" , 1 );return false;'>やり投</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@0@M0701@ALL" , 1 );return false;'>七種競技</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@A0200@ALL" , 1 );return false;'>七種競技 200m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@A0800@ALL" , 1 );return false;'>七種競技 800m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@AH101@ALL" , 1 );return false;'>七種競技 100mH</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@FJHJ0@ALL" , 1 );return false;'>七種競技 走高跳</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@FJLJ0@ALL" , 1 );return false;'>七種競技 走幅跳</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@FTAT6@ALL" , 1 );return false;'>七種競技 砲丸投</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@0@107@FTJT3@ALL" , 1 );return false;'>七種競技 やり投</a></td></tr>
+<tr><td class='race_l_line_td2'><hr class='race_l_line'></td></tr>
+<tr><td class='race_l_td_c2'>少年A</td></tr><tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@1@0@A1300@ALL" , 1 );return false;'>3000m</a></td></tr>
+<tr><td class='race_l_line_td2'><hr class='race_l_line'></td></tr>
+<tr><td class='race_l_td_c2'>少年B</td></tr><tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@2@0@A0100@ALL" , 1 );return false;'>100m</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@2@0@AH105@ALL" , 1 );return false;'>100mH</a></td></tr>
+<tr><td class='race_l_td2'><span class='race_l_list'>■</span><a href='racedata.php' onclick='submit_link( "ay022022013@2@2@0@FTDT3@ALL" , 1 );return false;'>円盤投</a></td></tr>
+</table>
+</div>
+
+<div class="event_right">
+<table class='race_table' cellspacing='0'><tr><th><a href='racedata.php' onclick='submit_link( "ay022022013" , 2 );return false;'>タイムテーブル</a> <a href='racedata.php' onclick='submit_link( "ay022022013" , 6 );return false;'>（印刷用）</a></th></tr></table><table class='race_table' cellspacing='0'><tr><th><a href='racedata.php' onclick='submit_link( "ay022022013" , 4.01 );return false;'>大会記録</a></th><th><a href='racedata.php' onclick='submit_link( "ay022022013" , 4.11 );return false;'>滋賀県記録</a></th><th><a href='racedata.php' onclick='submit_link( "ay022022013" , 4.21 );return false;'>滋賀県高校記録</a></th></tr><tr><th><a href='racedata.php' onclick='submit_link( "ay022022013" , 4.111 );return false;'>滋賀県中学記録</a></th></tr></table><iframe src='about:blank' name='AR_data' frameborder='0' seamless class='frame_data'>タイムテーブル</iframe></div>
+
+</div>
+
+<div class="foot">
+｜ <a href="corporate.php">会社概要</a> ｜ <a href="rule.php">利用規約</a> ｜ <a href="privacy.php">個人情報保護</a> ｜<br>
+(C) 2008 AthleteRanking.com  -  All Rights Reserved.
+</div>
+</div>
+</body>
+</html>

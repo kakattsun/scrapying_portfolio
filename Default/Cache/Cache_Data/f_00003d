@@ -1,0 +1,813 @@
+/**
+ * 画面表示後の処理
+ */
+$(function () {
+  var hiddens = $('.data-field');
+  var sites_responsive_flag_hidden = hiddens.find('input#sites_responsive_flag_hidden').val();
+  var page_responsive_flag_hidden = hiddens.find('input#page_responsive_flag_hidden').val();
+  var flag = 0;
+  if (sites_responsive_flag_hidden == 1) {
+    if (page_responsive_flag_hidden == 1) {
+      flag = 1;
+      responsive_css_add_or_delete(flag);
+      window_responsive();
+    } else {
+      responsive_css_add_or_delete(flag);
+      setDynamicPartsBlocks();
+    }
+  } else {
+    responsive_css_add_or_delete(flag);
+    setDynamicPartsBlocks();
+  }
+
+//パスの取得、localStorageの削除
+  get_path();
+
+//配色設定切替
+  easyweb_alternative_click();
+
+//フォントサイズ設定切替
+  easyweb_font_size_click();
+
+//ルビ表示切替
+  ruby_display_click();
+
+//パラメータ設定
+  setUrlParameter();
+});
+
+/**
+ * レスポンシブ関数
+ * @returns {undefined}
+ */
+function window_responsive() {
+  var style = Array();
+  var page_style = $('.cms-public').find('.page').attr("style");
+  //ブラウザ判定
+  var userAgent = window.navigator.userAgent.toLowerCase();
+  if (userAgent.indexOf('trident/7') != -1) {//IE11（IE10以下は考慮しない）
+    $('.cms-public').find('.page').attr('data-page_res', 1);
+  }
+  var pc_sp_threshold = 700;//pcとsp表示の閾値
+
+  //エージェント判定
+  var ua = navigator.userAgent;
+  if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {//スマホ
+    var device_type = 'SP';
+  } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {//タブレット
+    var device_type = 'TB';
+  } else {
+    var device_type = 'PC';
+  }
+
+  $.ajax(
+          setDynamicPartsBlocks()
+          ).done(function () {
+    //レスポンシブ対応（スライドブロック、広告バナー）
+    var slide_style = new Array();
+    var slide_style_cut = new Array();//文字分割用
+    var slide_style_cut_num = new Array();//数字抽出用
+    var aspect_compare_value = new Array(); //縦横比率
+    $('.layout div[class="slide"],div[class="slide animation"],div[class="advertisement"]').each(function () {
+      slide_style.push($(this).attr("style"));
+    });
+    var img_size_style = new Array();
+    //スライドブロック、広告バナー
+    $('.cms-public').find('div[class="slide"] ul[class="slide"] img,div[class="slide animation"] ul[class="slide"] img,div[class="advertisement"] ul[class="slide"] img').each(function () {
+      img_size_style.push($(this).attr("style"));
+    });
+    var k = 0;
+    for (var i = 0; i < slide_style.length; i++) {
+      slide_style_cut = slide_style[i].split(';');
+      for (var j = 0; j < 2; j++) {//width,heightのみ
+        slide_style_cut_num.push(slide_style_cut[j].replace(/[^0-9]/g, ""));//数字のみ抽出
+      }
+      aspect_compare_value.push(parseInt(slide_style_cut_num[k], 10) / parseInt(slide_style_cut_num[k + 1], 10));//縦横比を計算
+      k += 2;
+    }
+    style = window_size(page_style, pc_sp_threshold, aspect_compare_value, slide_style_cut_num, device_type);
+    window_resize(style, page_style, pc_sp_threshold, aspect_compare_value, slide_style_cut_num, img_size_style);
+  });
+}
+
+/**
+ * ウィンドウ幅に応じたページを表示する設定
+ * @param {type} page_style 指定幅
+ * @param {type} pc_sp_threshold PCとSP表示の閾値
+ * @param {type} aspect_compare_value スライド用縦横比率
+ * @param {type} slide_style_cut_num スライド用幅高さ
+ * @param {type} device_type 端末
+ * @returns {Array|window_size.style} style属性持つ各タグのstyle属性
+ */
+function window_size(page_style, pc_sp_threshold, aspect_compare_value, slide_style_cut_num, device_type) {
+  var sW = window.innerWidth;
+  var style = new Array();
+  var userAgent = window.navigator.userAgent.toLowerCase(); //ブラウザ判定
+
+  $('.layout *[style][style!=""][class!="paging"][class!="month-paging"]:not(.map):not(.map *):not(div.slide *):not(div.banner *):not(.hamburger):not(.buns):not(.menu-trigger):not(.close_point *):not(.more_point *):not(.search):not(.search *):not(.sns-buttons):not(.sns-buttons *):not(.html):not(.html *):not(.menu):not(.menu *):not(.title-list .tab > ul > li):not(.title-list .tab > .rss_button):not(.sentence *):not(.table table tr th):not(.table table tr td)').each(function () {
+    style.push($(this).attr("style"));//スタイルの取得
+    if (userAgent.indexOf('trident/7') != -1) {//IE11（IE10以下は考慮しない）
+      $(this).attr('data-res', 1);
+    }
+  });
+  if (device_type == 'PC') {
+    if (sW > pc_sp_threshold) {
+      $('.cms-public').find('.page').attr("style", page_style);
+    } else {
+      $('.cms-public').find('.page').attr("style", "page");
+      $('.layout *[style][style!=""][class!="paging"][class!="month-paging"]:not(.map):not(.map *):not(div.slide *):not(div.banner *):not(.hamburger):not(.buns):not(.menu-trigger):not(.close_point *):not(.more_point *):not(.search):not(.search *):not(.sns-buttons):not(.sns-buttons *):not(.html):not(.html *):not(.menu):not(.menu *):not(.title-list .tab > ul > li):not(.title-list .tab > .rss_button):not(.sentence *):not(.table table tr th):not(.table table tr td)').each(function () {
+        $(this).attr("style", "style");//スタイルの消去
+      });
+      //レスポンシブ対応（スライドブロック、広告バナー）
+      Responsive_Design_For_Slide_Bannar(sW, aspect_compare_value, slide_style_cut_num);
+    }
+  } else if (device_type == 'SP') {
+    $('.cms-public').find('.page').attr("style", "page");
+    $('.layout *[style][style!=""][class!="paging"][class!="month-paging"]:not(.map):not(.map *):not(div.slide *):not(div.banner *):not(.hamburger):not(.buns):not(.menu-trigger):not(.close_point *):not(.more_point *):not(.search):not(.search *):not(.sns-buttons):not(.sns-buttons *):not(.html):not(.html *):not(.menu):not(.menu *):not(.title-list .tab > ul > li):not(.title-list .tab > .rss_button):not(.sentence *):not(.table table tr th):not(.table table tr td)').each(function () {
+      $(this).attr("style", "style");//スタイルの消去
+    });
+    //レスポンシブ対応（スライドブロック、広告バナー）
+    Responsive_Design_For_Slide_Bannar(sW, aspect_compare_value, slide_style_cut_num);
+  }
+  return style;
+}
+
+/**
+ * ウィンドウ幅が変更時の画面変更処理
+ * 700px以上：PC表示,700px以内:SP表示
+ * @param {type} style 取得した各タグのstyle属性
+ * @param {type} page_style 指定幅
+ * @param {type} pc_sp_threshold PCとSP表示の閾値
+ * @param {type} aspect_compare_value スライド用縦横比率
+ * @param {type} slide_style_cut_num スライド用幅高さ
+ * @param {type} img_size_style スライド、広告バナー画像のスタイル
+ * @returns {undefined}
+ */
+function window_resize(style, page_style, pc_sp_threshold, aspect_compare_value, slide_style_cut_num, img_size_style) {
+  var sW = window.innerWidth;
+  var flag = 0;
+  if (sW > pc_sp_threshold) {
+    flag = 0;
+  } else {
+    flag = 1;
+  }
+  var userAgent = window.navigator.userAgent.toLowerCase(); //ブラウザ判定
+  //
+  //ウィンドウ幅変動時
+  $(window).resize(function () {
+    var sW = window.innerWidth;
+    if (sW > pc_sp_threshold) {
+      $('.cms-public').find('.page').attr("style", page_style);
+      if (userAgent.indexOf('trident/7') != -1) {//IE11（IE10以下は考慮しない）
+        $('.cms-public').find('.page[data-page_res=1]').attr("style", page_style);
+      }
+    } else {
+      $('.cms-public').find('.page').attr("style", "page");
+    }
+    if (sW > pc_sp_threshold) {
+      //レスポンシブ（スライドブロック、広告バナー）
+      $('.cms-public').find('div[class="slide"] ul[class="slide"] img,div[class="slide animation"] ul[class="slide"] img,div[class="advertisement"] ul[class="slide"] img').each(function (i) {
+        $(this).attr("style", img_size_style[i]);
+      });
+    }
+    if (flag == 1 && sW > pc_sp_threshold) {
+      $('.layout *[style][style!=""][class!="paging"][class!="month-paging"]:not(.map):not(.map *):not(div.slide *):not(div.banner *):not(.hamburger):not(.buns):not(.menu-trigger):not(.close_point *):not(.more_point *):not(.search):not(.search *):not(.sns-buttons):not(.sns-buttons *):not(.html):not(.html *):not(.menu):not(.menu *):not(.title-list .tab > ul > li):not(.title-list .tab > .rss_button):not(.sentence *):not(.table table tr th):not(.table table tr td)').each(function (i) {
+        $(this).attr("style", style[i]);//スタイルの復元
+      });
+      if (userAgent.indexOf('trident/7') != -1) {//IE11（IE10以下は考慮しない）
+        $('.layout *[data-res=1]').each(function (i) {
+          $(this).attr("style", style[i]);
+        });
+      }
+      flag = 0;
+    } else if (flag == 0 && sW <= pc_sp_threshold) {
+      $('.layout *[style][style!=""][class!="paging"][class!="month-paging"]:not(.map):not(.map *):not(div.slide *):not(div.banner *):not(.hamburger):not(.buns):not(.menu-trigger):not(.close_point *):not(.more_point *):not(.search):not(.search *):not(.sns-buttons):not(.sns-buttons *):not(.html):not(.html *):not(.menu):not(.menu *):not(.title-list .tab > ul > li):not(.title-list .tab > .rss_button):not(.sentence *):not(.table table tr th):not(.table table tr td)').each(function () {
+        $(this).attr("style", "style");//スタイルの消去
+      });
+      flag = 1;
+    }
+    if (sW < pc_sp_threshold) {
+      //レスポンシブ対応（スライドブロック、広告バナー）
+      Responsive_Design_For_Slide_Bannar(sW, aspect_compare_value, slide_style_cut_num);
+    }
+  });
+}
+
+/**
+ * 動的パーツブロックの設定
+ * @returns {undefined}
+ */
+function setDynamicPartsBlocks() {
+  var check_flag = 0;
+  if (($('.check_flag').length)) {
+    check_flag = $('.check_flag').val();
+  }
+  if (check_flag == 1) {
+    var char = $.ajax({
+      url: '/cms/ajax/accessibilities/get',
+      type: 'get',
+      async: false
+    }).done(function (res_prohibited) { // 禁則文字取得Ajax
+      return $.parseJSON(res_prohibited);
+    });
+  }
+
+  //ルビ表示
+  var host = location.host;
+  host = host.replace(/\./g, '_');
+  if (exist_ruby_cookie('rb_' + host)) { //ルビ表示
+    var body = $('body');
+    body.addClass('display-ruby');
+  }
+  $('.parts').each(function () {
+    var parts = $(this);
+    var dynamic = parseInt(parts.data('dynamic'));
+    var id = parseInt(parts.data('val'));
+    if (dynamic === 1 && id > 0) {
+      var table = parts.data('table');
+      var grant_table = parts.data('grant_table');
+      var language = parts.data('language');
+      var device = parts.data('device');
+      var type = parseInt(parts.data('type'));
+      var attribute_page_id = parseInt(parts.data('attribute_page_val'));
+      var data = {id: id, type: type, table: table, grant_table: grant_table, language: language, device: device, attribute_page_id: attribute_page_id, dynamic: 0};
+      var params = '';
+      switch (type) {
+        case 2:
+          var parameters = location.search;
+          params = parameters;
+          break;
+        case 3:
+          break;
+        case 4:
+          break;
+        case 5:
+          break;
+        case 6:
+          break;
+        case 7:
+          break;
+        case 8:
+          break;
+        case 10:
+          break;
+        case 12:
+          var attribute_page_id = parseInt(parts.data('attribute_page_val'));
+          var parent_id = parts.data('parent_val');
+          var top_no_display = parts.data('top_no_display');
+          data.breadcrumbs_part = {attribute_page_id: attribute_page_id, parent_id: parent_id, top_no_display: top_no_display};
+          break;
+        case 13:
+          break;
+        case 16:
+          var login_error = parseInt(parts.data('login_error'));
+          data.login_part = {error: login_error, url: location.href};
+          break;
+        case 17:
+          var user_password_change_error = parseInt(parts.data('user_password_change_error'));
+          data.user_password_change_part = {error: user_password_change_error, url: location.href};
+      }
+      var system = parseInt(parts.data('system'));
+      var url = '/cms/ajax/parts/dynamic_preview' + params;
+      if (system === 1) {
+        url = '/system/ajax/parts/dynamic_preview' + params;
+      }
+      $.ajax({
+        url: url,
+        type: 'post',
+        data: data
+      }).done(function (res) {
+        if (check_flag == 1) {//別ページ表示（アクセシビリティチェック）
+          var res_prohibited = JSON.parse(char.responseText);
+          var prohibited_words = res_prohibited.prohibited_words;
+          var accessibility_patterns = res_prohibited.accessibility_check_patterns;
+          $.each(prohibited_words, function () {
+            var regex;
+            regex = new RegExp(this["word"], "g");
+            if (this["level"] == 3) {//リンク文字警告
+              var nextTextNum = 0;
+              var endFlag = 0;
+              const EndTagA = 4;
+              while (endFlag == 0) {
+                var startLinkNum = res.indexOf('<a href=', nextTextNum);
+                var endLinkNum = -1;
+                var str, str2, str3;
+                if (startLinkNum != -1) {
+                  endLinkNum = res.indexOf('</a>', startLinkNum);
+                }
+                if (startLinkNum != -1 && endLinkNum != -1) {
+                  str = res.substr(0, startLinkNum);
+                  str2 = res.substr(startLinkNum, (endLinkNum + EndTagA) - startLinkNum);
+                  str3 = res.substr(endLinkNum + EndTagA);
+                  str2 = str2.replace(regex, Replace_prohibited_words);
+                  res = str + str2 + str3;
+                  endLinkNum = res.indexOf('</a>', startLinkNum);
+                  nextTextNum = endLinkNum + EndTagA;
+                }
+                if (startLinkNum == -1) {
+                  endFlag = 1;
+                }
+              }
+            } else {
+              res = res.replace(regex, Replace_prohibited_words);
+            }
+          });
+          $.each(accessibility_patterns, function () {
+            var regex;
+            regex = new RegExp(this["pattern"], "g");
+            res = res.replace(regex, Replace_accessibility_patterns);
+          });
+        }
+        var host = location.host;
+        host = host.replace(/\./g, '_');
+        if (system === 1 && exist_ruby_cookie('rb_' + host)) { //ルビ表示
+          res = $.ajax({
+            url: '/system/ajax/renderings/get_ruby_html',
+            type: 'post',
+            data: {html: res},
+            async: false
+          }).responseText;
+        }
+        $(res).insertAfter(parts);
+        parts.remove();
+      });
+    }
+  });
+  $('.block').each(function () {
+    var blocks = $(this);
+    var dynamic = parseInt(blocks.data('dynamic'));
+    var id = parseInt(blocks.data('val'));
+    if (dynamic === 1 && id > 0) {
+      var table = blocks.data('table');
+      var grant_table = blocks.data('grant_table');
+      var language = blocks.data('language');
+      var attribute_page_id = parseInt(blocks.data('attribute_page_val'));
+      var data = {id: id, table: table, grant_table: grant_table, language: language, attribute_page_id: attribute_page_id, dynamic: 0};
+      var system = parseInt(blocks.data('system'));
+      var url = '/cms/ajax/blocks/dynamic_preview';
+      if (system === 1) {
+        url = '/system/ajax/blocks/dynamic_preview';
+      }
+      $.ajax({
+        url: url,
+        type: 'post',
+        data: data
+      }).done(function (res) {
+        if (check_flag == 1) {//別ページ表示（アクセシビリティチェック）
+          var res_prohibited = JSON.parse(char.responseText);
+          var prohibited_words = res_prohibited.prohibited_words;
+          var accessibility_patterns = res_prohibited.accessibility_check_patterns;
+          $.each(prohibited_words, function () {
+            var regex;
+            regex = new RegExp(this["word"], "g");
+            if (this["level"] == 3) {//リンク文字警告
+              var nextTextNum = 0;
+              var endFlag = 0;
+              const EndTagA = 4;
+              while (endFlag == 0) {
+                var startLinkNum = res.indexOf('<a href=', nextTextNum);
+                var endLinkNum = -1;
+                var str, str2, str3;
+                if (startLinkNum != -1) {
+                  endLinkNum = res.indexOf('</a>', startLinkNum);
+                }
+                if (startLinkNum != -1 && endLinkNum != -1) {
+                  str = res.substr(0, startLinkNum);
+                  str2 = res.substr(startLinkNum, (endLinkNum + EndTagA) - startLinkNum);
+                  str3 = res.substr(endLinkNum + EndTagA);
+                  str2 = str2.replace(regex, Replace_prohibited_words);
+                  res = str + str2 + str3;
+                  endLinkNum = res.indexOf('</a>', startLinkNum);
+                  nextTextNum = endLinkNum + EndTagA;
+                }
+                if (startLinkNum == -1) {
+                  endFlag = 1;
+                }
+              }
+            } else {
+              res = res.replace(regex, Replace_prohibited_words);
+            }
+          });
+          $.each(accessibility_patterns, function () {
+            var regex;
+            regex = new RegExp(this["pattern"], "g");
+            res = res.replace(regex, Replace_accessibility_patterns);
+          });
+        }
+        var host = location.host;
+        host = host.replace(/\./g, '_');
+        if (system === 1 && exist_ruby_cookie('rb_' + host)) { //ルビ表示
+          res = $.ajax({
+            url: '/system/ajax/renderings/get_ruby_html',
+            type: 'post',
+            data: {html: res},
+            async: false
+          }).responseText;
+        }
+        $(res).insertAfter(blocks);
+        blocks.remove();
+      });
+    }
+  });
+}
+
+$(document).ready(function () {
+  $("body").on('click', ".cms-public a.menu-trigger", function () {
+    var width = $(this).closest('.area').width();
+    $(this).closest('.parts').find('.buns').css("width", width);
+    $(this).closest('.parts').find('.hamburger').animate({height: 'toggle'}, function () {
+      $(this).closest('.parts').find('a.menu-trigger').toggleClass('active_hamburger');
+      $(this).closest('.parts').find('.hamburger').queue([]);
+      $(this).closest('.parts').find('.hamburger').stop();
+    });
+  });
+
+  $("body").on('click', ".cms-public .menu-horizontal-fixed span.drop_down", function () {
+    if ($(this).closest('li').hasClass('menu_open')) {
+      $(this).closest('li').removeClass('menu_open');
+    } else {
+      $(this).closest('li').addClass('menu_open');
+    }
+  });
+});
+
+/**
+ * タグで囲まれていない指定文字を検索し、タグを付与する
+ * @param {type} str
+ * @param {type} offset
+ * @param {type} s
+ * @returns {String}
+ */
+function Replace_prohibited_words(str, offset, s) {
+  var greater = s.indexOf('>', offset);
+  var lesser = s.indexOf('<', offset);
+  if (greater < lesser || (greater != -1 && lesser == -1)) {
+    return str;
+  } else {
+    return '<span class="prohibited_words_check">' + str + '</span>';
+  }
+}
+function Replace_accessibility_patterns(str, offset, s) {
+  var greater = s.indexOf('>', offset);
+  var lesser = s.indexOf('<', offset);
+  if (greater < lesser || (greater != -1 && lesser == -1)) {
+    return str;
+  } else {
+    return '<span class="accessibility_patterns_check">' + str + '</span>';
+  }
+}
+
+/**
+ * レスポンシブ対応時におけるスライドブロック、広告バナーに対応するための関数
+ * @param {type} sW ウィンドウ幅
+ * @param {type} aspect_compare_value スライド、広告バナーの縦横比率
+ * @param {type} slide_style_cut_num スライド用幅高さ
+ * @returns {undefined}
+ */
+function Responsive_Design_For_Slide_Bannar(sW, aspect_compare_value, slide_style_cut_num) {
+  var i = 0;
+  $('.cms-public').find('div[class="slide"],div[class="slide animation"],div[class="advertisement"]').each(function (j) {
+    if (aspect_compare_value[j] > 1) {
+      if (slide_style_cut_num[i] > sW) {//指定した幅がウィンドウ幅よりも上回ったら可変
+        var slide_width = sW;
+      } else {//それ以外指定幅
+        var slide_width = slide_style_cut_num[i];
+      }
+      var slide_height = slide_width / aspect_compare_value[j];
+      $(this).attr("style", "width:" + slide_width + "px;" + " height:" + slide_height + "px; " + "margin-left:auto; margin-right:auto;");
+      $(this).find('ul[class="slide"] img').each(function () {
+        $(this).attr("style", "width:" + slide_width + "px;" + "height:" + slide_height + "px;");
+      });
+    } else if (aspect_compare_value[j] == 1) {
+      if (slide_style_cut_num[i] > sW) {
+        var slide_width = sW;
+      } else {
+        var slide_width = slide_style_cut_num[i];
+      }
+      var slide_height = slide_width / 1;
+      $(this).attr("style", "width:" + slide_width + "px;" + " height:" + slide_height + "px; " + "margin-left:auto; margin-right:auto;");
+      $(this).find('ul[class="slide"] img').each(function () {
+        $(this).attr("style", "width:" + slide_width + "px;" + "height:" + slide_height + "px;");
+      });
+    } else {
+      if (slide_style_cut_num[i] > sW) {
+        var slide_width = sW;
+      } else {
+        var slide_width = slide_style_cut_num[i];
+      }
+      var slide_height = slide_width / aspect_compare_value[j];
+      $(this).attr("style", "width:" + slide_width + "px;" + " height:" + slide_height + "px; " + "margin-left:auto; margin-right:auto;");
+      $(this).find('ul[class="slide"] img').each(function () {
+        $(this).attr("style", "width:" + slide_width + "px;" + "height:" + slide_height + "px;");
+      });
+    }
+    i += 2;
+  });
+}
+
+/**
+ * パスの取得、localStorageの削除
+ * @returns {undefined}
+ */
+function get_path() {
+  var pathname = location.pathname;//パスの取得
+  if (pathname.match(/cms/)) {
+    //開発環境なら
+    if (('localStorage' in window) && (window.localStorage != null)) {//ブラウザ対応チェック
+      localStorage.removeItem("color_name");//削除
+    }
+  }
+}
+
+/**
+ * 配色設定切替
+ * @returns {undefined}
+ */
+function easyweb_alternative_click() {
+  if (('localStorage' in window) && (window.localStorage != null)) {//ブラウザ対応チェック
+    var ls = localStorage.getItem("color_name");
+    if (ls) {//設定有り
+      var color_name = ls;
+    } else {//未使用
+      var color_name = "normal";
+    }
+
+    //色合い状態を反映
+    do_easyweb_alternative(color_name);
+
+    $('.easyweb_alternative_click').on('click', function () {
+      var color_name = $(this).val();
+      do_easyweb_alternative(color_name);
+      localStorage.setItem("color_name", color_name);
+    });
+  }
+}
+
+/**
+ * 配色設定切替（処理）
+ * @param {type} color_name 配色
+ * @returns {undefined}
+ */
+function do_easyweb_alternative(color_name) {
+  if (color_name == "normal") {
+    $('head').find('#easyweb_alternative_css').remove();
+  } else {
+    $('head').find('#easyweb_alternative_css').remove();
+    $('head').append("<link>");
+    var css = $('head').children(":last");
+    if (color_name == "blue") {
+      css.attr({
+        id: "easyweb_alternative_css",
+        rel: "stylesheet",
+        href: "/css/easyweb_alternative_blue.css"
+      });
+    } else if (color_name == "yellow") {
+      css.attr({
+        id: "easyweb_alternative_css",
+        rel: "stylesheet",
+        href: "/css/easyweb_alternative_yellow.css"
+      });
+    } else if (color_name == "black") {
+      css.attr({
+        id: "easyweb_alternative_css",
+        rel: "stylesheet",
+        href: "/css/easyweb_alternative_black.css"
+      });
+    }
+  }
+}
+
+/**
+ * フォントサイズ設定切替
+ * @returns {undefined}
+ */
+function easyweb_font_size_click() {
+  if (('localStorage' in window) && (window.localStorage != null)) {//ブラウザ対応チェック
+    var ls = parseInt(localStorage.getItem("fontsize_cnt"));
+    if (ls) {//設定有り
+      var fontsize_cnt = ls;
+    } else {//未使用
+      var fontsize_cnt = 0;
+    }
+    //フォントサイズ設定を反映
+    change_easyweb_font_size(fontsize_cnt);
+
+    $("body").on('click', '.easyweb_font_size_click', function () {
+      var change_value = parseInt($(this).val());
+      if (change_value === 0) {
+        fontsize_cnt = 0;
+      } else if (change_value === 1 && fontsize_cnt === 2) {
+        return;
+      } else if (change_value === -1 && fontsize_cnt === -2) {
+        return;
+      } else {
+        fontsize_cnt += change_value;
+      }
+      change_easyweb_font_size(fontsize_cnt);
+      localStorage.setItem("fontsize_cnt", fontsize_cnt);
+    });
+  }
+}
+
+/**
+ * フォントサイズ設定切替（処理）
+ * @param {type} fontsize_cnt フォントサイズ変更値
+ * @returns {undefined}
+ */
+function change_easyweb_font_size(fontsize_cnt) {
+  var fontsize = 100;
+  if (fontsize_cnt === 0) {
+    fontsize = 100;
+  } else if (fontsize_cnt > 0) {
+    for (var i = 0; i < fontsize_cnt; i++) {
+      fontsize *= 1.2;
+    }
+  } else if (fontsize_cnt < 0) {
+    for (var i = 0; i > fontsize_cnt; i--) {
+      fontsize /= 1.2;
+    }
+  }
+  document.body.style.fontSize = fontsize + '%';
+}
+
+/**
+ * レスポンシブCSS挿入削除
+ * @param {type} flag レスポンシブフラグ（1:CSS挿入、0:CSS削除）
+ * @returns {undefined}
+ */
+function responsive_css_add_or_delete(flag) {
+  if (flag == 1) {
+    $('head').find('#responsive_css').remove();
+    $('head').append("<link>");
+    var css = $('head').children(":last");
+    css.attr({
+      id: "responsive_css",
+      rel: "stylesheet",
+      href: "/css/responsive.css"
+    });
+  } else {
+    $('head').find('#responsive_css').remove();
+  }
+}
+
+/**
+ * ルビ表示切替
+ * @returns {undefined}
+ */
+function ruby_display_click() {
+  $(document).on('click', '.ruby_display_click', function () {
+    $.ajax({
+      url: '/system/ajax/renderings/ruby_cookie',
+      type: 'post',
+      data: {host: location.host}
+    }).done(function (res) {
+      var protocol = location.protocol; //ex: http:
+      var host = location.host; //ex: xxxx.xx.jp
+      var pathname = location.pathname;
+
+      if (res == 1) { //ルビ表示
+        if (pathname.indexOf('/r/') !== 0) {
+          pathname = '/r' + pathname;
+          var href = protocol + '//' + host + pathname;
+          window.location.href = href;
+        } else {
+          window.location.reload();
+        }
+      } else { //ルビ表示解除
+        if (pathname.indexOf('/r/') === 0) {
+          pathname = pathname.slice(2);
+          var href = protocol + '//' + host + pathname;
+          window.location.href = href;
+        } else {
+          window.location.reload();
+        }
+      }
+    });
+  });
+}
+
+/**
+ * ルビ表示Cookie存在チェック
+ * @param {type} key
+ * @returns {Boolean}
+ */
+function exist_ruby_cookie(key) {
+  var res = false;
+  if (document.cookie != '') {
+    var tmp = document.cookie.split('; ');
+    for (var i = 0; i < tmp.length; i++) {
+      var data = tmp[i].split('=');
+      if (data[0] === key) {
+        res = true;
+        break;
+      }
+    }
+  }
+
+  return res;
+}
+
+/**
+ * パラメータ設定
+ * @returns {undefined}
+ */
+function setUrlParameter() {
+  //URLにパラメータセット
+  $(document).on('click', '.cms-public a', function (e) {
+    var href = $(this).attr('href');
+    var now_protocol = location.protocol; //ex: http:
+    var now_host = location.host; //ex: xxxx.xx.jp
+    var now_pathname = location.pathname;
+    var now_href = now_protocol + '//' + now_host + now_pathname;
+    var now_href_compare = now_protocol + '//' + now_host + now_pathname; //今のURLと遷移先のURL比較用
+    if (href.indexOf('/') === 0) { //相対パス
+      href = now_protocol + '//' + now_host + href;
+    }
+
+    //セッション取得
+    var tl_session = [];
+    var ls = false;
+    for (var i = 0; i < sessionStorage.length; i++) {
+      var key = sessionStorage.key(i);
+      if (key.indexOf('tl-') !== -1) {
+        var getItem = sessionStorage.getItem(key);
+        var json = JSON.parse(getItem);
+        var split = key.split('-');
+        json['part_id'] = split[1];
+        tl_session.push(json);
+        ls = true;
+      }
+    }
+
+    //ブラウザバックのURL更新
+    if (href.indexOf('javascript:') === 0
+            || href.indexOf('mailto:') === 0
+            || href.indexOf('tel:') === 0
+            || href.indexOf('#') === 0) {
+      //スルー
+    } else {
+      var params = '';
+      for (i = 0; i < tl_session.length; i++) {
+        if (now_href.indexOf(tl_session[i]['url']) === 0 && (now_href == tl_session[i]['url'] || now_href == (tl_session[i]['url'] + '/') || now_href.indexOf(tl_session[i]['url'] + '?') === 0 || now_href.indexOf(tl_session[i]['url'] + '#') === 0 || now_href.indexOf(tl_session[i]['url'] + '/?') === 0 || now_href.indexOf(tl_session[i]['url'] + '/#') === 0)) {
+          if (params == '') {
+            params += tl_session[i]['part_id'] + '-' + tl_session[i]['tab'] + '-' + tl_session[i]['step'];
+          } else {
+            params += ',' + tl_session[i]['part_id'] + '-' + tl_session[i]['tab'] + '-' + tl_session[i]['step'];
+          }
+        }
+      }
+      var back_href = now_href;
+      if (params !== '') {
+        if (now_href.match(/titlelist=(.*?)(&|$)/)) {
+          back_href = now_href.replace(/titlelist=(.*?)(&|$)/, 'titlelist=' + params);
+        } else if (now_href.indexOf('?') >= 0) {
+          back_href = now_href.replace('?', '?titlelist=' + params + '&');
+        } else {
+          back_href = now_href + '?titlelist=' + params;
+        }
+        history.replaceState(null, null, back_href);
+      }
+    }
+
+    //遷移先のURL更新
+    if (href.indexOf(now_protocol + '//' + now_host + '/cms/') === 0
+            || href.indexOf(now_protocol + '//' + now_host + '/system/') === 0
+            || href.indexOf(now_protocol + '//' + now_host + '/file/') === 0
+            || href.indexOf(now_protocol + '//' + now_host + '/js/') === 0
+            || href.indexOf(now_protocol + '//' + now_host + '/css/') === 0
+            || href.indexOf(now_protocol + '//' + now_host + '/img/') === 0) {
+      //ページのURL以外はスルー
+    } else if (href.indexOf(now_protocol + '//' + now_host) === 0) {
+      if (ls) {
+        e.preventDefault();
+        var params = '';
+        for (i = 0; i < tl_session.length; i++) {
+          if (href.indexOf(tl_session[i]['url']) === 0 && (href == tl_session[i]['url'] || href == (tl_session[i]['url'] + '/') || href.indexOf(tl_session[i]['url'] + '?') === 0 || href.indexOf(tl_session[i]['url'] + '#') === 0 || href.indexOf(tl_session[i]['url'] + '/?') === 0 || href.indexOf(tl_session[i]['url'] + '/#') === 0)) {
+            if (params == '') {
+              params += tl_session[i]['part_id'] + '-' + tl_session[i]['tab'] + '-' + tl_session[i]['step'];
+            } else {
+              params += ',' + tl_session[i]['part_id'] + '-' + tl_session[i]['tab'] + '-' + tl_session[i]['step'];
+            }
+          }
+        }
+        var new_href = href;
+        if (params !== '') {
+          if (href.match(/titlelist=(.*?)(&|$)/)) {
+            new_href = href.replace(/titlelist=(.*?)(&|$)/, 'titlelist=' + params);
+          } else if (href.indexOf('?') >= 0) {
+            new_href = href.replace('?', '?titlelist=' + params + '&');
+          } else {
+            new_href = href + '?titlelist=' + params;
+          }
+        }
+        if (e.metaKey || e.ctrlKey) {
+          window.open(new_href); //Ctrlキーを押しながらの場合別タブで開く
+        } else if (new_href == now_href_compare) {
+          window.location.reload();
+        } else {
+          window.location.href = new_href;
+        }
+      }
+    }
+  });
+}

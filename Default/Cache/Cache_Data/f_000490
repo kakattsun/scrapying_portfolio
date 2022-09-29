@@ -1,0 +1,2704 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+
+
+var default_legend_code = new Array('FS','T1','T2','T3','T4','T5','T6','T7','T8','R1','K1','K2','K3','K4','K5','YC','YRC','RC','SB','PB','R1.1','R1.2','R1.3','R2','R3','T9','T10','T11','L','L2');
+var default_legend_jpn = new Array('不正スタート','他の競技者を妨害した','他のレーンに入った','縁石の上、内側ライン上または、その内側を走った/歩いた','ブレイクライン手前でレーンを離れ内側に入った','競技者が自らの意思でトラックから離脱した','ハードルをすべて越えなかった','足または脚がハードルをはみ出してバーの高さより低い位置を通った','手や体、振り上げ足の上側でハードルを倒した','テイク・オーバーゾーン内でバトンパスが完了しなかった','ロス・オブ・コンタクトで３名以上がレッドカードをだした','ベント・ニーで３名以上がレッドカードをだした','ロス・オブ・コンタクトとベント・ニーで３名以上がレッドカードをだした','ロス・オブ・コンタクトで競歩主任が単独で失格にした','ベント・ニーで競歩主任が単独で失格にした','警告','2回目の警告','レッドカードによる失格','今季最高記録','自己最高記録','テイク・オーバーゾーン内でバトンパスが完了しなかった 1-2','テイク・オーバーゾーン内でバトンパスが完了しなかった 2-3','テイク・オーバーゾーン内でバトンパスが完了しなかった 3-4','バトンを落とした際に規則違反があった','コーナートップで並んだ際に規則違反があった','自分または他のレーンのハードルを倒したり移動させて妨害した','水濠と障害物をすべて超えなかった','水濠と障害物を越える際に規則違反があった','1回目のレーン侵害','2回目のレーン侵害');
+var default_legend_eng = new Array('TR16.8 - false start','TR17.2 - obstruction','TR17.3.1 - lane infringement','TR17.3.2 - infringement of the inside border','TR17.5 - leaving the lane before the breakline','TR17.6 - continuing in the race after voluntarily leaving','TR22.6 - not going over each hurdle','TR22.6.1 - trailing leg below the horizontal plane of hurdle','TR22.6.2 - knocking down / displacing a hurdle in an illegal way','TR24.7 - Passing of the takeover zone','TR54.7.1 - loss of contact','TR54.7.1 - bent knee','TR54.7.1 - loss of contact,bent knee','TR54.4.1 - loss of contact','TR54.4.1 - bent knee','Yellow Card','2nd Yellow Card','Red Card ','Season Best','Personal Best','TR24.7 - Passing of the takeover zone 1-2','TR24.7 - Passing of the takeover zone 2-3','TR24.7 - Passing of the takeover zone 3-4','TR24.6.3 - fault at carrying the baton','TR24.20 or 21 - fault positions or jostling at the takeover','TR22.6.3 - knocking down / displacing a hurdle in another lane','TR23.7 - not going over each hurdle / the water jump','TR23.7 - not going over each hurdle / the water jump','TR17.4 - 1st lane infringement','TR17.4.3-4 - 2nd lane infringement');
+
+
+function tab_click(var_x)
+{
+	document.getElementById("id_base_tab").style.display = "none";
+	document.getElementById("id_release_tab").style.display = "none";
+	document.getElementById("id_manage_tab").style.display = "none";
+	document.getElementById("id_class_tab").style.display = "none";
+	document.getElementById("id_entry_tab").style.display = "none";
+	document.getElementById("id_system_tab").style.display = "none";
+	document.getElementById("id_outsource_tab").style.display = "none";
+
+	document.getElementById("id_tab_1").className = "width13per tabbtn";
+	document.getElementById("id_tab_2").className = "width13per tabbtn";
+	document.getElementById("id_tab_3").className = "width13per tabbtn";
+	document.getElementById("id_tab_4").className = "width13per tabbtn";
+	document.getElementById("id_tab_5").className = "width13per tabbtn";
+	document.getElementById("id_tab_6").className = "width13per tabbtn";
+	document.getElementById("id_tab_7").className = "width13per tabbtn";
+
+	document.form_main.P_tab_select_id.value = var_x;
+
+	switch(var_x){
+		case 1: //競技会登録＿基本情報タブを表示
+			document.getElementById("id_tab_1").className = "width13per backDBlue";
+			document.getElementById("id_base_tab").style.display = "";
+			break;
+		case 2: //競技会登録＿公開設定タブを表示
+			document.getElementById("id_tab_2").className = "width13per backDBlue";
+			document.getElementById("id_release_tab").style.display = "";
+			break;
+		case 3: //競技会登録＿競技会運営タブを表示
+			document.getElementById("id_tab_3").className = "width13per backDBlue";
+			document.getElementById("id_manage_tab").style.display = "";
+			break;
+		case 4: //競技会登録＿クラスタブを表示
+			document.getElementById("id_tab_4").className = "width13per backDBlue";
+			document.getElementById("id_class_tab").style.display = "";
+			break;
+		case 5: //競技会登録＿エントリータブを表示
+			document.getElementById("id_tab_5").className = "width13per backDBlue";
+			document.getElementById("id_entry_tab").style.display = "";
+			break;
+		case 6: //競技会登録＿システムタブを表示
+			document.getElementById("id_tab_6").className = "width13per backDBlue";
+			document.getElementById("id_system_tab").style.display = "";
+			break;
+		case 7: //競技会登録＿外部サービスタブを表示
+			document.getElementById("id_tab_7").className = "width13per backDBlue";
+			document.getElementById("id_outsource_tab").style.display = "";
+			break;
+		default:
+			break;
+	}
+	return false;
+}
+function button_click(var_x,var_y)
+{
+	if( var_x != 1 )
+		var change_flag = is_change();
+
+	document.form_main.target = "";
+
+	document.form_main.P_submit_value.value = "";
+	switch(var_x){
+		case 9999:
+			document.form_main.action = "../error.php";
+			break;
+		case 'back': //戻る
+
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_back_flag.value = 1;
+					button_click(1,0);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+			document.form_main.action = "./0011_gamemenu.php";
+
+			break;
+		case 1: //競技会登録：登録処理
+			if( postdata_check() == false )
+				return false;
+			document.form_main.P_submit_value.value = "REGIST GAME_TABLE ALL";
+			document.form_main.action = "./0012_gameinput.php";
+			break;
+		case 2: //競技会登録：登録処理
+			if( confirm('この大会を削除してよろしいですか？\nこの大会に登録されている情報も合わせて削除します。') == true )
+			{
+				if( confirm('復活はできません。\n本当に削除してよろしいですか？') == true )
+				{
+					if( confirm('最終確認です。\n本当に削除しますか？') == true )
+					{
+						document.form_main.P_submit_value.value = "DELETE GAME_TABLE ALL";
+						document.form_main.action = "./0012_gameinput.php";
+					}
+					else
+						return false;
+				}
+				else
+					return false;
+			}
+			else
+				return false;
+			break;
+		case 3: //競技会登録：他大会取込
+			document.form_main.target = "_blank";
+			document.form_main.P_game_copy.value ="COPY";
+			document.form_main.action = "./0003_gamelist.php";
+			break;
+
+		case 4: //競技会登録：略号デフォルト登録
+			if( confirm('略語を削除して、初期値の略語を登録します。よろしいですか？') == false )
+				return false;
+
+			document.form_main.P_submit_value.value = "REGIST LEGEND DEFAULT";
+			document.form_main.action = "./0012_gameinput.php";
+			break;
+
+		case 5: //競技会登録：直近略号登録
+			if( confirm('略語を削除して、直近の競技会の略語を登録します。よろしいですか？') == false )
+				return false;
+
+			document.form_main.P_submit_value.value = "REGIST LEGEND GAME";
+			document.form_main.action = "./0012_gameinput.php";
+			break;
+
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+function button_link(var_x)
+{
+	document.form_main.P_submit_value.value = "";
+	switch(var_x){
+
+		case 1:
+			document.form_main.action = "../../ii/imb_ver3.php?spp=&stp=1";
+			document.form_main.shortcut_flag.value = 1;
+			document.form_main.target = "_blank";
+			break;
+		case 2:
+			document.form_main.action = "../../ii/imb_ver3.php?spp=&stp=2";
+			document.form_main.shortcut_flag.value = 1;
+			document.form_main.target = "_blank";
+			break;
+		case 3:
+			document.form_main.action = "../../ii/imb_ver3.php?spp=&stp=3";
+			document.form_main.shortcut_flag.value = 1;
+			document.form_main.target = "_blank";
+			break;
+
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+function button_click_popup(var_x,var_y)
+{
+	switch(var_x){
+		case 1: //基本競技会選択画面を別窓で表示
+			document.form_main.target = 'ARV3_WINDOW';
+			document.form_main.P_submit_sub.value = "TAB SELECT MODE";
+			document.form_main.action = "./0004_gamebaselist.php";
+			break;
+		case 2: //競技場選択画面を別窓で表示
+			document.form_main.target = 'ARV3_WINDOW';
+			document.form_main.P_submit_sub.value = "TAB SELECT MODE";
+			document.form_main.action = "./0006_gameplacelist.php";
+			break;
+		default:
+			return false;
+			break;
+	}
+	document.form_main.submit();
+	document.form_main.target = '';
+	document.form_main.P_submit_sub.value = '';
+	return false;
+}
+
+function postdata_check()
+{
+	var data_req = document.form_main.P_start_date.value;
+	if( data_req == '' )
+	{
+		alert('競技会開催期間：必須項目です。入力してください。');
+		return false;
+	}
+	data_req = document.form_main.P_end_date.value;
+	if( data_req == '' )
+	{
+		alert('競技会開催期間：必須項目です。入力してください。');
+		return false;
+	}
+	data_req = document.form_main.P_short_name.value;
+	if( data_req == '' )
+	{
+		alert('競技会略称（16文字以内）：必須項目です。入力してください。');
+		return false;
+	}
+	else if( data_req.length > 16 )
+	{
+		alert('競技会略称（16文字以内）：指定桁数・文字数以内で入力してください。');
+		return false;
+	}
+	return true;
+}
+var addrow_class = 1;
+function add_class_rows(obj,row)
+{
+	var isIE =/*@cc_on!@*/false;
+	var tbodyElement,trElement,tdElement,inputElement;
+	var thisrow = addrow_class;
+
+
+	var totalrow = document.form_main.P_class_rows.value;
+	var max_num = 0;
+	var elements = document.getElementsByName( "P_class_table_sort_num[]" ) ;
+	for(var i=0;i<totalrow;i++)
+	{
+		if(max_num < parseInt(elements[i].value, 10))
+		{
+			max_num = parseInt(elements[i].value, 10);
+		}
+
+	}
+
+
+
+
+	tbodyElement = document.getElementById("id_class_tbody");
+	trElement = document.createElement("tr");
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='hidden' name='P_class_table_id[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "hidden";
+		inputElement.name = "P_class_table_id[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.id = "id_class_pid_" + thisrow;
+	inputElement.value = "";
+
+	if(isIE){
+		inputElement = document.createElement("<input type='hidden' name='P_class_table_delete_check[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "hidden";
+		inputElement.name = "P_class_table_delete_check[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.id = "id_class_delb_" + thisrow;
+	inputElement.value = "削除";
+	inputElement.onclick = function(){del_class_rows(inputElement,thisrow);}
+	inputElement.className = "inputButton width50";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width75 paddingTB3 paddingL15 ";
+
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_class_table_sort_num[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_class_table_sort_num[]";
+	}
+
+	max_num++;
+
+	tdElement.appendChild(inputElement);
+	inputElement.value = max_num;
+	inputElement.onkeydown = function(){return move_focus(event,this);}
+	inputElement.className = "textBox imeOff width50";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width75 paddingTB3";
+
+	tdElement = document.createElement("td");
+	trElement.appendChild(tdElement);
+	tdElement.className = "width75 paddingTB3";
+
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_class_table_name_class[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_class_table_name_class[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+	inputElement.onkeydown = function(){return move_focus(event,this);}
+	inputElement.className = "textBox width250";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width300 paddingTB3";
+
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_class_table_name_english[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_class_table_name_english[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+	inputElement.onkeydown = function(){return move_focus(event,this);}
+	inputElement.className = "textBox width250";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width300 paddingTB3";
+
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.name = "name_class_addb";
+	inputElement.value = ' + ';
+	inputElement.onclick = function(){add_class_rows(inputElement,thisrow);}
+	inputElement.className = 'inputButton width50';
+	trElement.appendChild(tdElement);
+	tbodyElement.appendChild(trElement);
+	trElement.id = 'id_class_row_' + thisrow;
+	trElement.className = 'contentData';
+
+	addrow_class = addrow_class + 1;
+	document.form_main.P_class_rows.value = Number(document.form_main.P_class_rows.value) + 1;
+	obj.style.display = 'none';
+}
+function del_class_rows(obj,row)
+{
+	var delid = document.getElementById('id_class_pid_' + row).value;
+	if( delid != "" )
+	{
+		if( confirm('削除しますか？（削除しても登録を実行するまで確定されません。）') == false )
+			return false;
+
+		document.getElementById('id_class_delchk_' + row).value = 'ON';
+		document.getElementById('id_class_row_' + row).style.display = 'none';
+
+		var target = document.getElementById('id_class_addb_' + row);
+		target.parentNode.removeChild(target);
+	}
+	else
+	{
+		var target = document.getElementById('id_class_row_' + row);
+		while(target.firstChild) target.removeChild(target.firstChild);
+		target.parentNode.removeChild(target);
+
+		document.form_main.P_class_rows.value = Number(document.form_main.P_class_rows.value) - 1;
+	}
+	var btn = document.getElementsByName('name_class_addb');
+	btn[btn.length-1].style.display = '';
+
+}
+function userbutton_click(var_x)
+{
+	switch(var_x){
+		case 1:
+			if( confirm('入力した競技会IDに一致する、ID、パスワードを取得しますか？\n（取得しても登録を実行するまで確定されません。）') == false )
+				return false;
+
+			ajax_mod(1);
+			break;
+		case 2:
+			if( confirm('ID、パスワードを自動で生成しますか？\n（生成しても登録を実行するまで確定されません。）') == false )
+				return false;
+
+			ajax_mod(2);
+			break;
+		case 3:
+			if( confirm('ID、パスワードを削除しますか？\n（削除しても登録を実行するまで確定されません。）') == false )
+				return false;
+
+			clear_game_id();
+			break;
+	}
+	return false;
+}
+function ajax_mod(var_x)
+{
+	var poststr = '';
+	var val1 = document.form_main.P_SESSION_KEY.value;
+	var val2 = document.form_main.P_SESSION_VALUE.value;
+	var val3 = document.form_main.P_prev_page.value;
+	var val4 = document.form_main.P_select_game_table_id.value;
+
+	poststr = encodeURIComponent("P_SESSION_KEY") + "=" + encodeURIComponent(val1);
+	poststr += "&" + encodeURIComponent("P_SESSION_VALUE") + "=" + encodeURIComponent(val2);
+	poststr += "&" + encodeURIComponent("P_prev_page") + "=" + encodeURIComponent(val3);
+	poststr += "&" + encodeURIComponent("P_select_game_table_id") + "=" + encodeURIComponent(val4);
+	if( var_x == 1 )
+	{
+		poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent("GETGUID GAME_TABLE SYSTEM");
+		poststr += "&" + encodeURIComponent("P_search_game_num") + "=" + encodeURIComponent(document.form_main.P_search_game_num.value);
+	}
+	else if( var_x == 2 )
+		poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent("CREATEGUID GAME_TABLE SYSTEM");
+	else if( var_x == 3 )
+		poststr += "&" + encodeURIComponent("P_submit_value") + "=" + encodeURIComponent("COPYTERMINAL GAME_TABLE SYSTEM");
+
+	var xmlhttp1 = this.XDomainRequest ? new XDomainRequest() : new XMLHttpRequest();
+	xmlhttp1.onreadystatechange = function()
+	{
+		if( xmlhttp1.readyState == 4 )
+		{
+			if( xmlhttp1.status == 200 )
+			{
+				var result = xmlhttp1.responseText;
+				try {
+					var json_obj = JSON.parse(result);
+				} catch(e) {
+					var json_obj = false;
+				}
+
+				if( json_obj )
+				{
+					//if(console && console.log) { console.log(json_obj); };
+					switch(json_obj["status"])
+					{
+						case "OK":
+							try {
+								if( json_obj["result"] == 'Complete' )
+								{
+									if( var_x == 3 )
+										set_terminal_id(json_obj);
+									else
+										set_game_id(json_obj);
+								}
+								else
+									alert('該当データがありませんでした。');
+							} catch(e) {
+								alert('データ通信に失敗しました。');
+							}
+							break;
+						default:
+							alert('データ通信に失敗しました。');
+							break;
+					}
+				}
+				else
+				{
+					alert('データ通信に失敗しました。');
+				}
+			}
+		}
+	}
+	xmlhttp1.open("POST", "./0012_gameinput.php", true);
+	xmlhttp1.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+	xmlhttp1.send(poststr.replace(/%20/g,'+'));
+}
+function set_game_id(json_obj)
+{
+	for(var i=0;i<5;i++)
+	{
+		document.form_main.elements['P_user_table_id[]'][i].value = '';
+		document.form_main.elements['P_user_table_loginid[]'][i].value = json_obj['user_table']['loginid'][i];
+		document.form_main.elements['P_user_table_loginpw[]'][i].value = json_obj['user_table']['loginpw'][i];
+	}
+}
+function clear_game_id()
+{
+	for(var i=0;i<5;i++)
+	{
+		document.form_main.elements['P_user_table_id[]'][i].value = '';
+		document.form_main.elements['P_user_table_loginid[]'][i].value = '';
+		document.form_main.elements['P_user_table_loginpw[]'][i].value = '';
+	}
+}
+function copyterminalbutton_click()
+{
+	if( confirm('直近の同競技場の競技会から端末情報を取得しますか？\n（取得しても登録を実行するまで確定されません。）') == false )
+		return false;
+
+	ajax_mod(3);
+}
+var nowrow_terminal = 1;
+var addrow_terminal = 1;
+
+var nowrow_legend = 1;
+var addrow_legend = 1;
+
+
+function set_terminal_id(json_obj)
+{
+	if( json_obj['print_terminal'] )
+	{
+		var cnt = json_obj['print_terminal']['id'].length;
+		for(var i=0;i<cnt;i++)
+		{
+			if( i >= nowrow_terminal )
+			{
+				var btn = document.getElementsByName('name_terminal_addb');
+				btn[i-1].onclick();
+			}
+			if( nowrow_terminal == 1 )
+				document.form_main.elements['P_terminal_name[]'].value = json_obj['print_terminal']['terminal_name'][i];
+			else
+				document.form_main.elements['P_terminal_name[]'][i].value = json_obj['print_terminal']['terminal_name'][i];
+		}
+		for(i=nowrow_terminal;i>cnt;i--)
+		{
+			var btn = document.getElementsByName('name_terminal_delb');
+			btn[i-2].onclick();
+		}
+	}
+}
+function add_terminal_rows(obj,row)
+{
+	var isIE =/*@cc_on!@*/false;
+	var tbodyElement,trElement,tdElement,inputElement,spanElement,textElement;
+	var thisrow = addrow_terminal;
+
+	tbodyElement = document.getElementById("id_system_tbody");
+
+	if(row > 0)
+	{
+		for(i=0;i<tbodyElement.rows.length;i++)
+		{
+			if( tbodyElement.rows[i].id == "id_terminal_new_row_" + row )
+			{
+				ins_index = i;
+				break;
+			}
+		}
+	}
+	else
+	{
+		for(i=0;i<tbodyElement.rows.length;i++)
+		{
+			if( tbodyElement.rows[i].id == "id_terminal_row" )
+			{
+				ins_index = i;
+				break;
+			}
+		}
+
+	}
+
+	trElement = tbodyElement.insertRow(ins_index + 1);
+
+//	trElement = document.createElement("tr");
+//	tdElement = document.createElement("td");
+
+//	trElement = document.createElement("tr");
+	tdElement = document.createElement("td");
+
+	if(isIE){
+		spanElement = document.createElement("<span>");
+	}else{
+		spanElement = document.createElement("span");
+	}
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	spanElement.appendChild(inputElement);
+	inputElement.id = "id_terminal_delb_" + thisrow;
+	inputElement.name = "name_terminal_delb";
+	inputElement.value = "削除";
+	inputElement.onclick = function(){del_terminal_rows(inputElement,thisrow);}
+	inputElement.className = "inputButton width50";
+
+	tdElement.appendChild(spanElement);
+	spanElement.className = "inlineBox width75";
+	textElement = document.createTextNode(' ');
+	tdElement.appendChild(textElement);
+
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_terminal_name[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_terminal_name[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+	inputElement.onkeydown = function(){move_focus_name_array(event,"P_auth_key_walk","P_game_status",this);}
+	inputElement.className = "textBox width300";
+	textElement = document.createTextNode(' ');
+	tdElement.appendChild(textElement);
+
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.name = "name_terminal_addb";
+	inputElement.value = ' + ';
+	inputElement.onclick = function(){add_terminal_rows(inputElement,thisrow);}
+	inputElement.className = 'inputButton width50';
+
+	trElement.appendChild(tdElement);
+//	tbodyElement.appendChild(trElement);
+	trElement.id = 'id_terminal_new_row_' + thisrow;
+
+	var trobj = document.getElementById("id_terminal_th");
+	trobj.rowSpan = Number(trobj.rowSpan) + 1;
+
+
+	addrow_terminal++;
+	nowrow_terminal++;
+	document.form_main.P_new_terminal_rows.value = Number(document.form_main.P_new_terminal_rows.value) + 1;
+	obj.style.display = 'none';
+}
+function del_terminal_rows(obj,row)
+{
+	var target = document.getElementById('id_terminal_new_row_' + row);
+	while(target.firstChild) target.removeChild(target.firstChild);
+//	target.parentNode.removeChild(target);
+
+	document.form_main.P_new_terminal_rows.value = Number(document.form_main.P_new_terminal_rows.value) - 1;
+	var btn = document.getElementsByName('name_terminal_addb');
+	btn[btn.length-1].style.display = '';
+	nowrow--;
+}
+function hidden_terminal_rows(obj,row)
+{
+	if( confirm('端末情報を削除しますか？\n（削除しても登録を実行するまで確定されません。）') == false )
+		return false;
+
+	document.getElementById('id_terminal_delchk_' + row).value = 'ON';
+	document.getElementById('id_terminal_row_' + row).style.display = 'none';
+
+	var trobj = document.getElementById("id_terminal_th");
+	trobj.rowSpan = trobj.rowSpan - 1;
+}
+
+
+function add_legend_rows(obj,row)
+{
+	var isIE =/*@cc_on!@*/false;
+	var tbodyElement,trElement,tdElement,inputElement,spanElement,textElement;
+	var thisrow = addrow_legend;
+
+	tbodyElement = document.getElementById("id_system_tbody");
+
+	if(row > 0)
+	{
+		for(i=0;i<tbodyElement.rows.length;i++)
+		{
+			if( tbodyElement.rows[i].id == "id_legend_new_row_" + row )
+			{
+				ins_index = i;
+				break;
+			}
+		}
+	}
+	else
+	{
+		for(i=0;i<tbodyElement.rows.length;i++)
+		{
+			if( tbodyElement.rows[i].id == "id_legend_row" )
+			{
+				ins_index = i;
+				break;
+			}
+		}
+
+	}
+
+	trElement = tbodyElement.insertRow(ins_index + 1);
+
+//	trElement = document.createElement("tr");
+//	tdElement = document.createElement("td");
+
+//	trElement = document.createElement("tr");
+	tdElement = document.createElement("td");
+
+	if(isIE){
+		spanElement = document.createElement("<span>");
+	}else{
+		spanElement = document.createElement("span");
+	}
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	spanElement.appendChild(inputElement);
+	inputElement.id = "id_legend_delb_" + thisrow;
+	inputElement.name = "name_legend_delb";
+	inputElement.value = "削除";
+	inputElement.onclick = function(){del_legend_rows(inputElement,thisrow);}
+	inputElement.className = "inputButton width50";
+
+	tdElement.appendChild(spanElement);
+	spanElement.className = "inlineBox width50";
+	textElement = document.createTextNode(' ');
+	tdElement.appendChild(textElement);
+
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_new_irm_code[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_new_irm_code[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+	inputElement.className = "textBox width120";
+
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_new_irm_jpn_text[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_new_irm_jpn_text[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+	inputElement.className = "textBox width300";
+
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_new_irm_eng_text[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_new_irm_eng_text[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+	inputElement.className = "textBox width300";
+
+
+
+	textElement = document.createTextNode(' ');
+	tdElement.appendChild(textElement);
+
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.name = "name_legend_addb";
+	inputElement.value = ' + ';
+	inputElement.onclick = function(){add_legend_rows(inputElement,thisrow);}
+	inputElement.className = 'inputButton width50';
+	inputElement.id = 'id_legend_addb_' + thisrow;
+
+	trElement.appendChild(tdElement);
+//	tbodyElement.appendChild(trElement);
+	trElement.id = 'id_legend_new_row_' + thisrow;
+
+	var trobj = document.getElementById("id_legend_th");
+	trobj.rowSpan = Number(trobj.rowSpan) + 1;
+
+
+	addrow_legend++;
+	nowrow_legend++;
+	document.form_main.P_new_legend_rows.value = Number(document.form_main.P_new_legend_rows.value) + 1;
+	obj.style.display = 'none';
+}
+
+function del_legend_rows(obj,row)
+{
+	var target = document.getElementById('id_legend_new_row_' + row);
+	while(target.firstChild) target.removeChild(target.firstChild);
+//	target.parentNode.removeChild(target);
+
+	document.form_main.P_new_legend_rows.value = Number(document.form_main.P_new_legend_rows.value) - 1;
+	var btn = document.getElementsByName('name_legend_addb');
+	btn[btn.length-1].style.display = '';
+	nowrow--;
+}
+function hidden_legend_rows(obj,row)
+{
+	if( confirm('略号情報を削除しますか？\n（削除しても登録を実行するまで確定されません。）') == false )
+		return false;
+
+	document.getElementById('id_legend_delchk_' + row).value = 'ON';
+	document.getElementById('id_legend_row_' + row).style.display = 'none';
+
+	var trobj = document.getElementById("id_legend_th");
+	trobj.rowSpan = trobj.rowSpan - 1;
+}
+
+
+function onload_event()
+{
+	return;
+}
+
+function is_change()
+{
+	// 指定フォーム要素対象版
+	var cnt = document.form_main.length;
+
+	for(var i=0;i<cnt;i++)
+	{
+		var frm = document.form_main.elements[i];
+		if( frm.tagName == "INPUT" )
+		{
+			if( frm.getAttribute("type") == "text" && frm.value != frm.defaultValue )
+			{
+
+				return true; // 変更あり
+			}
+			else if( frm.getAttribute("type") == "checkbox" && frm.checked != frm.defaultChecked )
+			{
+				return true; // 変更あり
+			}
+			else if( frm.getAttribute("type") == "radio" && frm.checked != frm.defaultChecked )
+			{
+				return true; // 変更あり
+			}
+		}
+		else if( frm.tagName == "SELECT" )
+		{
+			if(frm.options[frm.selectedIndex].defaultSelected == true)
+				continue; // 変更なし
+			else if(frm.selectedIndex == 0)
+			{
+				var option_cnt = frm.options.length;
+
+				for(var j=0;j<option_cnt;j++)
+				{
+
+					if(frm.options[j].defaultSelected == true)
+						return true; // 変更あり
+				}
+				continue; // 変更なし
+			}
+			else
+				return true; // 変更あり
+
+		}
+		else if( frm.tagName == "TEXTAREA" && frm.value != frm.defaultValue )
+		{
+			return true; // 変更あり
+		}
+	}
+	return false;
+}
+
+
+function button_copy()
+{
+
+
+	//着順、レーン、記録をコピーします
+	var cnt = 68;
+
+	buf = "";
+
+	var delete_check = document.getElementsByName( "P_print_legend_delete_check[]" ) ;
+	var irm_code = document.getElementsByName( "P_print_legend_irm_code[]" ) ;
+	var jpn_text = document.getElementsByName( "P_print_legend_irm_jpn_text[]" ) ;
+	var eng_text = document.getElementsByName( "P_print_legend_irm_eng_text[]" ) ;
+	var new_irm_code = document.getElementsByName( "P_new_irm_code[]" ) ;
+	var new_jpn_text = document.getElementsByName( "P_new_irm_jpn_text[]" ) ;
+	var new_eng_text = document.getElementsByName( "P_new_irm_eng_text[]" ) ;
+
+	var cnt2 = document.form_main.P_new_legend_rows.value;
+
+	//タイトルをつけます
+
+
+	//レーンとナンバーと記録を取得する
+	for(i=0;i<cnt;i++)
+	{
+		if(delete_check[i].value == "" )
+		{
+			buf = buf + irm_code[i].value + "\t";
+			buf = buf + jpn_text[i].value + "\t";
+			buf = buf + eng_text[i].value + "\r\n";
+		}
+	}
+
+	for(i=0;i<cnt2;i++)
+	{
+		buf = buf + new_irm_code[i].value + "\t";
+		buf = buf + new_jpn_text[i].value + "\t";
+		buf = buf + new_eng_text[i].value + "\r\n";
+	}
+
+	var copyarea = document.getElementById("copyarea");
+
+    copyarea.value = buf;
+    copyarea.select();
+    document.execCommand("copy");
+
+	alert("コピーしました。");
+
+	return;
+}
+
+
+//-->
+</script>
+
+<style type="text/css">
+
+.pageMenu {
+    width: 100%;
+    max-width: 1276px;
+    min-width: 780px;
+    border: none;
+    background-color: #FFFFFF;
+    font-size: 22px;
+    margin-top: 42px;
+    line-height: 50px;
+}
+
+.requireBox {
+    display: inline-block;
+    margin-left: 9px;
+    padding: 0px 5px;
+    background-color: #FF3333;
+    color: #FFFFFF;
+    float: right;
+    line-height: 36px;
+    height: 36px;
+}
+.requireBox_li {
+    display: inline-block;
+    margin-left: 9px;
+    padding: 0px 5px;
+    background-color: #FF3333;
+    color: #FFFFFF;
+    line-height: 36px;
+    height: 36px;
+}
+.outsource_link{
+/*	width: 100%;
+	height:100%;*/
+/*	border: 1px solid #CCCCCC;*/
+/*	display: block;*/
+/*	padding: 0px*/
+}
+.outsource_link a{
+    cursor: pointer;
+	display: block;
+/*	width: 100%;*/
+	height:100%;
+	text-decoration: none;
+	color: #000;
+	padding: 10px;
+}
+.outsource_link a:hover {
+    background-color: #003399;
+    color: #FFFFFF;
+}
+
+</style>
+
+
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body onload='onload_event();tab_click(1);' >
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li class='backButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click("back",1)' style='width: 75px; padding-left: 3px; padding-right: 3px;'><span style='font-weight:bold; font-size:18px;'><-Back</span></li><li><div class='pageName'>競技会設定</div></li><li><div class='gameName'>2022滋賀高校春季総体[皇子山]</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_terminal'><input id='id_printer' type='button' value='未設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_click()' class='printButton'><span>端末選択</span></li><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option><option value='102'>記録（滋賀陸協１）</option><option value='104'>写真判定（高体連）</option><option value='105'>競技者係(MF244dw)</option><option value='117'>競技者係（テスト用）</option><option value='123'>普及(PX-1700F) </option><option value='150'>リザルト集</option><option value='151'>英語リザルト</option><option value='267'>番組編成(滋賀陸協1)</option><option value='340'>記録（コピー機）</option><option value='341'>賞状（PX-M6010F）</option><option value='356'>普及・記録</option><option value='357'>普及・賞状</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target='' enctype='multipart/form-data' autocomplete='kevin' >
+	<input type='hidden' name='P_SESSION_KEY' value='l11947'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-07-19 19:47:33 A3R4F3E1S5'>
+	<input type='hidden' name='P_prev_page' value='0012_gameinput.php'>
+	<input type='hidden' name='P_submit_value' value=''><input type='hidden' name='P_submit_sub' value=''>
+	<input type='hidden' name='P_submit_onload' value=''>
+		<input type='hidden' name='P_select_game_table_id' value='5538'>
+		<input type='hidden' name='P_class_rows' value='1'>
+		<input type='hidden' name='P_terminal_rows' value='12'>
+		<input type='hidden' name='P_legend_rows' value='68'>
+		<input type='hidden' name='P_new_terminal_rows' value='1'>
+		<input type='hidden' name='P_new_legend_rows' value='1'>
+		<input type='hidden' name='P_city_name' value='Otsu (Municipal Stadium)'>
+		<input type='hidden' name='P_tab_select_id' value='1'>
+		<input type='hidden' name='P_game_copy' value=''>
+		<input type='hidden' name='P_copy_game_table_id' value=''>
+		<input type='hidden' name='ver2_flag' value='0'>
+		<input type='hidden' name='P_back_flag' value='0'>
+		<input name="shortcut_flag" type="hidden" >
+
+
+	<!--  -->
+	<div class='topBox'>
+		<table class='topLine' style='margin-top: 42px;'>
+			<tr class='lineH50'><!--
+			--><td style='padding-left:20px; width:58%;'>				<input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(1,0)' class='inputButton width200' style='height:40px; vertical-align: middle;'>
+			
+							<input type='button' value='他大会取込' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								onclick='' class='inputButtonUndev width200' style='height:40px; vertical-align: middle;'>
+
+							
+			</td><!--
+			--><td style='text-align: right; padding-right: 20px;'>				<input type='button' value='削除' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(2,0)' class='inputButton width200' style='height:40px; vertical-align: middle;'>
+			</td>
+			</tr>
+		</table>
+
+		<table class='tabLine' style='margin: 0px 20px 0px 20px; max-width: 1236px;' >
+			<tr style='line-height: 45px;'>
+			<td class='width13per backDBlue' id='id_tab_1' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(1)'>基本情報</td><!--
+			--><td class='width13per tabbtn' id='id_tab_2' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(2)'>公開設定</td><!--
+			--><td class='width13per tabbtn' id='id_tab_3' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(3)'>競技会運営</td><!--
+			--><td class='width13per tabbtn' id='id_tab_4' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(4)'>クラス</td><!--
+			--><td class='width13per tabbtn' id='id_tab_5' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(5)'>エントリー</td><!--
+			--><td class='width13per tabbtn' id='id_tab_6' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(6)'>システム</td><!--
+			--><td class='width13per tabbtn' id='id_tab_7' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='tab_click(7)' style='background-color: #007130; color: #fff;'>外部ｻｰﾋﾞｽ</td>
+			</tr>
+		</table>
+	</div>
+
+	<!--  -->
+	<div class='bodyBox marginTop219' style='margin-top:138px;'>
+
+		<!--  -->
+		<table class='inputTable ' id='id_base_tab'>
+
+		<tr>
+			<th class='textLeft' style='width:26%;'>基本競技会（入力不可）<span class='requireBox'>必須</span></th>
+			<td><span id='id_game_name'>滋賀春季高校総合体育大会</span>
+			<input type='hidden' name='P_game_baseid' value='ay020001'>
+			<input type='button' value='変更' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click_popup(1,0)' class='inputButton width150'>
+			基本競技会ID&nbsp;ay020001&nbsp;&nbsp;競技会ID&nbsp;ay022022012			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技場（入力不可）<span class='requireBox'>必須</span></th>
+			<td><span id='id_short_stadium'>皇子山(Otsu (Municipal Stadium))</span>
+			<input type='hidden' name='P_stadium_id' value='17'>
+			<input type='button' value='競技場選択' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click_popup(2,0)' class='inputButton width150'>
+			競技場コード:252020			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>都道府県<span class='requireBox'>必須</span></th>
+			<td><select name='P_pref' class='selectNormal' onkeydown='return move_focus_name(event,"P_support","P_start_date");'>
+				<option value='0'>指定無</option><option value='1'>北海道</option><option value='2'>青森</option><option value='3'>岩手</option><option value='4'>宮城</option><option value='5'>秋田</option><option value='6'>山形</option><option value='7'>福島</option><option value='8'>茨城</option><option value='9'>栃木</option><option value='10'>群馬</option><option value='11'>埼玉</option><option value='12'>千葉</option><option value='13'>東京</option><option value='14'>神奈川</option><option value='15'>山梨</option><option value='16'>新潟</option><option value='17'>長野</option><option value='18'>富山</option><option value='19'>石川</option><option value='20'>福井</option><option value='21'>静岡</option><option value='22'>愛知</option><option value='23'>三重</option><option value='24'>岐阜</option><option value='25' selected='selected'>滋賀</option><option value='26'>京都</option><option value='27'>大阪</option><option value='28'>兵庫</option><option value='29'>奈良</option><option value='30'>和歌山</option><option value='31'>鳥取</option><option value='32'>島根</option><option value='33'>岡山</option><option value='34'>広島</option><option value='35'>山口</option><option value='36'>香川</option><option value='37'>徳島</option><option value='38'>愛媛</option><option value='39'>高知</option><option value='40'>福岡</option><option value='41'>佐賀</option><option value='42'>長崎</option><option value='43'>熊本</option><option value='44'>大分</option><option value='45'>宮崎</option><option value='46'>鹿児島</option><option value='47'>沖縄</option>
+			</select></td>
+		</tr>
+
+		<tr>
+			<th class='textLeft'>競技会開催期間<span class='requireBox'>必須</span></th>
+			<td><input type='text' name='P_start_date' value='2022/06/02'
+			 onkeydown='return move_focus_name(event,"P_pref","P_end_date");'
+			 class='textBox imeOff requireColor width110' placeholder='YYYY/MM/DD' > 〜
+			<input type='text' name='P_end_date' value='2022/06/04'
+			 onkeydown='return move_focus_name(event,"P_start_date","P_disp_date");'
+			 class='textBox imeOff requireColor width110' placeholder='YYYY/MM/DD'>
+			※開催年は後から変更できません。日付は yyyy-mm-dd の形式で入力してください</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>期間文言（80文字以内）</th>
+			<td><input type='text' name='P_disp_date' value='出場選手の保護者のみ観戦可能です。皇子山陸上競技場への駐車は競技役員以外できません。大会に関する詳細な連絡事項は関連URLでお知らせします。併せてご覧ください。'
+			 onkeydown='return move_focus_name(event,"P_end_date","P_short_name");'
+			 class='textBox width700'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技会略称（16文字以内）<span class='requireBox'>必須</span></th>
+			<td><input type='text' name='P_short_name' value='2022滋賀高校春季総体'
+			 onkeydown='return move_focus_name(event,"P_disp_date","P_long_name");'
+			 class='textBox requireColor width300'>
+			※都道府県名を入れるなど、他と区別がつく名前で登録してください。</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技会名称（80文字以内）</th>
+			<td><input type='text' name='P_long_name' value='令和４年度春季高等学校総合体育大会陸上競技の部'
+			 onkeydown='return move_focus_name(event,"P_short_name","P_game_english");'
+			 class='textBox width700'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技会英語名称（80文字以内）<span class='requireBox'>必須</span></th>
+			<td><input type='text' name='P_game_english' value='2022 Spring Shiga Prefectural High School Athletic Game'
+			 onkeydown='return move_focus_name(event,"P_long_name","P_sub_name");'
+			 class='textBox requireColor width700'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技会サブ名称（80文字以内）</th>
+			<td><input type='text' name='P_sub_name' value='兼秩父宮賜杯全国高等学校陸上競技対校選手権大会滋賀県予選会'
+			 onkeydown='return move_focus_name(event,"P_game_english","P_game_count");'
+			 class='textBox width700'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>WAカテゴリ<span class='requireBox'>必須</span></th>
+			<td>
+			<select name='P_wa_category' class='selectNormal' onkeydown='return move_focus_name(event,"P_sub_name","P_game_count");'>
+				<option value='UO'>UO</option><option value='F' selected='selected'>F</option><option value='E'>E</option><option value='D'>D</option><option value='C'>C</option><option value='B'>B</option><option value='A'>A</option><option value='GL'>GL</option><option value='GW'>GW</option><option value='DF'>DF</option><option value='OW'>OW</option>
+			</select>
+			※ＵＯ＝非公認競技会			</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft'>競技会回数（数字）</th>
+			<td><input type='text' name='P_game_count' value=''
+			 onkeydown='return move_focus_name(event,"P_wa_category","P_organizer");'
+			 class='textBox imeOff width100'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>主催（60文字以内）</th>
+			<td><input type='text' name='P_organizer' value='滋賀陸上競技協会・滋賀県高体連陸上競技専門部'
+			 onkeydown='return move_focus_name(event,"P_game_count","P_supervisor");'
+			 class='textBox width700'><br>
+			※大会報告資料等の設定項目</td>
+
+		</tr>
+		<tr>
+			<th class='textLeft'>主管（60文字以内）</th>
+			<td><input type='text' name='P_supervisor' value='滋賀県高体連陸上競技専門部'
+			 onkeydown='return move_focus_name(event,"P_organizer","P_support");'
+			 class='textBox width700'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>後援（60文字以内）</th>
+			<td><input type='text' name='P_support' value=''
+			 onkeydown='return move_focus_name(event,"P_supervisor","P_support");'
+			 class='textBox width700'></td>
+		</tr>
+
+
+		</table>
+
+		<!--  -->
+		<table class='inputTable' id='id_release_tab' style='display:none;'>
+
+		<tr>
+			<th class='textLeft'>公開</th>
+			<td>
+			<select name='P_disp_open' class='selectNormal' onkeydown='return move_focus_name(event,"P_memo_file5","P_disp_round");'>
+				<option value='0' selected='selected'>全公開する（通常）</option><option value='1'>結果公開せずタイムテーブルは公開する</option><option value='2'>大会情報のみ公開し結果は公開しない</option><option value='3'>大会は公開せずランキングには表示する</option><option value='4'>完全に非公開にする</option>
+			</select>
+			※一般ページへの公開設定			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>スタートリスト公開</th>
+			<td>
+			<select name='P_start_open' class='selectNormal' onkeydown='return move_focus_name(event,"P_memo_file5","P_disp_round");'>
+				<option value='0'>班組確定前でも表示する</option><option value='1' selected='selected'>班組確定後のみ表示する</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>ラウンド・順位指定公開</th>
+			<td>
+			<select name='P_disp_round' class='selectNormal' onkeydown='return move_focus_name(event,"P_disp_open","P_rank_prank");'>
+				<option value='0'>指定無</option><option value='1'>決勝</option><option value='2'>準決勝</option><option value='5'>予選</option>			</select>
+
+
+			<select name='P_rank_prank' class='selectNormal' onkeydown='return move_focus_name(event,"P_disp_round","P_disp_rank");' >
+				<option value=0 selected>組順位
+<option value=1>総合順位
+			</select>
+
+
+			<input type='text' name='P_disp_rank' value=''
+			 onkeydown='return move_focus_name(event,"P_disp_round","P_disp_rank_type");'
+			 class='textBox imeOff width50'>
+			位まで公開			※公開が「全公開する(通常)」場合のみ適用されます。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>公開順位表示設定</th>
+			<td>
+			<select name='P_disp_rank_type' class='selectNormal' onkeydown='return move_focus_name(event,"P_disp_rank","P_disp_erec");'>
+				<option value='0' selected='selected'>組順位</option><option value='1'>総合順位</option>
+			</select>
+			※組順位は組内の順位。総合順位はトータル順位が表示されます。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>資格記録表示設定</th>
+			<td>
+			<select name='P_disp_erec' class='selectNormal' onkeydown='return move_focus_name(event,"P_disp_rank_type","P_disp_gamerecord");'>
+				<option value='0' selected='selected'>表示</option><option value='1'>非表示</option>
+			</select>
+			※一般ページへの資格記録表示設定			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>大会記録公開</th>
+			<td><label for='id0_P_disp_gamerecord'>
+			<input type='radio' name='P_disp_gamerecord' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_disp_erec","P_inquiry");'
+			 class='radioButton' id='id0_P_disp_gamerecord'>
+			公開する</label>
+			<label for='id1_P_disp_gamerecord'>
+			<input type='radio' name='P_disp_gamerecord' value='1' 			 onkeydown='return move_focus_name(event,"P_disp_erec","P_inquiry");'
+			 class='radioButton' id='id1_P_disp_gamerecord'>
+			公開しない</label>
+
+			※公開が「全公開する（通常）」場合のみ一般ページに公開されます。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>問合せ先名称（60文字以内）<span class='requireBox'>必須</span></th>
+			<td><input type='text' name='P_inquiry' value='彦根工業高等学校　松岡遼'
+			 onkeydown='return move_focus_name(event,"P_disp_gamerecord","P_request_mail");'
+			 class='textBox width700'><br>
+ 			※一般の大会閲覧画面に表示されます			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>問合せメールアドレス（60文字以内）</th>
+			<td><input type='text' name='P_request_mail' value='info@shigahstf.com'
+			 onkeydown='return move_focus_name(event,"P_inquiry","P_game_url");'
+			 class='textBox width700'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技会URL（100文字以内）</th>
+			<td><input type='text' name='P_game_url' value='https://shigahstf.com/infomation/spring'
+			 onkeydown='return move_focus_name(event,"P_request_mail","P_photo_memo");'
+			 class='textBox width700'></td>
+		</tr>
+		<tr>
+			<th class='textLeft' rowspan='2'>写真説明（200文字以内）<br>登録写真（説明必須）</th>
+			<td><textarea name='P_photo_memo' class='textareaBox width700'></textarea></td>
+		</tr>
+		<tr>
+			<td>
+				<input type='file' name='PF_photograph' class='fileButton'>
+				※説明は写真とセットです。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' rowspan='5'>ファイル説明（20文字以内）<br>登録ファイル（説明必須）</th>
+			<td><input type='text' name='P_memo_file1' value='大会要項' placeholder='ファイル説明１'
+			 onkeydown='return move_focus_name(event,"P_photo_memo","P_memo_file2");'
+			 class='textBox width700'><br>
+				[<A HREF='../../games/dataopen/202205271025070_url_file1.pdf' TARGET='_blank'>202205271025070_url_file1.pdf</A>]
+
+<!--
+				<img src='../../games/dataopen/202205271025070_url_file1.pdf' class='width300'>
+-->
+				<input type='hidden' name='P_url_file1' value='202205271025070_url_file1.pdf'>
+				削除<input type='checkbox' name='PF_delete_url_file1' value='ON' class='checkBox'>
+			</td>
+		</tr>
+		<tr>
+			<td><input type='text' name='P_memo_file2' value='リザルトブック'  placeholder='ファイル説明２'
+			 onkeydown='return move_focus_name(event,"P_memo_file1","P_memo_file3");'
+			 class='textBox width700'><br>
+<!--
+				<img src='../../games/dataopen/202206051435428_url_file2.pdf' class='width300'>
+-->
+				[<A HREF='../../games/dataopen/202206051435428_url_file2.pdf' TARGET='_blank'>202206051435428_url_file2.pdf</A>]
+
+				<input type='hidden' name='P_url_file2' value='202206051435428_url_file2.pdf'>
+				削除<input type='checkbox' name='PF_delete_url_file2' value='ON' class='checkBox'>
+			</td>
+		</tr>
+		<tr>
+			<td><input type='text' name='P_memo_file3' value=''  placeholder='ファイル説明３'
+			 onkeydown='return move_focus_name(event,"P_memo_file2","P_memo_file4");'
+			 class='textBox width700'><br>
+			<input type='file' name='PF_url_file3' class='fileButton'>
+			</td>
+		</tr>
+		<tr>
+			<td><input type='text' name='P_memo_file4' value=''  placeholder='ファイル説明４'
+			 onkeydown='return move_focus_name(event,"P_memo_file3","P_memo_file5");'
+			 class='textBox width700'><br>
+			<input type='file' name='PF_url_file4' class='fileButton'>
+			</td>
+		</tr>
+		<tr>
+			<td><input type='text' name='P_memo_file5' value=''  placeholder='ファイル説明５'
+			 onkeydown='return move_focus_name(event,"P_memo_file4","P_disp_open");'
+			 class='textBox width700'><br>
+			<input type='file' name='PF_url_file5' class='fileButton'>
+			</td>
+		</tr>
+
+		</table>
+
+		<!--  -->
+		<table class='inputTable' id='id_manage_tab' style='display:none;'>
+
+		<tr>
+			<th class='textLeft'>競技会コード（通常8桁、10文字以内）</th>
+			<td><input type='text' name='P_game_code' value='22251001'
+			 onkeydown='return move_focus_name(event,"P_c_recorder","P_indoor_flag");'
+			 class='textBox imeOff width150'>
+			※陸連の大会コードです。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>屋内外区分</th>
+			<td><label for='id0_P_indoor_flag'>
+			<input type='radio' name='P_indoor_flag' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_game_code","P_official_game_flag");'
+			 class='radioButton' id='id0_P_indoor_flag'>
+			アウトドア</label>
+			<label for='id1_P_indoor_flag'>
+			<input type='radio' name='P_indoor_flag' value='1' 			 onkeydown='return move_focus_name(event,"P_game_code","P_official_game_flag");'
+			 class='radioButton' id='id1_P_indoor_flag'>
+			インドア</label>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>公認区分</th>
+			<td><label for='id0_P_official_game_flag'>
+			<input type='radio' name='P_official_game_flag' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_indoor_flag","P_basic_point");'
+			 class='radioButton' id='id0_P_official_game_flag'>
+			公認</label>
+			<label for='id1_P_official_game_flag'>
+			<input type='radio' name='P_official_game_flag' value='1' 			 onkeydown='return move_focus_name(event,"P_indoor_flag","P_basic_point");'
+			 class='radioButton' id='id1_P_official_game_flag'>
+			非公認</label>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>決勝得点</th>
+			<td><input type='text' name='P_basic_point' value='8-7-6-5-4-3-2-1'
+			 onkeydown='return move_focus_name(event,"P_official_game_flag","P_auto_point_set");'
+			 placeholder='※ex.8-7-6-5-4-3-2-1'
+			 class='textBox imeOff width250'>
+			<br>※１位から順に「-」で区切って入力してください。			</td>
+		</tr>
+		<tr>
+
+			<th class='textLeft'>決勝得点自動付与区分</th>
+			<td><label for='id1_P_auto_point_set'>
+			<input type='radio' name='P_auto_point_set' value='1' checked='checked'			 onkeydown='return move_focus_name(event,"P_basic_point","P_open_rule");'
+			 class='radioButton' id='id1_P_auto_point_set'>
+			ON</label>
+			<label for='id0_P_auto_point_set'>
+			<input type='radio' name='P_auto_point_set' value='0' 			 onkeydown='return move_focus_name(event,"P_basic_point","P_open_rule");'
+			 class='radioButton' id='id0_P_auto_point_set'>
+			OFF</label>
+			</td>
+
+		</tr>
+		<tr>
+			<th class='textLeft'>オープン参加設定</th>
+			<td>
+			<select name='P_open_rule' class='selectNormal' onkeydown='return move_focus_name(event,"P_auto_point_set","P_best_flag");'>
+				<option value='0' selected='selected'>総合順位と大会記録の対象外とする</option><option value='1'>次のラウンドに進めない</option><option value='2'>次のラウンドにもトップ８にも進めない</option><option value='3'>駅伝・区間成績はオープンの扱いとしない</option>
+			</select>
+			<br>※ﾁｰﾑ名に「(ｵｰﾌﾟﾝ」「・ｵｰﾌﾟﾝ」「(OPEN」「・OPEN」<br>を含む選手が対象です。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>SB・PBの使用</th>
+			<td>
+			<select name='P_best_flag' class='selectNormal' onkeydown='return move_focus_name(event,"P_open_rule","P_association");'>
+				<option value='0'>使用しない</option><option value='1'>SBのみ自動判定</option><option value='2' selected='selected'>PBのみ自動判定</option><option value='3'>SB・PB自動判定</option>
+			</select>
+			</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft'>運営協会名（20文字以内）</th>
+			<td><input type='text' name='P_association' value='滋賀'
+			 onkeydown='return move_focus_name(event,"P_best_flag","P_chairperson");'
+			 class='textBox width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>上位一覧表表示審判長（20文字以内）</th>
+			<td><input type='text' name='P_chairperson' value='小寺　善正'
+			 onkeydown='return move_focus_name(event,"P_association","P_c_tech_track");'
+			 class='textBox width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>トラック審判長/JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_tech_track' value='小寺　善正'
+			 onkeydown='return move_focus_name(event,"P_chairperson","P_c_tech_track_jso");'
+			 class='textBox width250'><!--
+			-->/<input type='text' name='P_c_tech_track_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_tech_track","P_c_ref_jump");'
+			 class='textBox width250'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>跳躍審判長/JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_ref_jump' value='浮氣　清司'
+			 onkeydown='return move_focus_name(event,"P_c_tech_track_jso","P_c_ref_jump_jto");'
+			 class='textBox width250'><!--
+			-->/<input type='text' name='P_c_ref_jump_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_ref_jump","P_c_aref_throw");'
+			 class='textBox width250'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>投てき審判長/JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_aref_throw' value='小澤　信一'
+			 onkeydown='return move_focus_name(event,"P_c_ref_jump_jto","P_c_aref_throw_jto");'
+			 class='textBox width250'><!--
+			-->/<input type='text' name='P_c_aref_throw_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_aref_throw","P_c_start_comb");'
+			 class='textBox width250'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>混成審判長/JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_start_comb' value='馬場　豊'
+			 onkeydown='return move_focus_name(event,"P_c_aref_throw_jto","P_c_start_comb_jto");'
+			 class='textBox width250'><!--
+			-->/<input type='text' name='P_c_start_comb_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_start_comb","P_c_photo_walk");'
+			 class='textBox width250'>
+
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競歩審判長/JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_photo_walk' value='小寺　善正'
+			 onkeydown='return move_focus_name(event,"P_c_start_comb_jto","P_c_photo_walk_jto");'
+			 class='textBox width250'><!--
+			-->/<input type='text' name='P_c_photo_walk_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_photo_walk","P_c_time_road");'
+			 class='textBox width250'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>ロード審判長/JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_time_road' value=''
+			 onkeydown='return move_focus_name(event,"P_c_photo_walk_jto","P_c_time_road_jto");'
+			 class='textBox width250'><!--
+			-->/<input type='text' name='P_c_time_road_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_time_road","P_c_competi");'
+			 class='textBox width250'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>番組編成員（60文字以内）</th>
+			<td><input type='text' name='P_c_competi' value='松井　真也'
+			 onkeydown='return move_focus_name(event,"P_c_time_road","P_c_recorder");'
+			 class='textBox width500'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>記録主任（60文字以内）</th>
+			<td><input type='text' name='P_c_recorder' value='亀田　徹'
+			 onkeydown='return move_focus_name(event,"P_c_competi","P_c_jto");'
+			 class='textBox width500'></td>
+		</tr>
+		<tr style='display:none;'>
+			<th class='textLeft'>JTO（60文字以内）</th>
+			<td><input type='text' name='P_c_jto' value=''
+			 onkeydown='return move_focus_name(event,"P_c_recorder","P_c_jto");'
+			 class='textBox width500'></td>
+		</tr>
+
+		</table>
+
+		<!--  -->
+		<div id='id_class_tab' style='display:none;'>
+<!--
+		<div class='pageMenu hBox70 backWhite' >
+			<ul class='menuFull textLeft backGray marginTop15 paddingTB3' style='margin-top:23px;'>
+			<li class='width75 fontBig paddingL15'></li><!--
+-->
+		<div class='pageMenu backGray' style='margin-top:3px; background-color: #727171;'>
+			<ul class='menuFull textLeft paddingTB3'>
+			<li class='width75 fontBig paddingL15'></li><!--
+
+			--><li class='width75 fontBig '>表示順</li><!--
+			--><li class='width75 fontBig '>コード</li><!--
+			--><li class='width400 fontBig ' style='width:300px;'>クラス名称（12文字以内）<span class='requireBox_li'>必須</span></li><!--
+			--><li class='width300 fontBig '>クラス英語名称（12文字以内）<span class='requireBox_li'>必須</span></li><!--
+			--><li></li>
+			</ul>
+		</div>
+
+		<table class='contentTable' style='margin-top:5px;'>
+		<tbody id='id_class_tbody'>
+<tr class='contentData' id='id_class_row_0'><td class='width75 paddingTB3 paddingL15'><input type='hidden' name='P_class_table_id[]' value='35290' id='id_class_pid_0'><input type='hidden' name='P_class_table_delete_check[]' value='' id='id_class_delchk_0'><input type='button' value='削除' id='id_class_delb_0' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' style='display:none' onclick='del_class_rows(this,0)' class='inputButton width50'></td><td class='width75 paddingTB3'><input type='text' name='P_class_table_sort_num[]' value='1' class='textBox imeOff width50' onkeydown='return move_focus(event,this);'></td><td class='width75 paddingTB3 textCenter'>0</td><td class='width300 paddingTB3'><input type='text' name='P_class_table_name_class[]' value=' ' class='textBox width250' onkeydown='return move_focus(event,this);'></td><td class='width300 paddingTB3'><input type='text' name='P_class_table_name_english[]' value=' ' class='textBox width250' onkeydown='return move_focus(event,this);'></td><td class='paddingTB3'><input type='button' value=' + ' name='name_class_addb' id='id_class_addb_0' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_class_rows(this,0)' class='inputButton width50'></td></tr>
+
+		</tbody>
+		</table>
+		</div>
+
+		<!--  -->
+		<table class='inputTable' id='id_entry_tab' style='display:none;'>
+
+		<tr>
+			<th class='textLeft' colspan='2'>受付期間</th>
+			<td><input type='text' name='P_entry_start' value='2022/04/20'
+			 onkeydown='return move_focus_name(event,"P_entry_mail","P_entry_end");'
+			 class='textBox imeOff width150' placeholder='YYYY/MM/DD'> -
+			<input type='text' name='P_entry_end' value='2022/05/10'
+			 onkeydown='return move_focus_name(event,"P_entry_start","P_entry_string");'
+			 class='textBox imeOff width150' placeholder='YYYY/MM/DD'>
+			<br>※エントリー等の設定。一般者の受付可能・ブランクは無制限。</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>受付注意文言（100文字以内）</th>
+			<td><input type='text' name='P_entry_string' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_end","P_rec_start");'
+			 class='textBox width600'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>資格記録対象期間</th>
+			<td><input type='text' name='P_rec_start' value='2021/01/01'
+			 onkeydown='return move_focus_name(event,"P_entry_string","P_rec_end");'
+			 class='textBox imeOff width150' placeholder='YYYY/MM/DD'> -
+			<input type='text' name='P_rec_end' value='2022/05/10'
+			 onkeydown='return move_focus_name(event,"P_rec_start","P_entry_count");'
+			 class='textBox imeOff width150' placeholder='YYYY/MM/DD'>
+			<br>※資格記録の対象期間範囲・ブランクは無制限。</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>参加種目数上限</th>
+			<td><input type='text' name='P_entry_count' value=''
+			 onkeydown='return move_focus_name(event,"P_rec_end","P_entry_max");'
+			 class='textBox imeOff width75'>
+			※選手１人当りの参加種目数上限・ブランクまたは０で無制限。</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>所属・種目別上限</th>
+			<td><input type='text' name='P_entry_max' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_count","P_entry_category");'
+			 class='textBox imeOff width75'>
+			※所属別の同一種目への参加人数上限・ブランクまたは０で無制限。</td>
+		</tr>
+		<tr>
+			<th class='textLeft' rowspan='3'>参加制限</th>
+			<th class='textLeft'>カテゴリ</th>
+			<td>
+			<select name='P_entry_category' class='selectNormal' onkeydown='return move_focus_name(event,"P_entry_max","P_entry_pref");'>
+				<option value='0' selected='selected'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20'>高校</option><option value='30'>中学</option><option value='40'>小学</option>
+			</select>
+			※指定カテゴリ以外の所属からログインができなくなります。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>都道府県</th>
+			<td>
+			<select name='P_entry_pref' class='selectNormal' onkeydown='return move_focus_name(event,"P_entry_category","P_entry_user_area");'>
+				<option value='0' selected='selected'>指定無</option><option value='1'>北海道</option><option value='2'>青森</option><option value='3'>岩手</option><option value='4'>宮城</option><option value='5'>秋田</option><option value='6'>山形</option><option value='7'>福島</option><option value='8'>茨城</option><option value='9'>栃木</option><option value='10'>群馬</option><option value='11'>埼玉</option><option value='12'>千葉</option><option value='13'>東京</option><option value='14'>神奈川</option><option value='15'>山梨</option><option value='16'>新潟</option><option value='17'>長野</option><option value='18'>富山</option><option value='19'>石川</option><option value='20'>福井</option><option value='21'>静岡</option><option value='22'>愛知</option><option value='23'>三重</option><option value='24'>岐阜</option><option value='25'>滋賀</option><option value='26'>京都</option><option value='27'>大阪</option><option value='28'>兵庫</option><option value='29'>奈良</option><option value='30'>和歌山</option><option value='31'>鳥取</option><option value='32'>島根</option><option value='33'>岡山</option><option value='34'>広島</option><option value='35'>山口</option><option value='36'>香川</option><option value='37'>徳島</option><option value='38'>愛媛</option><option value='39'>高知</option><option value='40'>福岡</option><option value='41'>佐賀</option><option value='42'>長崎</option><option value='43'>熊本</option><option value='44'>大分</option><option value='45'>宮崎</option><option value='46'>鹿児島</option><option value='47'>沖縄</option>
+			</select>
+			※指定都道府県以外の所属からログインができなくなります。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>地区</th>
+			<td>
+			<select name='P_entry_user_area' class='selectNormal' onkeydown='return move_focus_name(event,"P_entry_pref","P_entry_fee");'>
+				<option value='0' selected='selected'>指定無</option><option value='1'>大津</option><option value='2'>彦根</option>
+			</select>
+			※指定地区以外の所属からログインができなくなります。			</td>
+		</tr>
+		<tr>
+
+			<th class='textLeft' colspan='2'>参加料金</th>
+			<td><input type='text' name='P_entry_fee' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_user_area","P_entry_fee_20");'
+			 class='textBox imeOff width500'>
+			<a href='../comp/help/gameinput_help_fee.php'  target='_blank'>※入力形式はこちら。</a></td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>参加料金(高校)</th>
+			<td><input type='text' name='P_entry_fee_20' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_fee","P_entry_fee_30");'
+			 class='textBox imeOff width500'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>参加料金(中学)</th>
+			<td><input type='text' name='P_entry_fee_30' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_fee_20","P_entry_fee_40");'
+			 class='textBox imeOff width500'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>参加料金(小学)</th>
+			<td><input type='text' name='P_entry_fee_40' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_fee_30","P_use_receipt");'
+			 class='textBox imeOff width500'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>領収書利用</th>
+			<td>
+			<select name='P_use_receipt' class='selectNormal' onkeydown='return move_focus_name(event,"P_entry_fee_40","P_credit_flag");'>
+				<option value='0' selected='selected'>利用しない</option><option value='1'>利用する</option>
+			</select>
+			※申込書下部に領収書を印刷するかどうかの設定です。			</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' colspan='2'>他ユーザーエントリー</th>
+			<td>
+			<select name='P_other_entry_open' class='selectNormal' onkeydown='return move_focus_name(event,"P_use_receipt","P_entry_open");'>
+				<option value='0'>受付しない（通常）</option><option value='1'>他ユーザーからのエントリーを受付ける</option>
+			</select>
+			※他のユーザーがこの競技会に直接申込ができるようになります。<br>
+			</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' colspan='2'>非ﾛｸﾞｲﾝ申込<br>非ﾛｸﾞｲﾝ用ﾒｰﾙｱﾄﾞﾚｽ</th>
+			<td>
+			<select name='P_entry_open' class='selectNormal' onkeydown='return move_focus_name(event,"P_other_entry_open","P_entry_mail");'>
+				<option value='0'
+Notice: Undefined variable: entry_open_flag in /var/www/html/devuser/athleteranking.com/members/compv3/0012_gameinput.php on line 6467
+ selected='selected'>受付しない（通常）</option><option value='1'
+Notice: Undefined variable: entry_open_flag in /var/www/html/devuser/athleteranking.com/members/compv3/0012_gameinput.php on line 6467
+>受付し公開しない</option><option value='2'
+Notice: Undefined variable: entry_open_flag in /var/www/html/devuser/athleteranking.com/members/compv3/0012_gameinput.php on line 6467
+>受付し公開する</option>
+			</select>
+			※ﾛｸﾞｲﾝせずに申込する機能を使用するか否か。ﾒｰﾙｱﾄﾞﾚｽとｾｯﾄです。<a href='../comp/help/gameinput_help_open.php' target='_blank'>詳細はこちら。</a><br>
+			<input type='text' name='P_entry_mail' value=''
+			 onkeydown='return move_focus_name(event,"P_entry_open","P_entry_start");'
+			 class='textBox imeOff width500'>※非ﾛｸﾞｲﾝ申込時の連絡用ﾒｰﾙｱﾄﾞﾚｽ			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2' rowspan='2' style='background-color: #007130;'>
+				参加料決済サービス（外部サービス）				<p style='font-size:12px; line-height: 12px;'>各チームの参加料をオンラインで決済できます。</p>
+				<p style='font-size:12px;'><a href='https://athletepit.com/img/onlinepayment_terms.pdf' target='_blank' style='color: #fff;'>利用規約・詳細はこちら</a></p>
+			</th>
+			<td style='background-color: #90ee90;'>
+				<select name='P_credit_flag' class='selectNormal' onkeydown='return move_focus_name(event,"P_use_receipt","P_entry_open");'>
+				<option value='0' selected='selected'>利用しない</option><option value='1'>利用する</option>
+			</select>
+			利用する場合は、決済申込担当者を必ずご入力ください。			</td>
+		</tr>
+		<tr>
+			<td style='background-color: #90ee90;'>
+			決済申込担当者			<input type='text' name='P_credit_name' value='' placeholder='お名前'
+			 onkeydown='return move_focus_name(event,"P_credit_flag","P_credit_mail");'
+			 class='textBox  width200'>
+			<input type='text' name='P_credit_mail' value='' placeholder='連絡用メールアドレス'
+			 onkeydown='return move_focus_name(event,"P_credit_name","P_entry_open");'
+			 class='textBox imeOff width500'>
+
+			</td>
+		</tr>
+
+
+
+		</table>
+
+		<!--  -->
+		<table class='inputTable' id='id_system_tab' style='display:none;'>
+		<tbody id='id_system_tbody'>
+
+
+		<tr>
+			<th class='textLeft' colspan='2'>競技会状態</th>
+			<td><label for='id0_P_game_status'>
+			<input type='radio' name='P_game_status' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_terminal_name[]","P_use_lang");'
+			 class='radioButton' id='id0_P_game_status'>
+			未</label>
+			<label for='id1_P_game_status'>
+			<input type='radio' name='P_game_status' value='1' 			 onkeydown='return move_focus_name(event,"P_terminal_name[]","P_use_lang");'
+			 class='radioButton' id='id1_P_game_status'>
+			オープン</label>
+			<label for='id2_P_game_status'>
+			<input type='radio' name='P_game_status' value='2' 			 onkeydown='return move_focus_name(event,"P_terminal_name[]","P_use_lang");'
+			 class='radioButton' id='id2_P_game_status'>
+			クローズ</label>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>言語</th>
+			<td>
+			<select name='P_use_lang' class='selectNormal' onkeydown='return move_focus_name(event,"P_game_status","P_system_ver");'>
+				<option value='JPN' selected='selected'>JPN</option>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>システムバージョン</th>
+			<td><label for='id1_P_system_ver'>
+			<input type='radio' name='P_system_ver' value='1' checked='checked'			 onkeydown='return move_focus_name(event,"P_use_lang","P_game_ope_mode");'
+			 class='radioButton' id='id1_P_system_ver'>
+			Ver.3</label>
+			<label for='id0_P_system_ver'>
+			<input type='radio' name='P_system_ver' value='0' 			 onkeydown='return move_focus_name(event,"P_use_lang","P_game_ope_mode");'
+			 class='radioButton' id='id0_P_system_ver'>
+			Ver.2（旧バージョン）</label>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>競技会運用モード</th>
+			<td><label for='id0_P_game_ope_mode'>
+			<input type='radio' name='P_game_ope_mode' value='0' 			 onkeydown='return move_focus_name(event,"P_system_ver","P_data_send_mode");'
+			 class='radioButton' id='id0_P_game_ope_mode'>
+			ページモード</label>
+			<label for='id1_P_game_ope_mode'>
+			<input type='radio' name='P_game_ope_mode' value='1' checked='checked'			 onkeydown='return move_focus_name(event,"P_system_ver","P_data_send_mode");'
+			 class='radioButton' id='id1_P_game_ope_mode'>
+			ルーズモード</label>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>データ送信機能</th>
+			<td><label for='id1_P_data_send_mode'>
+			<input type='radio' name='P_data_send_mode' value='1' 			 onkeydown='return move_focus_name(event,"P_game_ope_mode","P_entry_only_mode");'
+			 class='radioButton' id='id1_P_data_send_mode'>
+			ON</label>
+			<label for='id0_P_data_send_mode'>
+			<input type='radio' name='P_data_send_mode' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_game_ope_mode","P_entry_only_mode");'
+			 class='radioButton' id='id0_P_data_send_mode'>
+			OFF</label>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>エントリーのみ利用</th>
+			<td><label for='id1_P_entry_only_mode'>
+			<input type='radio' name='P_entry_only_mode' value='1' 			 onkeydown='return move_focus_name(event,"P_data_send_mode","P_print_system");'
+			 class='radioButton' id='id1_P_entry_only_mode'>
+			ON</label>
+			<label for='id0_P_entry_only_mode'>
+			<input type='radio' name='P_entry_only_mode' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_data_send_mode","P_print_system");'
+			 class='radioButton' id='id0_P_entry_only_mode'>
+			OFF</label>
+			※未エントリー時のみ変更できます。			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>帳票出力方法</th>
+			<td><label for='id0_P_print_system'>
+			<input type='radio' name='P_print_system' value='0' checked='checked'			 onkeydown='return move_focus_name(event,"P_entry_only_mode","P_search_game_num");'
+			 class='radioButton' id='id0_P_print_system'>
+			印刷システム</label>
+			<label for='id1_P_print_system'>
+			<input type='radio' name='P_print_system' value='1' 			 onkeydown='return move_focus_name(event,"P_entry_only_mode","P_search_game_num");'
+			 class='radioButton' id='id1_P_print_system'>
+			Excel出力（Ver.2）</label>
+			<label for='id2_P_print_system'>
+			<input type='radio' name='P_print_system' value='2' 			 onkeydown='return move_focus_name(event,"P_entry_only_mode","P_search_game_num");'
+			 class='radioButton' id='id2_P_print_system'>
+			HTMLプレビュー（Ver.2）</label>
+			</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' rowspan='6'>競技会別ID</th>
+			<th class='textLeft'></th>
+			<td>
+			<input type='text' name='P_search_game_num' value='' class='textBox imeOff width200' onkeydown='return move_focus_name(event,"P_print_system","P_user_table_loginpw[]");'>
+			<input type='button' value='取得' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='userbutton_click(1)' class='inputButton width75'>
+			<input type='button' value='生成' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='userbutton_click(2)' class='inputButton width75'>
+			<input type='button' value='削除' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='userbutton_click(3)' class='inputButton width75'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>管理者</th>
+			<td>
+			<input type='hidden' name='P_user_table_id[]' value=''>
+			<input type='text' name='P_user_table_loginid[]' value=''
+			 class='textBox readonlyColor width200' readonly='readonly'>
+			<input type='text' name='P_user_table_loginpw[]' value='' class='textBox imeOff width200'
+			 onkeydown='return move_focus_name_array(event,"P_search_game_num","P_password",this);'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>管理者エントリー</th>
+			<td>
+			<input type='hidden' name='P_user_table_id[]' value=''>
+			<input type='text' name='P_user_table_loginid[]' value=''
+			 class='textBox readonlyColor width200' readonly='readonly'>
+			<input type='text' name='P_user_table_loginpw[]' value='' class='textBox imeOff width200'
+			 onkeydown='return move_focus_name_array(event,"P_search_game_num","P_password",this);'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>エントリー</th>
+			<td>
+			<input type='hidden' name='P_user_table_id[]' value=''>
+			<input type='text' name='P_user_table_loginid[]' value=''
+			 class='textBox readonlyColor width200' readonly='readonly'>
+			<input type='text' name='P_user_table_loginpw[]' value='' class='textBox imeOff width200'
+			 onkeydown='return move_focus_name_array(event,"P_search_game_num","P_password",this);'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競技会運営</th>
+			<td>
+			<input type='hidden' name='P_user_table_id[]' value=''>
+			<input type='text' name='P_user_table_loginid[]' value=''
+			 class='textBox readonlyColor width200' readonly='readonly'>
+			<input type='text' name='P_user_table_loginpw[]' value='' class='textBox imeOff width200'
+			 onkeydown='return move_focus_name_array(event,"P_search_game_num","P_password",this);'>
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft'>閲覧者・CIS</th>
+			<td>
+			<input type='hidden' name='P_user_table_id[]' value=''>
+			<input type='text' name='P_user_table_loginid[]' value=''
+			 class='textBox readonlyColor width200' readonly='readonly'>
+			<input type='text' name='P_user_table_loginpw[]' value='' class='textBox imeOff width200'
+			 onkeydown='return move_focus_name_array(event,"P_search_game_num","P_password",this);'>
+			</td>
+		</tr>
+
+
+
+		<tr>
+			<th class='textLeft' colspan='2'>ショートカットパスワード</th>
+			<td><input type='text' name='P_password' value=''
+			 onkeydown='return move_focus_name(event,"P_user_table_loginpw[]","P_watch_pw");'
+			 autocomplete="off" class='textBox imeOff width300'> ※大規模大会以外は、空欄。
+<!--
+				<input type='button' value='CIS(審判長・総務)'  onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='' class='inputButtonUndev width120'>
+				<input type='button' value='CIS(ディレクター)'  onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='' class='inputButtonUndev width120'>
+				<input type='button' value='CIS(通告)'  onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='' class='inputButtonUndev width120'>
+-->
+			</td>
+		</tr>
+		<tr>
+			<th class='textLeft' colspan='2'>監視強化パスワード</th>
+			<td><input type='text' name='P_watch_pw' value=''
+			 onkeydown='return move_focus_name(event,"P_cap_color","P_auth_key_call");'
+			 autocomplete="off" class='textBox imeOff width300'> ※大規模大会以外は、空欄。</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' colspan='2'>アップロードパスワード</th>
+			<td><input type='text' name='P_cap_color' value=''
+			 onkeydown='return move_focus_name(event,"P_watch_pw","P_auth_key_call");'
+			 autocomplete="off" class='textBox imeOff width300'> ※半角数字４桁固定です。</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' rowspan='8'>権限キー設定</th>
+			<th class='textLeft'>受付</th>
+			<td>
+			※閲覧者・CISのIDでログイン時、CIS画面で権限キーを入力すると機能が利用できます。			<br><input type='text' name='P_auth_key_call' value=''
+			 onkeydown='return move_focus_name(event,"P_watch_pw","P_auth_key_announce");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>通告</th>
+			<td><input type='text' name='P_auth_key_announce' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_call","P_auth_key_print");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>印刷</th>
+			<td><input type='text' name='P_auth_key_print' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_announce","P_auth_key_monitor");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>大型表示盤</th>
+			<td><input type='text' name='P_auth_key_monitor' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_print","P_auth_key_wind");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>風速</th>
+			<td><input type='text' name='P_auth_key_wind' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_monitor","P_auth_key_field");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>フィールド</th>
+			<td><input type='text' name='P_auth_key_field' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_wind","P_auth_key_condition");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>グラコン</th>
+			<td><input type='text' name='P_auth_key_condition' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_field","P_auth_key_walk");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+		<tr>
+			<th class='textLeft'>競歩</th>
+			<td><input type='text' name='P_auth_key_walk' value=''
+			 onkeydown='return move_focus_name(event,"P_auth_key_condition","P_terminal_name[]");'
+			 class='textBox imeOff width300'></td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' rowspan='14' colspan='2' id='id_terminal_th'>端末情報（30文字以内）</th>
+			<td>
+			※端末情報を登録しておくと、端末を指定して印刷することができます。			<!--
+			<br>
+			<input type='button' value='直近の競技会から取得'
+			 onclick='copyterminalbutton_click()' class='inputButton width250'>
+
+			※直近の同競技場の競技会から端末情報をコピーします。			-->
+			</td>
+		</tr>
+		<tr id='id_terminal_row_0'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,0)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='102'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_0'>
+			記録（滋賀陸協１）			</td>
+		</tr>
+		<tr id='id_terminal_row_1'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,1)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='104'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_1'>
+			写真判定（高体連）			</td>
+		</tr>
+		<tr id='id_terminal_row_2'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,2)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='105'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_2'>
+			競技者係(MF244dw)			</td>
+		</tr>
+		<tr id='id_terminal_row_3'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,3)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='117'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_3'>
+			競技者係（テスト用）			</td>
+		</tr>
+		<tr id='id_terminal_row_4'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,4)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='123'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_4'>
+			普及(PX-1700F) 			</td>
+		</tr>
+		<tr id='id_terminal_row_5'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,5)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='150'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_5'>
+			リザルト集			</td>
+		</tr>
+		<tr id='id_terminal_row_6'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,6)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='151'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_6'>
+			英語リザルト			</td>
+		</tr>
+		<tr id='id_terminal_row_7'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,7)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='267'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_7'>
+			番組編成(滋賀陸協1)			</td>
+		</tr>
+		<tr id='id_terminal_row_8'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,8)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='340'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_8'>
+			記録（コピー機）			</td>
+		</tr>
+		<tr id='id_terminal_row_9'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,9)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='341'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_9'>
+			賞状（PX-M6010F）			</td>
+		</tr>
+		<tr id='id_terminal_row_10'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,10)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='356'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_10'>
+			普及・記録			</td>
+		</tr>
+		<tr id='id_terminal_row_11'>
+			<td><span class='inlineBox width75'><input type='button' value='削除'
+			 onclick='hidden_terminal_rows(this,11)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_terminal_id[]' value='357'>
+			<input type='hidden' name='P_print_terminal_delete_check[]' value='' id='id_terminal_delchk_11'>
+			普及・賞状			</td>
+		</tr>
+
+		<tr id='id_terminal_row'>
+			<td><span class='inlineBox width75'> </span>
+				<input type='text' name='P_terminal_name[]' value='' class='textBox width300'
+				 onkeydown='return move_focus_name_array(event,"P_auth_key_walk","P_game_status",this);'>
+				<input type='button' value=' + ' name='name_terminal_addb' id='id_terminal_addb_0' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'				 onclick='add_terminal_rows(this,0)' class='inputButton width50'>
+			</td>
+		</tr>
+
+		<tr>
+			<th class='textLeft' rowspan='71' colspan='2' id='id_legend_th'>競技会使用略号</th>
+			<td>
+			※略号を登録しておくと、記録入力画面の備考欄に略号入力時、リザルトの注釈に表示することができます。<br>
+
+			<input type='button' value='初期値取得' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(4)' class='inputButton width120' style='height:40px; '>
+
+			<input type='button' value='直近の競技会から取得' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(5)' class='inputButton width200' style='height:40px; '>
+
+			<input type='button' value='コピー' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_copy()' class='inputButton width120' style='height:40px; '>
+
+
+			<!--
+			<br>
+			<input type='button' value='直近の競技会から取得'
+			 onclick='copylegendbutton_click()' class='inputButton width250'>
+			※直近の同競技場の競技会から端末情報をコピーします。			-->
+			</td>
+		</tr>
+
+		<tr id='id_legend_row_0'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,0)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38493'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_0'>
+			<input type='text' name='P_print_legend_irm_code[]' value='C' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='不適切行為' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='unsporting manner / improper conduct' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_1'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,1)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38494'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_1'>
+			<input type='text' name='P_print_legend_irm_code[]' value='E1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='登録外競技者出場' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Unidentified athlete' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_2'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,2)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38495'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_2'>
+			<input type='text' name='P_print_legend_irm_code[]' value='E2' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='指定外コース走行' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Course Out' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_3'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,3)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38496'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_3'>
+			<input type='text' name='P_print_legend_irm_code[]' value='E3' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='指定外たすき使用' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Unidentified sash' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_4'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,4)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38497'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_4'>
+			<input type='text' name='P_print_legend_irm_code[]' value='E4' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='たすきリレー不正' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Missing sash relay' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_5'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,5)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38498'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_5'>
+			<input type='text' name='P_print_legend_irm_code[]' value='FS' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR16.7-不正スタート' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='false start' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_6'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,6)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38499'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_6'>
+			<input type='text' name='P_print_legend_irm_code[]' value='FS1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR39.8.3-不正スタート（混成種目）' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='false start (Combined Events)' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_7'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,7)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38500'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_7'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR6.3.1-不適切なペーメーカーによる助力を得た' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='pacing' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_8'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,8)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38501'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_8'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J2' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR6.3.2-電子機器の使用' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='use of electronic device' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_9'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,9)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38443'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_9'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J3' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR6.3.3-技術や装置の使用' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='use of technology or appliance' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_10'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,10)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38483'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_10'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J4' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR6.3.4-機械的補助の使用' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='use of mechanical aid' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_11'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,11)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38484'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_11'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J5' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR6.3.5-競技役員からの助言またはその他支援' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='provision of advice or other support by officials' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_12'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,12)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38447'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_12'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J6' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR6.3.6-転倒後、他の競技者から前に進むための手助けを得た' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='receiving physical support from another athlete ' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_13'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,13)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38448'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_13'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J7' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.14-審判長の承諾なしに、競技区内で途中時間を知らされた' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='assistance' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_14'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,14)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38449'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_14'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J8' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.15.4-不正に飲食物や水を受け取った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='assistance' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_15'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,15)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38450'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_15'>
+			<input type='text' name='P_print_legend_irm_code[]' value='J9' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.15.4-他の競技者に飲食物や水の受け渡しを繰り返した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='assistance' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_16'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,16)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38451'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_16'>
+			<input type='text' name='P_print_legend_irm_code[]' value='K1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR54.7.1-ロス・オブ・コンタクトで３名以上がレッドカードをだした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='third red card - loss of contact ' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_17'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,17)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38452'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_17'>
+			<input type='text' name='P_print_legend_irm_code[]' value='K2' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR54.7.1-ベント・ニーで３名以上がレッドカードをだした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='third red card - bent knee' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_18'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,18)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38444'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_18'>
+			<input type='text' name='P_print_legend_irm_code[]' value='K3' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR54.7.1-ロス・オブ・コンタクトとベント・ニーで３名以上がレッドカードをだした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='third red card - loss of contact &amp; bent knee' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_19'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,19)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38453'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_19'>
+			<input type='text' name='P_print_legend_irm_code[]' value='K4' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR54.4.1-ロス・オブ・コンタクトで競歩主任が単独で失格にした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='chief judge red card - loss of contact' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_20'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,20)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38454'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_20'>
+			<input type='text' name='P_print_legend_irm_code[]' value='K5' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR54.4.1-ベント・ニーで競歩主任が単独で失格にした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='chief judge red card - bent knee' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_21'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,21)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38455'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_21'>
+			<input type='text' name='P_print_legend_irm_code[]' value='L' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.4.3-4 レーン侵害' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='lane infringement' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_22'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,22)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38456'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_22'>
+			<input type='text' name='P_print_legend_irm_code[]' value='M' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='着差あり' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Margin' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_23'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,23)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38457'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_23'>
+			<input type='text' name='P_print_legend_irm_code[]' value='OT' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='オーバータイム' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Overtime' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_24'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,24)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38458'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_24'>
+			<input type='text' name='P_print_legend_irm_code[]' value='PB' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='パーソナルベスト' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='personal best' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_25'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,25)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38459'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_25'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.7-テイク・オーバーゾーン内でバトンパスが完了しなかった（１走→２走）' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='passing the baton outside the 1st takeover zone' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_26'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,26)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38460'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_26'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R10' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.6.3-バトンを落とした際、または拾う際、有利になったり他のチームを妨害したりした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='obstruction at recovering a dropped baton' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_27'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,27)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38445'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_27'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R11' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.10-オーダー不正' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='running more than one leg' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_28'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,28)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38442'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_28'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R12' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.11-オーダー提出後の不正なオーダー変更' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='late confirmation' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_29'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,29)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38446'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_29'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R13' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.15-ブレイクライン手前でレーンを離れ、内側レーンに入った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='leaving the lane early before the breakline' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_30'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,30)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38485'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_30'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R14' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.8-バトンを渡し終えた競技者が他のチームを妨害した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='infringement of TR17.3 / impediment at takeover' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_31'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,31)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38486'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_31'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R15' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.6.3-バトンパスの完了前に後走者が落としたバトンを拾った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='fault at recovering a dropped baton' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_32'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,32)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38461'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_32'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R16' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.6.3-バトンパスの完了後に前走者が落としたバトンを拾った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='fault at recovering a dropped baton' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_33'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,33)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38462'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_33'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R17' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.6.3-バトンを拾い上げた後、落とした地点に戻らずにレースを再開した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='fault at recovering a dropped baton' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_34'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,34)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38487'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_34'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R18' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.9-落としたバトンを他のチームが拾い上げ際、落としたチームが有利になった' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='taking the baton from another team' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_35'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,35)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38488'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_35'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R2' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.7-テイク・オーバーゾーン内でバトンパスが完了しなかった（２走→３走）' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='passing the baton outside the 2nd takeover zone' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_36'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,36)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38489'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_36'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R3' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.7-テイク・オーバーゾーン内でバトンパスが完了しなかった（３走→４走）' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='passing the baton outside the 3rd takeover zone' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_37'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,37)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38463'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_37'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R4' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.20-コーナートップの順に並んだあと、入れ替わった ' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='exchanging positions before takeover' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_38'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,38)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38464'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_38'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R5' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.9-他のチームのバトンを使った・拾い上げた' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='taking the baton from another team' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_39'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,39)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38465'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_39'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R6' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.19-テイクオーバーゾーンの外からスタートした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='starting outside the takeover zone' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_40'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,40)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38466'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_40'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R7' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.21-次走者が内側に移動する際に、他の走者を妨害したり押しのけたりした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='jostling / obstruction at takeover' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_41'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,41)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38467'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_41'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R8' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.6.1-バトンを手で持ち運ばなかった' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='running without the baton' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_42'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,42)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38468'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_42'>
+			<input type='text' name='P_print_legend_irm_code[]' value='R9' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR24.6.2-バトンを受け取りやすくする目的で、手袋などをはめた' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='fault at carrying the baton' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_43'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,43)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38469'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_43'>
+			<input type='text' name='P_print_legend_irm_code[]' value='RC' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='レッドカードによる失格' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Red Card ' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_44'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,44)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38490'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_44'>
+			<input type='text' name='P_print_legend_irm_code[]' value='S1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR16.5.1-正当な理由もなくスタートを中断させた' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='aborting the start without valid reason ' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_45'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,45)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38491'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_45'>
+			<input type='text' name='P_print_legend_irm_code[]' value='S2' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR16.5.2-スタートを遅延させた' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='delaying the start' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_46'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,46)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38492'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_46'>
+			<input type='text' name='P_print_legend_irm_code[]' value='S3' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR16.5.3-スタートを妨害させた' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='disturbing the start' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_47'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,47)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38470'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_47'>
+			<input type='text' name='P_print_legend_irm_code[]' value='SB' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='シーズンベスト' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='season best' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_48'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,48)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38471'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_48'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T0' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='録画失敗' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='failed to record' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_49'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,49)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38502'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_49'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T1' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.2.2-他の競技者を妨害した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='obstruction' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_50'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,50)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38472'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_50'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T10' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR23.7-全ての障害物・水濠を越えなかった' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='not going over each hurdle / the water jump' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_51'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,51)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38503'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_51'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T11' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR23.7.1-水濠以外の地面に着地した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='stepping beside the water jump' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_52'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,52)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38504'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_52'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T12' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR23.7.2-足または脚が障害物をはみ出して障害物の高さより低い位置を通った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='trailing leg at hurdle clearance below the horizontal plane of the top of hurdle' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_53'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,53)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38505'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_53'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T13' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR5.11-規定外シューズ着用' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='non-regulated shoes' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_54'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,54)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38473'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_54'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T14' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.4-レーン侵害により実質的利益を得た' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='lane infringement resulting in material advantage ' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_55'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,55)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38474'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_55'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T15' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.4.3-2回(歩)目にレーンの内側の線を踏んだ' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='lane infringement' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_56'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,56)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38475'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_56'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T16' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.4.4-2回(歩)目にレーンの内側の線を踏んだ' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='lane infringement' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_57'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,57)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38476'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_57'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T17' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.4.4-曲走路で白線を完全に超え、内側のレーンに入った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='lane infringement' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_58'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,58)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38477'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_58'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T2' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.3.1-他のレーンに入った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='lane infringement' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_59'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,59)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38478'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_59'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T3' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.3.2-縁石のうえ、内側ライン上またはその内側を走った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='infringement of the inside border' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_60'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,60)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38479'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_60'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T4' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.5-ブレイクライン手前でレーンを離れ内側に入った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='leaving the assigned lane before the breakline' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_61'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,61)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38480'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_61'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T5' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR17.6-競技者がトラックから勝手に離脱した後レースを続けようとした' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='continuing the race after voluntarily leaving' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_62'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,62)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38481'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_62'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T6' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR22.6-ハードルをすべて越えなかった' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='not going over each hurdle' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_63'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,63)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38482'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_63'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T7' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR22.6.1-足又は脚がハードルをはみ出してバーの高さより低い位置を通った' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='trailing leg at hurdle clearance below the horizontal plane of top of hurdle' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_64'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,64)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38506'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_64'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T8' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR22.6.2-手や身体、振り上げ脚の上側でハードルを倒した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='knocking down / displacing a hurdle in an illegal way' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_65'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,65)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38507'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_65'>
+			<input type='text' name='P_print_legend_irm_code[]' value='T9' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='TR22.6.3-自分または他のレーンのハードルを倒したり移動させて妨害した' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='knocking down / displacing a hurdle in another lane' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_66'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,66)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38508'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_66'>
+			<input type='text' name='P_print_legend_irm_code[]' value='YC' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='警告' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='Yellow Card' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+		<tr id='id_legend_row_67'>
+			<td><span class='inlineBox width50'><input type='button' value='削除'
+			 onclick='hidden_legend_rows(this,67)' class='inputButton width50'></span>
+			<input type='hidden' name='P_print_legend_id[]' value='38509'>
+			<input type='hidden' name='P_print_legend_delete_check[]' value='' id='id_legend_delchk_67'>
+			<input type='text' name='P_print_legend_irm_code[]' value='YRC' class='textBox width120' placeholder='略号(5文字以内)' ><input type='text' name='P_print_legend_irm_jpn_text[]' value='2回目の警告' class='textBox width300' placeholder='内容(80文字以内)' ><input type='text' name='P_print_legend_irm_eng_text[]' value='2nd Yellow Card' class='textBox width300' placeholder='Rules(80文字以内)' >
+			</td>
+		</tr>
+
+
+<tr id='id_legend_row'><td><span class='inlineBox width50'> </span>				<input type='text' name='P_new_irm_code[]' value='' class='textBox width120' placeholder='略号(5文字以内)'><!--
+			--><input type='text' name='P_new_irm_jpn_text[]' value='' class='textBox width300' placeholder='内容(80文字以内)'><!--
+			--><input type='text' name='P_new_irm_eng_text[]' value='' class='textBox width300' placeholder='Rules(80文字以内)'>
+
+<input type='button' value=' + ' name='name_legend_addb' id='id_legend_addb_0; ?>' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_legend_rows(this,0)' class='inputButton width50' style='display:;'>			</td>
+		</tr>
+
+
+
+
+
+
+
+		</tbody>
+		</table>
+
+
+		<!--  -->
+		<table class='textTable' id='id_outsource_tab' style='display:none;'>
+
+		<tr >
+			<td style='background-color: #fff; color: #FF9900; padding: 0px;' colspan='3'><p>「外部サービス」は「フィールドハウス社」単独のサービス業務です。「AthleteRanking.com」が提供するサービスではありません。</p></td>
+		</tr>
+
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>参加料金決済サービス</td>
+			<td class='outsource_td_content text_size'>各チームの参加料金をオンライン決済できます。<BR>各チームはエントリー完了時に、決済ボタンを押して料金自動計算。<br />クレジット、コンビニ決済対応。<br />運営者の参加料金の徴収作業を軽減します。<br />この画面の「エントリー」タブを押し、「参加料決済サービス」の項目から設定できます。</td>
+			<td class='outsource_td_image'><img src='../img/onlinepayment.jpg' class='outsource_img'></td>
+		</tr>
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>
+				<a href='https://athletepit.com/goods.php?i_id=1969' target='_blank'>
+					写真判定機(フォトフィニッシュ)・計測サービス（レンタル）<br />
+					(詳しくはこちらから・Athletepit.comへ)				</a>
+			</td>
+			<td class='outsource_td_content text_size'>写真判定機のない陸上競技場や、バックアップ用の計測などに、写真判定機(フォトフィニッシュ)をレンタル設置します。<br />
+	当店スタッフが設置から操作・計測まで行います。<br />アスリートランキングドットコムを利用した競技会では基本料金を50%OFF！</td>
+			<td class='outsource_td_image'><img src='../img/photo_rental.jpg' class='outsource_img'></td>
+			</td>
+		</tr>
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>
+				<a href='https://athletepit.com/goods.php?i_id=1972' target='_blank'>
+					スタートインフォメーションシステム・計測サービス（レンタル）<br />
+					(詳しくはこちらから・Athletepit.comへ)				</a>
+			</td>
+			<td class='outsource_td_content text_size'>スタートインフォメーションシステム（スタート反応時間計測器）は国際陸上競技連盟競技規則、161条及び260条にて世界記録等の必要条件として規定されています。国内では主要大会で導入がされていますが、その他の大会では利用されることがほぼありません。主要大会への対策としても平素の大会でも導入が望まれる設備です<BR>そのスタートインフォメーションシステム・計測サービス（レンタル）を始めました。<BR>システムを導入して、競技会の格をあげましょう。<BR>アスリートランキングドットコムを利用した競技会では基本料金を50%OFF！</td>
+			<td class='outsource_td_image'><img src='../img/1795_3.jpg' class='outsource_img'></td>
+			</td>
+		</tr>
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>
+				<a href='https://athletepit.com/goods.php?i_id=1971' target='_blank'>
+					トラック周回計測サービス<br />
+					(詳しくはこちらから・Athletepit.comへ)				</a>
+			</td>
+			<td class='outsource_td_content text_size'>トラック種目の周回記録(スプリットタイム)を計測します。<br />
+	選手につけたICタグを読み取り、周回ごとの記録をアスリートランキングドットコムの途中記録画面にアップロードします。<br />
+	リザルト印刷はもちろん、大型モニター・CIS画面、アナウンスにも活用できます。<br />
+	アスリートランキングドットコムを利用した競技会では基本料金を50%OFF！
+	</td>
+			<td class='outsource_td_image'><img src='../img/shuukai.jpg' class='outsource_img'></td>
+			</td>
+		</tr>
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>
+				<a href='https://athletepit.com/goods.php?i_id=1970' target='_blank'>
+					ロード競技計測サービス<br />
+					(詳しくはこちらから・Athletepit.comへ)				</a>
+			</td>
+			<td class='outsource_td_content text_size'>ロードレース・クロカン・駅伝競技会のタイム計測サービスです。<br />
+	計測地点にアンテナマットを敷き、選手につけたICタグを読み取ります。<br />
+	駅伝やリレーマラソンなどの区間計測にも対応。アスリートランキングドットコムの途中記録画面にアップロードします。
+	</td>
+			<td class='outsource_td_image'><img src='../img/ekiden.jpg' class='outsource_img'></td>
+			</td>
+		</tr>
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>
+				<a href='https://athletepit.com/goods.php?i_id=1968' target='_blank'>
+					LEDスポーツディスプレイ・表示サービス（レンタル）<br />
+					(詳しくはこちらから・Athletepit.comへ)				</a>
+			</td>
+			<td class='outsource_td_content text_size'>リザルトや選手情報の表示など、から静止画、動画表示にも対応。<br />LED表示版をレンタル設置します。<br />
+	当店スタッフが設置から操作まで行います。<br />
+	屋外、全天候対応。自立式スタンド付。<br />
+	LEDディスプレイの大きさは、1.5m×1m。<br />
+	アスリートランキングドットコムを利用した競技会では基本料金を50%OFF！
+	</td>
+			<td class='outsource_td_image'><img src='../img/led.jpg' class='outsource_img'></td>
+			</td>
+		</tr>
+		<!--  -->
+		<tr >
+			<td class='outsource_td_title text_size'>
+				<a href='https://www.athletepit.com/no.php' target='_blank'>
+					ナンバーカードの購入・製作<br />
+					(詳しくはこちらから・Athletepit.comへ)				</a>
+			</td>
+			<td class='outsource_td_content text_size'>「選手一覧」画面からCSVファイルをダウンロードし、<br />そのままナンバーカードの自作や、製作発注ができます。</td>
+			<td class='outsource_td_image'><img src='../img/zekken.jpg' class='outsource_img'></td>
+		</tr>
+
+
+		</table>
+
+
+	</div>
+
+<textarea name="copy" id="copyarea" rows="1" cols="1" style="position: fixed; top: 0; z-index:0;"></textarea>
+
+	<!--  -->
+
+	<div id='id_message_box' class='messageBox' style='position:fixed; top:20vh; z-index:10; width:800px; height:30vh; overflow-y: auto; margin:0px 203px;border: 2px solid #999999; background-color:#FFFFFF; display:none;'><div class='closebutton' onclick='document.getElementById("id_message_box").style.display="none";document.getElementById("id_message_button").style.display="";' >&nbsp;</div><div style='margin-top:-50px; width:200px; height:30px; padding: 20px 0px 15px 20px;'>Message</div><p class='message' id='id_message' style='padding-left:20px;'></p><p class='messageSafe' id='messagesafe' style='padding-left:20px;'></p><p class='messageError' id='messageerror' style='padding-left:20px;'></p></div><div id='id_message_button' style='position:fixed; bottom:0px; z-index:2; width:90px; height:50px;margin:0px 0px 0px 20px; padding-top:3px; background-color:#CCCCCC; cursor: pointer; display:none;' onclick='document.getElementById("id_message_box").style.display="";document.getElementById("id_message_button").style.display="none";'>Message</div>
+
+</form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+
+
+</div>
+</body>
+</html>

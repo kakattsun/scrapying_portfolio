@@ -1,0 +1,1369 @@
+@charset "EUC-JP";
+/* AthleteRanking.com CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html { width: 100%; height: 100%;
+	background-image: url("../img/back_white.png"); background-repeat: repeat-y; background-position: top center;
+	background-color: #CCCCCC;
+}
+body {
+	font-family: "メイリオ", sans-serif;
+	text-align: center;
+}
+img { border: 0px; }
+
+/* safari対策 */
+input[type="button"],input[type="submit"],input[type="image"]{
+   -webkit-appearance: none;
+   border-radius: 0;
+}
+
+/* ---------- */
+.base {
+	max-width: 1276px; min-width: 800px;
+	margin: 0px auto;
+}
+.headBox {
+	position: fixed; top: 0px;
+	width: 100%; height: 42px;
+	max-width: 1276px; min-width: 800px;
+	text-align: left;
+	background-color: #000000; color: #FFFFFF;
+	z-index: 10;
+}
+.bodyBox {
+	width: 100%;
+	max-width: 1276px; min-width:800px;
+	margin-left: 0px; margin-right: 0px; margin-bottom: 35px;
+	padding-bottom: 20px;
+	background-color: #FFFFFF; color: #000000;
+	z-index: 1;
+/*	height: 1000px;overflow-y: scroll;*/
+}
+.footBox {
+	position: fixed; bottom: 0;
+	width: 100%; height: 35px;
+	max-width: 1276px; min-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 11px; line-height: 32px;
+	background-color: #000000; color: #FFFFFF;
+	z-index: 10;
+}
+
+.dialogbox {
+	top:0px;
+	left:0px;
+	z-index:10000;
+	position:fixed;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+
+.printbox ,.terminalbox {
+	margin:6% auto;
+	width:400px;
+	height:300px;
+/*	border:2px solid #999999;*/
+	background-color:#FFFFFF;
+	box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.closebutton{
+	width:50px;
+	height:50px;
+	margin:0px 0px 0px auto;
+	text-align:center;
+	background-color:#000000;
+	background-image: url("../img/close.png"); background-repeat: no-repeat; background-position: 50%;
+	background-size: 25px;
+	color:#FFFFFF;
+	font-size:24px;
+	cursor:pointer;
+}
+
+.siteMenuLeft {
+	position: absolute; left: 0px; bottom: 0px;
+}
+.siteMenuLeft li { display: inline-block; }
+.siteMenuLeft .backButton {
+	width: 40px; height:18px;
+
+	padding:18px 16px 10px 26px;
+/*
+	padding: 18px 16px 18px 26px;
+*/
+	background-color: #333333;
+	cursor: pointer;
+}
+.siteMenuLeft .backButton:hover { opacity:0.7; }
+
+.siteMenuRight {
+	position: absolute; right: 10px; bottom: 0px;
+	max-width: 600px; min-width: 500px;
+	text-align: right;
+	font-size: 16px;
+	background-color:#000000;
+	z-index: 11;
+}
+.siteMenuRight li {
+	display: inline-block;
+	padding: 0px 15px;
+	
+}
+.siteMenuRight img { cursor: pointer; height: 18px;}
+.siteMenuRight img:hover { opacity:0.7; }
+
+.pageName {
+	display: inline-block;
+	padding-left: 20px; padding-right: 20px;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 16px; line-height: 16px;
+}
+.gameName {
+	display: inline-block;
+	padding-left: 20px;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: 16px; line-height: 16px;
+	border-left: 1px solid #FFFFFF;
+}
+
+#id_printer{
+	background-size: 20px;
+	height:18px; 
+	padding:0px 0px 0px 35px; 
+	margin-top:0px; 
+	background-color: #000000; 
+	font-family: "メイリオ", 
+	sans-serif; 
+	font-size: 16px; 
+	cursor: pointer;
+}
+
+.topBox {
+	position: fixed; top: 0px;
+	width: 100%; max-width: 1276px; min-width: 780px;
+	border: none;
+	text-align: left;
+	background-color: #FFFFFF;
+	z-index: 5;
+}
+
+.pageMenu {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	border: none;
+	background-color: #FFFFFF;
+	font-size: 22px; line-height: 30px;
+}
+
+.pageMenu ul { display: inline-block; }
+.pageMenu li {
+	display: inline-block;
+}
+
+.pageMenu_ul {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+}
+
+.pageMenu .menuLeft {
+    width: 50%;
+    max-width: 638px;
+    min-width: 390px;
+	padding: 5px 0;
+	height: 40px;
+}
+.pageMenu .menuRight {
+    width: 50%;
+    max-width: 638px;
+    min-width: 390px;
+    text-align: right;
+    z-index: 11;
+	padding: 5px 0;
+	height: 40px;
+}
+.pageMenu .menuFull {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 53px;
+}
+
+.topLine{
+	width: 100%;
+	text-align: left;
+	margin-top: 42px;
+	border: none;
+	border-collapse: collapse;
+}
+.topLine_height{
+	line-height: 46px;
+}
+.topLine_tab_noselect{
+	cursor: pointer;
+	vertical-align: middle;
+	line-height: 45px;
+	text-align: center;
+}
+.topLine_tab_noselect:hover{
+	opacity:0.7;
+}
+.menuLine{
+	width: 100%;
+	text-align: left;
+	border: none;
+	border-collapse: collapse;
+}
+
+.tabLine{
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+.tabbtn{
+	cursor: pointer;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+}
+
+.tabbtn:hover {
+	background-color:#003399; color:#FFFFFF;
+	
+}
+.recLine_ {
+	background-color:#003399; color:#FFFFFF;
+	
+}
+.tabLine_entry{
+	width: 100%;
+	margin-top: 42px;
+	text-align: center;
+	border-collapse: collapse;
+	border-bottom: 1px solid #ccc;
+}
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+
+	.menuFull li {
+		font-size: 16px;
+	}
+
+	.menuLeft li{
+		font-size: 16px;
+	}
+
+	.menuRight li{
+		font-size: 16px;
+	}
+
+	.menuFull2 {
+		width: 100%; max-width: 1276px; min-width: 780px;
+		padding: 10px 0px 10px 0px;
+	}
+
+	.menuFull2 li{
+		vertical-align: middle;
+		display: inline-block;
+		font-size: 16px;
+	}
+	.topLine td{
+		font-size: 14px;
+	}
+	.topLine .race td {
+		font-size: 16px;
+	}
+	.menuLine td{
+		font-size: 14px;
+	}
+	.menuLine .font-big{
+		font-size: 18px;
+	}
+	.menuLine .font-mid{
+		font-size: 16px;
+	}
+	.text_font_size{
+		font-size: 14px;
+	}
+	.ranking_td_width{
+		min-width: 100%;
+		/*min-width: 1110px;*/
+	}
+	.tabLine td{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+	.menuFull li {
+		font-size: 14px;
+	}
+
+	.menuLeft li{
+		font-size: 14px;
+	}
+
+	.menuRight li{
+		font-size: 14px;
+	}
+
+	.menuFull2 {
+		width: 100%; max-width: 1276px; min-width: 780px;
+		padding: 10px 0px 10px 0px;
+	}
+
+	.menuFull2 li{
+		vertical-align: middle;
+		display: inline-block;
+		font-size: 14px;
+	}
+	.topLine td{
+		font-size: 12px;
+	}
+	.menuLine td{
+		font-size: 12px;
+	}
+	.menuLine .font-big{
+		font-size: 12px;
+	}
+	.menuLine .font-mid{
+		font-size: 12px;
+	}
+	.text_font_size{
+		font-size: 12px;
+	}
+	.ranking_td_width{
+		min-width: 80%;
+		/*min-width: 972px;*/
+	}
+	.tabLine td{
+		font-size: 12px;
+	}
+}
+
+
+@media (min-width: 1200px) {
+    /*横幅が1200px以上の場合に適用するスタイル*/
+	.serchbar_l_height {
+		line-height: 40px;
+	}
+	.serchbar_span_font {
+		font-size: 16px;
+	}
+
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+	.serchbar_l_height {
+		line-height: 22px;
+	}
+	.serchbar_span_font {
+		font-size: 12px;
+	}
+
+
+}
+
+
+.mein_Select{
+	padding-top: 32px;
+	height: 53px;
+}
+
+.select_Display{
+	padding: 2px 15px 2px 15px;
+}
+
+
+
+/* ---------- */
+.messageBox {
+/*	padding: 20px 0px 5px 20px;*/
+	text-align: left;
+	font-size: 16px;
+}
+.contentTable {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	line-height:36px;
+}
+
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+	.contentData td , .contentLink td , .contentCheck td {
+		border: none;
+		border-bottom: 1px solid #acacac;
+		border-right: 1px solid #e0e0e0;
+		font-size:16px;
+		padding-left: 5px;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+
+	.contentData td , .contentLink td , .contentCheck td {
+		border: none;
+		border-bottom: 1px solid #acacac;
+		border-right: 1px solid #e0e0e0;
+		font-size:12px;
+		padding-left: 2px;
+	}
+}
+
+
+
+
+
+
+.contentLink:hover {
+	background-color: #99CCFF;
+	cursor: pointer;
+}
+.contentCheck:hover {
+	background-color: #99CCFF;
+	cursor: pointer;
+}
+.inputTable {
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 0px 20px;
+    width: 100%;
+    max-width: 1236px;
+    min-width: 740px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+}
+.inputTable th, .inputTable td {
+    border: none;
+    padding: 0px 15px;
+    height: 36px;
+}
+
+.inputTable th {
+	background-color: #666666; color:#FFFFFF;
+	font-weight:normal;
+}
+.inputTable td {
+	background-color: #CCCCCC;
+}
+.textTable{
+	table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    margin: 0px 20px;
+    width: 100%;
+    max-width: 1236px;
+    min-width: 740px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+}
+/* ---------- */
+.message{
+/*	padding: 20px 0px 0px 20px;*/
+	color: #339933;
+}
+.messageSafe{ color: #3333FF; }
+.messageError{ color: #FF3333; }
+
+.fontBig { font-size: 22px; line-height: 50px; }
+
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+
+	.inputButton {
+		height: 40px;
+		border: none;
+		background-color: #000066; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+		vertical-align: middle;
+	}
+	.inputButtonUndev {
+		height: 40px;
+	    border: none;
+	    background-color: #C9CACA;
+	    color: #FFFFFF;
+	    font-family: "メイリオ", sans-serif;
+	    font-size: 16px;
+	    vertical-align: middle;
+	}
+
+	.inputButton:hover {
+		opacity:0.7;
+	}
+	.inputButtonIm {
+		height: 36px;
+		border: none;
+		background-color: #FF3333; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.inputButtonIm:hover {
+		opacity:0.7;
+	}
+
+	.inputButtonDL {
+		height: 36px;
+		border: none;
+		background-image: url(../img/icon_download.png);
+		background-repeat: no-repeat;
+		background-position: 5% 45%;
+		background-color: #FF9900; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.inputButtonDL:hover {
+		opacity:0.7;
+	}
+
+	.inputButtonUP {
+		height: 36px;
+		border: none;
+		background-image: url(../img/icon_upload.png);
+		background-repeat: no-repeat;
+		background-position: 5% 45%;
+		background-color: #000066; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.inputButtonUP:hover {
+		opacity:0.7;
+	}
+
+
+	.linkButtonimg {
+		width: 100px;
+		text-align: left;
+		height: 35px;
+		border: none;
+		background-image: url("../img/linkbutton.png"); background-repeat: no-repeat; background-position: 100%;
+		background-color: #FFFFFF; color: #003399;
+		background-size: 25px;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.linkButtonimg:hover {
+		opacity:0.7;
+	}
+
+	.linkButtonimg2 {
+		width: 100px;
+		text-align: left;
+		height: 35px;
+		border: none;
+		background-image: url("../img/linkbutton2.png"); background-repeat: no-repeat; background-position: 100%;
+		background-color: #FFFFFF; color: #003399;
+		background-size: 13px;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.linkButtonimg2:hover {
+		opacity:0.7;
+	}
+	.printButton {
+		height: 40px;
+		border: none;
+		background-image: url("../img/icon_printer.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		background-color: #00CC00; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.printButton:hover {
+		opacity:0.7;
+	}
+	.printButtonTop {
+		height: 40px;
+		border: none;
+		background-image: url("../img/icon_printer.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		background-color: #00CC00; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+	.printButtonTop:hover {
+		opacity:0.7;
+	}
+
+	.plusButton {
+		height: 45px;
+		padding: 0px 5px 0px 30px;
+		border: none;
+		background-image: url("../img/icon_plus.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		background-color: #FFFFFF; color: #000066;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+		background-size: 18px;
+	}
+	.plusButton:hover {
+		opacity: 0.7;
+	}
+
+	.fileDlButton {
+		height: 45px;
+		padding: 0px 5px 0px 30px;
+		border: none;
+		background-image: url("../img/linkbutton3.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+		background-size: 18px;
+	}
+	.fileDlButton:hover {
+		opacity: 0.7;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+
+	.inputButton {
+		height: 40px;
+		border: none;
+		background-color: #000066; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+		vertical-align: middle;
+	}
+	.inputButtonUndev {
+		height: 40px;
+	    border: none;
+	    background-color: #C9CACA;
+	    color: #FFFFFF;
+	    font-family: "メイリオ", sans-serif;
+	    font-size: 12px;
+	    vertical-align: middle;
+	}
+	.inputButton:hover {
+		opacity:0.7;
+	}
+	.inputButtonIm {
+		height: 36px;
+		border: none;
+		background-color: #FF3333; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.inputButtonIm:hover {
+		opacity:0.7;
+	}
+
+	.inputButtonDL {
+		height: 36px;
+		border: none;
+		background-image: url(../img/icon_download.png);
+		background-repeat: no-repeat;
+		background-position: 5% 45%;
+		background-color: #FF9900; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.inputButtonDL:hover {
+		opacity:0.7;
+	}
+
+	.inputButtonUP {
+		height: 36px;
+		border: none;
+		background-image: url(../img/icon_upload.png);
+		background-repeat: no-repeat;
+		background-position: 5% 45%;
+		background-color: #000066; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.inputButtonUP:hover {
+		opacity:0.7;
+	}
+
+
+	.linkButtonimg {
+		width: 100px;
+		text-align: left;
+		height: 35px;
+		border: none;
+		background-image: url("../img/linkbutton.png"); background-repeat: no-repeat; background-position: 100%;
+		background-color: #FFFFFF; color: #003399;
+		background-size: 25px;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.linkButtonimg:hover {
+		opacity:0.7;
+	}
+
+	.linkButtonimg2 {
+		width: 100px;
+		text-align: left;
+		height: 35px;
+		border: none;
+		background-image: url("../img/linkbutton2.png"); background-repeat: no-repeat; background-position: 100%;
+		background-color: #FFFFFF; color: #003399;
+		background-size: 13px;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.linkButtonimg2:hover {
+		opacity:0.7;
+	}
+	.printButton {
+		height: 40px;
+		border: none;
+		background-image: url("../img/icon_printer.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		background-color: #00CC00; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.printButton:hover {
+		opacity:0.7;
+	}
+	.printButtonTop {
+		height: 40px;
+		border: none;
+		background-image: url("../img/icon_printer.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		background-color: #00CC00; color: #FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+	.printButtonTop:hover {
+		opacity:0.7;
+	}
+
+	.plusButton {
+		height: 45px;
+		padding: 0px 5px 0px 30px;
+		border: none;
+		background-image: url("../img/icon_plus.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		background-color: #FFFFFF; color: #000066;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+		background-size: 18px;
+	}
+	.plusButton:hover {
+		opacity: 0.7;
+	}
+
+	.fileDlButton {
+		height: 45px;
+		padding: 0px 5px 0px 30px;
+		border: none;
+		background-image: url("../img/linkbutton3.png"); background-repeat: no-repeat; background-position: 5% 45%;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+		background-size: 18px;
+	}
+	.fileDlButton:hover {
+		opacity: 0.7;
+	}
+
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+
+	.linkButton {
+		height: 45px;
+		padding: 0px 5px 0px 5px;
+		border: none;
+		background-color: #FFFFFF; color: #000066;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+
+	.linkButton {
+		height: 45px;
+		padding: 0px 5px 0px 5px;
+		border: none;
+		background-color: #FFFFFF; color: #000066;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+		cursor: pointer;
+	}
+}
+
+
+
+
+
+.linkButton:hover {
+	opacity: 0.7;
+}
+
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+
+	.textBox {
+	    height: 28px;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    font-family: "メイリオ", sans-serif;
+	    font-size: 16px;
+	}
+
+	.selectNormal {
+		height: 32px;
+		padding: 0px 5px 0px 5px;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+	}
+
+	.selectLarge {
+		height: 50px;
+		padding: 0px 5px 0px 5px;
+		font-family: "メイリオ", sans-serif; font-size: 22px;
+	}
+
+	.selectAction {
+		height: 50px;
+		padding: 0px 5px 0px 5px;
+		border:1px solid #CCCCCC;
+		background-color:#000066; color:#FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 22px;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+
+	.textBox {
+	    height: 28px;
+	    padding-left: 3px;
+	    padding-right: 3px;
+	    font-family: "メイリオ", sans-serif;
+	    font-size: 12px;
+	}
+
+	.selectNormal {
+		height: 32px;
+		padding: 0px 5px 0px 5px;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+	}
+
+	.selectLarge {
+		height: 50px;
+		padding: 0px 5px 0px 5px;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+	}
+
+	.selectAction {
+		height: 50px;
+		padding: 0px 5px 0px 5px;
+		border:1px solid #CCCCCC;
+		background-color:#000066; color:#FFFFFF;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+	}
+
+}
+
+
+
+
+
+.textareaBox {
+	height: 80px;
+	padding: 10px;
+	font-family: "メイリオ", sans-serif; font-size: 16px;
+}
+.radioButton {
+	display:inline-block; width: 16px; height: 16px;
+	margin: 0px 5px 0px 10px;
+	-moz-transform: scale( 2 );
+	-webkit-transform: scale( 2 );
+}
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+
+	.checkBox {
+		display:inline-block; width: 25px; height: 25px;
+		margin: 0px 5px 0px 10px;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+
+	.checkBox {
+		display:inline-block; width: 15px; height: 15px;
+		margin: 0px 5px 0px 5px;
+	}
+}
+
+
+.fileButton {
+	height: 40px;
+	border: none;
+	background-color: #000066; color: #FFFFFF;
+	font-family: "メイリオ", sans-serif; font-size: 16px;
+}
+.nonDevButton {
+	background-color: #ccc !important;
+	cursor:default;
+}
+.nonDevButton:hover {
+	opacity: 1 !important;
+}
+.requireBox {
+    display: inline-block;
+    margin-left: 9px;
+    padding: 0px 5px;
+    background-color: #FF3333;
+    color: #FFFFFF;
+    float: right;
+    line-height: 36px;
+    height: 36px;
+}
+.zumiButton {
+	line-height: 40px;
+    height: 40px;
+    width: 150px;
+    background-color: #ccc;
+    color: #fff;
+    text-align: center;
+    padding: 0; 
+}
+
+.tooltip span{
+	display: none;
+}
+
+.tooltip:hover {
+	position: relative;
+}
+
+.tooltip:hover span {
+	display: block;
+	position: absolute;
+	top: 27px; /*全体（増やすほど下に）*/
+	left:15px; /*全体（増やすほど右に）*/
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	background-color: #0062ac;
+	padding: 3px;
+	z-index:100;
+}
+.tooltip_width_terminal:hover span {
+	width: 80px;
+}
+.tooltip_width_bbs:hover span {
+	width: 60px;
+}
+.tooltip_width_v2:hover span {
+	width: 60px;
+}
+.tooltip_width_file:hover span {
+	width: 110px;
+}
+.tooltip_width_user:hover span {
+	width: 100px;
+}
+.tooltip_width_help:hover span {
+	width: 80px;
+}
+.tooltip_width_logout:hover span {
+	width: 100px;
+}
+.tooltip span:before{
+    content:'';
+    display:block;
+    position:absolute;
+    height:0;
+    width:0;
+    top:-13px; /*三角形（増やすほど上に）*/
+    left:4px; /*三角形（増やすほど右に）*/
+    border:9px transparent solid; /*三角形の大きさ*/
+    border-right-width:0;
+    border-left-color:#0062ac;
+    transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+    z-index:100;
+}
+
+
+
+.txtlink{
+	color:#003399;
+	font-weight:normal;
+	text-decoration: underline;
+}
+a.txtlink:hover{
+	text-decoration: none;
+	opacity: 0.7;
+}
+
+
+.linkButton3 {
+	padding: 5px;
+	border: 1px solid #0062ac;
+	background-color: #fff;
+	color: #0062ac;
+	cursor: pointer;
+}
+.linkButton3:hover {
+	background-color: #0062ac;
+	color: #fff;
+	cursor: pointer;
+}
+
+.td_accept_prev{
+	height: 50px;
+	position: absolute;
+	top: 42px;
+	left: 0px;
+	z-index: 6;
+}
+.td_accept_next{
+	height: 50px;
+	position: absolute;
+	top: 42px;
+	right: 0px;
+	z-index: 6;
+}
+/*_::-webkit-full-page-media, _:future, :root .td_accept_prev {
+	height: 50px;
+	position: absolute;
+	top: 24px;
+}*/
+/*Safariだけに適用されるCSSハック*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ::i-block-chrome,
+	.td_accept_prev{
+		top: 42px;
+	}
+	.td_accept_next{
+		top: 42px;
+	}
+}
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+  ::i-block-chrome, 
+}*/
+/*.arrow{
+position: relative;
+display: inline-block;
+padding: 0 0 0 16px;
+color: #000;
+vertical-align: middle;
+text-decoration: none;
+font-size: 15px;
+}*/
+
+/*.arrow::before,*/
+/*.arrow::before{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+content: "test";
+vertical-align: middle;
+}*/
+/*.arrow_R::before{
+left: 3px;
+width: 4px;
+height: 4px;
+border-top: 2px solid #003399;
+border-right: 2px solid #003399;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}*/
+
+/*.arrow{
+width: 30px;
+height: 30px;
+border: 5px solid;
+border-color: #565656 #565656 transparent transparent;
+transform: rotate(45deg);
+}*/
+
+
+.requireColor { background-color: #CCFFFF; }
+.readonlyColor { background-color: #CCCCCC; }
+.imeOff { ime-mode: disabled; }
+.imeOn { ime-mode: active; }
+
+.marginTop0 { margin-top: 0px; }
+.marginTop10 { margin-top: 10px; }
+.marginTop13 { margin-top: 13px; }
+.marginTop15 { margin-top: 15px; }
+.marginTop30 { margin-top: 30px; }
+.marginTop36 { margin-top: 36px; }
+.marginTop42 { margin-top: 42px; }
+.marginTop45 { margin-top: 45px; }
+.marginTop50 { margin-top: 50px; }
+
+.marginTop55 { margin-top: 55px; }
+.marginTop76 { margin-top: 76px; }
+.marginTop110 { margin-top: 110px; }
+.marginTop135 { margin-top: 135px; }
+.marginTop145 { margin-top: 145px; }
+.marginTop152 { margin-top: 152px; }
+.marginTop158 { margin-top: 158px; }
+.marginTop161 { margin-top: 161px; }
+.marginTop168 { margin-top: 168px; }
+.marginTop170 { margin-top: 170px; }
+.marginTop178 { margin-top: 178px; }
+.marginTop200 { margin-top: 200px; }
+.marginTop213 { margin-top: 213px; }
+.marginTop219 { margin-top: 219px; }
+.marginTop222 { margin-top: 222px; }
+.marginTop229 { margin-top: 229px; }
+.marginTop239 { margin-top: 239px; }
+.marginTop253 { margin-top: 253px; }
+.marginTop289 { margin-top: 289px; }
+.marginTop359 { margin-top: 359px; }
+
+.marginTopM30  { margin-top: -30px; }
+.marginTopM10  { margin-top: -10px; }
+
+.marginL3 { margin-left: 3px; }
+.marginL5 { margin-left: 5px; }
+.marginL10 { margin-left: 10px; }
+.marginL15 { margin-left: 15px; }
+.marginL50 { margin-left: 50px; }
+.marginL60 { margin-left: 60px; }
+.marginL100 { margin-left: 100px; }
+
+.marginR10 { margin-right: 10px; }
+.marginR15 { margin-right: 15px; }
+.marginR50 { margin-right: 50px; }
+.marginR100 { margin-right: 100px; }
+
+.paddingTBLR0 { padding: 0px; }
+.paddingTBLR3 { padding: 3px; }
+.paddingT2 { padding-top: 2px;}
+.paddingT3 { padding-top: 3px;}
+.paddingT10 { padding-top: 10px;}
+.paddingT13 { padding-top: 13px;}
+.paddingT15 { padding-top: 15px;}
+.paddingT17 { padding-top: 17px;}
+.paddingT20 { padding-top: 20px;}
+.paddingT32 { padding-top: 32px;}
+.paddingL3 { padding-left: 3px; }
+.paddingL5 { padding-left: 5px; }
+.paddingL8 { padding-left: 8px; }
+.paddingL15 { padding-left: 15px; }
+.paddingL20 { padding-left: 20px; }
+.paddingL23 { padding-left: 23px; }
+.paddingL25 { padding-left: 25px; }
+.paddingL50 { padding-left: 50px; }
+.paddingR5 { padding-right: 5px; }
+.paddingR10 { padding-right: 10px; }
+.paddingR15 { padding-right: 15px; }
+.paddingR25 { padding-right: 25px; }
+.paddingR50 { padding-right: 50px; }
+.paddingLR15 { padding-left: 15px; padding-right: 15px;}
+.paddingB5 { padding-bottom: 5px;}
+.paddingT30 { padding-top: 30px;}
+
+.paddingTB3 { padding-top: 3px; padding-bottom: 3px;}
+.paddingTB15 { padding-top: 15px; padding-bottom: 15px;}
+.paddingB18 { padding-bottom: 18px;}
+
+.width20  { width: 20px;  }
+.width30  { width: 30px;  }
+.width35  { width: 35px;  }
+.width40  { width: 40px;  }
+.width50  { width: 50px;  }
+.width55  { width: 55px;  }
+.width60  { width: 60px;  }
+.width65  { width: 65px;  }
+.width70  { width: 70px;  }
+.width75  { width: 75px;  }
+.width80  { width: 80px;  }
+.width85  { width: 85px;  }
+.width90  { width: 90px;  }
+.width95  { width: 95px;  }
+.width100 { width: 100px; }
+.width110 { width: 110px; }
+.width115 { width: 115px; }
+.width120 { width: 120px; }
+.width125 { width: 125px; }
+.width130 { width: 130px; }
+.width135 { width: 135px; }
+.width140 { width: 140px; }
+.width150 { width: 150px; }
+.width160 { width: 160px; }
+.width170 { width: 170px; }
+.width180 { width: 180px; }
+.width185 { width: 185px; }
+.width190 { width: 190px; }
+.width200 { width: 200px; }
+.width220 { width: 220px; }
+.width240 { width: 240px; }
+.width250 { width: 250px; }
+.width260 { width: 260px; }
+.width300 { width: 300px; }
+.width340 { width: 340px; }
+.width350 { width: 350px; }
+.width400 { width: 400px; }
+.width450 { width: 450px; }
+.width500 { width: 500px; }
+.width550 { width: 550px; }
+.width600 { width: 600px; }
+.width650 { width: 650px; }
+.width700 { width: 700px; }
+.width800 { width: 800px; }
+
+.max_width200 { max-width: 200px; }
+.min_width70 { min-width: 70px; }
+.min_width100 { min-width: 100px; }
+.min_width150 { min-width: 150px; }
+.min_width400 { min-width: 400px; }
+
+
+.width2per { width: 2%; }
+.width3per { width: 3%; }
+.width4per { width: 4%; }
+.width5per { width: 5%; }
+.width6per { width: 6%; }
+.width7per { width: 7%; }
+.width8per { width: 8%; }
+.width9per { width: 9%; }
+.width10per { width: 10%; }
+.width11per { width: 11%; }
+.width12per { width: 12%; }
+.width13per { width: 13%; }
+.width14per { width: 14%; }
+.width15per { width: 15%; }
+.width16per { width: 16%; }
+.width17per { width: 17%; }
+.width18per { width: 18%; }
+.width19per { width: 19%; }
+.width20per { width: 20%; }
+.width21per { width: 21%; }
+.width22per { width: 22%; }
+.width23per { width: 23%; }
+.width24per { width: 24%; }
+.width25per { width: 25%; }
+.width26per { width: 26%; }
+.width27per { width: 27%; }
+.width28per { width: 28%; }
+.width29per { width: 29%; }
+.width30per { width: 30%; }
+.width31per { width: 31%; }
+
+.width35per { width: 35%; }
+.width40per { width: 40%; }
+.width45per { width: 45%; }
+.width50per { width: 50%; }
+.width55per { width: 55%; }
+.width60per { width: 60%; }
+.width65per { width: 65%; }
+.width70per { width: 70%; }
+.width75per { width: 75%; }
+.width80per { width: 80%; }
+.width90per { width: 90%; }
+.width95per { width: 95%; }
+.width100per { width: 100%; }
+
+.lineH1{ line-height:1;}
+.lineH12{ line-height:12px;}
+.lineH14{ line-height:14px;}
+.lineH16{ line-height:16px;}
+.lineH18{ line-height:18px;}
+.lineH20{ line-height:20px;}
+.lineH22{ line-height:22px;}
+.lineH26{ line-height:26px;}
+.lineH32{ line-height:32px;}
+.lineH36{ line-height:36px;}
+.lineH40{ line-height:40px;}
+.lineH45{ line-height:45px;}
+.lineH46{ line-height:46px;}
+.lineH50{ line-height:50px;}
+.lineH55{ line-height:55px;}
+.hBox26 { height: 26px; }
+.hBox30 { height: 30px; }
+.hBox32 { height: 32px; }
+.hBox36 { height: 36px; }
+.hBox40 { height: 40px; }
+.hBox44 { height: 44px; }
+.hBox45 { height: 45px; }
+.hBox50 { height: 50px; }
+.hBox70 { height: 70px; }
+.hBox90 { height: 90px; }
+.pBox25 { padding: 25px 0px 0px 20px; }
+
+.borderLeft { border-left: 1px solid #CCCCCC; }
+.borderRight { border-right: 1px solid #CCCCCC; }
+.borderNone { border: none; }
+
+
+
+.backGray_rec { background-color:#9FA0A0; }
+.backGrayC { background-color:#EEEEEE; }
+.backGray { background-color:#727171; color:#FFFFFF; }
+.backWhite { background-color:#FFFFFF; }
+.backBlue { background-color:#4472c4; color:#FFFFFF; }
+.backDBlue { background-color:#003399; color:#FFFFFF; }
+.backDOrange { background-color:#FF9900; color:#FFFFFF; }
+.backDRed { background-color:#FF3333; color:#FFFFFF; }
+.backDGreen { background-color:#00CC00; color:#FFFFFF; }
+.backDarkGray { background-color:#333333; }
+.backBrown { background-color:#666600; }
+.backBlack {background-color:#000000; color:#FFFFFF;}
+.backUndev { background-color:#C9CACA; }
+.open_Athlete { color:#CC00CC; }
+
+
+.textLeft { text-align: left; }
+.textCenter { text-align: center; }
+.textRight { text-align: right; }
+
+.inlineBox { display: inline-block; }
+
+.fontmen { color:#4472c4;}
+.fontlady { color:#FF9900;}
+.fontmenlady { color:#00CC00;}
+.fontbold { font-weight:bold;}
+
+.tr_men { background-color:#e0efff; }
+.tr_lady { background-color:#ffefe0; }
+.tr_menlady { background-color:#efffe0; }
+
+.lineheight_cont { line-height: 18px; }
+
+.valignT { vertical-align: top; }
+.valignM { vertical-align: middle; }
+.valignB { vertical-align: bottom; }
+
+.ws_nowrap { white-space: nowrap; }
+
+
+/* 横向き・通常 */
+@media only screen and (orientation : landscape) {
+}
+/* 横向き・小画面 */
+@media only screen and (max-height:530px) and (orientation : landscape) {
+}
+/* 縦向き・通常 */
+@media only screen and (orientation : portrait) {
+}
+/* 縦向き・小画面 */
+@media only screen and (max-height:1050px) and (orientation : portrait) {
+}
+
+

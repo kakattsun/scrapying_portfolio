@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+event_codes = new Array('A0050','A0060','A0080','A0100','A0145','A0150','A0200','A0300','A0400','A0600','A0800','A1100','A1150','A1160','A1200','A1300','A1400','A1500','A1600','A1800','A2100','AH053','AH054','AH055','AH056','AH058','AH061','AH063','AH082','AH083','AH084','AH086','AH101','AH103','AH104','AH111','AH112','AH113','AH205','AH301','AH302','AH303','AH401','AH402','AS201','AS202','AS301','AW150','AW300','AW500','AX100','AX200','AY001','D0400','D0800','D0808','D1000','D1600','D3200','D6000','FJHJ0','FJHP0','FJLJ0','FJTJ0','FJVJ0','FJVJ3','FJVJ5','FTAT1','FTAT2','FTAT3','FTAT4','FTAT5','FTAT6','FTAT7','FTAT8','FTAT9','FTDT1','FTDT2','FTDT3','FTDT4','FTHT1','FTHT2','FTHT3','FTHT4','FTHT5','FTHT6','FTHT7','FTJT1','FTJT2','FTJT3','FTJT4','FTJT5','FTJX0','FTJX1','FTWT1','FTWT2','FTWT3','FTWT4','FTWT5','FTXT0','FTYX0','M02E1','M02E2','M03S0','M04M0','M04M1','M0800','M1001','M1002','R0100','R0150','R0160','R0200','R0300','R0350','R0420','R0500','R1000','R1500','R1609','R2000','R2100','R4210','R9990','R9ZZZ','RW010','RW050','RW100','RW200','RW500','RWZZZ','RX040','RX060','RX080','RX100','RXZZZ');
+event_names = new Array('50m','60m','80m','100m','145m','150m','200m','300m','400m','600m','800m','1000m','1500m','1ﾏｲﾙ','2000m','3000m','4000m','5000m','6000m','8000m','10000m','50mH:99.1cm:99.1cm (99.1:13-8.5-11.5:4set)','50mH:84.0cm:84.0cm (84.0:13-8.5-11.5:4set)','50mH:60.0cm:小学独自 (60.0:10-7.5-10:5set)','50mH:91.4cm:91.4cm (91.4:13-8.5-11.5:4set)','50mH:70.0cm:70.0cm　(70.0:13-7-9:5set)','60mH:106.7cm:一般男子','60mH:91.4cm:中学男子','80mH:76.2cm:M70-75 W50-55','80mH:68.6cm:M80+ W60+','80mH:70.0cm:小学','80mH(60cm):60.0cm:小学(60cm)','100mH:84.0cm:一般女子 W35 中学男子(低学年)','100mH:91.4cm:M50-55','100mH:84.0cm:M60-65','110mH:106.7cm:一般男子','110mH:99.1cm:M40-45 高校男子(ジュニア)','110mH:91.4cm:中学男子','200mH:68.6:マスターズ種目','300mH:91.4cm:男子','300mH:76.2cm:女子 M60-65 W50-55','300mH:68.6cm:M70+ W60+','400mH:91.4cm:男子 M40-45','400mH:84.0cm:M50-55','2000mSC:76.2cm:M60+ W35+','2000mSC:91.4cm:M60+','3000mSC:91.4cm:男子 M40-55','1500mW','3000mW','5000mW','10000mW','20000mW','スラローム','4x100mR','4x200mR','8x100mR','ｽｳｪｰﾃﾞﾝR','4x400mR','4x800mR','4x1500mR','走高跳','棒高跳','走幅跳','三段跳','立幅跳','立三段跳','立五段跳','砲丸投:7.26kg:男子 M40-45','砲丸投:6.35kg:高校男子(少年Ａ)','砲丸投:6kg:高校男子(2006以降) M50-55','砲丸投:5.45kg:高校男子(2005以前)','砲丸投:5kg:男子ユース 中学男子 M60-65','砲丸投:4kg:女子 中男旧 M70+ W35-45','砲丸投:3kg:W50+','砲丸投:2.72kg:中学女子、中１男子','砲丸投:2.00k:w75+','円盤投:2.0kg:男子 M40-45','円盤投:1.5kg:中学男子 男子ユース M50-55','円盤投:1.0kg:女子  M60+ W35-80','円盤投:1.75kg:高校男子(2006以降)','ﾊﾝﾏｰ投:7.26kg:男子 M40-45','ﾊﾝﾏｰ投:6.35kg:高校男子(2005以前)','ﾊﾝﾏｰ投:6kg:高校男子(2006以降) M50-55','ﾊﾝﾏｰ投:5kg:男子ユース M60-65','ﾊﾝﾏｰ投:4kg:女子 M70+ W35-45','ﾊﾝﾏｰ投:3kg:W50+','ﾊﾝﾏｰ投:2kg:W70+','やり投:800g:男子 M40-45','やり投:700g:男子ユース M50-55','やり投:600g:女子 M60-65 W35-45','やり投:500g:M70-75 W50-55','やり投:400g:M80+ W60+','ｼﾞｬﾍﾞﾘｯｸｽﾛｰ','ｼﾞｬﾍﾞﾘｯｸﾎﾞｰﾙ投','重錘投:15.88kg:男子 M40-45','重錘投:11.34kg:M50-55','重錘投:9.08kg:女子 M60-65 W35-45','重錘投:7.26kg:M70-75 W50-55','重錘投:5.45kg:M80+ W60+','ｿﾌﾄﾎﾞｰﾙ投:１号球','ﾋﾞｰﾝﾊﾞｯｸﾞ投','コンバインドA','コンバインドB','スプリント三種','四種競技:男子','四種競技B:男子','八種競技:高校男子','十種競技:男子','十種競技:Jr.規格:ジュニア男子','1km','1.5km','1.6km','2km','3km','3.5km','4.2km','5km','10km','15km','10Mile','20km','ﾊｰﾌﾏﾗｿﾝ','ﾏﾗｿﾝ','100km','Road','1kmW','5kmW','10kmW','20kmW','50kmW','RoadWalk','XC4km','XC6km','XC8km','XC10km','CrossCountry');
+function button_click(var_x,var_y)
+{
+
+	if( var_x != 1 )
+		var change_flag = is_change();
+
+	document.form_main.P_submit_value.value = "";
+	switch(var_x){
+		case 9999:
+			document.form_main.action = "../error.php";
+			break;
+		case 'back': //戻る
+
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_back_flag.value = 1;
+					button_click(1,0);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+
+			document.form_main.action = "./0011_gamemenu.php";
+			break;
+		case 1: //種目設定：登録処理
+			if( postdata_check() == false )
+				return false;
+			document.form_main.P_submit_value.value = "REGIST GAME_EVENT";
+			document.form_main.action = "./0013_event.php";
+			break;
+		case 2: //種目設定：種目自動作成処理
+			if( postdata_check() == false )
+				return false;
+
+			document.form_main.P_submit_sub.value = var_y;
+			document.form_main.P_submit_value.value = "CREATE NEW GAME_EVENT";
+			document.form_main.action = "./0013_event.php";
+			break;
+		case 3: //種目設定：検索処理
+
+			if( change_flag == true )
+			{
+				if( confirm('更新して移動しますか？') == true )
+				{
+					document.form_main.P_back_flag.value = 2;
+					button_click(1,0);
+					return false;
+				}
+				else
+				{
+					if( confirm('更新せずに移動しますか？') == false )
+						return false;
+				}
+			}
+
+			document.form_main.action = "./0013_event.php";
+			break;
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+function postdata_check()
+{
+	return true;
+}
+var addrow = 22;
+function add_rows(obj,row)
+{
+	var isIE =/*@cc_on!@*/false;
+	var tbodyElement,trElement,tdElement,inputElement,textElement,selectElement;
+	var thisrow = addrow;
+
+	var e_cnt = 136;
+	var e_name = new Array('50m','60m','80m','100m','145m','150m','200m','300m','400m','600m','800m','1000m','1500m','1ﾏｲﾙ','2000m','3000m','4000m','5000m','6000m','8000m','10000m','50mH:99.1cm:99.1cm (99.1:13-8.5-11.5:4set)','50mH:84.0cm:84.0cm (84.0:13-8.5-11.5:4set)','50mH:60.0cm:小学独自 (60.0:10-7.5-10:5set)','50mH:91.4cm:91.4cm (91.4:13-8.5-11.5:4set)','50mH:70.0cm:70.0cm　(70.0:13-7-9:5set)','60mH:106.7cm:一般男子','60mH:91.4cm:中学男子','80mH:76.2cm:M70-75 W50-55','80mH:68.6cm:M80+ W60+','80mH:70.0cm:小学','80mH(60cm):60.0cm:小学(60cm)','100mH:84.0cm:一般女子 W35 中学男子(低学年)','100mH:91.4cm:M50-55','100mH:84.0cm:M60-65','110mH:106.7cm:一般男子','110mH:99.1cm:M40-45 高校男子(ジュニア)','110mH:91.4cm:中学男子','200mH:68.6:マスターズ種目','300mH:91.4cm:男子','300mH:76.2cm:女子 M60-65 W50-55','300mH:68.6cm:M70+ W60+','400mH:91.4cm:男子 M40-45','400mH:84.0cm:M50-55','2000mSC:76.2cm:M60+ W35+','2000mSC:91.4cm:M60+','3000mSC:91.4cm:男子 M40-55','1500mW','3000mW','5000mW','10000mW','20000mW','スラローム','4x100mR','4x200mR','8x100mR','ｽｳｪｰﾃﾞﾝR','4x400mR','4x800mR','4x1500mR','走高跳','棒高跳','走幅跳','三段跳','立幅跳','立三段跳','立五段跳','砲丸投:7.26kg:男子 M40-45','砲丸投:6.35kg:高校男子(少年Ａ)','砲丸投:6kg:高校男子(2006以降) M50-55','砲丸投:5.45kg:高校男子(2005以前)','砲丸投:5kg:男子ユース 中学男子 M60-65','砲丸投:4kg:女子 中男旧 M70+ W35-45','砲丸投:3kg:W50+','砲丸投:2.72kg:中学女子、中１男子','砲丸投:2.00k:w75+','円盤投:2.0kg:男子 M40-45','円盤投:1.5kg:中学男子 男子ユース M50-55','円盤投:1.0kg:女子  M60+ W35-80','円盤投:1.75kg:高校男子(2006以降)','ﾊﾝﾏｰ投:7.26kg:男子 M40-45','ﾊﾝﾏｰ投:6.35kg:高校男子(2005以前)','ﾊﾝﾏｰ投:6kg:高校男子(2006以降) M50-55','ﾊﾝﾏｰ投:5kg:男子ユース M60-65','ﾊﾝﾏｰ投:4kg:女子 M70+ W35-45','ﾊﾝﾏｰ投:3kg:W50+','ﾊﾝﾏｰ投:2kg:W70+','やり投:800g:男子 M40-45','やり投:700g:男子ユース M50-55','やり投:600g:女子 M60-65 W35-45','やり投:500g:M70-75 W50-55','やり投:400g:M80+ W60+','ｼﾞｬﾍﾞﾘｯｸｽﾛｰ','ｼﾞｬﾍﾞﾘｯｸﾎﾞｰﾙ投','重錘投:15.88kg:男子 M40-45','重錘投:11.34kg:M50-55','重錘投:9.08kg:女子 M60-65 W35-45','重錘投:7.26kg:M70-75 W50-55','重錘投:5.45kg:M80+ W60+','ｿﾌﾄﾎﾞｰﾙ投:１号球','ﾋﾞｰﾝﾊﾞｯｸﾞ投','コンバインドA','コンバインドB','スプリント三種','四種競技:男子','四種競技B:男子','八種競技:高校男子','十種競技:男子','十種競技:Jr.規格:ジュニア男子','1km','1.5km','1.6km','2km','3km','3.5km','4.2km','5km','10km','15km','10Mile','20km','ﾊｰﾌﾏﾗｿﾝ','ﾏﾗｿﾝ','100km','Road','1kmW','5kmW','10kmW','20kmW','50kmW','RoadWalk','XC4km','XC6km','XC8km','XC10km','CrossCountry','');
+	var e_code = new Array('A0050','A0060','A0080','A0100','A0145','A0150','A0200','A0300','A0400','A0600','A0800','A1100','A1150','A1160','A1200','A1300','A1400','A1500','A1600','A1800','A2100','AH053','AH054','AH055','AH056','AH058','AH061','AH063','AH082','AH083','AH084','AH086','AH101','AH103','AH104','AH111','AH112','AH113','AH205','AH301','AH302','AH303','AH401','AH402','AS201','AS202','AS301','AW150','AW300','AW500','AX100','AX200','AY001','D0400','D0800','D0808','D1000','D1600','D3200','D6000','FJHJ0','FJHP0','FJLJ0','FJTJ0','FJVJ0','FJVJ3','FJVJ5','FTAT1','FTAT2','FTAT3','FTAT4','FTAT5','FTAT6','FTAT7','FTAT8','FTAT9','FTDT1','FTDT2','FTDT3','FTDT4','FTHT1','FTHT2','FTHT3','FTHT4','FTHT5','FTHT6','FTHT7','FTJT1','FTJT2','FTJT3','FTJT4','FTJT5','FTJX0','FTJX1','FTWT1','FTWT2','FTWT3','FTWT4','FTWT5','FTXT0','FTYX0','M02E1','M02E2','M03S0','M04M0','M04M1','M0800','M1001','M1002','R0100','R0150','R0160','R0200','R0300','R0350','R0420','R0500','R1000','R1500','R1609','R2000','R2100','R4210','R9990','R9ZZZ','RW010','RW050','RW100','RW200','RW500','RWZZZ','RX040','RX060','RX080','RX100','RXZZZ','');
+
+	var c_cnt = 7;
+	var c_name = new Array('指定無','一般','大学','ﾏｽﾀｰｽﾞ','高校','中学','小学','');
+	var c_code = new Array('0','1','2','3','20','30','40','');
+
+	var nowrow = document.form_main.P_game_event_rows.value;
+
+	var grade_min = document.getElementsByName( "P_entry_grade_min[]" ) ;
+	var grade_max = document.getElementsByName( "P_entry_grade_max[]" ) ;
+	var category = document.getElementsByName( "P_entry_category[]" ) ;
+	var age_min = document.getElementsByName( "P_entry_age_min[]" ) ;
+	var age_max = document.getElementsByName( "P_entry_age_max[]" ) ;
+
+
+	var btn = document.getElementsByName('name_delb');
+	btn[btn.length-1].style.display = '';
+
+	tbodyElement = document.getElementById("id_event_tbody");
+	trElement = document.createElement("tr");
+	// 1
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='hidden' name='P_id[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "hidden";
+		inputElement.name = "P_id[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.id = "id_pid_" + thisrow;
+	inputElement.value = "";
+
+	if(isIE){
+		inputElement = document.createElement("<input type='hidden' name='P_delete_check[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "hidden";
+		inputElement.name = "P_delete_check[]";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.value = "";
+
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.id = "id_delb_" + thisrow;
+	inputElement.name = "name_delb";
+	inputElement.value = "削除";
+	inputElement.onclick = function(){del_rows(inputElement,thisrow);}
+	inputElement.className = "inputButton width50";
+	inputElement.style.display = "none";
+	trElement.appendChild(tdElement);
+	tdElement.className = "paddingTB3 paddingL15";
+          
+	// 2
+	tdElement = document.createElement("td");
+	textElement = document.createTextNode('男');
+	tdElement.appendChild(textElement);
+	trElement.appendChild(tdElement);
+	tdElement.className = "width100 paddingTB3";
+
+	// 3
+	tdElement = document.createElement("td");
+	textElement = document.createTextNode(' ');
+	tdElement.appendChild(textElement);
+	trElement.appendChild(tdElement);
+	tdElement.className = "width180 paddingTB3";
+
+	// 4 種目
+	tdElement = document.createElement("td");
+	if(isIE){
+		selectElement = document.createElement("<select name='P_e_code[]'>");
+	}else{
+		selectElement = document.createElement("select");
+		selectElement.name = "P_e_code[]";
+	}
+	tdElement.appendChild(selectElement);
+
+	//空白行
+	selectElement.options[0] = new Option("","");
+
+
+	for(i=0;i<e_cnt;i++)
+	{
+		var ii = i + 1;
+		selectElement.options[ii] = new Option(e_name[i],e_code[i]);
+	}
+	selectElement.value = "";
+	selectElement.style.width = "200px";
+	selectElement.onchange = function(){set_event_select();}
+	selectElement.className = "selectNormal";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width50 paddingTB3";
+
+	// 5 対象カテゴリ
+	tdElement = document.createElement("td");
+	if(isIE){
+		selectElement = document.createElement("<select name='P_entry_category[]'>");
+	}else{
+		selectElement = document.createElement("select");
+		selectElement.name = "P_entry_category[]";
+	}
+	tdElement.appendChild(selectElement);
+	for(i=0;i<c_cnt;i++)
+	{
+		selectElement.options[i] = new Option(c_name[i],c_code[i]);
+	}
+
+	selectElement.value = "";
+	selectElement.className = "selectNormal";
+	selectElement.selectedIndex = category[nowrow-1].selectedIndex;
+
+	trElement.appendChild(tdElement);
+	tdElement.className = "width150 paddingTB3";
+
+	// 6 学年範囲
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_entry_grade_min[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_entry_grade_min[]";
+	}
+	inputElement.onkeydown=function(){return move_focus(event,this);}
+	tdElement.appendChild(inputElement);
+	inputElement.value = grade_min[nowrow-1].value;
+	inputElement.className = "textBox imeOff width30";
+	textElement = document.createTextNode(' - ');
+	tdElement.appendChild(textElement);
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_entry_grade_max[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_entry_grade_max[]";
+	}
+	inputElement.onkeydown=function(){return move_focus(event,this);}
+	tdElement.appendChild(inputElement);
+	inputElement.value = grade_max[nowrow-1].value;
+	inputElement.className = "textBox imeOff width30";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width180 paddingTB3";
+
+	// 7 年齢範囲
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_entry_age_min[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_entry_age_min[]";
+	}
+	inputElement.onkeydown=function(){return move_focus(event,this);}
+	tdElement.appendChild(inputElement);
+	inputElement.value = age_min[nowrow-1].value;
+	inputElement.className = "textBox imeOff width30";
+	textElement = document.createTextNode(' - ');
+	tdElement.appendChild(textElement);
+	if(isIE){
+		inputElement = document.createElement("<input type='text' name='P_entry_age_max[]'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "text";
+		inputElement.name = "P_entry_age_max[]";
+	}
+	inputElement.onkeydown=function(){return move_focus(event,this);}
+	tdElement.appendChild(inputElement);
+	inputElement.value = age_max[nowrow-1].value;
+	inputElement.className = "textBox imeOff width30";
+	trElement.appendChild(tdElement);
+	tdElement.className = "width180 paddingTB3";
+
+
+	// 8
+	tdElement = document.createElement("td");
+	textElement = document.createTextNode('');
+	tdElement.appendChild(textElement);
+	trElement.appendChild(tdElement);
+	tdElement.className = "";
+
+	// 9 追加ボタン
+	tdElement = document.createElement("td");
+	if(isIE){
+		inputElement = document.createElement("<input type='button'>");
+	}else{
+		inputElement = document.createElement("input");
+		inputElement.type = "button";
+	}
+	tdElement.appendChild(inputElement);
+	inputElement.name = "name_addb";
+	inputElement.value = ' + ';
+	inputElement.onclick = function(){add_rows(inputElement,thisrow);}
+	inputElement.className = 'inputButton width50';
+	trElement.appendChild(tdElement);
+	tbodyElement.appendChild(trElement);
+	trElement.id = 'id_row_' + thisrow;
+	trElement.className = 'contentData';
+	trElement.style = 'line-height:1;';
+
+	addrow = addrow + 1;
+	document.form_main.P_game_event_rows.value = Number(document.form_main.P_game_event_rows.value) + 1;
+	obj.style.display = 'none';
+	set_event_select();
+}
+function del_rows(obj,row)
+{
+	var delid = document.getElementById('id_pid_' + row).value;
+	if( delid != "" )
+	{
+		if( confirm('削除しますか？（削除しても登録を実行するまで確定されません。）') == false )
+			return false;
+
+		document.getElementById('id_delchk_' + row).value = 'ON';
+		document.getElementById('id_row_' + row).style.display = 'none';
+
+		var target = document.getElementById('id_addb_' + row);
+		target.parentNode.removeChild(target);
+	}
+	else
+	{
+		var target = document.getElementById('id_row_' + row);
+		while(target.firstChild) target.removeChild(target.firstChild);
+		target.parentNode.removeChild(target);
+
+		document.form_main.P_game_event_rows.value = Number(document.form_main.P_game_event_rows.value) - 1;
+	}
+	var btn = document.getElementsByName('name_addb');
+	btn[btn.length-1].style.display = '';
+	set_event_select();
+}
+var event_chenge_flag = 0;
+var ev_sel_flag = 0;
+function set_event_select()
+{
+	if( ev_sel_flag == 0 )
+	{
+		rows = 136;
+		ev_sel_flag = 1;
+		var ev_obj = document.getElementsByName('P_e_code[]');
+		var disp_evlist = new Array();
+		//全行の種目コード一覧取得
+		for(i=0;i<ev_obj.length;i++)
+		{
+			disp_evlist.push(ev_obj[i].value)
+		}
+		//各行の処理
+		for(i=0;i<ev_obj.length;i++)
+		{
+			if( ev_obj[i].type == 'select-one')
+			{
+				sel_id = ev_obj[i].value;
+				cnt = ev_obj[i].length;
+				for(j=cnt-1;j>=0;j--){
+					ev_obj[i].options[j] = null;
+				}
+				ev_obj[i].options[0] = new Option('','');
+				opt = 1;
+				for(j=0;j<rows;j++)
+				{
+					tmp_flag = 0;
+					for(k=0;k<disp_evlist.length;k++)
+					{
+						if(event_codes[j].substr( 0, 4 ) == disp_evlist[k].substr( 0, 4 ))
+						{
+							if( sel_id != event_codes[j] )
+							{
+								tmp_flag = 1;
+								break;
+							}
+						}
+					}
+					if( tmp_flag == 0 )
+					{
+						ev_obj[i].options[opt] = new Option(event_names[j],event_codes[j]);
+						if( sel_id == event_codes[j] ){
+							ev_obj[i].options[opt].selected = true;
+						}
+						opt++;
+					}
+				}
+			}
+		}
+		ev_sel_flag = 0;
+
+		event_chenge_flag = 1;
+	}
+}
+
+var form_element = new Array('P_entry_category[]','P_entry_grade_min[]','P_entry_grade_max[]','P_entry_age_min[]','P_entry_age_max[]');
+function is_change()
+{
+
+	// 指定フォーム要素対象版
+	var cnt = form_element.length;
+	for(var i=0;i<cnt;i++)
+	{
+		if( document.form_main.elements[form_element[i]] )
+		{
+			var frm = document.form_main.elements[form_element[i]];
+
+			var tmptag = document.getElementsByName( form_element[i] ) ;
+
+
+			if( frm.length > 1 )
+			{
+				for(var j=0;j<frm.length;j++)
+				{
+					if( frm[j].tagName == "INPUT" )
+					{
+						if( frm[j].getAttribute("type") == "text" && frm[j].value != frm[j].defaultValue )
+						{
+							return true; // 変更あり
+						}
+						else if( frm[j].getAttribute("type") == "checkbox" && frm[j].checked != frm[j].defaultChecked )
+							return true; // 変更あり
+						else if( frm[j].getAttribute("type") == "radio" && frm[j].checked != frm[j].defaultChecked )
+							return true; // 変更あり
+					}
+					else if( frm[j].tagName == "SELECT" && frm[j].options[frm[j].selectedIndex].defaultSelected == false )
+					{
+						return true; // 変更あり
+					}
+					else if( frm[j].tagName == "TEXTAREA" && frm[j].value != frm[j].defaultValue )
+						return true; // 変更あり
+				}
+			}
+			else
+			{
+
+				if( frm.tagName == "INPUT" )
+				{
+					if( frm.getAttribute("type") == "text" && frm.value != frm.defaultValue )
+					{
+						return true; // 変更あり
+					}
+					else if( frm.getAttribute("type") == "checkbox" && frm.checked != frm.defaultChecked )
+						return true; // 変更あり
+					else if( frm.getAttribute("type") == "radio" && frm.checked != frm.defaultChecked )
+						return true; // 変更あり
+				}
+				else if( frm.tagName == "SELECT" && frm.options[frm.selectedIndex].defaultSelected == false )
+				{
+					return true; // 変更あり
+				}
+				else if( frm.tagName == "TEXTAREA" && frm.value != frm.defaultValue )
+					return true; // 変更あり
+			}
+		}
+	}
+
+	if(event_chenge_flag == 1)
+		return true; // 変更あり
+		
+
+	return false;
+}
+
+function onload_event()
+{
+	return;
+}
+
+//-->
+</script>
+
+
+<style type="text/css">
+
+
+</style>
+
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body onload='onload_event()' >
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li class='backButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click("back",1)' style='width: 75px; padding-left: 3px; padding-right: 3px;'><span style='font-weight:bold; font-size:18px;'><-Back</span></li><li><div class='pageName'>種目設定</div></li><li><div class='gameName'>2022滋賀高校春季総体[皇子山]</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_terminal'><input id='id_printer' type='button' value='未設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_click()' class='printButton'><span>端末選択</span></li><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option><option value='102'>記録（滋賀陸協１）</option><option value='104'>写真判定（高体連）</option><option value='105'>競技者係(MF244dw)</option><option value='117'>競技者係（テスト用）</option><option value='123'>普及(PX-1700F) </option><option value='150'>リザルト集</option><option value='151'>英語リザルト</option><option value='267'>番組編成(滋賀陸協1)</option><option value='340'>記録（コピー機）</option><option value='341'>賞状（PX-M6010F）</option><option value='356'>普及・記録</option><option value='357'>普及・賞状</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target=''>
+	<input type='hidden' name='P_SESSION_KEY' value='l11947'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-07-19 19:47:33 A3R4F3E1S5'>
+	<input type='hidden' name='P_prev_page' value='0013_event.php'>
+	<input type='hidden' name='P_submit_value' value=''><input type='hidden' name='P_submit_sub' value=''>
+		<input type='hidden' name='P_select_game_table_id' value='5538'>
+		<input type='hidden' name='P_game_event_rows' value='22'>
+		<input type='hidden' name='P_select_game_race_id' value=''>
+		<input type='hidden' name='P_submit_onload' value=''>
+		<input type='hidden' name='P_back_flag' value='0'>
+		<input type='hidden' name='P_search_sex_page' value='1'>
+		<input type='hidden' name='P_search_class_id_page' value='0'>
+
+	<!--  -->
+	<div class='topBox'>
+
+		<table class='topLine'>
+			<tr class='lineH50'>
+			<td class='paddingL15'>
+			<input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(1,0)' class='inputButton width180' style='width: 150px; height: 40px;'>
+			</td>
+			</tr>
+		</table>
+
+		<table class='menuLine'>
+			<tr class='lineH50 backGray'>
+			<td class='width5per ' ></td><!--
+			--><td class='width8per' >
+				<select name='P_search_sex' class='selectNormal' onchange='button_click(3,0)'>
+				<option value='1' selected='selected'>男</option><option value='2'>女</option><option value='3'>混合</option>
+				</select>
+			</td><!--
+			--><td class='width15per' >
+				<select name='P_search_class_id' class='selectNormal ' onchange='button_click(3,0)' style='width: 95%'>
+				<option value='0' selected='selected'> </option>
+				</select>
+			</td><!--
+			--><td class='width20per' >種目</td><!--
+			--><td class='width10per'>対象カテゴリ</td><!--
+			--><td class='width15per'>学年範囲</td><!--
+			--><td class='width15per'>年齢範囲</td><!--
+			--><td class=''>エントリ人数</td><!--
+			--><td></td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<!--  -->
+	<div class='bodyBox' style='margin-top: 142px;'>
+		<table class='contentTable'>
+		<tbody id='id_event_tbody'>
+
+<tr class='contentData' id='id_row_0' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367542' id='id_pid_0'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_0'><input type='button' value='削除' name='name_delb' id='id_delb_0' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,0)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >A0100:100m<input type='hidden' name='P_e_code[]' value='A0100'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>137</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_0' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,0)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_1' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367544' id='id_pid_1'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_1'><input type='button' value='削除' name='name_delb' id='id_delb_1' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,1)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >A0200:200m<input type='hidden' name='P_e_code[]' value='A0200'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>120</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_1' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,1)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_2' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367545' id='id_pid_2'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_2'><input type='button' value='削除' name='name_delb' id='id_delb_2' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,2)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >A0400:400m<input type='hidden' name='P_e_code[]' value='A0400'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>106</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_2' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,2)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_3' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367547' id='id_pid_3'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_3'><input type='button' value='削除' name='name_delb' id='id_delb_3' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,3)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >A0800:800m<input type='hidden' name='P_e_code[]' value='A0800'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>94</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_3' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,3)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_4' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367548' id='id_pid_4'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_4'><input type='button' value='削除' name='name_delb' id='id_delb_4' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,4)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >A1150:1500m<input type='hidden' name='P_e_code[]' value='A1150'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>106</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_4' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,4)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_5' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367550' id='id_pid_5'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_5'><input type='button' value='削除' name='name_delb' id='id_delb_5' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,5)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >A1500:5000m<input type='hidden' name='P_e_code[]' value='A1500'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>62</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_5' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,5)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_6' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367551' id='id_pid_6'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_6'><input type='button' value='削除' name='name_delb' id='id_delb_6' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,6)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >AH111:110mH:106.7cm:一般男子<input type='hidden' name='P_e_code[]' value='AH111'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>31</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_6' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,6)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_7' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367553' id='id_pid_7'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_7'><input type='button' value='削除' name='name_delb' id='id_delb_7' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,7)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >AH401:400mH:91.4cm:男子 M40-45<input type='hidden' name='P_e_code[]' value='AH401'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>42</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_7' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,7)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_8' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367554' id='id_pid_8'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_8'><input type='button' value='削除' name='name_delb' id='id_delb_8' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,8)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >AS301:3000mSC:91.4cm:男子 M40-55<input type='hidden' name='P_e_code[]' value='AS301'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>27</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_8' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,8)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_9' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367555' id='id_pid_9'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_9'><input type='button' value='削除' name='name_delb' id='id_delb_9' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,9)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >AW500:5000mW<input type='hidden' name='P_e_code[]' value='AW500'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>14</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_9' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,9)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_10' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367556' id='id_pid_10'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_10'><input type='button' value='削除' name='name_delb' id='id_delb_10' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,10)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >D0400:4x100mR<input type='hidden' name='P_e_code[]' value='D0400'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>36</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_10' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,10)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_11' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367557' id='id_pid_11'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_11'><input type='button' value='削除' name='name_delb' id='id_delb_11' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,11)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >D1600:4x400mR<input type='hidden' name='P_e_code[]' value='D1600'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>32</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_11' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,11)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_12' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367558' id='id_pid_12'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_12'><input type='button' value='削除' name='name_delb' id='id_delb_12' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,12)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FJHJ0:走高跳<input type='hidden' name='P_e_code[]' value='FJHJ0'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>20</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_12' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,12)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_13' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367560' id='id_pid_13'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_13'><input type='button' value='削除' name='name_delb' id='id_delb_13' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,13)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FJHP0:棒高跳<input type='hidden' name='P_e_code[]' value='FJHP0'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>6</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_13' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,13)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_14' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367561' id='id_pid_14'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_14'><input type='button' value='削除' name='name_delb' id='id_delb_14' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,14)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FJLJ0:走幅跳<input type='hidden' name='P_e_code[]' value='FJLJ0'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>71</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_14' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,14)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_15' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367563' id='id_pid_15'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_15'><input type='button' value='削除' name='name_delb' id='id_delb_15' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,15)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FJTJ0:三段跳<input type='hidden' name='P_e_code[]' value='FJTJ0'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>36</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_15' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,15)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_16' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367564' id='id_pid_16'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_16'><input type='button' value='削除' name='name_delb' id='id_delb_16' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,16)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FTAT3:砲丸投:6kg:高校男子(2006以降) M50-55<input type='hidden' name='P_e_code[]' value='FTAT3'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>43</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_16' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,16)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_17' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367566' id='id_pid_17'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_17'><input type='button' value='削除' name='name_delb' id='id_delb_17' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,17)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FTDT4:円盤投:1.75kg:高校男子(2006以降)<input type='hidden' name='P_e_code[]' value='FTDT4'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>45</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_17' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,17)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_18' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367567' id='id_pid_18'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_18'><input type='button' value='削除' name='name_delb' id='id_delb_18' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,18)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FTHT3:ﾊﾝﾏｰ投:6kg:高校男子(2006以降) M50-55<input type='hidden' name='P_e_code[]' value='FTHT3'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>20</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_18' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,18)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_19' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367568' id='id_pid_19'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_19'><input type='button' value='削除' name='name_delb' id='id_delb_19' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,19)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >FTJT1:やり投:800g:男子 M40-45<input type='hidden' name='P_e_code[]' value='FTJT1'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>53</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_19' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,19)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_20' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='367570' id='id_pid_20'><input type='hidden' name='P_delete_check[]' value='' id='id_delchk_20'><input type='button' value='削除' name='name_delb' id='id_delb_20' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,20)' class='inputButton' style='width:95%;'></td><td class='width8per' >男</td><td class='width15per' >0: </td><td class='width20per' >M0800:八種競技:高校男子<input type='hidden' name='P_e_code[]' value='M0800'></td><td class='width10per' ><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='3' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='999' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''>18</td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_20' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,20)' class='inputButton width50' style='display:none;'></td></tr>
+<tr class='contentData' id='id_row_21' style='line-height:1;'><td class='width5per paddingL15'><input type='hidden' name='P_id[]' value='' id='id_pid_21'><input type='button' value='削除' name='name_delb' id='id_delb_21' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'  onclick='del_rows(this,21)' class='inputButton width100per' style='display:none;'></td><td class='width8per'>男</td><td class='width15per'>0: </td><td class='width20per'><select name='P_e_code[]' class='selectNormal ' onchange='set_event_select();' style='width:200px;'><option value=''></option><option value='A0050'>50m</option><option value='A0060'>60m</option><option value='A0080'>80m</option><option value='A0145'>145m</option><option value='A0150'>150m</option><option value='A0300'>300m</option><option value='A0600'>600m</option><option value='A1100'>1000m</option><option value='A1160'>1ﾏｲﾙ</option><option value='A1200'>2000m</option><option value='A1300'>3000m</option><option value='A1400'>4000m</option><option value='A1600'>6000m</option><option value='A1800'>8000m</option><option value='A2100'>10000m</option><option value='AH053'>50mH:99.1cm:99.1cm (99.1:13-8.5-11.5:4set)</option><option value='AH054'>50mH:84.0cm:84.0cm (84.0:13-8.5-11.5:4set)</option><option value='AH055'>50mH:60.0cm:小学独自 (60.0:10-7.5-10:5set)</option><option value='AH056'>50mH:91.4cm:91.4cm (91.4:13-8.5-11.5:4set)</option><option value='AH058'>50mH:70.0cm:70.0cm　(70.0:13-7-9:5set)</option><option value='AH061'>60mH:106.7cm:一般男子</option><option value='AH063'>60mH:91.4cm:中学男子</option><option value='AH082'>80mH:76.2cm:M70-75 W50-55</option><option value='AH083'>80mH:68.6cm:M80+ W60+</option><option value='AH084'>80mH:70.0cm:小学</option><option value='AH086'>80mH(60cm):60.0cm:小学(60cm)</option><option value='AH101'>100mH:84.0cm:一般女子 W35 中学男子(低学年)</option><option value='AH103'>100mH:91.4cm:M50-55</option><option value='AH104'>100mH:84.0cm:M60-65</option><option value='AH205'>200mH:68.6:マスターズ種目</option><option value='AH301'>300mH:91.4cm:男子</option><option value='AH302'>300mH:76.2cm:女子 M60-65 W50-55</option><option value='AH303'>300mH:68.6cm:M70+ W60+</option><option value='AS201'>2000mSC:76.2cm:M60+ W35+</option><option value='AS202'>2000mSC:91.4cm:M60+</option><option value='AW150'>1500mW</option><option value='AW300'>3000mW</option><option value='AX100'>10000mW</option><option value='AX200'>20000mW</option><option value='AY001'>スラローム</option><option value='D0800'>4x200mR</option><option value='D0808'>8x100mR</option><option value='D1000'>ｽｳｪｰﾃﾞﾝR</option><option value='D3200'>4x800mR</option><option value='D6000'>4x1500mR</option><option value='FJVJ0'>立幅跳</option><option value='FJVJ3'>立三段跳</option><option value='FJVJ5'>立五段跳</option><option value='FTJX0'>ｼﾞｬﾍﾞﾘｯｸｽﾛｰ</option><option value='FTJX1'>ｼﾞｬﾍﾞﾘｯｸﾎﾞｰﾙ投</option><option value='FTWT1'>重錘投:15.88kg:男子 M40-45</option><option value='FTWT2'>重錘投:11.34kg:M50-55</option><option value='FTWT3'>重錘投:9.08kg:女子 M60-65 W35-45</option><option value='FTWT4'>重錘投:7.26kg:M70-75 W50-55</option><option value='FTWT5'>重錘投:5.45kg:M80+ W60+</option><option value='FTXT0'>ｿﾌﾄﾎﾞｰﾙ投:１号球</option><option value='FTYX0'>ﾋﾞｰﾝﾊﾞｯｸﾞ投</option><option value='M02E1'>コンバインドA</option><option value='M02E2'>コンバインドB</option><option value='M03S0'>スプリント三種</option><option value='M04M0'>四種競技:男子</option><option value='M04M1'>四種競技B:男子</option><option value='M1001'>十種競技:男子</option><option value='M1002'>十種競技:Jr.規格:ジュニア男子</option><option value='R0100'>1km</option><option value='R0150'>1.5km</option><option value='R0160'>1.6km</option><option value='R0200'>2km</option><option value='R0300'>3km</option><option value='R0350'>3.5km</option><option value='R0420'>4.2km</option><option value='R0500'>5km</option><option value='R1000'>10km</option><option value='R1500'>15km</option><option value='R1609'>10Mile</option><option value='R2000'>20km</option><option value='R2100'>ﾊｰﾌﾏﾗｿﾝ</option><option value='R4210'>ﾏﾗｿﾝ</option><option value='R9990'>100km</option><option value='R9ZZZ'>Road</option><option value='RW010'>1kmW</option><option value='RW050'>5kmW</option><option value='RW100'>10kmW</option><option value='RW200'>20kmW</option><option value='RW500'>50kmW</option><option value='RWZZZ'>RoadWalk</option><option value='RX040'>XC4km</option><option value='RX060'>XC6km</option><option value='RX080'>XC8km</option><option value='RX100'>XC10km</option><option value='RXZZZ'>CrossCountry</option></select></td><td class='width10per'><select name='P_entry_category[]' onkeydown='return move_focus(event,this);' class='selectNormal'><option value='0'>指定無</option><option value='1'>一般</option><option value='2'>大学</option><option value='3'>ﾏｽﾀｰｽﾞ</option><option value='20' selected='selected'>高校</option><option value='30'>中学</option><option value='40'>小学</option></select></td><td class='width15per'><input type='text' name='P_entry_grade_min[]' value='0' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_grade_max[]' value='99' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class='width15per'><input type='text' name='P_entry_age_min[]' value='1' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'> - <input type='text' name='P_entry_age_max[]' value='99' onkeydown='return move_focus(event,this);' class='textBox imeOff width30'></td><td class=''></td><td class=''><input type='button' value=' + ' name='name_addb' id='id_addb_21' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='add_rows(this,21)' class='inputButton width50'></td></tr>
+
+		</tbody>
+		</table>
+	</div>
+	<!--  -->
+	<div id='id_message_box' class='messageBox' style='position:fixed; top:20vh; z-index:10; width:800px; height:30vh; overflow-y: auto; margin:0px 203px;border: 2px solid #999999; background-color:#FFFFFF; display:none;'><div class='closebutton' onclick='document.getElementById("id_message_box").style.display="none";document.getElementById("id_message_button").style.display="";' >&nbsp;</div><div style='margin-top:-50px; width:200px; height:30px; padding: 20px 0px 15px 20px;'>Message</div><p class='message' id='id_message' style='padding-left:20px;'></p><p class='messageSafe' id='messagesafe' style='padding-left:20px;'></p><p class='messageError' id='messageerror' style='padding-left:20px;'></p></div><div id='id_message_button' style='position:fixed; bottom:0px; z-index:2; width:90px; height:50px;margin:0px 0px 0px 20px; padding-top:3px; background-color:#CCCCCC; cursor: pointer; display:none;' onclick='document.getElementById("id_message_box").style.display="";document.getElementById("id_message_button").style.display="none";'>Message</div></form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+</div>
+</body>
+</html>

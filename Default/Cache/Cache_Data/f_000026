@@ -1,0 +1,549 @@
+{
+  "max": 5,
+  "items": {
+    "visitor": [
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_312_lg.png",
+          "/assets/img/top/recommend/bnr_312_sm.png"
+        ],
+        "alt": "野村のトータルコンサルティングプラン",
+        "href": "/campaign/consulting_family/?sc_pid=bnr_cojp312new_top",
+        "target": "",
+        "goto": "",
+        "show": 1,
+        "order": 1
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_304_lg.jpg",
+          "/assets/img/top/recommend/bnr_304_sm.jpg"
+        ],
+        "alt": "株主優待で賢く株式投資",
+        "href": "/retail/stock/incentives/?sc_pid=bnr_cojp304new_top",
+        "target": "",
+        "goto": "",
+        "show": 1,
+        "order": 2
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_271_lg.png",
+          "/assets/img/top/recommend/bnr_271_sm.png"
+        ],
+        "alt": "投信積立キャッシュバックキャンペーン",
+        "href": "/campaign/fundtumitate/?sc_pid=bnr_cojp271new_top",
+        "target": "",
+        "goto": "",
+        "show": 1,
+        "order": 2
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_298_lg.jpg",
+          "/assets/img/top/recommend/bnr_298_sm.jpg"
+        ],
+        "alt": "SDGs with Nomura（Drive Sustainability）地球のために、今できること。　特別対談企画：ESG投資で変える未来",
+        "href": "/lp/esg/?sc_pid=bnr_cojp298new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 1,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_306_lg.jpg",
+          "/assets/img/top/recommend/bnr_306_sm.jpg"
+        ],
+        "alt": "分散投資×先進国外債の魅力　～過去から学ぶ、運用成果の高い組み合せは？～",
+        "href": "/lp/bond/?sc_pid=bnr_cojp306new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 1,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_291_lg.jpg",
+          "/assets/img/top/recommend/bnr_291_sm.jpg"
+        ],
+        "alt": "米国株式の魅力",
+        "href": "/lp/fstock/?sc_pid=bnr_cojp291new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_320_lg.png",
+          "/assets/img/top/recommend/bnr_320_sm.png"
+        ],
+        "alt": "野村のオンラインセミナー：インフレ環境下の新たな投資機会に",
+        "href": "/dx/webseminar/index.html?sc_pid=bnr_cojp320new_top#sp_20220620",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_261_lg.png",
+          "/assets/img/top/recommend/bnr_261_sm.png"
+        ],
+        "alt": "個人向け国債キャンペーン",
+        "href": "/campaign/kojinmuke/?sc_pid=bnr_cojp261new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_286_lg.jpg",
+          "/assets/img/top/recommend/bnr_286_sm.jpg"
+        ],
+        "alt": "売れ筋ランキングも公開中！　自分のペースで、無理なく育てる投信積立　中長期の資産づくり「6つの法則」とは？",
+        "href": "/retail/fund/tsumitate/?sc_pid=bnr_cojp286new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_319_lg.jpg",
+          "/assets/img/top/recommend/bnr_319_sm.jpg"
+        ],
+        "alt": "特別対談企画2：ESG投資で変える未来",
+        "href": "/lp/esg/article/202204/?sc_pid=bnr_cojp319new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_299_lg.jpg",
+          "/assets/img/top/recommend/bnr_299_sm.jpg"
+        ],
+        "alt": "「ESG投資」応援キャンペーン",
+        "href": "/campaign/esg/?sc_pid=bnr_cojp299new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_318_lg.png",
+          "/assets/img/top/recommend/bnr_318_sm.png"
+        ],
+        "alt": "野村のハッピーライフセミナー",
+        "href": "/happylife_seminar/?sc_pid=bnr_cojp318new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_295_lg.png",
+          "/assets/img/top/recommend/bnr_295_sm.png"
+        ],
+        "alt": "新型コロナウイルス感染拡大防止に向けたお客様へのご連絡・お願い",
+        "href": "/introduc/news/2020/20200408_1.html?sc_pid=bnr_cojp295new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_302_lg.png",
+          "/assets/img/top/recommend/bnr_302_sm.png"
+        ],
+        "alt": "「お金のQ」キャンペーン　お金のクイズに君も挑戦！",
+        "href": "https://quiz.nomura.co.jp/?sc_pid=bnr_cojp302new_top&utm_source=nm_wwwtop&utm_medium=banner&utm_campaign=oopj_okane-q&utm_content=a",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_297_lg.jpg",
+          "/assets/img/top/recommend/bnr_297_sm.jpg"
+        ],
+        "alt": "オンラインサービス　新生活様式で活かす　オンライン資産管理術　資産チェック・お取引・入出金・セキュリティ対策・情報収集",
+        "href": "/lp/athome/?sc_pid=bnr_cojp297new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_288_b_lg.jpg",
+          "/assets/img/top/recommend/bnr_288_b_sm.jpg"
+        ],
+        "alt": "新春野村投資セミナー（アーカイブ）",
+        "href": "/event/shinshun_seminar/?sc_pid=bnr_cojp288new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_292_lg.jpg",
+          "/assets/img/top/recommend/bnr_292_sm.jpg"
+        ],
+        "alt": "当社厳選の投資信託ラインアップ「グローバル・メジャー・ファンズ」　フィデリティ・世界割安成長株投信　愛称：テンバガーハンター",
+        "href": "/lp/globalmajor/?sc_pid=bnr_cojp292new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_308_lg.jpg",
+          "/assets/img/top/recommend/bnr_308_sm.jpg"
+        ],
+        "alt": "野村Webローンでお持ちの資産をかしこく活用　適用金利年率1.5%（2021年7月1日時点 変動金利）　初回お借入特典 30日間お利息実質0円",
+        "href": "/retail/loan/?sc_pid=bnr_cojp308new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_301_lg.jpg",
+          "/assets/img/top/recommend/bnr_301_sm.jpg"
+        ],
+        "alt": "”おトク”にポイントが貯まる優待サービスがはじまりました！",
+        "href": "/wp/lp/service/otokuworld/?sc_pid=bnr_cojp301new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_294_lg.jpg",
+          "/assets/img/top/recommend/bnr_294_sm.jpg"
+        ],
+        "alt": "つみたてNISA対象商品　業界最安※。　野村スリーゼロ先進国株式投信　※当社調べ",
+        "href": "/retail/nisa/tsumitate/threezero.html?sc_pid=bnr_cojp294new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_293_lg.png",
+          "/assets/img/top/recommend/bnr_293_sm.png"
+        ],
+        "alt": "【野村のオンライン信用取引】信用取引のコストは、手数料だけじゃない",
+        "href": "/retail/stock/credit/?sc_pid=bnr_cojp293new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_278_lg.jpg",
+          "/assets/img/top/recommend/bnr_278_sm.jpg"
+        ],
+        "alt": "人生100年時代。お金の知識を体系的かつ実践的に学ぶ　野村金融アカデミー",
+        "href": "/lp/academy/?sc_pid=bnr_cojp278new_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_283_lg.jpg",
+          "/assets/img/top/recommend/bnr_283_sm.jpg"
+        ],
+        "alt": "資産運用のこと、もっと知ってみませんか？　資産運用の手引き",
+        "href": "/guidance/?sc_pid=bnr_cojp283new_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      }
+    ],
+    "customer": [
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_312_lg.png",
+          "/assets/img/top/recommend/bnr_312_sm.png"
+        ],
+        "alt": "野村のトータルコンサルティングプラン",
+        "href": "/campaign/consulting_family/?sc_pid=bnr_cojp312ols_top",
+        "target": "",
+        "goto": "",
+        "show": 1,
+        "order": 1
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_304_lg.jpg",
+          "/assets/img/top/recommend/bnr_304_sm.jpg"
+        ],
+        "alt": "株主優待で賢く株式投資",
+        "href": "/retail/stock/incentives/?sc_pid=bnr_cojp304ols_top",
+        "target": "",
+        "goto": "",
+        "show": 1,
+        "order": 2
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_271_lg.png",
+          "/assets/img/top/recommend/bnr_271_sm.png"
+        ],
+        "alt": "投信積立キャッシュバックキャンペーン",
+        "href": "/campaign/fundtumitate/?sc_pid=bnr_cojp271ols_top",
+        "target": "",
+        "goto": "",
+        "show": 1,
+        "order": 2
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_298_lg.jpg",
+          "/assets/img/top/recommend/bnr_298_sm.jpg"
+        ],
+        "alt": "SDGs with Nomura（Drive Sustainability）地球のために、今できること。　特別対談企画：ESG投資で変える未来",
+        "href": "/lp/esg/?sc_pid=bnr_cojp298ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 1,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_306_lg.jpg",
+          "/assets/img/top/recommend/bnr_306_sm.jpg"
+        ],
+        "alt": "分散投資×先進国外債の魅力　～過去から学ぶ、運用成果の高い組み合せは？～",
+        "href": "/lp/bond/?sc_pid=bnr_cojp306ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 1,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_291_lg.jpg",
+          "/assets/img/top/recommend/bnr_291_sm.jpg"
+        ],
+        "alt": "米国株式の魅力",
+        "href": "/lp/fstock/?sc_pid=bnr_cojp291ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_320_lg.png",
+          "/assets/img/top/recommend/bnr_320_sm.png"
+        ],
+        "alt": "野村のオンラインセミナー：インフレ環境下の新たな投資機会に",
+        "href": "/dx/webseminar/index.html?sc_pid=bnr_cojp320ols_top#sp_20220620",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_261_lg.png",
+          "/assets/img/top/recommend/bnr_261_sm.png"
+        ],
+        "alt": "個人向け国債キャンペーン",
+        "href": "/campaign/kojinmuke/?sc_pid=bnr_cojp261ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_299_lg.jpg",
+          "/assets/img/top/recommend/bnr_299_sm.jpg"
+        ],
+        "alt": "「ESG投資」応援キャンペーン",
+        "href": "/campaign/esg/?sc_pid=bnr_cojp299ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_286_lg.jpg",
+          "/assets/img/top/recommend/bnr_286_sm.jpg"
+        ],
+        "alt": "売れ筋ランキングも公開中！　自分のペースで、無理なく育てる投信積立　中長期の資産づくり「6つの法則」とは？",
+        "href": "/retail/fund/tsumitate/?sc_pid=bnr_cojp286ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_319_lg.jpg",
+          "/assets/img/top/recommend/bnr_319_sm.jpg"
+        ],
+        "alt": "特別対談企画2：ESG投資で変える未来",
+        "href": "/lp/esg/article/202204/?sc_pid=bnr_cojp319ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_318_lg.png",
+          "/assets/img/top/recommend/bnr_318_sm.png"
+        ],
+        "alt": "野村のハッピーライフセミナー",
+        "href": "/happylife_seminar/?sc_pid=bnr_cojp318ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_295_lg.png",
+          "/assets/img/top/recommend/bnr_295_sm.png"
+        ],
+        "alt": "新型コロナウイルス感染拡大防止に向けたお客様へのご連絡・お願い",
+        "href": "/introduc/news/2020/20200408_1.html?sc_pid=bnr_cojp295ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_302_lg.png",
+          "/assets/img/top/recommend/bnr_302_sm.png"
+        ],
+        "alt": "「お金のQ」キャンペーン　お金のクイズに君も挑戦！",
+        "href": "https://quiz.nomura.co.jp/?sc_pid=bnr_cojp302ols_top&utm_source=nm_wwwtop&utm_medium=banner&utm_campaign=oopj_okane-q&utm_content=a",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_297_lg.jpg",
+          "/assets/img/top/recommend/bnr_297_sm.jpg"
+        ],
+        "alt": "オンラインサービス　新生活様式で活かす　オンライン資産管理術　資産チェック・お取引・入出金・セキュリティ対策・情報収集",
+        "href": "/lp/athome/?sc_pid=bnr_cojp297ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_288_b_lg.jpg",
+          "/assets/img/top/recommend/bnr_288_b_sm.jpg"
+        ],
+        "alt": "新春野村投資セミナー（アーカイブ）",
+        "href": "/event/shinshun_seminar/?sc_pid=bnr_cojp288ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_292_lg.jpg",
+          "/assets/img/top/recommend/bnr_292_sm.jpg"
+        ],
+        "alt": "当社厳選の投資信託ラインアップ「グローバル・メジャー・ファンズ」　フィデリティ・世界割安成長株投信　愛称：テンバガーハンター",
+        "href": "/lp/globalmajor/?sc_pid=bnr_cojp292ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_308_lg.jpg",
+          "/assets/img/top/recommend/bnr_308_sm.jpg"
+        ],
+        "alt": "野村Webローンでお持ちの資産をかしこく活用　適用金利年率1.5%（2021年7月1日時点 変動金利）　初回お借入特典 30日間お利息実質0円",
+        "href": "/retail/loan/?sc_pid=bnr_cojp308ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_301_lg.jpg",
+          "/assets/img/top/recommend/bnr_301_sm.jpg"
+        ],
+        "alt": "”おトク”にポイントが貯まる優待サービスがはじまりました！",
+        "href": "/wp/lp/service/otokuworld/?sc_pid=bnr_cojp301ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_294_lg.jpg",
+          "/assets/img/top/recommend/bnr_294_sm.jpg"
+        ],
+        "alt": "つみたてNISA対象商品　業界最安※。　野村スリーゼロ先進国株式投信　※当社調べ",
+        "href": "/retail/nisa/tsumitate/threezero.html?sc_pid=bnr_cojp294ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_293_lg.png",
+          "/assets/img/top/recommend/bnr_293_sm.png"
+        ],
+        "alt": "【野村のオンライン信用取引】信用取引のコストは、手数料だけじゃない",
+        "href": "/retail/stock/credit/?sc_pid=bnr_cojp293ols_top",
+        "target": "",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      },
+      {
+        "src": [
+          "/assets/img/top/recommend/bnr_278_lg.jpg",
+          "/assets/img/top/recommend/bnr_278_sm.jpg"
+        ],
+        "alt": "人生100年時代。お金の知識を体系的かつ実践的に学ぶ　野村金融アカデミー",
+        "href": "/lp/academy/?sc_pid=bnr_cojp278ols_top",
+        "target": "_blank",
+        "goto": "",
+        "show": 0,
+        "order": 0
+      }
+    ]
+  }
+}

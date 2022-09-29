@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="EUC-JP">
+
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<title>AthleteRanking.com</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/base_ver3.css?v=210805">
+	<link rel="stylesheet" type="text/css" href="../css/page_ver3.css?v=210805">
+	<script type="text/javascript" src="../css/js.php"></script>
+
+<script>
+<!--
+function button_click(var_x,var_y)
+{
+	document.form_main.P_submit_value.value = "";
+	document.form_main.target = "";
+	switch(var_x){
+		case 9999:
+			document.form_main.action = "../error.php";
+			break;
+		case 'back': //戻る
+			document.form_main.action = "./0003_gamelist.php";
+			break;
+		case 'back_newgame': //戻る
+			document.form_main.action = "./0010_newgame_release.php";
+			break;
+		case 1: //競技会設定へ移動
+			document.form_main.action = "./0012_gameinput.php";
+			break;
+		case 2: //レース一覧画面へ移動
+			document.form_main.action = "./0015_racelist.php";
+			break;
+		case 3: //データ入出力画面へ移動
+			var key_event = window.event;
+
+			if(key_event.ctrlKey)
+			{
+				document.form_main.action = "./0042_referee_list.php";
+			}
+			else
+			{
+				document.form_main.action = "./0028_data.php";
+			}
+
+
+			break;
+		case 4: //種目設定へ移動
+			document.form_main.action = "./0013_event.php";
+			break;
+		case 5: //V2 CIS画面へ移動
+			document.form_main.target = "ARV2_WINDOW";
+			document.form_main.admin_kbn.value = "";
+
+			if (var_y == 1) //V3
+				document.form_main.action = "../comp/0100_cis_frame.php";
+			else //V2
+				document.form_main.action = "../comp/v3frame.php";
+			break;
+		case 6: //エントリー画面へ移動
+//			document.form_main.target = "ARV2_WINDOW";
+//			document.form_main.action = "../comp/entrymenu.php";
+			document.form_main.action = "./0310_entryadmin.php";
+
+			break;
+		case 7: //V2 モニター画面へ移動
+
+
+			if(var_y == 2)
+			{
+				document.form_main.target = "_blank";
+				document.form_main.action = "../comp/0100_cis_frame.php";
+				document.form_main.admin_kbn.value = "bigdisplay";
+
+			}
+			else
+			{
+				document.form_main.target = "_blank";
+				document.form_main.admin_kbn.value = "bigdisplay";
+				document.form_main.action = "../comp/racemonitor.php";
+			}
+
+
+			break;
+		case 8: //レース設定＿ラウンドへ移動
+			document.form_main.action = "./0014_race_round.php";
+			break;
+		case 9: //選手一覧画面へ移動
+			document.form_main.action = "./0025_athletelist.php";
+			break;
+		case 10: //競技会削除
+alert('can not');
+return false;
+			document.form_main.P_submit_value.value = "GAME DELETE";
+			document.form_main.action = "./0011_gamemenu.php";
+			break;
+		case 11: //総合印刷画面へ移動
+			// document.form_main.target = "ARV2_WINDOW";
+			// document.form_main.action = "../comp/gameprint.php";
+			document.form_main.action = "./0027_printtotal.php";
+			break;
+		case 12: //班組へ移動
+			document.form_main.action = "./0013_eventlist.php";
+			break;
+		case 13: //結果一覧へ移動
+			document.form_main.action = "./0026_resultlist.php";
+
+			break;
+
+		case 14: //事前受付へ移動
+
+			document.form_main.target = "ARV2_WINDOW";
+			document.form_main.action = "./entry_athlete.php";
+
+			break;
+
+		case 15: //審判登録へ移動
+
+			document.form_main.action = "./0042_referee_list.php";
+
+			break;
+
+		case 16: //メール連絡へ移動
+
+			document.form_main.action = "./0043_mail_send_list.php";
+
+			break;
+
+		case 17: //プログラム製本へ移動
+
+			document.form_main.action = "./0050_program.php";
+
+			break;
+
+		default:
+			document.form_main.action = "../index.php";
+			break;
+	}
+	document.form_main.submit();
+	return false;
+}
+
+function onload_event()
+{
+	return;
+}
+
+//-->
+</script>
+
+<style type="text/css">
+
+.gameMenuButton {
+    width: 250px;
+     height: 70px;
+    border: none;
+    background-color: #003399;
+    color: #FFFFFF;
+    font-family: "メイリオ", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.gameMenuTable {
+    border-collapse: collapse;
+    margin: 0px auto 0px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+</style>
+
+</head>
+<!-- <body onContextmenu='return false'> -->
+<body onload='onload_event()' >
+<div class='base'>
+	<div class='headBox' ><ul class='siteMenuLeft' ><li class='backButton' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='button_click("back",1)' style='width: 75px; padding-left: 3px; padding-right: 3px;'><span style='font-weight:bold; font-size:18px;'><-Back</span></li><li><div class='pageName'>競技会メニュー</div></li><li><div class='gameName'>2022滋賀県選手権[皇子山]</div></li></ul><ul class='siteMenuRight' style='max-width: 700px;'><li class='tooltip tooltip_width_terminal'><input id='id_printer' type='button' value='未設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_click()' class='printButton'><span>端末選択</span></li><li class='tooltip tooltip_width_bbs'><img src='../img/icon_keijiban.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='bbs_click()' ><span>掲示板</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_chat.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='chat_click()'><span>チャット</span></li><li class='tooltip tooltip_width_v2'><img src='../img/icon_ver2.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='v2_click()'><span>Ver.2</span></li><li class='tooltip tooltip_width_user'><img src='../img/icon_setting.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return user_click()'><span>ユーザー情報</span></li><li class='tooltip tooltip_width_help'><img src='../img/icon_help.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='help_click()'><span>画面説明</span></li><li class='tooltip tooltip_width_logout'><img src='../img/icon_logout.png' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='return logout_click()'><span>ログアウト</span></li><li>滋賀陸上競技協会</li></ul></div>
+<div id='id_dialogbox_print_terminal' class='dialogbox' style='display:none;'><div class='terminalbox'><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_terminal").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>端末情報を選択してください。</span><div class='width200' style='margin:20px auto 20px auto;'><select id='id_select_print_terminal' name='select_print_terminal' class='selectNormal width200'><option value='0'>未設定</option><option value='102'>記録（滋賀陸協１）</option><option value='104'>写真判定（高体連）</option><option value='105'>競技者係(MF244dw)</option><option value='117'>競技者係（テスト用）</option><option value='123'>普及(PX-1700F) </option><option value='150'>リザルト集</option><option value='151'>英語リザルト</option><option value='267'>番組編成(滋賀陸協1)</option><option value='340'>記録（コピー機）</option><option value='341'>賞状（PX-M6010F）</option><option value='356'>普及・記録</option><option value='357'>普及・賞状</option></select></div><input type='button' value='登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='printer_selected_click()' class='inputButton width200'></div></div>
+<div id='id_dialogbox_print_job' class='dialogbox' style='display:none;'><div class='printbox' style='height:330px;' ><div class='closebutton' onclick='document.getElementById("id_dialogbox_print_job").style.display="none";' >&nbsp;</div><span style='display: inline-block;'>印刷します。</span><div class='' style='margin:10px auto 20px auto; width:100%;'>部数<select id='id_select_print_count' name='select_print_count' class='selectNormal width200'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option><option value='8'>8</option><option value='9'>9</option><option value='10'>10</option></select><div id='id_print_race_box' style='display:none; margin-top:10px;'>組　<input type='text' id='id_print_select_race' name='print_select_race' style='width:180px;'  class='textBox' onInput='checkFormPrint(this)'></div><table id='id_print_type' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist' value='ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(50)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist' value='ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(60)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal' value='ﾘｻﾞﾙﾄ総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_resultplus' value='ﾌﾟﾗｽ進出' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultgroup' value='ﾘｻﾞﾙﾄ団体' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combtotal' value='混成総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_startfield' value='ﾌｨｰﾙﾄﾞ用紙' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultfield' value='ﾌｨｰﾙﾄﾞﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_ekidentotal' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award' value='賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_combresult' value='混成ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(81)' class='printButton  backDGreen width120 paddingL25'></td><td></td></tr></table><table id='id_print_type_ekiden' style='width:100%; margin-top:10px; display:none;'><tr><td><input type='button' id='id_startlist_section' value='区間ｽﾀｰﾄﾘｽﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(190)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resultlist_section' value='区間ﾘｻﾞﾙﾄ' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(191)' class='printButton  backDGreen width120 paddingL25'></td><td><input type='button' id='id_resulttotal_ekiden' value='駅伝総合' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(192)' class='printButton  backDGreen width120 paddingL25'></td></tr><tr><td><input type='button' id='id_award_section' value='区間賞状' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click(193)' class='printButton  backDGreen width120 paddingL25'></td><td></td><td></td></tr></table></div><input type='button' id='id_print_button' value='印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);' onclick='print_job_create_click()' class='inputButton width200' style='display:none;'></div></div>
+<!--  -->
+<form name='form_main' method='post' action='' target=''>
+	<input type='hidden' name='P_SESSION_KEY' value='l11145'>
+	<input type='hidden' name='P_SESSION_VALUE' value='2022-07-02 11:45:25 J1B2W7C5D5'>
+	<input type='hidden' name='P_prev_page' value='0011_gamemenu.php'>
+	<input type='hidden' name='P_submit_value' value=''>
+	<input type='hidden' name='P_select_game_table_id' value='5539'>
+	<input type='hidden' name='P_copy_game_table_id' value=''>
+
+	<!--  -->
+	<input type='hidden' name='game_num' value='ay022022013'>
+	<input type='hidden' name='admin_kbn' value=''>
+
+	<!--  -->
+
+
+	<!--  -->
+	<div class='bodyBox marginTop76 height100per' style='margin-top: 42px;'>
+
+		<div class='gameMenuTop'>
+			<ul class='menuLeft' style='padding:0px; height:0px;'>
+			<li>
+			</li>
+			</ul><!--
+			--><ul class='menuRight' style='padding:0px;  height:0px;'>
+			<li>
+<!--
+			<input type='button' value='競技会削除' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'			 onclick='button_click(9,0)' class='gameMenuButtonS'>
+-->
+			</li>
+			</ul>
+		</div>
+		<table class='gameMenuTable'>
+
+<!--
+		<tr>
+			<th>設定</th>
+			<th>運営</th>
+			<th>活用</th>
+		</tr>
+ -->
+		<tr>
+			<td>				<input type='button' value='競技会設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'				 onclick='button_click(1,0)' class='gameMenuButton'>
+			</td>
+
+			<td>				<input type='button' value='審判登録' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(15,0)' class='gameMenuButton'>
+							</td>
+
+			<td>				<input type='button' value='事前受付' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(14,0)' class='gameMenuButton'>
+				
+			</td>
+			<td>				<input type='button' value='総合印刷' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(11,0)' class='gameMenuButton'>
+							</td>
+		</tr>
+		<tr>
+			<td>				<input type='button' value='種目設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'				 onclick='button_click(4,0)' class='gameMenuButton'>
+			</td>
+
+			<td>				<input type='button' value='メール連絡' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(16,0)' class='gameMenuButton'>
+							</td>
+
+			<td>				<input type='button' value='レース一覧' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(2,0)' class='gameMenuButton'>
+				
+			</td>
+			<td>				<input type='button' value='データ入出力' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'				 onclick='button_click(3,0)' class='gameMenuButton'>
+			</td>
+		</tr>
+		<tr>
+			<td>				<input type='button' value='エントリー' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(6,0)' class='gameMenuButton'>
+							</td>
+
+			<td>				<input type='button' value='プログラム帳票' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'
+								 onclick='button_click(17,0)' class='gameMenuButton'>
+				
+			</td>
+
+
+			<td>				<input type='button' value='V2' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(5,0)' class='gameMenuButton' style='width:80px'>
+											<input type='button' value='CIS V3' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(5,1)' class='gameMenuButton' style='width:164px'>
+							</td>
+			<td>				<input type='button' value='結果一覧' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(13,0)' class='gameMenuButton'>
+							</td>
+		</tr>
+		<tr>
+			<td>				<input type='button' value='レース設定' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(8,0)' class='gameMenuButton'>
+							</td>
+
+			<td></td>
+
+
+			<td>				<input type='button' value='V2' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(7,1)' class='gameMenuButton' style='width:80px'>
+														<input type='button' value='モニター V3' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(7,2)' class='gameMenuButton' style='width:164px'>
+										</td>
+
+
+		</tr>
+
+
+		<tr>
+			<td>				<input type='button' value='班組一覧' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(12,0)' class='gameMenuButton'>
+							</td>
+		</tr>
+		<tr>
+			<td>				<input type='button' value='選手一覧' onmousedown='mouseclick(1,this);' onmouseup='mouseclick(0,this);' onmouseout='mouseclick(0,this);' onmouseover='mouseclick(0,this);'								 onclick='button_click(9,0)' class='gameMenuButton'>
+							</td>
+		</tr>
+		</table>
+	</div>
+	<!--  -->
+	<div id='id_message_box' class='messageBox' style='position:fixed; top:20vh; z-index:10; width:800px; height:30vh; overflow-y: auto; margin:0px 203px;border: 2px solid #999999; background-color:#FFFFFF; display:none;'><div class='closebutton' onclick='document.getElementById("id_message_box").style.display="none";document.getElementById("id_message_button").style.display="";' >&nbsp;</div><div style='margin-top:-50px; width:200px; height:30px; padding: 20px 0px 15px 20px;'>Message</div><p class='message' id='id_message' style='padding-left:20px;'></p><p class='messageSafe' id='messagesafe' style='padding-left:20px;'></p><p class='messageError' id='messageerror' style='padding-left:20px;'></p></div><div id='id_message_button' style='position:fixed; bottom:0px; z-index:2; width:90px; height:50px;margin:0px 0px 0px 20px; padding-top:3px; background-color:#CCCCCC; cursor: pointer; display:none;' onclick='document.getElementById("id_message_box").style.display="";document.getElementById("id_message_button").style.display="none";'>Message</div></form>
+
+	<div class='footBox' style='height: 20px; line-height:20px;'>(C) AthleteRanking.com  -  All Rights Reserved.</div>
+</div>
+</body>
+</html>

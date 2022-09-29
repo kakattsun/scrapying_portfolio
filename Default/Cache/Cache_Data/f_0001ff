@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<title>大会一覧</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+var usertype = 1
+function chk_all(cnt) 
+{
+	for(i=0;i<cnt;i++)
+	{
+		if(i==0)
+		{
+			if(document.frm_main.elements['chk_game[0]'].checked == true)
+				sss = false;
+			else
+				sss = true;
+		}
+		namae = "chk_game[" + i + "]";
+		document.frm_main.elements[namae].checked = sss;
+	}
+	return;
+
+
+}
+function submit_list(id,kyonen_flag) {
+
+	document.frm_main.target ="_self";
+
+
+  if(kyonen_flag == 1 && usertype != 5)
+  {
+	bbb = "前年度以前の大会の修正トラブルが多く発生しているため操作には十二分にご注意ください。" + "\n" + "トラブルを防ぐため、強制的に閲覧者モードに移行します。" + "\n" + "よろしいでしょうか？";
+	ret = confirm(bbb);
+	if (ret != true)
+	{
+		bbb = "今のモードのまま進んでよろしいですか？" + "\n" + "修正トラブルには十二分にご注意ください。" + "\n" + "よろしいでしょうか？";
+		ret = confirm(bbb);
+		if (ret != true)
+			return;
+		else
+			document.frm_main.view_mode.value = 0;
+	}
+	else
+	  document.frm_main.view_mode.value = 1;
+  }
+
+  document.frm_main.action = "gamemenu.php";
+  document.frm_main.game_num.value = id;
+  document.frm_main.submit();
+}
+function submit_list2(id) {
+  document.frm_main.action = "entrymenu.php";
+  document.frm_main.game_num.value = id;
+  document.frm_main.submit();
+}
+function submit_menu(para) 
+{
+	document.frm_main.target ="_self";
+
+	switch(para){
+	case 0://manual
+		document.frm_main.action = "helplist.php";
+		break;
+	case 1://user
+		document.frm_main.action = "../compv3/4001_user_redirect.php";
+		document.frm_main.target ="_blank";
+
+		break;
+	case 2://game
+		document.frm_main.action = "gamebasic.php";
+		break;
+	case 3://area
+		document.frm_main.action = "setdistrict.php";
+		break;
+	case 4://cancel
+		document.frm_main.action = "gamemenu.php";
+		break;
+	case 5://rank
+		document.frm_main.action = "rankinglist.php";
+		break;
+	case 6://athle
+		document.frm_main.action = "athletelist.php";
+		break;
+	case 7://team
+		document.frm_main.action = "teamlist.php";
+		break;
+	case 8://stadium
+		document.frm_main.action = "stadiumlist.php";
+		break;
+	case 9://record
+		document.frm_main.action = "setrecbase.php";
+		break;
+	case 10://file
+		document.frm_main.action = "userfilelist.php";
+		break;
+	case 11://file
+		document.frm_main.action = "gamelist.php";
+		break;
+	}
+	document.frm_main.submit();
+}
+function submit_copy(aaa) {
+
+ bbb = "大会の結果等が一旦削除されます" + "\n" + "本当によろしいですか？";
+ ret = confirm(bbb);
+ if (ret != true)
+   return;
+
+  document.frm_main.target ="_self";
+  document.frm_main.game_num3.value = aaa;
+  document.frm_main.action = "gamemenu.php";
+  document.frm_main.submit();
+}
+function submit_logout(){
+	ret = confirm("ログアウトしますか？");
+	document.frm_main.target="_parent";
+
+	if(usertype == 0)
+		document.frm_main.action=document.frm_main.url_back.value;
+	else
+		document.frm_main.action="../logout.php";
+
+	if (ret == true)
+		document.frm_main.submit();
+
+	return;
+}
+function btn_trans(){
+
+//	document.frm_main.action = "gamemenu.php";
+//	document.frm_main.game_num.value = id;
+//	document.frm_main.submit();
+	return;
+}
+//-->
+</script>
+</head>
+<!--<body background="../../image/arback.gif">-->
+<body>
+
+<form name="frm_main" method="post" action="">
+
+<input type='hidden' name="url_back" value="../index.php">
+
+<table width="770" border="0" class="BaseTable">
+ <tr>
+   <td class="MenuLeft"><img src="../../image/shorttrack.gif" width="32" height="23" align="absmiddle">大会一覧</td>
+   <td class="MenuCenter">
+	<table>
+     <tr>
+	  <td>
+<input type='button' value='ログアウト' style='width:100px' onclick='submit_logout()'>	  </td>
+	  <input name="game_num3" type="hidden">
+<input name='disp_prev' type='hidden' value='gamelist.php'><td><input type='button' value='操作マニュアル' onclick='submit_menu(0)' style='width:100px'></td><td><input type='button' value='ユーザ情報' onclick='submit_menu(1)' style='width:100px'></td><td><input type='button' value='大会登録' onclick='submit_menu(2)' style='width:100px'></td><td><input type='button' value='ユーザ地区' onclick='submit_menu(3)' style='width:100px'></td></tr><tr><td><input type='button' value='ランキング' onclick='submit_menu(5)' style='width:100px'></td><td><input type='button' value='選手検索' onclick='submit_menu(6)' style='width:100px'></td><td><input type='button' value='所属検索' onclick='submit_menu(7)' style='width:100px'></td><td><input type='button' value='競技場一覧' onclick='submit_menu(8)' style='width:100px'></td><td><input type='button' value='基本記録' onclick='submit_menu(9)' style='width:100px'></td></tr><tr><td><input type='button' value='ファイル管理' onclick='submit_menu(10)' style='width:100px'></td></tr></table>	</td>
+<td class='MenuRight'><A HREF='help/gamelist_help.php' target='_blank'><img src='../../image/question.gif' width='24' height='24' align='absmiddle' border='0'></a></td>  </tr>
+
+  <tr>
+    <td colspan="3" class="ErrMessage"></td>
+  </tr>
+
+<tr><td class='MenuLeft'></td><td class='MenuCenter'><div style='margin-left:20px; height:42px; width:450px; overflow-y:auto; border:1px solid #999999;'>最新更新情報<br>
+<ul style='margin-top:3px;'>
+<li>19/05/08  Ver2でVer3の競技会設定画面が開くように設定しました。<br>
+	Ver2(旧バージョン)の大会メニュー画面で「大会情報」ボタンを押すと、Ver3の競技会設定画面が開くように設定しました。<br />
+	「競技会別ID」でログイン時、競技会設定画面のシステムタブ内、「システムバージョン」をVer.3に変更していただければ、<br />
+	当該競技会のみ、次回ログイン時より、Ver3でご利用頂けます。<br />
+</li>
+<li>16/07/29  2016年7月に公開されたWindows UpdateによってEXCELファイルが開けない現象が起こっております。<br>
+回避方法ついて記載させていただきました。回避方法は<a href='help/excel_help.php' target='_blank'>こちら。</a>
+
+
+<li>14/03/11  InternetExplorer11で入力が半角カタカナになるバグがあります。<A HREF='http://support.microsoft.com/kb/2931749/ja' TARGET='_blank'>Microsoftのサイトをご覧ください。</A>
+</li>
+<li>12/04/13  DSQをDQに変更しました。
+</li>
+<li>11/06/23  ログイン後の閲覧はしばらく停止いたします。
+</li>
+<li>11/06/22  トラック入力の自動処理機能を搭載しました。
+</li>
+<li>11/06/22  賞状出力が容易になりました。
+</li>
+<li>11/05/14  状況処理モードが追加されました。
+</li>
+</ul>
+<!--
+<li>11/04/1  大会別にIDが登録できるようになりました。
+</li>
+<li>11/04/1  大会に県・地区・種別で所属のエントリー制限がかけられるようになりました。
+</li>
+<li>11/03/19 大会別にアカウント数が管理できるようになりました。(3/19以降分)
+</li>
+<li>10/06/30 申込状態が締め切り後も閲覧可能になりました。
+</li>
+<li>10/06/11 審判員の登録が可能になりました。
+</li>
+<li>10/06/11 大会記録や都道府県記録が公開できるようになりました。
+</li>
+<li><FONT COLOR='#FF0000'>10/05/14 AM9:00-12:00の間でメンテナンスの為、数分間程度停止することがあります。</FONT>
+</li>
+<li>10/04/22 印刷画面から選手の履歴検索、混成得点計算が可能になりました。
+</li>
+<li>10/04/22 競技終了時刻、記録担当審判員を入力できるようになりました。
+</li>
+<li>10/03/05 混成競技のルール改正（風速）に対応しました。
+</li>
+<li><FONT COLOR='#FF0000'>10/03/26 AM2:00-6:00の間でメンテナンスの為、停止することがあります。</FONT>
+</li>
+<li>10/02/10 一般エントリー選手の参加料金計算が可能になりました。
+</li>
+<li>09/10/26 参加料金の計算に一部不具合があり修正しました。
+</li>
+<li>09/10/16 参加料金の計算ができるようになりました。
+</li>
+<li>09/10/16 非ログイン申込が可能になりました。
+</li>
+<li>09/09/17 CSVエントリーをリニューアルしました。
+</li>
+<li>09/09/04 データ受信システムのβ版を公開しました。<BR>
+番組編成から選手エントリーができるようになりました。
+</li>
+<li>09/05/21 <A HREF='http://www.athleteranking.com/upload/info_taf2.html' TARGET='_blank'><font color='#FF0000'>重要なお知らせ。必ずお読みください。</font></A></li>
+<li>09/05/21 大会毎のエントリー種目数制限機能等が追加されました。</A></font></li>
+<li>09/02/11 <font color='#FF0000'>エントリー方法を改善いたしました。</font></li>
+<li>08/11/12 ランキング検索からの追加入力が可能になりました。</li>
+<li>08/10/10 <font color='#FF0000'>(重要)</FONT>写真判定機からのデータ受信をバージョンアップしました。取得システムも更新していますので、記録入力画面右上の「？」よりインストールしてください。</li>
+<li>08/09/17 混成競技で３名以上の同点着順判定処理を組み込みました。</li>
+<li>08/09/14 オープン参加選手を着順等から自動除外できるようになりました。</li>
+<li>08/09/14 大会記録や基本記録の登録が簡単になりました。</li>
+<li>08/09/12 種目の初期登録が簡単になりました。</li>
+<li>08/09/11 大会ごとに大会記録記号が登録可能になりました。</li>
+-->
+</div></td><td class='MenuRight'></td></tr>  <tr>
+    <td colspan="3">
+      <table align="center">
+<tr><td class='InnerTable' colspan='5'><select name='search_pref'><option value=0 selected>指定無
+<option value=1>北海道
+<option value=2>青森
+<option value=3>岩手
+<option value=4>宮城
+<option value=5>秋田
+<option value=6>山形
+<option value=7>福島
+<option value=8>茨城
+<option value=9>栃木
+<option value=10>群馬
+<option value=11>埼玉
+<option value=12>千葉
+<option value=13>東京
+<option value=14>神奈川
+<option value=15>山梨
+<option value=16>新潟
+<option value=17>長野
+<option value=18>富山
+<option value=19>石川
+<option value=20>福井
+<option value=21>静岡
+<option value=22>愛知
+<option value=23>三重
+<option value=24>岐阜
+<option value=25>滋賀
+<option value=26>京都
+<option value=27>大阪
+<option value=28>兵庫
+<option value=29>奈良
+<option value=30>和歌山
+<option value=31>鳥取
+<option value=32>島根
+<option value=33>岡山
+<option value=34>広島
+<option value=35>山口
+<option value=36>香川
+<option value=37>徳島
+<option value=38>愛媛
+<option value=39>高知
+<option value=40>福岡
+<option value=41>佐賀
+<option value=42>長崎
+<option value=43>熊本
+<option value=44>大分
+<option value=45>宮崎
+<option value=46>鹿児島
+<option value=47>沖縄
+</select><select name='year'>
+<option value=0 selected>2022
+<option value=1>2021
+<option value=2>2020
+<option value=3>2019
+<option value=4>2018
+<option value=5>2017
+<option value=6>2016
+<option value=7>2015
+<option value=8>2014
+<option value=9>2013
+<option value=10>2012
+<option value=11>2011
+<option value=12>2010
+<option value=13>2009
+<option value=14>2008
+<option value=15>2007
+<option value=16>2006
+<option value=17>2005
+<option value=18>2004
+<option value=19>1013
+</select>
+		<input type="button" name="submit1"  value="検索" onclick='submit_menu(11)' style='width:100px'></td>
+		<input name="gameindex" type="hidden" value="0">
+		<input name="game_num" type="hidden">
+		<input name="game_rows" type="hidden" value="32">
+
+
+</tr>
+
+
+<tr><th class='TableTitle'>&nbsp;</th><th class='TableTitle'>開始日</th><th class='TableTitle'>大会名</th><th class='TableTitle'>会場</th><th class='TableTitle'><input type='button' value='全' style='width:30px'onclick='chk_all(32)'></th></tr><tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022020",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[0]' value='ay022022020'><td class='InnerTable'>2022-08-19</td><td class='InnerTable'>2022滋賀ユース選手権(0)<span style='font-size:8pt'><br>ay022022020</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[0]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022016",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[1]' value='ay022022016'><td class='InnerTable'>2022-08-11</td><td class='InnerTable'>第３回滋賀陸協記録会(0)<span style='font-size:8pt'><br>ay022022016</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[1]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022018",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[2]' value='ay022022018'><td class='InnerTable'>2022-08-11</td><td class='InnerTable'>滋賀県国体選考会８月(0)<span style='font-size:8pt'><br>ay022022018</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[2]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022025",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[3]' value='ay022022025'><td class='InnerTable'>2022-07-28</td><td class='InnerTable'>2022滋賀中学夏季総体(0)<span style='font-size:8pt'><br>ay022022025</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[3]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022015",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[4]' value='ay022022015'><td class='InnerTable'>2022-07-23</td><td class='InnerTable'>第3回滋賀高校記録会(0)<span style='font-size:8pt'><br>ay022022015</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[4]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022014",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[5]' value='ay022022014'><td class='InnerTable'>2022-07-22</td><td class='InnerTable'>2022滋賀県高校県体(961)<span style='font-size:8pt'><br>ay022022014</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[5]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022023",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[6]' value='ay022022023'><td class='InnerTable'>2022-07-21</td><td class='InnerTable'>2022滋賀中学通信陸上(955)<span style='font-size:8pt'><br>ay022022023</span></td><td class='InnerTable'>布引</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[6]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022024",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[7]' value='ay022022024'><td class='InnerTable'>2022-07-21</td><td class='InnerTable'>2022滋賀中学U16陸上(42)<span style='font-size:8pt'><br>ay022022024</span></td><td class='InnerTable'>布引</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[7]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022013",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[8]' value='ay022022013'><td class='InnerTable'>2022-07-16</td><td class='InnerTable'>2022滋賀県選手権(1167)<span style='font-size:8pt'><br>ay022022013</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[8]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022034",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[9]' value='ay022022034'><td class='InnerTable'>2022-07-09</td><td class='InnerTable'>第4ブロック７月チャレンジ記録会(0)<span style='font-size:8pt'><br>ay022022034</span></td><td class='InnerTable'>甲賀</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[9]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022022",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[10]' value='ay022022022'><td class='InnerTable'>2022-07-02</td><td class='InnerTable'>第3回滋賀中学記録会(1244)<span style='font-size:8pt'><br>ay022022022</span></td><td class='InnerTable'>布引</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[10]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022033",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[11]' value='ay022022033'><td class='InnerTable'>2022-06-26</td><td class='InnerTable'>全国小学生陸上滋賀県予選(963)<span style='font-size:8pt'><br>ay022022033</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[11]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022021",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[12]' value='ay022022021'><td class='InnerTable'>2022-06-18</td><td class='InnerTable'>第2回滋賀中学記録会(1359)<span style='font-size:8pt'><br>ay022022021</span></td><td class='InnerTable'>布引</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[12]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022026",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[13]' value='ay022022026'><td class='InnerTable'>2022-06-12</td><td class='InnerTable'>第32回大津市陸上競技大会(1313)<span style='font-size:8pt'><br>ay022022026</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[13]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022029",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[14]' value='ay022022029'><td class='InnerTable'>2022-06-07</td><td class='InnerTable'>2022滋賀中学第3ブロック陸上(1195)<span style='font-size:8pt'><br>ay022022029</span></td><td class='InnerTable'>希望が丘</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[14]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022030",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[15]' value='ay022022030'><td class='InnerTable'>2022-06-04</td><td class='InnerTable'>滋賀県第4ブロック6月記録会(557)<span style='font-size:8pt'><br>ay022022030</span></td><td class='InnerTable'>甲賀</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[15]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022012",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[16]' value='ay022022012'><td class='InnerTable'>2022-06-02</td><td class='InnerTable'>2022滋賀高校春季総体(3078)<span style='font-size:8pt'><br>ay022022012</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[16]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022032",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[17]' value='ay022022032'><td class='InnerTable'>2022-05-29</td><td class='InnerTable'>SGH文スポ杯県小春季陸上記録会(586)<span style='font-size:8pt'><br>ay022022032</span></td><td class='InnerTable'>SGHG</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[17]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022011",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[18]' value='ay022022011'><td class='InnerTable'>2022-05-22</td><td class='InnerTable'>第2回滋賀陸協記録会(1983)<span style='font-size:8pt'><br>ay022022011</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[18]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022019",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[19]' value='ay022022019'><td class='InnerTable'>2022-05-19</td><td class='InnerTable'>2022滋賀中学春季総体(2950)<span style='font-size:8pt'><br>ay022022019</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[19]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022028",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[20]' value='ay022022028'><td class='InnerTable'>2022-05-14</td><td class='InnerTable'>2022滋賀甲賀市陸上競技大会(511)<span style='font-size:8pt'><br>ay022022028</span></td><td class='InnerTable'>甲賀</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[20]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022010",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[21]' value='ay022022010'><td class='InnerTable'>2022-05-07</td><td class='InnerTable'>第1回滋賀県国体選手選考会(607)<span style='font-size:8pt'><br>ay022022010</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[21]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022017",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[22]' value='ay022022017'><td class='InnerTable'>2022-05-03</td><td class='InnerTable'>第1回滋賀中学記録会(2454)<span style='font-size:8pt'><br>ay022022017</span></td><td class='InnerTable'>布引</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[22]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022009",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[23]' value='ay022022009'><td class='InnerTable'>2022-05-03</td><td class='InnerTable'>第2回滋賀高校記録会(2769)<span style='font-size:8pt'><br>ay022022009</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[23]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022008",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[24]' value='ay022022008'><td class='InnerTable'>2022-04-29</td><td class='InnerTable'>2022彦根市民大会(845)<span style='font-size:8pt'><br>ay022022008</span></td><td class='InnerTable'>布引</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[24]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022006",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[25]' value='ay022022006'><td class='InnerTable'>2022-04-24</td><td class='InnerTable'>2022滋賀県選手権10000m(19)<span style='font-size:8pt'><br>ay022022006</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[25]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022007",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[26]' value='ay022022007'><td class='InnerTable'>2022-04-24</td><td class='InnerTable'>第1回滋賀陸協記録会(1125)<span style='font-size:8pt'><br>ay022022007</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[26]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022005",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[27]' value='ay022022005'><td class='InnerTable'>2022-04-24</td><td class='InnerTable'>2022滋賀県リレーカーニバル(804)<span style='font-size:8pt'><br>ay022022005</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[27]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022027",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[28]' value='ay022022027'><td class='InnerTable'>2022-04-11</td><td class='InnerTable'>test(0)<span style='font-size:8pt'><br>ay022022027</span></td><td class='InnerTable'>彦根</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[28]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022002",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[29]' value='ay022022002'><td class='InnerTable'>2022-04-10</td><td class='InnerTable'>第1回滋賀県高校記録会(1094)<span style='font-size:8pt'><br>ay022022002</span></td><td class='InnerTable'>皇子山</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[29]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022004",0 )' style='width:60px'></td><input type='hidden' NAME='game_num2[30]' value='ay022022004'><td class='InnerTable'>2022-04-02</td><td class='InnerTable'>トライアル練習会(55)<span style='font-size:8pt'><br>ay022022004</span></td><td class='InnerTable'>希望が丘</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[30]'></td></tr>
+<tr><td class='InnerTable'><input type='button' value='選択' onclick='submit_list( "ay022022001",1 )' style='width:60px'></td><input type='hidden' NAME='game_num2[31]' value='ay022022001'><td class='InnerTable'>2022-01-29</td><td class='InnerTable'>2022滋賀高校新人駅伝(0)<span style='font-size:8pt'><br>ay022022001</span></td><td class='InnerTable'>希望が丘駅伝コース</td><td class='InnerTable'><input type='checkbox' NAME='chk_game[31]'></td></tr>
+</table>
+	</td>
+  </tr>
+  <tr>
+<td colspan='3' class='Message'>★大会を選択してください</td>  </tr>
+  <tr>
+    <td colspan="3" class="HedFoot">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+</table>
+<!-- コメント？　-->
+<input name='view_mode' type='hidden' value=0>
+</form>
+
+
+</body>
+</html>

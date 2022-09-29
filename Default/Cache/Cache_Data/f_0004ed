@@ -1,0 +1,1485 @@
+@charset "EUC-JP";
+/* AthleteRanking.com CSS Document */
+
+.loginBox {
+	width: 600px;
+	margin: 0px auto 20px auto; padding:150px 0px 20px 0px;
+	text-align:left;
+
+	background-image: url("../img/athran_logo.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.loginBox .messageBox {
+	margin-bottom: 20px; padding: 0px;
+	text-align:center;
+}
+.loginBox span {
+	display:inline-block;
+	width:150px;
+	margin-left: 25px;
+	margin-bottom: 40px;
+	font-size: 22px; text-align: left;
+}
+.loginBox .textBox {
+	width: 230px; height: 50px;
+	padding-left: 10px; padding-right: 10px;
+	font-size: 22px;
+}
+.loginBox .inputButton {
+	width: 250px; height: 50px;
+}
+
+.newsBox {
+	width: 100%; height: 50px;
+	max-width: 1256px; min-width: 780px;
+	padding: 20px 0px 0px 20px;
+	border: none; border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+	font-size: 18px; line-height:30px;
+	background-color: #FFFFFF;
+	z-index: 5;
+}
+
+.wizardBox{
+	width: 100%;
+    height: 50px;
+    max-width: 1276px;
+    min-width: 780px;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    z-index: 5;
+    margin-top: 42px;
+}
+.wizardBox ul {
+	width: 100%; max-width: 1276px; min-width: 780px;
+}
+.wizardBox li{
+    display: inline-block;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.tabBox {
+	width: 100%; height: 65px;
+	max-width: 1276px; min-width: 780px;
+	padding: 5px 0px 0px 0px;
+	border: none; border-bottom: 1px solid #CCCCCC;
+	text-align: left;
+	font-size: 16px; line-height: 28px;
+	background-color: #FFFFFF;
+	z-index: 5;
+}
+.tabBox ul {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	padding: 0px 18px;
+}
+.tabBox li {
+	display: inline-block;
+	margin: 0px 6px; padding: 18px 0px 18px 0px;
+	border: 1px solid #CCCCCC;
+	text-align: center;
+}
+.tabBox .tabLink {
+	cursor: pointer;
+}
+.tabBox .tabLink:hover {
+	background-color:#003399; color:#FFFFFF;
+}
+
+
+.gameMenuTop {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	border: none;
+	background-color: #FFFFFF;
+	font-size: 22px; line-height: 30px;
+}
+.gameMenuTop ul { display: inline-block; }
+.gameMenuTop li {
+	display: inline-block;
+	padding: 0px 25px 0px 25px;
+}
+.gameMenuTop .menuLeft {
+	width: 50%; max-width: 638px; min-width: 390px;
+	padding-top: 13px;
+	text-align: left;
+}
+.gameMenuTop .menuRight {
+	width: 50%; max-width: 638px; min-width: 390px;
+	padding-top: 13px; 
+	text-align: right;
+	z-index: 11;
+}
+.gameMenuTable {
+	border-collapse: collapse;
+	margin: 0px auto 50px;
+	text-align: center;
+	font-size: 22px; line-height:40px;
+}
+.gameMenuTable th , .gameMenuTable td {
+	padding: 10px 15px 10px 15px;
+	vertical-align: middle;
+	font-weight: normal;
+	border: none;
+}
+.gameMenuButton {
+	width: 250px; height: 100px;
+	border: none;
+	background-color: #003399; color: #FFFFFF;
+	font-family: "メイリオ", sans-serif; font-size: 22px;
+	cursor: pointer;
+}
+.gameMenuButton:hover {
+	opacity:0.7;
+}
+.gameMenuButtonS {
+	display:inline-block;
+	width: 120px; height: 40px;
+	border: none; border:1px solid #000066;
+	background-color: #FFFFFF; color: #000066;
+	font-family: "メイリオ", sans-serif; font-size: 18px;
+	cursor: pointer;
+}
+.gameMenuButtonS:hover {
+	opacity:0.7;
+}
+
+.gameMenuButtonUndev {
+	width: 250px; height: 70px;
+	border: none;
+	background-color: #C9CACA; color: #FFFFFF;
+	font-family: "メイリオ", sans-serif; font-size: 22px;
+	cursor: pointer;
+}
+
+.athleteName {
+	text-decoration: none;
+	color:#003399;
+	font-weight:bold;
+}
+
+.athleteOpen {
+	text-decoration: none;
+	color:#CC00CC;
+	font-weight:bold;
+}
+
+.dnsBox{
+	position:relative;
+	display:inline-block;
+	border-radius: 10px;
+	 -webkit-border-radius: 10px;
+	 -moz-border-radius: 10px;
+	height:36px;
+	color:#FF0000;
+	background-color:#cccccc;
+}
+
+.dnsButton{
+	position:absolute;border-radius: 10px;
+	 -webkit-border-radius: 10px;
+	 -moz-border-radius: 10px;
+}
+
+.recTitel {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+.recTitel ul {
+	padding-top: 0px;
+	margin-top: 0px;
+
+}
+
+.recTitel li {
+	display: inline-block;
+	padding: 0px;
+	font-size:12px;
+	padding-top: 0px;
+	height:20px;
+	line-height:20px;
+	margin-top: 0px;
+}
+
+
+.recpageMenu {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	background-color: #9FA0A0;
+	font-size: 22px; 
+}
+.recpageMenu ul { display: inline-block; }
+.recpageMenu li {
+	vertical-align:middle;
+	display: inline-block;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+.recpageMenu td {
+	padding:0px;
+	background-color:#FFFFFF;
+	font-size:14px;
+}
+
+.rec_Table {
+	width:100%;
+	height:80px;
+	font-size:28px;
+	background-color:#FFFFFF;
+
+}
+
+.rec_Table td{
+	padding-left:10px;
+ 	border-bottom: 1px solid #CCCCCC;
+	background-color:#FFFFFF;
+
+}
+
+
+
+.td_title{
+	display: inline-block;
+	line-height: 54px;
+	background-color: #666666; color: #FFFFFF;
+
+}
+
+
+.td_data{
+	display: inline-block;
+	text-align:center;
+	width:100px;
+	line-height: 50px;
+
+}
+
+.title_box {
+	margin: 0px 23px;
+	padding:15px 0px 0px 15px;
+	width: 100%; max-width: 1215px; min-width: 734px;
+	height: 45px;
+	background-color: #333333;
+	font-size: 22px; 
+	text-align:left;
+	color:#FFFFFF;
+}
+
+.td_center{
+	text-align:center;
+}
+
+
+
+
+.recmenuFull {
+	width: 100%; max-width: 1276px; min-width: 780px;
+	padding-top: 0px;
+}
+
+.recmenuFull li{
+	text-align:left;
+}
+
+.recmenuFullSmall{
+	width: 100%; max-width: 1276px; min-width: 780px;
+}
+.rectopBox {
+	position: fixed; top: 0px;
+	width: 100%; max-width: 1276px; min-width: 780px;
+	border: none;
+	text-align: left;
+	background-color: #FFFFFF;
+	z-index: 5;
+}
+
+.recprintButton {
+	height: 40px;
+	border: none;
+	background-image: url("../img/icon_printer.png"); background-repeat: no-repeat; background-position: 5% 45%;
+	background-color: #00CC00; color: #FFFFFF;
+	font-family: "メイリオ", sans-serif;
+	cursor: pointer;
+}
+
+
+.recprevButton{
+	display: inline-block;
+    width: 60px;
+    height: 90px;
+    padding: 0px 0px 0px 0px;
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-size: 20px 40px;
+    background-position: 50%;
+}
+
+.recnextButton{
+	display: inline-block;
+    width: 60px;
+    height: 90px;
+    padding: 0px 0px 0px 0px;
+    background-image: url(../img/next.png);
+    background-repeat: no-repeat;
+    background-size: 20px 40px;
+    background-position: 50%;
+}
+
+.status_Button:hover{
+	opacity: 0.7;
+}
+
+
+.userinputTable {
+	border-collapse: separate; border-spacing: 1px;
+	margin: 0px 20px;
+	width: 100%; max-width: 1236px; min-width: 740px;
+	text-align: left;
+	font-size: 16px; line-height:40px;height: 40px;
+}
+.userinputTable th , .userinputTable td {
+	border: none;
+}
+
+.userinputTable th {
+	padding: 3px 15px 3px 15px;
+}
+.userinputTable td {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.userinputTable th {
+	background-color: #666666; color:#FFFFFF;
+	font-weight:normal;
+}
+.userinputTable td {
+	background-color: #CCCCCC;
+}
+.usertrh40 {
+	height: 40px;
+}
+
+.athleteeditMenu {
+    margin: 0px 20px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 1234px;
+    min-width: 734px;
+    border: none;
+    border: 1px solid #fff;
+    font-size: 22px;
+    line-height: 36px;
+    height: 36px;
+}
+.athleteeditMenu ul { display: inline-block; }
+.athleteeditMenu li {
+	display: inline-block;
+}
+
+.athleteeditTable {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 1230px; 
+	min-width: 734px;
+	text-align: left;
+	margin: 0px 23px;
+	font-size: 22px; line-height:40px;
+}
+
+.entryStatus{
+	display:inline-block;
+	line-height: 26px;
+	font-family: "メイリオ", sans-serif;
+	font-size: 16px;
+}
+
+.game_num{
+	font-size:10px;
+	line-height:15px;
+	color:#727171;
+}
+
+.stasusmenuLeft{
+	width: 50%;
+    max-width: 638px;
+    min-width: 390px;
+    line-height: 50px;
+    height: 50px;
+    background-color: #727171;
+}
+
+.stasusmenuRight{
+	width: 50%;
+    max-width: 638px;
+    min-width: 390px;
+    line-height: 50px;
+    height: 50px;
+}
+
+.RaceNumSet{
+	background-color: #003399;
+    display: block;
+    padding-top: 3px;
+    height: 37px;
+    width: 80px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+.RaceNumSet:hover{
+	opacity:0.7;
+}
+.rec_label_multi{
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	cursor:pointer;
+	padding: 0px 5px;
+}
+.rec_label_multi:hover{
+	opacity:0.7;
+}
+.rec_label_kuri{
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	cursor:pointer;
+	padding: 0px 5px;
+}
+.rec_label_kuri:hover{
+	opacity:0.7;
+}
+.rec_label_comb{
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	cursor:pointer;
+	padding: 0px 5px;
+}
+.rec_label_comb:hover{
+	opacity:0.7;
+}
+.rec_menuLine{
+	margin: 0px 60px;
+	text-align: left;
+	border: none;
+	border-collapse: collapse;
+}
+.rec_menuLine_small{
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	border-collapse: collapse;
+}
+
+
+
+.copyButton {
+	margin:0px 5px;
+	padding:0px 5px;
+	height: 20px;
+	border: none;
+	background-color: #000066; color: #FFFFFF;
+	font-family: "メイリオ", sans-serif;
+	cursor: pointer;
+}
+.copyButton:hover {
+	opacity:0.7;
+}
+
+/* エントリー */
+
+
+.entry_pageMenu {
+	margin-top: 42px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.entry_pageMenu2 {
+	height: 36px;
+	line-height: 36px;
+}
+
+.entry_pageMenu_button {
+	height: 50px;
+	line-height: 50px;
+}
+
+.entry_menuBar{
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+}
+.entry_menuBar_entryul{
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	text-align: right;
+}
+.entry_menu_li_lname{
+	float: left;
+	margin-left: 20px;
+	word-break: break-word;
+	width: 50%	;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.entry_menubutton{
+	height: 50px;
+}
+
+
+
+.entry_inputButton_selected:hover {
+	opacity:0.7;
+}
+
+.entry_inputButton:hover {
+	background-color: #003399;
+	color: #fff;
+}
+
+.entry_inputButton_R{
+	margin-right: 15px;
+	height: 36px;
+	border-top: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: none;
+	background-color: #e5e5e5;
+	color: #000;
+	font-family: "メイリオ", sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	vertical-align: bottom;
+}
+
+
+.entry_inputButton_R:hover {
+	background-color: #003399;
+	color: #fff;
+}
+.entry_explain {
+	font-size: 13px;
+	color: #666666;
+	line-height: 13px;
+}
+
+.entry_contentTable{
+	line-height: 36px;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	color:#fff;
+	background-color:#727171;
+	font-size:16px;
+}
+
+.entry_contentTable_textonly{
+	line-height: 36px;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	color:#fff;
+	background-color:#727171;
+	font-size:14px;
+}
+.entry_contentTable_textonly_tr{
+	line-height: 26px;
+	font-size:14px;
+}
+
+.entry_lnamefont{
+	font-size: 20px;
+}
+.entry_contentTable_cont{
+	line-height:36px;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	/*margin:10px auto 0px auto;*/
+}
+.entry_checkbox_cont{
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+}
+.entry_contentTable_cont th {
+	background-color:#EEEEEE;
+	color:#000000;
+}
+.entry_numbertable{
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+}
+.entry_menu_MemBox {
+	margin:0px;
+	width:100%;
+	text-align:left;
+}
+.entry_menu_tabButton {
+	height: 40px;
+	background-color: #003399;
+	color: #fff;
+	border: none;
+	font-family: "メイリオ", sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+}
+.entry_menu_tabButton:hover {
+	opacity:0.7;
+}
+.entry_contentTable_upd {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	line-height:36px;
+	color:#fff;
+	background-color:#727171;
+	font-size:16px;
+	margin:0px;
+}
+.entryadmin_menu_tabButton {
+	width: 100%;
+	text-align: center;
+	height: 43px;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #ffffff;
+	background-color: #727171; /*Gray*/
+}
+.entryadmin_menu_tabButton:hover {
+	opacity: 0.7;
+}
+.entryadmin_menu_tabButton_selected {
+	width: 13%;
+	min-width: 100px;
+	text-align: center;
+}
+.entryadmin_TabButton_ul {
+	width: 100%; max-width: 1276px; min-width: 780px;
+
+	height: 44px;
+	line-height: 44px;
+	font-size: 14px;
+}
+.entryadmin_menuBar_tr {
+	height: 24px;
+	line-height: 24px;
+	font-size: 13px;
+}
+.entryadmin_DataBox1 {
+	margin-top:40px;
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 50%;
+	max-height: 800px; min-height: 414px;
+	/*background-image: url("../img/back_white.png"); background-repeat: repeat-y; background-position: top center;*/
+	text-align: left;
+	z-index: 5;
+
+}
+
+.entryadmin_DataBox2 {
+/*	margin-top:40px;*/
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 50%;
+	max-height: 800px; min-height: 414px;
+	/*background-image: url("../img/back_white.png"); background-repeat: repeat-y; background-position: top center;*/
+	text-align: left;
+	z-index: 5;
+
+}
+
+
+.entryadmin_DataBox_data1 {
+/*	margin-top:10px;*/
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 100%;
+	max-height: 320px; min-height: 150px;
+	text-align: left;
+	z-index: 5;
+	overflow: auto;
+}
+.conttable_data{
+	width:95%;
+	border: 1px solid #CCCCCC;
+	margin: 0px auto 0px auto;
+	border-collapse: collapse;
+}
+
+.raceentry_DataBox1 {
+	margin-top:40px;
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 50%;
+	max-height: 800px; min-height: 414px;
+	/*background-image: url("../img/back_white.png"); background-repeat: repeat-y; background-position: top center;*/
+	text-align: left;
+	z-index: 5;
+
+}
+.raceentry_DataBox_data1 {
+/*	margin-top:10px;*/
+	width: 100%; max-width: 1276px; min-width: 780px;
+	height: 100%;
+	max-height: 380px; min-height: 150px;
+	text-align: left;
+	z-index: 5;
+	overflow: auto;
+}
+.bbs_titlebar {
+width: 64%;
+background-color: #0062ac;
+font-size: 20px;
+font-weight: bold;
+color: #fff;
+border: none;
+/*line-height: 50px;*/
+height: 50px;
+padding-left: 20px;
+}
+.bbs_cont_first {
+padding:5px 5px 5px 20px;
+width: 98%;
+font-size: 16px;
+font-family: "メイリオ", sans-serif;
+resize: none;
+background-color: #f2f2f2;
+border:none;
+}
+.bbs_cont_reply {
+padding:5px 5px 5px 50px;
+width: 93%;
+font-size: 16px;
+font-family: "メイリオ", sans-serif;
+border:none;
+}
+.bbs_inputtable {
+border-collapse: collapse;
+border-spacing: 1px;
+border:none;
+width: 100%;
+min-width: 740px;
+text-align: left;
+font-size: 16px;
+line-height: 30px;
+}
+.bbs_td_s{
+padding-left: 20px;
+}
+.bbs_td_title{
+padding-left: 2%;
+width: 50%;
+}
+.bbs_td_name{
+padding-left: 2%;
+width: 25%;
+}
+.bbs_td_regtime{
+padding-left: 2%;
+width: 10%;
+}
+.bbs_title{
+cursor:pointer;
+color:#0062ac;
+font-weight:bold;
+overflow:hidden;
+white-space: nowrap;
+text-overflow:ellipsis;
+/*display: block;*/
+/*width: 600px;*/
+/*float: right;*/
+}
+.bbs_plusbutton{
+height:30px;
+border:1px solid #ccc;
+color:#0062ac;
+margin-right: 10px;
+}
+.bbs_title_content{
+padding-left:60px;
+width:650px;
+line-height: 30px;
+overflow:hidden;
+white-space: nowrap;
+text-overflow:ellipsis;
+}
+.bbs_textareaBox{
+width: 96.5%;
+padding: 10px;
+height: 180px;
+font-size:16px;
+font-family: "メイリオ", sans-serif;
+}
+.bbsinput_td_reply{
+padding-left: 3.5%;
+width: 55%;
+}
+.bbsinput_td_label{
+padding-left: 2%;
+width: 15%;
+}
+.bbsinput_td_input{
+padding-left: 2%;
+width: 20%;
+}
+.bbsinput_td_reply{
+padding-left: 3.5%;
+width: 15%;
+}
+.bbsinput_td_inputcategory{
+padding-left: 2%;
+width: 75%;
+}
+.bbs_inputTable {
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 0px 20px;
+    width: 100%;
+    max-width: 1236px;
+    min-width: 740px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/*競技会設定の外部サービス*/
+.outsource_td_title {
+	background-color: #eee;
+	padding: 10px;
+	height: 112px;
+	border: 1px solid #CCCCCC;
+	vertical-align: top;
+}
+.outsource_td_content {
+	background-color: #fff;
+	border: 1px solid #CCCCCC;
+	border-right: none;
+	border-left: none;
+	width: 50%;
+	vertical-align: top;
+	padding: 10px;
+}
+.outsource_td_image {
+	background-color: #fff;
+	border: 1px solid #CCCCCC;
+	border-left: none;
+	width: 20%;
+}
+.outsource_img {
+	width:100%;
+	vertical-align: middle;
+}
+.outsource_td_title a{
+    cursor: pointer;
+	display: block;
+/*	width: 100%;*/
+	height:100%;
+	text-decoration: none;
+	color: #000;
+	padding: 10px;
+}
+.outsource_td_title a:hover {
+    background-color: #003399;
+    color: #FFFFFF;
+}
+.event_title_td {
+	padding-left: 15px;
+	line-height: 22px;
+}
+
+
+
+@media (min-width: 1200px) {
+   /* 横幅が1200px以上の場合に適用するスタイル */
+	.entry_inputButton_selected{
+		height: 36px;
+		border: none;
+		background-color: #003399;
+		color: #fff;
+		font-family: "メイリオ", sans-serif;
+		font-size: 16px;
+		cursor: pointer;
+		vertical-align: bottom;
+		width: 100%;
+		min-width: 180px;
+	}
+
+	.entry_inputButton{
+		height: 36px;
+		border-top: 1px solid #CCCCCC;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #CCCCCC;
+		border-bottom: none;
+		background-color: #e5e5e5;
+		color: #000;
+		font-family: "メイリオ", sans-serif;
+		font-size: 16px;
+		cursor: pointer;
+		vertical-align: bottom;
+		width: 100%;
+		min-width: 180px;
+	}
+	.select_display_type {
+		width:150px;
+
+	}
+
+	.select_display {
+		width:150px;
+
+	}
+
+	.race_Title_td {
+		width: 50%;
+		padding-left: 0px;
+		line-height: 22px;
+	}
+
+	.race_Title_td span {
+		font-size:22px;
+	}
+
+	.event_title_td{
+		width: 70%;
+	}
+	.event_title_td span {
+		font-size:22px;
+	}
+
+	.race_ttl_td {
+		width: 60%;
+		padding: 0px 10px;
+		background-color: #FFF;
+		line-height: 20px;
+	}
+	.race_ttl_td span {
+		font-size:21px;
+		vertical-align: middle;
+	}
+	.race_td {
+		padding: 0px 5px;
+		background-color: #fff;
+		line-height: 20px;
+	}
+	.race_td span {
+		font-size:16px;
+		vertical-align: middle;
+	}
+
+	.record_td {
+		display: block;
+		border-left: 1px solid #9FA0A0;
+		border-right: 1px solid #9FA0A0;
+		line-height: 20px;
+		overflow: auto;
+		height: 40px;
+		padding: 1px 5px 0px 10px;
+		background-color: #FFFFFF;
+/*		max-width: 120px;*/
+		color: #000;
+	}
+	.rec_menuLine td{
+		font-size:16px;
+	}
+	.status_li {
+		width:60px;
+
+	}
+
+	.status_Button {
+		font-size: 16px;
+		height: 32px;
+		line-height: 32px;
+	    text-align: center;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    border: none;
+	    font-family: "メイリオ", sans-serif;
+	}
+
+	.rec_update_Button {
+		width: 150px;
+	}
+
+	.rec_label_multi{
+		width: 80px;
+	}
+	.rec_label_kuri{
+		width: 90px;
+	}
+	.rec_label_comb{
+		width: 100px;
+	}
+	.slit_Table {
+	    width: 230px;
+	    border-collapse: collapse;
+	    border: 0px solid #FF9900;
+	    background-color: #FFFFFF;
+	    height: 40px;
+	    line-height: 13px;
+	}
+
+	.slit_Table td{
+
+		border-collapse: collapse;
+	 	border: 1px solid #9FA0A0;
+		padding-left: 5px;
+		font-size:14px;
+		background-color:#FFFFFF;
+
+	}
+
+	.slit_Table td a.hover{
+		opacity:0.7;
+
+	}
+
+	.linkButton_rec {
+		padding: 5px;
+		border: 1px solid #0062ac;
+		background-color: #fff;
+		color: #0062ac;
+		cursor: pointer;
+		font-size: 16px;
+		height: 40px;
+		width: 95px;
+	}
+	.linkButton_rec:hover {
+		background-color: #0062ac;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.select_attempt {
+		width:200px;
+	}
+
+	.rectextBox {
+		height: 28px;
+		padding-left: 5px; padding-right: 5px;
+		font-family: "メイリオ", sans-serif; font-size: 16px;
+	}
+
+	.recfontBig { font-size: 22px; line-height: 22px; }
+
+	.attempt_Search { font-size: 16px; line-height: 22px; }
+
+	.attempt_Search_Button { width:75px;}
+
+	.slit_Button { width:50px;}
+
+	.set_Button { width:50px;}
+
+	.high_Title {
+		background-color:#333333;
+		display: inline-block;
+		width: 30px;
+		height: 32px;
+		line-height: 32px;
+		font-size: 14px;
+	}
+
+	.select_high_Attempt {
+		width:70px;
+		font-size: 19px;
+		padding: 0px 0px 0px 5px;
+	}
+
+	.td_attempt_off{
+		width:70px;
+	}
+
+	.td_attempt_rec{
+		width:65px;
+	}
+	.input_attempt_rec{
+		width:50px;
+	}
+
+	.input_attempt_wind{
+		width:45px;
+	}
+
+	.select_attempt_off{
+		width:60px;
+		font-size: 19px; 
+		padding: 0px 0px 0px 5px;
+	}
+
+	.input_high_rec{
+		width:38px;
+		margin:2px 0;
+	}
+
+	.relay_order_Title {
+		font-size: 22px;
+		padding-left: 75px;
+		line-height: 22px;
+		vertical-align: middle;
+		width: 450px;
+	}
+
+	.accept_Title {
+		font-size: 22px;
+		padding: 0px 15px 0px 70px;
+		line-height: 22px;
+		vertical-align: middle;
+		width: 400px;
+	}
+
+	.accept_Title span{
+		font-size: 22px;
+	}
+
+	.accept_status_Button {
+		width:130px;
+		margin-left: 10px;
+	}
+	.relay_order_button {
+		width:150px;
+	}
+	.text_size{
+		font-size: 16px;
+	}
+	.entry_Gametitle{
+		font-size: 20px;
+		padding: 0px 15px 0px 15px;
+		line-height: 20px;
+		vertical-align: middle;
+		word-wrap: break-word;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 0;
+		white-space: nowrap;
+		text-align: left;
+	}
+	.data_table_v3 th , .data_table_v3 td{
+		font-size:14px;
+	}
+}
+
+@media (max-width: 1199px) {
+   /* 横幅が1200pxより小さいの場合に適用するスタイル */
+  	.entry_inputButton_selected{
+		height: 36px;
+		border: none;
+		background-color: #003399;
+		color: #fff;
+		font-family: "メイリオ", sans-serif;
+		font-size: 12px;
+		cursor: pointer;
+		vertical-align: bottom;
+		width: 100%;
+		min-width: 145px;
+	}
+
+	.entry_inputButton{
+		height: 36px;
+		border-top: 1px solid #CCCCCC;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #CCCCCC;
+		border-bottom: none;
+		background-color: #e5e5e5;
+		color: #000;
+		font-family: "メイリオ", sans-serif;
+		font-size: 12px;
+		cursor: pointer;
+		vertical-align: bottom;
+		width: 100%;
+		min-width: 145px;
+	}
+	.select_display_type {
+		width:100px;
+
+	}
+
+	.select_display {
+		width:100px;
+
+	}
+
+	.race_Title_td {
+		width: 50%;
+		padding-left: 0px;
+		line-height: 22px;
+
+	}
+	.race_Title_td span {
+		font-size:16px;
+
+	}
+	.event_title_td{
+		width: 25%;
+	}
+	.event_title_td span {
+		font-size:16px;
+	}
+	.race_ttl_td {
+		width: 50%;
+		padding: 0px 5px;
+		background-color: #fff;
+		line-height: 20px;
+	}
+	.race_ttl_td span {
+		font-size:16px;
+		vertical-align: middle;
+	}
+	.race_td {
+		padding: 0px 5px;
+		background-color: #fff;
+		line-height: 20px;
+	}
+	.race_td span {
+		font-size:12px;
+		vertical-align: middle;
+	}
+
+
+	.record_td {
+		display: block;
+		border-left: 1px solid #9FA0A0;
+		border-right: 1px solid #9FA0A0;
+		overflow: auto;
+		height: 40px;
+		padding: 1px 5px 0px 5px;
+		line-height: 22px;
+		background-color: #FFFFFF;
+/*		max-width: 120px;*/
+		color: #000;
+
+	}
+	.rec_menuLine td{
+		font-size:12px;
+	}
+	.status_li {
+		width:5%;
+
+	}
+
+	.status_Button {
+		font-size: 14px;
+		height: 32px;
+		line-height: 32px;
+	    text-align: center;
+	    color: #FFFFFF;
+	    cursor: pointer;
+	    border: none;
+	    font-family: "メイリオ", sans-serif;
+	}
+
+	.rec_update_Button {
+		width: 100px;
+	}
+	.rec_label_multi{
+		width: 60px;
+	}
+	.rec_label_kuri{
+		width: 70px;
+	}
+	.rec_label_comb{
+		width: 75px;
+	}
+	.slit_Table {
+	    width: 200px;
+	    border-collapse: collapse;
+	    border: 0px solid #FF9900;
+	    background-color: #FFFFFF;
+	    height: 40px;
+	    line-height: 13px;
+	}
+
+	.slit_Table td{
+
+		border-collapse: collapse;
+	 	border: 1px solid #9FA0A0;
+		padding-left: 5px;
+		font-size:10px;
+		background-color:#FFFFFF;
+
+	}
+
+	.slit_Table td a.hover{
+		opacity:0.7;
+
+	}
+	.linkButton_rec {
+		padding: 5px;
+		border: 1px solid #0062ac;
+		background-color: #fff;
+		color: #0062ac;
+		cursor: pointer;
+		font-size: 12px;
+		height: 40px;
+		width:65px;
+	}
+	.linkButton_rec:hover {
+		background-color: #0062ac;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.select_attempt {
+		width:150px;
+	}
+
+	.rectextBox {
+		height: 28px;
+		padding-left: 5px; padding-right: 5px;
+		font-family: "メイリオ", sans-serif; font-size: 12px;
+	}
+
+	.recfontBig { font-size: 22px; line-height: 22px; }
+
+	.attempt_Search { font-size: 12px; line-height: 12px; }
+
+	.attempt_Search_Button { width:40px;}
+
+	.slit_Button { width:40px;}
+
+	.set_Button { width:40px;}
+
+	.high_Title {
+		background-color:#333333;
+		display: inline-block;
+		width: 15px;
+		height: 32px;
+		line-height: 32px;
+		font-size: 10px;
+	}
+
+	.select_high_Attempt {
+		width:60px;
+		font-size: 12px;
+		padding: 0px 0px 0px 5px;
+	}
+
+	.td_attempt_off{
+		width:60px;
+	}
+
+	.td_attempt_rec{
+		width:50px;
+	}
+	.input_attempt_rec{
+		width:40px;
+	}
+
+	.input_attempt_wind{
+		width:30px;
+	}
+
+	.select_attempt_off{
+		width:50px;
+		font-size: 12px; 
+		padding: 0px 0px 0px 5px;
+	}
+
+	.input_high_rec{
+		width:30px;
+		margin:2px 0;
+	}
+
+	.relay_order_Title {
+		font-size: 14px;
+		padding-left: 75px;
+		line-height: 14px;
+		vertical-align: middle;
+		width: 450px;
+	}
+
+	.accept_Title {
+		font-size: 14px;
+		padding: 0px 15px 0px 70px;
+		line-height: 14px;
+		vertical-align: middle;
+		min-width: 280px;
+	}
+
+	.accept_Title span{
+		font-size: 14px;
+	}
+
+	.accept_status_Button {
+		width:100px;
+		font-size:12px;
+		margin-left: 10px;
+	}
+	.relay_order_button{
+		width: 120px;
+
+	}
+	.text_size{
+		font-size: 12px;
+	}
+	.entry_Gametitle{
+		font-size: 14px;
+		padding: 0px 15px 0px 15px;
+		line-height: 14px;
+		vertical-align: middle;
+		word-wrap: break-word;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-width: 0;
+		white-space: nowrap;
+		text-align: left;
+	}
+	.data_table_v3 th , .data_table_v3 td{
+		font-size:12px;
+	}
+
+}
+
+
+.data_table_v3 {
+	margin: 10px 10px 10px 15px;
+	border:0px; border-collapse: collapse;
+}
+.data_table_v3 th {
+	padding:6px 20px 4px 20px;
+	border:1px solid #FFF;
+	background-color:#727171;
+	color:#FFFFFF;
+	line-height:150%;
+	font-weight: normal;
+}
+.data_table_v3 td {
+	padding:6px 10px 4px 10px;
+	border:1px solid #FFF;
+	background-color:#eaeaea;
+	line-height:150%;
+}
+.data_table_v3 input {
+	padding:5px 7px;
+}
+.data_table_v3 select {
+	padding:5px 7px;
+}
+.data_table_v3 a , .data_table_v3 a:link , .data_table_v3 a:visited {
+	display:inline-block;
+	padding:5px 20px 3px 20px;
+	color:#333333;
+	text-decoration:none;
+	background-color:#DDDDDD;
+	border:1px solid #999999;
+}
+.data_table_v3 a:hover , .data_table_v3 a:active {
+	color:#FFFFFF;
+	background-color:#999999;
+	border:1px solid #999999;
+}
